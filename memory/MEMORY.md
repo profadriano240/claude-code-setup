@@ -1,0 +1,2 @@
+- [Automações WhatsApp](projeto_automacoes_whatsapp.md) — repositório GitHub cotacoes-b3, CallMeBot, preferência por soluções gratuitas sem API paga
+- [Máquina Debian pessoal](maquina_debian_home.md) — notebook fraco (Celeron N4020, 3,6GB RAM), estado de ferramentas instaladas, sudo não-interativo sempre falha
