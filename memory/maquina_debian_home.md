@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-13T15:24:12.041Z
+  modified: 2026-08-13T15:24:30.950Z
 ---
 
 Notebook pessoal do Adriano: Debian 13 (trixie), instalação limpa feita em
@@ -60,14 +60,23 @@ na linha de comando. O `late_command` roda no fim da instalação (via
 `in-target`), pergunta (com timeout de 20s, padrão sim) se deve instalar, e
 se um `ccs_token` (fine-grained PAT, read-only, escopo só no repo
 `claude-code-setup`, expiração curta) foi passado, clona o repositório
-privado e restaura settings/memória/hooks também — tudo automático. Sem
-token, instala só o binário do Claude Code. O token nunca é gravado em
+privado e restaura tudo — não só o Claude Code (settings/memória/hooks), mas
+também: repositório apt do VS Code + todos os pacotes de
+`packages/apt-manual.txt` (+ `tlp` explicitamente, que fica marcado como
+"automático" e por isso não entra nessa lista), `system/` (zram,
+auto-upgrades, com os serviços habilitados), `dotfiles/`, e a config do GNOME
+(`desktop/gnome-settings.dconf`) — essa última não dá pra aplicar dentro do
+`late_command` (sem sessão gráfica/dbus no chroot), então fica agendada via
+autostart para o primeiro login gráfico, e se autodestrói depois de rodar.
+Sem token, instala só o binário do Claude Code. O token nunca é gravado em
 nenhum arquivo/repositório, só lido de `/proc/cmdline` durante a instalação;
 o `README.md` desse repositório instrui a revogar o token logo após o uso.
 **Ainda não testado num boot real** (só validado sintaticamente) — pendente
 validar numa VM antes de gravar num pendrive de verdade. Resumo salvo em
-`~/Documentos/instalador-claude-code.docx` a pedido do usuário, que indicou
-que vamos retomar esse teste/validação numa sessão futura.
+`~/Documentos/instalador-claude-code.docx` a pedido do usuário (docx
+desatualizado desde a extensão para pacotes/system/desktop/dotfiles — se for
+retomar, atualizar o docx também), que indicou que vamos retomar esse
+teste/validação numa sessão futura.
 
 **Why:** Hardware fraco (RAM/CPU) — relevante para não recomendar ferramentas
 pesadas (ex.: evitar várias apps Electron simultâneas) e para preferir
