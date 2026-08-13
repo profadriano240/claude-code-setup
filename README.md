@@ -16,10 +16,14 @@ memória de longo prazo (arquivos de texto sem segredos).
   preferências do usuário, contexto de projetos e feedback acumulado.
 - `hooks/sync-memory-repo.sh` — script do hook `PostToolUse` que mantém `memory/` sincronizada.
 - `hooks/sync-config-repo.sh` — script dos hooks `ConfigChange`/`SessionStart`/`PostToolUse(Bash)`
-  que mantém `config/` e `packages/` sincronizados.
+  que mantém `config/`, `packages/` e `hooks/` sincronizados (inclusive copiando qualquer novo
+  script de hook criado em `~/.claude/hooks/` para este repositório).
+- `hooks/tts-response.sh` — script do hook `Stop` que lê a última resposta do Claude em voz alta
+  (ver seção "Leitura de respostas em voz alta" abaixo).
 - `packages/apt-manual.txt` — pacotes apt instalados manualmente (`apt-mark showmanual`).
 - `packages/npm-global.txt` — pacotes npm globais.
-- `packages/pip-user.txt` / `packages/pipx.txt` — pacotes Python (vazios no snapshot atual).
+- `packages/pipx-list.txt` — pacotes pipx instalados (ex.: `piper-tts`, usado na leitura de
+  respostas em voz alta).
 - `system/zramswap` — config do zram (`/etc/default/zramswap`).
 - `system/20auto-upgrades` — habilita atualizações automáticas (`/etc/apt/apt.conf.d/20auto-upgrades`).
 - `desktop/gnome-settings.dconf` — configurações do GNOME (`dconf dump /`): teclado, touchpad,
@@ -44,11 +48,15 @@ cd claude-code-setup
 partir do `$HOME`) — o hook de auto-sync (abaixo) espera o repositório nesse caminho.
 
 O script:
-1. Reinstala os pacotes apt listados em `packages/apt-manual.txt` (pede sudo interativo).
+1. Reinstala os pacotes apt listados em `packages/apt-manual.txt`, mais `tlp` e `alsa-utils`
+   explicitamente (pede sudo interativo).
 2. Instala o Claude Code via instalador nativo (`curl -fsSL https://claude.ai/install.sh | bash`).
 3. Copia `config/settings.json` e `config/known_marketplaces.json` para `~/.claude/`.
 4. Copia `memory/` para `~/.claude/projects/-home-adriano/memory/`.
-5. Copia `hooks/sync-memory-repo.sh` e `hooks/sync-config-repo.sh` para `~/.claude/hooks/`.
+5. Copia todos os scripts de `hooks/*.sh` para `~/.claude/hooks/`.
+6. Reinstala os pacotes pipx listados em `packages/pipx-list.txt` (ex.: `piper-tts`).
+7. Baixa o modelo de voz pt_BR (`pt_BR-faber-medium`) do Piper TTS para
+   `~/.local/share/piper-voices/`.
 
 Depois disso, faça login (`claude` → `/login`) e gere uma nova chave SSH se necessário —
 essas partes são intencionalmente manuais por envolverem segredos.
@@ -78,6 +86,24 @@ Três hooks, configurados em `config/settings.json` e restaurados por `restore.s
 
 Em todos os casos, o script só faz `commit`+`push` se realmente houver diferença em relação
 ao que já está no repositório.
+
+## Leitura de respostas em voz alta
+
+Um hook `Stop`, configurado em `config/settings.json`, roda `hooks/tts-response.sh` toda vez
+que o Claude termina de responder (em background, via `async: true`, sem travar o chat). O
+script:
+
+1. Lê o `transcript_path` recebido no stdin do hook.
+2. Extrai o texto da última mensagem do assistant no transcript (JSONL) com `jq`.
+3. Remove marcações markdown básicas (`**`, `` ` ``, `#`, links).
+4. Sintetiza o áudio com o [Piper TTS](https://github.com/rhasspy/piper) (voz neural
+   `pt_BR-faber-medium`, instalado via `pipx install piper-tts`) e toca com `aplay` (pacote
+   `alsa-utils`).
+
+Dependências: pacote apt `alsa-utils`, pacote pipx `piper-tts` (`packages/pipx-list.txt`) e o
+modelo de voz em `~/.local/share/piper-voices/pt_BR-faber-medium.{onnx,onnx.json}` (baixado
+pelo `restore.sh`, não versionado no git por ser um binário de ~60 MB — é regenerável a
+qualquer momento com `python -m piper.download_voices`).
 
 ## Atualizar o backup
 
