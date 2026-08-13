@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-13T21:46:53.851Z
+  modified: 2026-08-13T21:47:16.802Z
 ---
 
 Notebook pessoal do Adriano: Debian 13 (trixie), instalação limpa feita em
@@ -52,31 +52,34 @@ repositório `claude-code-setup` inteiro fica sempre atualizado sem pedir.
 
 Criado em 2026-08-13: repositório público
 https://github.com/profadriano240/claude-code-installer (sem nenhum dado
-pessoal) com `preseed.cfg` + `late-command.sh` para instalar o Claude Code
-automaticamente durante uma instalação nova do Debian 13 a partir do pendrive
-oficial (sem modificar a ISO) — no boot do instalador, adicionar
-`url=https://raw.githubusercontent.com/profadriano240/claude-code-installer/master/preseed.cfg ccs_token=<TOKEN>`
+pessoal sensível) com `preseed.cfg` + `late-command.sh` para instalar o
+Claude Code automaticamente durante uma instalação nova do Debian 13 a
+partir do pendrive oficial (sem modificar a ISO) — no boot do instalador,
+adicionar `url=https://raw.githubusercontent.com/profadriano240/claude-code-installer/master/preseed.cfg`
 na linha de comando. O `late_command` roda no fim da instalação (via
-`in-target`), pergunta (com timeout de 20s, padrão sim) se deve instalar, e
-se um `ccs_token` (fine-grained PAT, read-only, escopo só no repo
-`claude-code-setup`, expiração curta) foi passado, clona o repositório
-privado e restaura tudo — não só o Claude Code (settings/memória/hooks), mas
-também: repositório apt do VS Code + todos os pacotes de
-`packages/apt-manual.txt` (+ `tlp` explicitamente, que fica marcado como
-"automático" e por isso não entra nessa lista), `system/` (zram,
-auto-upgrades, com os serviços habilitados), `dotfiles/`, e a config do GNOME
-(`desktop/gnome-settings.dconf`) — essa última não dá pra aplicar dentro do
-`late_command` (sem sessão gráfica/dbus no chroot), então fica agendada via
-autostart para o primeiro login gráfico, e se autodestrói depois de rodar.
-Sem token, instala só o binário do Claude Code. O token nunca é gravado em
-nenhum arquivo/repositório, só lido de `/proc/cmdline` durante a instalação;
-o `README.md` desse repositório instrui a revogar o token logo após o uso.
-**Ainda não testado num boot real** (só validado sintaticamente) — pendente
-validar numa VM antes de gravar num pendrive de verdade. Resumo salvo em
-`~/Documentos/instalador-claude-code.docx` a pedido do usuário (docx
-desatualizado desde a extensão para pacotes/system/desktop/dotfiles — se for
-retomar, atualizar o docx também), que indicou que vamos retomar esse
-teste/validação numa sessão futura.
+`in-target`) e, sem perguntar nada (100% automático), clona
+`claude-code-setup` e restaura tudo — Claude Code (settings/memória/hooks,
+inclusive leitura de voz), pacotes apt/pipx, `system/`, `dotfiles/`, GNOME
+(agendado pro primeiro login gráfico). Resumo salvo em
+`~/Documentos/instalador-claude-code.docx` (desatualizado desde então — se
+for retomar, atualizar o docx).
+
+**Atualizado em 2026-08-13 (mesma sessão que a leitura de voz):** o usuário
+pediu para eliminar completamente a edição manual da linha de boot também.
+Decisão tomada com confirmação explícita do usuário: `claude-code-setup`
+**passou de privado para público** (github repo edit --visibility public) —
+o README dele já garantia "sem credenciais/tokens", então isso elimina de
+vez o mecanismo de `ccs_token` (removido do `late-command.sh`/`preseed.cfg`,
+inclusive o prompt "Instalar agora? [S/n]", que virou automático sem
+perguntar). Consequência aceita pelo usuário: memória/preferências/hooks
+ficam publicamente legíveis por qualquer pessoa (não é credencial, mas é
+informação pessoal). Em andamento: remasterizar a ISO oficial do Debian
+13.6 netinst (scripts em `claude-code-installer/iso-build/`, usando
+`xorriso ... -boot_image any replay` para reaproveitar o boot BIOS+UEFI da
+ISO original) para publicar como GitHub Release — assim o usuário só baixa
+a ISO pronta e grava no pendrive, sem editar nada no boot.
+**Ainda não testado num boot real** (nem a versão anterior com token nem
+esta). Recomendado validar antes de gravar num pendrive de verdade.
 
 **Why:** Hardware fraco (RAM/CPU) — relevante para não recomendar ferramentas
 pesadas (ex.: evitar várias apps Electron simultâneas) e para preferir
