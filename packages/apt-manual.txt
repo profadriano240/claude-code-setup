@@ -45,6 +45,7 @@ gcc-14-base
 gettext-base
 gh
 git
+google-chrome-stable
 gpg
 grep
 groff-base
