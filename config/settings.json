@@ -29,6 +29,18 @@
         ]
       }
     ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash /home/adriano/.claude/hooks/tts-response.sh 2>/dev/null || true",
+            "statusMessage": "Lendo resposta em voz alta...",
+            "async": true
+          }
+        ]
+      }
+    ],
     "PostToolUse": [
       {
         "matcher": "Write|Edit",
