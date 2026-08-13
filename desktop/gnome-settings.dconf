@@ -1,0 +1,201 @@
+[org/gnome/Weather]
+locations=[<(uint32 2, <('Brasília', 'SBBR', true, [(-0.27692558046753113, -0.83659448230485101)], [(-0.27547112778867422, -0.83630360573171358)])>)>]
+window-height=494
+window-maximized=false
+window-width=439
+
+[org/gnome/control-center]
+last-panel='mouse'
+window-state=(980, 640, false)
+
+[org/gnome/deja-dup]
+backend='google'
+prompt-check='2026-08-13T14:01:16.526168Z'
+
+[org/gnome/desktop/a11y/applications]
+screen-keyboard-enabled=false
+
+[org/gnome/desktop/a11y/keyboard]
+stickykeys-enable=false
+
+[org/gnome/desktop/app-folders]
+folder-children=['System', 'Utilities', 'YaST', 'Pardus']
+
+[org/gnome/desktop/app-folders/folders/Pardus]
+categories=['X-Pardus-Apps']
+name='X-Pardus-Apps.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/System]
+apps=['nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.DiskUtility.desktop', 'im-config.desktop', 'org.gnome.Logs.desktop', 'org.freedesktop.MalcontentControl.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.SystemMonitor.desktop']
+name='X-GNOME-Shell-System.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+apps=['org.gnome.Connections.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.Loupe.desktop', 'org.gnome.seahorse.Application.desktop']
+name='X-GNOME-Shell-Utilities.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
+
+[org/gnome/desktop/background]
+color-shading-type='horizontal'
+picture-options='zoom'
+picture-uri='file:///usr/share/desktop-base/joy-inksplat-theme/wallpaper/gnome-background.xml'
+picture-uri-dark='file:///usr/share/desktop-base/joy-inksplat-theme/wallpaper/gnome-background.xml'
+primary-color='#0099cc'
+secondary-color='#006699'
+
+[org/gnome/desktop/break-reminders/eyesight]
+play-sound=true
+
+[org/gnome/desktop/break-reminders/movement]
+duration-seconds=uint32 300
+interval-seconds=uint32 1800
+play-sound=true
+
+[org/gnome/desktop/input-sources]
+mru-sources=[('xkb', 'br'), ('xkb', 'us')]
+sources=[('xkb', 'br')]
+xkb-options=@as []
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+cursor-blink-time=1478
+toolkit-accessibility=false
+
+[org/gnome/desktop/notifications]
+application-children=['org-gnome-software', 'gnome-power-panel', 'firefox-esr']
+
+[org/gnome/desktop/notifications/application/firefox-esr]
+application-id='firefox-esr.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
+
+[org/gnome/desktop/peripherals/keyboard]
+numlock-state=true
+
+[org/gnome/desktop/peripherals/touchpad]
+two-finger-scrolling-enabled=true
+
+[org/gnome/desktop/screensaver]
+color-shading-type='horizontal'
+picture-options='zoom'
+picture-uri='file:///usr/share/desktop-base/joy-inksplat-theme/wallpaper/gnome-background.xml'
+primary-color='#0099cc'
+secondary-color='#006699'
+
+[org/gnome/desktop/search-providers]
+sort-order=['org.gnome.Settings.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.Nautilus.desktop']
+
+[org/gnome/desktop/session]
+idle-delay=uint32 0
+
+[org/gnome/evolution-data-server]
+migrated=true
+
+[org/gnome/evolution]
+version='3.56.2'
+
+[org/gnome/evolution/calendar]
+use-24hour-format=true
+week-start-day-name='monday'
+work-day-friday=true
+work-day-monday=true
+work-day-saturday=false
+work-day-sunday=false
+work-day-thursday=true
+work-day-tuesday=true
+work-day-wednesday=true
+
+[org/gnome/evolution/mail]
+browser-close-on-reply-policy='ask'
+forward-style-name='attached'
+image-loading-policy='never'
+paned-size=1161347
+reply-style-name='quoted'
+to-do-bar-width=1150000
+
+[org/gnome/evolution/shell]
+default-component-id='mail'
+
+[org/gnome/evolution/shell/window]
+height=900
+maximized=true
+width=1440
+x=0
+y=0
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+migrated-gtk-settings=true
+search-filter-time-type='last_modified'
+
+[org/gnome/nautilus/window-state]
+initial-size=(890, 550)
+
+[org/gnome/settings-daemon/plugins/color]
+night-light-schedule-automatic=false
+
+[org/gnome/settings-daemon/plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Control><Alt>t'
+command='Abrir oTerminal'
+name='Terminal'
+
+[org/gnome/settings-daemon/plugins/power]
+idle-dim=false
+power-saver-profile-on-low-battery=true
+sleep-inactive-ac-type='nothing'
+sleep-inactive-battery-type='nothing'
+
+[org/gnome/shell]
+favorite-apps=['firefox-esr.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Terminal.desktop', 'libreoffice-writer.desktop', 'libreoffice-calc.desktop']
+last-selected-power-profile='power-saver'
+welcome-dialog-last-shown-version='48.7'
+
+[org/gnome/shell/weather]
+automatic-location=true
+locations=[<(uint32 2, <('Brasília', 'SBBR', true, [(-0.27692558046753113, -0.83659448230485101)], [(-0.27547112778867422, -0.83630360573171358)])>)>]
+
+[org/gnome/shell/world-clocks]
+locations=@av []
+
+[org/gnome/software]
+check-timestamp=int64 1786625746
+first-run=false
+packagekit-historical-updates-timestamp=uint64 1786629510
+update-notification-timestamp=int64 1786625765
+
+[org/gnome/terminal/legacy]
+shortcuts-enabled=true
+
+[org/gnome/terminal/legacy/keybindings]
+new-window='<Primary>t'
+
+[org/gtk/gtk4/settings/file-chooser]
+show-hidden=false
+sort-directories-first=false
+
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=157
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+window-position=(26, 23)
+window-size=(1231, 689)
