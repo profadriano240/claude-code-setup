@@ -12,7 +12,19 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo \"$(date) configchange fired: $(cat)\" >> /tmp/claude-configchange-check.txt"
+            "command": "echo \"$(date) configchange fired\" >> /tmp/claude-hook-check.txt; bash /home/adriano/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
+            "statusMessage": "Sincronizando config/ com claude-code-setup..."
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash /home/adriano/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
+            "statusMessage": "Verificando sincronização de config/packages..."
           }
         ]
       }
@@ -25,6 +37,16 @@
             "type": "command",
             "command": "bash /home/adriano/.claude/hooks/sync-memory-repo.sh 2>/dev/null || true",
             "statusMessage": "Sincronizando memória com claude-code-setup..."
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash /home/adriano/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
+            "statusMessage": "Verificando pacotes instalados..."
           }
         ]
       }
