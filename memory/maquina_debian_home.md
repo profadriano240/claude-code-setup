@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-13T21:15:37.457Z
+  modified: 2026-08-13T21:46:53.851Z
 ---
 
 Notebook pessoal do Adriano: Debian 13 (trixie), instalação limpa feita em
@@ -89,11 +89,22 @@ root, pedir ao usuário para rodar num terminal aberto na tela dele (ou via
 prefixo `!` no chat, que também não passa senha). Preferir soluções leves e
 gratuitas por padrão.
 
-Nesta máquina o usuário não digita `sudo` diretamente — o comando que ele usa
-no dia a dia é `r -` (alias/wrapper próprio). Ao sugerir comandos com
-privilégio de root para ele copiar e colar, considerar mencionar `r -` como
-alternativa ao `sudo` explícito, já que é o que ele realmente usa no
-terminal.
+**Correção (2026-08-13):** o usuário disse por voz/áudio "não rodo sudo, rodo
+`r -`" — isso foi mal-entendido (provavelmente erro de transcrição de voz).
+Na prática ele digita `su -` (troca pra shell de root) e depois roda os
+comandos direto, sem prefixo. Confirmado ao vivo: pedi pra ele rodar
+`r - apt install ...` e o `r` expandiu (alias real dele, motivo/origem
+desconhecidos) para `rm -f packages.microsoft.gpg`, quase apagando esse
+arquivo sem querer — o comando falhou por sorte (erro de opção inválida do
+`rm` antes de tocar em arquivos). **Nunca mais sugerir `r -` como
+equivalente de sudo.** Ao pedir para o usuário rodar algo como root, pedir
+para ele usar `su -` e então colar o comando sem prefixo (ou `sudo`
+diretamente, que também funciona quando ele digita a senha interativamente
+no terminal dele). Vale sugerir a ele investigar/remover esse alias `r`
+perigoso do shell interativo (não achei a definição em `~/.bashrc`,
+`~/.bash_aliases`, `~/.profile`, `~/.zshrc` nem em `/etc/bash.bashrc` —
+pode estar em dotfiles de root, já que ele estava com `su -` ativo quando
+o alias disparou).
 
 Criado em 2026-08-13: leitura das respostas do Claude em voz alta, via hook
 `Stop` (`~/.claude/hooks/tts-response.sh`, `async: true`) configurado em
