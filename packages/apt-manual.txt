@@ -34,6 +34,7 @@ dmidecode
 doc-debian
 dpkg
 e2fsprogs
+espeak-ng
 fdisk
 file
 findutils
