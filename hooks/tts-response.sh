@@ -1,7 +1,7 @@
 #!/bin/bash
 # Lê a última resposta do assistant no transcript e fala em voz alta via Piper TTS.
-PIPER_BIN=/home/adriano/.local/bin/piper
-PIPER_MODEL=/home/adriano/.local/share/piper-voices/pt_BR-faber-medium.onnx
+PIPER_BIN="$HOME/.local/bin/piper"
+PIPER_MODEL="$HOME/.local/share/piper-voices/pt_BR-faber-medium.onnx"
 
 input=$(cat)
 transcript_path=$(echo "$input" | jq -r '.transcript_path // empty')
