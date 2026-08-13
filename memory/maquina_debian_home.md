@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-13T15:09:29.033Z
+  modified: 2026-08-13T15:09:37.685Z
 ---
 
 Notebook pessoal do Adriano: Debian 13 (trixie), instalação limpa feita em
@@ -60,6 +60,10 @@ privado e restaura settings/memória/hooks também — tudo automático. Sem
 token, instala só o binário do Claude Code. O token nunca é gravado em
 nenhum arquivo/repositório, só lido de `/proc/cmdline` durante a instalação;
 o `README.md` desse repositório instrui a revogar o token logo após o uso.
+**Ainda não testado num boot real** (só validado sintaticamente) — pendente
+validar numa VM antes de gravar num pendrive de verdade. Resumo salvo em
+`~/Documentos/instalador-claude-code.docx` a pedido do usuário, que indicou
+que vamos retomar esse teste/validação numa sessão futura.
 
 **Why:** Hardware fraco (RAM/CPU) — relevante para não recomendar ferramentas
 pesadas (ex.: evitar várias apps Electron simultâneas) e para preferir
