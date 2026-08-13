@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-13T14:32:38.059Z
+  modified: 2026-08-13T15:03:39.675Z
 ---
 
 Notebook pessoal do Adriano: Debian 13 (trixie), instalação limpa feita em
