@@ -18,10 +18,11 @@ echo "==> Restaurando memória de longo prazo..."
 mkdir -p ~/.claude/projects/-home-adriano/memory
 cp -r memory/* ~/.claude/projects/-home-adriano/memory/
 
-echo "==> Restaurando hook de auto-sync da memória..."
+echo "==> Restaurando hooks de auto-sync (memória e config/packages)..."
 mkdir -p ~/.claude/hooks
 cp hooks/sync-memory-repo.sh ~/.claude/hooks/sync-memory-repo.sh
-chmod +x ~/.claude/hooks/sync-memory-repo.sh
+cp hooks/sync-config-repo.sh ~/.claude/hooks/sync-config-repo.sh
+chmod +x ~/.claude/hooks/sync-memory-repo.sh ~/.claude/hooks/sync-config-repo.sh
 if [ "$(pwd)" != "$HOME/claude-code-setup" ]; then
   echo "AVISO: este clone não está em ~/claude-code-setup — o hook de auto-sync"
   echo "        (referenciado em config/settings.json) espera o repo exatamente ali."
