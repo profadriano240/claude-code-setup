@@ -12,7 +12,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash /home/adriano/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
+            "command": "bash $HOME/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
             "statusMessage": "Sincronizando config/ com claude-code-setup..."
           }
         ]
@@ -23,7 +23,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash /home/adriano/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
+            "command": "bash $HOME/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
             "statusMessage": "Verificando sincronização de config/packages..."
           }
         ]
@@ -34,7 +34,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash /home/adriano/.claude/hooks/tts-response.sh 2>/dev/null || true",
+            "command": "bash $HOME/.claude/hooks/tts-response.sh 2>/dev/null || true",
             "statusMessage": "Lendo resposta em voz alta...",
             "async": true
           }
@@ -47,7 +47,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash /home/adriano/.claude/hooks/sync-memory-repo.sh 2>/dev/null || true",
+            "command": "bash $HOME/.claude/hooks/sync-memory-repo.sh 2>/dev/null || true",
             "statusMessage": "Sincronizando memória com claude-code-setup..."
           }
         ]
@@ -57,7 +57,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash /home/adriano/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
+            "command": "bash $HOME/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
             "statusMessage": "Verificando pacotes instalados..."
           }
         ]
