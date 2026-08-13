@@ -5,7 +5,7 @@
     "mode": "hold"
   },
   "theme": "auto",
-  "voiceEnabled": false,
+  "voiceEnabled": true,
   "hooks": {
     "ConfigChange": [
       {
