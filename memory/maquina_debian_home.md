@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-13T14:32:30.215Z
+  modified: 2026-08-13T14:32:38.059Z
 ---
 
 Notebook pessoal do Adriano: Debian 13 (trixie), instalação limpa feita em
@@ -31,9 +31,16 @@ continuam manuais na restauração.
 **Why:** o usuário quer que uma reinstalação futura do Claude Code já venha
 configurada como está hoje, sem partir do zero.
 
-**How to apply:** ao gerar novas memórias ou mudar `settings.json`/plugins
-relevantes, oferecer atualizar esse repositório (regenerar `config/`,
-`memory/`, `packages/` e commitar/push).
+**How to apply:** ao mudar `settings.json`/plugins/pacotes relevantes,
+oferecer atualizar as pastas `config/`/`packages/` desse repositório e
+commitar/push (a pasta `memory/` já sincroniza sozinha, ver abaixo).
+
+Criado em 2026-08-13: hook `PostToolUse` (matcher `Write|Edit`) em
+`~/.claude/settings.json`, rodando `~/.claude/hooks/sync-memory-repo.sh`.
+Sempre que um arquivo em `~/.claude/projects/-home-adriano/memory/` é escrito,
+o script copia a pasta inteira para `~/claude-code-setup/memory/` (clone local
+persistente do repo, fora do scratchpad) e faz commit+push automático se
+houver diferença. `config/` e `packages/` continuam manuais.
 
 **Why:** Hardware fraco (RAM/CPU) — relevante para não recomendar ferramentas
 pesadas (ex.: evitar várias apps Electron simultâneas) e para preferir
