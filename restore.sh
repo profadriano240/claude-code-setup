@@ -16,7 +16,9 @@ VSCODE_EOF
 
 echo "==> Reinstalando pacotes apt manuais (pede senha sudo)..."
 sudo apt-get update
-xargs -a packages/apt-manual.txt sudo apt-get install -y
+# tlp costuma ficar marcado como "automatico" (dependencia), por isso nao
+# aparece em apt-manual.txt - garantido explicitamente aqui.
+sudo apt-get install -y tlp $(cat packages/apt-manual.txt)
 
 echo "==> Restaurando configurações de sistema (zram, auto-upgrades)..."
 sudo cp system/zramswap /etc/default/zramswap
