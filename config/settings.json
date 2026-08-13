@@ -45,7 +45,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo \"$(date) bash-matcher fired\" >> /tmp/claude-hook-check2.txt; bash /home/adriano/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
+            "command": "bash /home/adriano/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
             "statusMessage": "Verificando pacotes instalados..."
           }
         ]
