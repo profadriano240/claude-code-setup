@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-13T21:06:03.251Z
+  modified: 2026-08-13T21:15:37.457Z
 ---
 
 Notebook pessoal do Adriano: Debian 13 (trixie), instalação limpa feita em
@@ -94,3 +94,33 @@ no dia a dia é `r -` (alias/wrapper próprio). Ao sugerir comandos com
 privilégio de root para ele copiar e colar, considerar mencionar `r -` como
 alternativa ao `sudo` explícito, já que é o que ele realmente usa no
 terminal.
+
+Criado em 2026-08-13: leitura das respostas do Claude em voz alta, via hook
+`Stop` (`~/.claude/hooks/tts-response.sh`, `async: true`) configurado em
+`~/.claude/settings.json`. O script extrai o texto da última resposta do
+assistant do `transcript_path` recebido no stdin, limpa marcações markdown
+básicas e sintetiza com **Piper TTS** (voz neural `pt_BR-faber-medium`,
+instalada via `pipx install piper-tts`, modelo em
+`~/.local/share/piper-voices/`), tocando com `aplay` (pacote `alsa-utils`).
+Testamos primeiro `espeak-ng` (robótico demais, rejeitado pelo usuário) antes
+de trocar para o Piper (aprovado — "ficou bem melhor").
+
+**Why:** usuário pediu uma forma de ouvir as respostas em voz alta, já que
+está acostumado a interagir por voz (ver `voiceEnabled`/`voice.mode: hold` já
+existentes em `settings.json`, que são para ditado de entrada, não leitura de
+saída — funcionalidade complementar e distinta).
+
+**How to apply:** se o usuário pedir para desativar/pausar a leitura em voz
+alta, remover ou comentar o hook `Stop` em `settings.json` (não precisa
+desinstalar Piper/alsa-utils). Se pedir para trocar a voz, há outros modelos
+`pt_BR-*` em https://github.com/rhasspy/piper — basta baixar com
+`python -m piper.download_voices` e trocar o caminho `PIPER_MODEL` no script.
+
+Todo o setup (hook, pacote pipx, instruções de reinstalação do modelo de voz)
+já foi propagado para os repositórios `claude-code-setup` (auto-sync captura
+`hooks/*.sh` e `packages/pipx-list.txt` automaticamente agora — o script de
+sync foi generalizado para copiar qualquer `.sh` novo em `~/.claude/hooks/`,
+não só os dois hooks de auto-sync originais) e `claude-code-installer`
+(`late-command.sh` atualizado para reinstalar pacotes pipx e baixar o modelo
+de voz no primeiro boot). O modelo de voz (~60 MB, binário) não é versionado
+no git — é sempre baixado de novo pelo `restore.sh`/`late-command.sh`.
