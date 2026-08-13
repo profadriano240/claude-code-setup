@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-13T15:23:58.140Z
+  modified: 2026-08-13T15:24:12.041Z
 ---
 
 Notebook pessoal do Adriano: Debian 13 (trixie), instalação limpa feita em
@@ -38,13 +38,17 @@ o script copia a pasta inteira para `~/claude-code-setup/memory/` (clone local
 persistente do repo, fora do scratchpad) e faz commit+push automático se
 houver diferença.
 
-`config/` e `packages/` também sincronizam sozinhos agora, via
-`~/.claude/hooks/sync-config-repo.sh`, disparado por três hooks: `ConfigChange`
-(qualquer mudança em `settings.json`, por qualquer via), `PostToolUse`/`Bash`
-(filtra internamente por comandos de instalação/remoção de pacotes) e
-`SessionStart` (rede de segurança, ex.: `known_marketplaces.json` atualizado
-sozinho pelo Claude Code). Ou seja, o repositório `claude-code-setup` inteiro
-(`memory/`, `config/`, `packages/`) fica sempre atualizado sem pedir.
+`config/`, `packages/`, `system/`, `desktop/` e `dotfiles/` também sincronizam
+sozinhos agora, via `~/.claude/hooks/sync-config-repo.sh`, disparado por três
+hooks: `ConfigChange` (qualquer mudança em `settings.json`, por qualquer via),
+`PostToolUse`/`Bash` (filtra internamente por comandos de instalação/remoção
+de pacotes) e `SessionStart` (rede de segurança, ex.: `known_marketplaces.json`
+atualizado sozinho pelo Claude Code). `system/` = `/etc/default/zramswap` +
+`/etc/apt/apt.conf.d/20auto-upgrades`; `desktop/` = `dconf dump /` (config do
+GNOME, sem senhas/tokens); `dotfiles/` = `.bashrc`/`.gitconfig`/`.profile`.
+`tlp.conf` e extensões/config do VS Code ficaram de fora de propósito (o
+primeiro é 100% default, o segundo estava vazio na captura). Ou seja, o
+repositório `claude-code-setup` inteiro fica sempre atualizado sem pedir.
 
 Criado em 2026-08-13: repositório público
 https://github.com/profadriano240/claude-code-installer (sem nenhum dado
