@@ -2,3 +2,4 @@
 - [Máquina Debian pessoal](maquina_debian_home.md) — notebook fraco (Celeron N4020, 3,6GB RAM), estado de ferramentas instaladas, sudo não-interativo sempre falha
 - [Economia de tokens](feedback_economia_tokens.md) — usuário pede sempre economizar tokens: usar browser_batch, evitar screenshots/confirmações redundantes
 - [Diário de Classe SEDUC-PA](referencia_diario_classe_seduc_pa.md) — como registrar frequência no www4.seduc.pa.gov.br; URL/IDs da turma, passo a passo, botão "Todos"
+- [Lançamento de notas em paralelo](projeto_lancamento_notas_seduc.md) — outra sessão de terminal já cuida do lançamento de notas no mesmo diário; não duplicar aqui sem confirmar
