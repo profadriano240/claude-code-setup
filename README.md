@@ -20,7 +20,17 @@ memória de longo prazo (arquivos de texto sem segredos).
 - `packages/apt-manual.txt` — pacotes apt instalados manualmente (`apt-mark showmanual`).
 - `packages/npm-global.txt` — pacotes npm globais.
 - `packages/pip-user.txt` / `packages/pipx.txt` — pacotes Python (vazios no snapshot atual).
+- `system/zramswap` — config do zram (`/etc/default/zramswap`).
+- `system/20auto-upgrades` — habilita atualizações automáticas (`/etc/apt/apt.conf.d/20auto-upgrades`).
+- `desktop/gnome-settings.dconf` — configurações do GNOME (`dconf dump /`): teclado, touchpad,
+  atalhos customizados, terminal, notificações etc. Sem senhas/tokens (Wi-Fi e afins ficam no
+  keyring do sistema, não no dconf).
+- `dotfiles/bashrc`, `dotfiles/gitconfig`, `dotfiles/profile` — cópias de `~/.bashrc`,
+  `~/.gitconfig`, `~/.profile`.
 - `restore.sh` — script de restauração.
+
+**Não incluído de propósito:** `tlp.conf` (fica 100% no valor padrão do pacote, nada para
+restaurar) e extensões/configurações do VS Code (nenhuma instalada no momento da captura).
 
 ## Como restaurar numa máquina nova
 
@@ -52,7 +62,7 @@ para este repositório (clonado em `~/claude-code-setup`) e faz `commit`+`push` 
 quando há mudança. Ou seja, `memory/` neste repositório fica sempre atualizada sozinha —
 não precisa pedir para sincronizar manualmente.
 
-## Auto-sync de config/ e packages/
+## Auto-sync de config/, packages/, system/, desktop/ e dotfiles/
 
 Três hooks, configurados em `config/settings.json` e restaurados por `restore.sh`, rodam
 `hooks/sync-config-repo.sh`:
