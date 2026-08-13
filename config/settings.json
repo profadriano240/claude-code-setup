@@ -12,7 +12,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo \"$(date) configchange fired\" >> /tmp/claude-hook-check.txt; bash /home/adriano/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
+            "command": "bash /home/adriano/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
             "statusMessage": "Sincronizando config/ com claude-code-setup..."
           }
         ]
