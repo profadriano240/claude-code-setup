@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-13T21:47:16.802Z
+  modified: 2026-08-13T23:11:25.106Z
 ---
 
 Notebook pessoal do Adriano: Debian 13 (trixie), instalação limpa feita em
@@ -138,3 +138,53 @@ não só os dois hooks de auto-sync originais) e `claude-code-installer`
 (`late-command.sh` atualizado para reinstalar pacotes pipx e baixar o modelo
 de voz no primeiro boot). O modelo de voz (~60 MB, binário) não é versionado
 no git — é sempre baixado de novo pelo `restore.sh`/`late-command.sh`.
+
+Concluído em 2026-08-13: ISO remasterizada do Debian 13.6.0 (amd64 netinst)
+publicada como GitHub Release em
+https://github.com/profadriano240/claude-code-installer/releases/tag/debian-13.6.0-v1
+(940 MB, asset `claude-code-debian-13.6.0-amd64.iso` + `.sha256`). Objetivo:
+gravar num pendrive e instalar sem editar nada na tela de boot — o
+`late_command` (que instala Claude Code + toda a config pessoal) já dispara
+sozinho. Gerada por `claude-code-installer/iso-build/remaster.sh` (script
+versionado no repo, ISO em si fica só como asset de Release, não no git —
+`.gitignore` cobre isso). Duas armadilhas encontradas e corrigidas ao gerar:
+(1) a entrada realmente padrão do menu isolinux é `gtk.cfg`
+("Graphical install", flag `menu default`), não `txt.cfg` — o script precisa
+editar todos os `isolinux/*.cfg`, não só um; (2) remapear só uma *parte* da
+árvore (`-map dir /caminho` ou `-boot_image any keep/replay`) sobre a ISO
+original corrompe a estrutura híbrida (perde a flag isohybrid, cabeçalho de
+backup do GPT fica inconsistente) porque desloca `boot/grub/efi.img` da LBA
+exata que o MBR/GPT/APM hardcodeiam — a solução robusta é extrair a ISO
+inteira, editar os `.cfg`, e reconstruir do zero com
+`xorriso -as mkisofs` usando os parâmetros de boot exatos obtidos via
+`xorriso -indev <iso> -report_el_torito as_mkisofs` (não usar `-boot_image
+... keep/replay` pra esse caso). ISO cresce de ~755MB pra ~940MB nesse
+processo (extração via `-osirrox on` não preserva hardlinks internos do
+ISO9660 original) — não é um problema funcional, só estético.
+
+Validação feita: conteúdo dos `.cfg` editados confirmado (contém
+`url=.../preseed.cfg`); estrutura de boot (isohybrid/GPT/El Torito)
+verificada sem avisos via `xorriso -report_system_area`; boot real testado
+via QEMU (kernel+initrd extraídos da ISO, `-append` simulando o parâmetro
+injetado, sem KVM porque o usuário não está no grupo `kvm`) — kernel bootou,
+recebeu o parâmetro `url=` corretamente, e o instalador chegou até a tela
+"Select a language" (esperado, já que o preseed só configura o
+`late_command`, sem automatizar idioma/partição/usuário). Não foi possível
+(nem necessário) simular o `late_command` rodando de fato sem clicar
+manualmente por toda a instalação.
+
+**Decisão importante desta sessão:** `claude-code-setup` passou de privado
+pra público (confirmado explicitamente pelo usuário) especificamente pra
+viabilizar isso — sem token, o boot pode ser 100% automático e a ISO fica
+válida pra sempre (não expira). Ver bloco acima sobre a remoção do
+`ccs_token`.
+
+**Preferência de comunicação (2026-08-13):** durante uploads/tarefas longas
+em background, o usuário pediu primeiro progresso em tempo real, depois
+mudou de ideia e pediu silêncio total até a conclusão ("não precisa mais me
+informar o progresso"). Lição: para "avise só quando terminar", usar espera
+de notificação única (`Bash` com `run_in_background` + loop `until`), não o
+`Monitor` (que notifica a cada linha/iteração — bom só quando o pedido é
+acompanhamento contínuo). Também pediu (mensagem separada) que eu sempre
+"fale" nas respostas — já coberto pelo hook `Stop` de leitura em voz alta,
+que dispara em toda resposta automaticamente, nada adicional necessário.
