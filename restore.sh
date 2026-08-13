@@ -45,8 +45,10 @@ cp config/settings.json ~/.claude/settings.json
 cp config/known_marketplaces.json ~/.claude/plugins/known_marketplaces.json
 
 echo "==> Restaurando memória de longo prazo..."
-mkdir -p ~/.claude/projects/-home-adriano/memory
-cp -r memory/* ~/.claude/projects/-home-adriano/memory/
+# nome da pasta = $HOME com "/" trocado por "-" (convenção do Claude Code)
+proj_dir="$(printf '%s' "$HOME" | sed 's,/,-,g')"
+mkdir -p ~/.claude/projects/"$proj_dir"/memory
+cp -r memory/* ~/.claude/projects/"$proj_dir"/memory/
 
 echo "==> Restaurando hooks (auto-sync, leitura de respostas em voz alta, etc.)..."
 mkdir -p ~/.claude/hooks

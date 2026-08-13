@@ -12,7 +12,7 @@ memória de longo prazo (arquivos de texto sem segredos).
 
 - `config/settings.json` — configurações do Claude Code (idioma, tema, modo de voz, hooks).
 - `config/known_marketplaces.json` — marketplaces de plugins instaladas.
-- `memory/` — memória de longo prazo do Claude Code (`~/.claude/projects/-home-adriano/memory/`):
+- `memory/` — memória de longo prazo do Claude Code (`~/.claude/projects/$(echo $HOME | sed 's,/,-,g')/memory/`):
   preferências do usuário, contexto de projetos e feedback acumulado.
 - `hooks/sync-memory-repo.sh` — script do hook `PostToolUse` que mantém `memory/` sincronizada.
 - `hooks/sync-config-repo.sh` — script dos hooks `ConfigChange`/`SessionStart`/`PostToolUse(Bash)`
@@ -52,7 +52,7 @@ O script:
    explicitamente (pede sudo interativo).
 2. Instala o Claude Code via instalador nativo (`curl -fsSL https://claude.ai/install.sh | bash`).
 3. Copia `config/settings.json` e `config/known_marketplaces.json` para `~/.claude/`.
-4. Copia `memory/` para `~/.claude/projects/-home-adriano/memory/`.
+4. Copia `memory/` para `~/.claude/projects/$(echo $HOME | sed 's,/,-,g')/memory/`.
 5. Copia todos os scripts de `hooks/*.sh` para `~/.claude/hooks/`.
 6. Reinstala os pacotes pipx listados em `packages/pipx-list.txt` (ex.: `piper-tts`).
 7. Baixa o modelo de voz pt_BR (`pt_BR-faber-medium`) do Piper TTS para
@@ -65,7 +65,7 @@ essas partes são intencionalmente manuais por envolverem segredos.
 
 Um hook `PostToolUse` (matcher `Write|Edit`), configurado em `config/settings.json` e
 restaurado por `restore.sh`, roda `hooks/sync-memory-repo.sh` sempre que o Claude Code
-escreve num arquivo de memória. O script copia `~/.claude/projects/-home-adriano/memory/`
+escreve num arquivo de memória. O script copia `~/.claude/projects/$(echo $HOME | sed 's,/,-,g')/memory/`
 para este repositório (clonado em `~/claude-code-setup`) e faz `commit`+`push` automático
 quando há mudança. Ou seja, `memory/` neste repositório fica sempre atualizada sozinha —
 não precisa pedir para sincronizar manualmente.
