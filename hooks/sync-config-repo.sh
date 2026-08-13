@@ -7,11 +7,15 @@ event="$(jq -r '.hook_event_name // empty' <<<"$payload")"
 tool_name="$(jq -r '.tool_name // empty' <<<"$payload")"
 
 do_sync() {
-  mkdir -p "$REPO_DIR/config" "$REPO_DIR/packages" "$REPO_DIR/system" "$REPO_DIR/desktop" "$REPO_DIR/dotfiles"
+  mkdir -p "$REPO_DIR/config" "$REPO_DIR/packages" "$REPO_DIR/system" "$REPO_DIR/desktop" "$REPO_DIR/dotfiles" "$REPO_DIR/hooks"
   cp "$HOME/.claude/settings.json" "$REPO_DIR/config/settings.json" 2>/dev/null
   cp "$HOME/.claude/plugins/known_marketplaces.json" "$REPO_DIR/config/known_marketplaces.json" 2>/dev/null
   LC_ALL=C apt-mark showmanual 2>/dev/null | LC_ALL=C sort > "$REPO_DIR/packages/apt-manual.txt"
   npm ls -g --depth=0 > "$REPO_DIR/packages/npm-global.txt" 2>/dev/null
+  pipx list --short 2>/dev/null | awk '{print $1}' | LC_ALL=C sort > "$REPO_DIR/packages/pipx-list.txt"
+
+  # copia todos os scripts de hook (nao so os de auto-sync) para o repo
+  find "$HOME/.claude/hooks" -maxdepth 1 -name '*.sh' -exec cp {} "$REPO_DIR/hooks/" \; 2>/dev/null
 
   cp /etc/default/zramswap "$REPO_DIR/system/zramswap" 2>/dev/null
   cp /etc/apt/apt.conf.d/20auto-upgrades "$REPO_DIR/system/20auto-upgrades" 2>/dev/null
@@ -25,7 +29,7 @@ do_sync() {
   cp "$HOME/.profile" "$REPO_DIR/dotfiles/profile" 2>/dev/null
 
   cd "$REPO_DIR" || return 0
-  git add config/ packages/ system/ desktop/ dotfiles/
+  git add config/ packages/ system/ desktop/ dotfiles/ hooks/
   git diff --cached --quiet && return 0
   git commit -q -m "Auto-sync config/packages/system/desktop/dotfiles ($(date -Iseconds))"
   git push -q
