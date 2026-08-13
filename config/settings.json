@@ -5,5 +5,19 @@
     "mode": "hold"
   },
   "theme": "auto",
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash /home/adriano/.claude/hooks/sync-memory-repo.sh 2>/dev/null || true",
+            "statusMessage": "Sincronizando memória com claude-code-setup..."
+          }
+        ]
+      }
+    ]
+  }
 }
