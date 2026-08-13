@@ -7,6 +7,16 @@
   "theme": "auto",
   "voiceEnabled": true,
   "hooks": {
+    "ConfigChange": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"$(date) configchange fired: $(cat)\" >> /tmp/claude-configchange-check.txt"
+          }
+        ]
+      }
+    ],
     "PostToolUse": [
       {
         "matcher": "Write|Edit",
