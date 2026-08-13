@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-13T15:24:30.950Z
+  modified: 2026-08-13T21:06:03.251Z
 ---
 
 Notebook pessoal do Adriano: Debian 13 (trixie), instalação limpa feita em
@@ -88,3 +88,9 @@ não-interativas (pede senha, sem TTY) — para qualquer ação que precise de
 root, pedir ao usuário para rodar num terminal aberto na tela dele (ou via
 prefixo `!` no chat, que também não passa senha). Preferir soluções leves e
 gratuitas por padrão.
+
+Nesta máquina o usuário não digita `sudo` diretamente — o comando que ele usa
+no dia a dia é `r -` (alias/wrapper próprio). Ao sugerir comandos com
+privilégio de root para ele copiar e colar, considerar mencionar `r -` como
+alternativa ao `sudo` explícito, já que é o que ele realmente usa no
+terminal.
