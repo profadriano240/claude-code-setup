@@ -5,22 +5,6 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "/home/adriano/.claude/plugins/marketplaces/claude-plugins-official",
-    "lastUpdated": "2026-07-24T17:03:58.398Z"
-  },
-  "superpowers-marketplace": {
-    "source": {
-      "source": "github",
-      "repo": "obra/superpowers-marketplace"
-    },
-    "installLocation": "/home/adriano/.claude/plugins/marketplaces/superpowers-marketplace",
-    "lastUpdated": "2026-07-24T15:31:11.051Z"
-  },
-  "caveman": {
-    "source": {
-      "source": "github",
-      "repo": "JuliusBrussee/caveman"
-    },
-    "installLocation": "/home/adriano/.claude/plugins/marketplaces/caveman",
-    "lastUpdated": "2026-07-24T15:43:11.903Z"
+    "lastUpdated": "2026-08-13T21:09:27.913Z"
   }
 }
