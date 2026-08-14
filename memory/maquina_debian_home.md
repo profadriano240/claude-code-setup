@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-13T23:11:25.106Z
+  modified: 2026-08-14T17:52:07.494Z
 ---
 
 Notebook pessoal do Adriano: Debian 13 (trixie), instalação limpa feita em
@@ -188,3 +188,40 @@ de notificação única (`Bash` com `run_in_background` + loop `until`), não o
 acompanhamento contínuo). Também pediu (mensagem separada) que eu sempre
 "fale" nas respostas — já coberto pelo hook `Stop` de leitura em voz alta,
 que dispara em toda resposta automaticamente, nada adicional necessário.
+
+**Conflito de git resolvido (2026-08-14):** os hooks `sync-config-repo.sh` e
+`sync-memory-repo.sh` sempre usam o caminho fixo `$HOME/claude-code-setup`
+(confirmado por grep no código dos dois) — não existe clone separado por
+sessão, é o mesmo diretório físico no disco pra qualquer sessão do Claude
+Code nesta máquina. Mesmo assim, duas sessões rodando em paralelo (~12h20 e
+~14h47) geraram commits de auto-sync divergentes (a segunda não tinha o
+fetch da primeira), e o push foi rejeitado. Rebase resolveu automaticamente
+a maioria dos arquivos, mas `packages/apt-manual.txt` deu conflito de
+verdade porque as duas sessões capturaram `apt-mark showmanual` em momentos
+diferentes.
+
+**Como resolvi:** em vez de mesclar as duas listas manualmente (arriscado —
+reintroduziria pacotes já removidos entre as duas capturas), regenerei o
+arquivo direto do estado real atual da máquina (`apt-mark showmanual`), que
+é exatamente o que o hook faz normalmente. Validado depois: `bash -n
+restore.sh` (sintaxe OK) e conferência de que o arquivo não tinha sobrado
+marcador de conflito nem linha em branco — `restore.sh` consome esse
+arquivo via `$(cat packages/apt-manual.txt)` (word-split simples, funciona
+porque nomes de pacote não têm espaço).
+
+**Why:** arquivos gerados automaticamente a partir do estado real do
+sistema (listas de pacotes, `dconf dump`, etc.) não devem ser resolvidos
+por merge textual em caso de conflito — a fonte de verdade é sempre
+"regerar do estado atual", não "unir os dois lados". A própria lista em
+conflito já estava suspeita (tinha `ubuntu-desktop-minimal`,
+`libreoffice26.2-*` — pacotes que não fazem sentido pra este Debian
+minimal), então regenerar também corrigiu uma captura ruim anterior.
+
+**How to apply:** se aparecer um conflito de git em `claude-code-setup`
+de novo (comum quando duas sessões auto-sincronizam em paralelo), preferir
+sempre regenerar o arquivo gerado (pacotes apt/npm/pipx, `dconf dump`,
+etc.) a partir do comando de origem, em vez de editar manualmente os
+marcadores `<<<<<<<`/`=======`/`>>>>>>>`. Atenção: comandos como
+`apt-mark showmanual` batem no filtro `*apt-mark*` do hook
+`PostToolUse`/Bash em `sync-config-repo.sh` — rodar esse comando dentro de
+uma sessão já dispara um novo auto-commit/push sozinho.
