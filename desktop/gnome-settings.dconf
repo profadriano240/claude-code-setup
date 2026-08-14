@@ -176,7 +176,7 @@ locations=@av []
 [org/gnome/software]
 check-timestamp=int64 1786729682
 first-run=false
-packagekit-historical-updates-timestamp=uint64 1786629510
+packagekit-historical-updates-timestamp=uint64 1786730424
 update-notification-timestamp=int64 1786625765
 
 [org/gnome/terminal/legacy]
