@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-12T19:29:40.914Z
+  modified: 2026-08-14T17:56:16.528Z
 ---
 
 Adriano (usuário GitHub @profadriano240) tem um repositório privado **cotacoes-b3**
@@ -14,10 +14,19 @@ GitHub Actions (não dependem do notebook estar ligado):
 
 - **cotacoes_whatsapp.py**: envia cotações de VALE3, BBAS3, ITUB4 (ações) e RBVA11,
   GTWR11, LVBI11, HSML11, GGRC11 (FIIs) via brapi.dev (plano free, 1 ativo por
-  requisição) — roda 07:45 e 18:00 (seg-sex, horário de Brasília).
+  requisição) — roda 07:15 e 17:30 (seg-sex, horário de Brasília).
 - **noticias_whatsapp.py**: busca as 5 notícias mais recentes do feed
   `https://www.moneytimes.com.br/mercados/feed/` publicadas até 18h do próprio dia,
-  sem IA (apenas RSS + filtro de horário) — roda às 19:00 (seg-sex).
+  sem IA (apenas RSS + filtro de horário) — roda às 18:30 (seg-sex).
+
+**Atualizado em 2026-08-14:** usuário pediu para adiantar os três horários em
+30 minutos (eram 07:45/18:00/19:00). Editado direto em
+`.github/workflows/cotacoes.yml` e `.github/workflows/noticias.yml` (cron em
+UTC, Brasília é UTC-3 fixo, sem horário de verão) — commit `9bb255b`,
+clonado temporariamente em scratchpad só para essa edição (repo não tem
+clone permanente nesta máquina, roda 100% via Actions). O filtro de corte
+"notícias até 18h" do `noticias_whatsapp.py` não precisou mudar, pois
+18:30 continua depois do corte.
 
 Entrega via **CallMeBot** (API gratuita de WhatsApp) — número do usuário é
 **+559491184178** (note: sem o "9" extra que ele mesmo informou verbalmente;
