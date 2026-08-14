@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: reference
   originSessionId: 4648e32c-e38b-4607-8a62-727c268cecb8
-  modified: 2026-08-14T15:16:57.537Z
+  modified: 2026-08-14T15:40:52.359Z
 ---
 
 Repositório https://github.com/profadriano240/claude-code-setup (branch `master`, público, sem
@@ -21,11 +21,13 @@ credenciais/tokens/histórico de conversa) guarda backup da config Claude Code d
 Sync automático via hooks (`PostToolUse`, `ConfigChange`, `SessionStart`) faz commit+push sozinho
 a cada escrita de memória ou instalação de pacote — não precisa pedir sync manual.
 
-**Nota (2026-08-14):** pasta local `~/.claude/projects/-home-adriano/memory/` está vazia, mas repo
-tem 5 arquivos de memória (whatsapp, máquina debian, economia tokens, SEDUC diário, SEDUC notas).
-Se usuário perguntar por essas memórias e elas não aparecerem localmente, provável causa: máquina
-nova ainda não rodou `restore.sh`, ou pasta local foi limpa. Conteúdo recuperável do repo via
-`curl -s https://raw.githubusercontent.com/profadriano240/claude-code-setup/master/memory/<arquivo>`.
+**Verificado 2026-08-14 (pós-reinício):** pasta local e repo batendo 100% — settings.json,
+known_marketplaces.json, dotfiles (bashrc/gitconfig/profile), pacotes apt-manual e os 7 arquivos
+de memória, todos iguais. Hooks testados manualmente (`sync-memory-repo.sh`, `sync-config-repo.sh`)
+rodam sem erro. Sync bidirecional funcionando como esperado: escrita local → hook → commit+push
+automático. Se um dia pasta local e repo divergirem de novo, comparar com
+`curl -s https://raw.githubusercontent.com/profadriano240/claude-code-setup/master/memory/<arquivo>`
+antes de assumir perda de dado.
 
 **Como usar:** se usuário mencionar "backup", "restore.sh", "claude-code-setup", ou perguntar por
 memórias antigas que não batem com o que está local, checar este repo primeiro.
