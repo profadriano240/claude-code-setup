@@ -151,6 +151,9 @@ initial-size-file-chooser=(890, 550)
 [org/gnome/portal/filechooser/code]
 last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTATÍSTICA/PROGRAMA v3.2'
 
+[org/gnome/portal/filechooser/com.google.Chrome]
+last-folder-path='/home/adriano/Downloads/ENEM'
+
 [org/gnome/settings-daemon/plugins/color]
 night-light-schedule-automatic=false
 
