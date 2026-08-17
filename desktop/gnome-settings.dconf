@@ -5,7 +5,7 @@ window-maximized=false
 window-width=439
 
 [org/gnome/control-center]
-last-panel='wifi'
+last-panel='display'
 window-state=(980, 640, false)
 
 [org/gnome/deja-dup]
