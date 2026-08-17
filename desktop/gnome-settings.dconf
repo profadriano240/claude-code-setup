@@ -83,7 +83,7 @@ application-id='google-chrome.desktop'
 application-id='org.gnome.Software.desktop'
 
 [org/gnome/desktop/peripherals/keyboard]
-numlock-state=false
+numlock-state=true
 
 [org/gnome/desktop/peripherals/touchpad]
 two-finger-scrolling-enabled=true
@@ -174,10 +174,10 @@ locations=[<(uint32 2, <('Brasília', 'SBBR', true, [(-0.27692558046753113, -0.8
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1786729682
+check-timestamp=int64 1786970209
 first-run=false
 packagekit-historical-updates-timestamp=uint64 1786730424
-update-notification-timestamp=int64 1786625765
+update-notification-timestamp=int64 1786970213
 
 [org/gnome/terminal/legacy]
 shortcuts-enabled=true
