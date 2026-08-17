@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-14T17:52:07.494Z
+  modified: 2026-08-17T20:24:28.235Z
 ---
 
 Notebook pessoal do Adriano: Debian 13 (trixie), instalação limpa feita em
@@ -225,3 +225,39 @@ marcadores `<<<<<<<`/`=======`/`>>>>>>>`. Atenção: comandos como
 `apt-mark showmanual` batem no filtro `*apt-mark*` do hook
 `PostToolUse`/Bash em `sync-config-repo.sh` — rodar esse comando dentro de
 uma sessão já dispara um novo auto-commit/push sozinho.
+
+**Otimização de RAM aplicada em 2026-08-17** (confirmada pelo usuário via
+pergunta de múltipla escolha, todas as três aceitas): estado normal já era
+saudável (zram 50%/1,9GB + swap em disco 4GB via `zramswap.service`,
+corretamente configurado — `free -h` mostrava ~2,1GB "disponível" de
+3,6GB). Ainda assim, três desperdícios reais e corrigidos, nenhum exigindo
+`sudo`:
+1. Autostart do `gnome-software` (ficava residente em background só para
+   checar atualizações) desativado via
+   `~/.config/autostart/org.gnome.Software.desktop` com
+   `X-GNOME-Autostart-enabled=false` (override por usuário, não mexe no
+   `/etc/xdg/autostart/` do sistema). O app "Software" continua funcionando
+   normalmente se aberto manualmente.
+2. `localsearch-3.service` (indexador de arquivos do GNOME, ex-Tracker
+   Miner FS) mascarado via `systemctl --user mask` — estava rodando
+   continuamente em background. **Consequência: a busca por conteúdo de
+   arquivos no GNOME Files/Activities não vai mais indexar/atualizar** (só
+   busca por nome de arquivo continua). Se o usuário reclamar que a busca
+   piorou, é isso.
+3. Processos órfãos do `chrome-devtools-mcp` (de uma automação de browser
+   anterior na mesma sessão, ~360MB juntos: processo principal + watchdog
+   de telemetria) encerrados com `kill`. São recriados automaticamente
+   quando uma ferramenta `mcp__chrome-devtools__*` é chamada de novo — não
+   é uma configuração permanente, só limpeza pontual.
+
+**Why:** usuário pediu para reduzir desperdício de RAM na máquina fraca.
+Nenhuma mudança precisou de root porque autostart e serviços mascarados
+eram todos escopo `--user`/`~/.config`. Ver [[feedback-economia-tokens]]
+para o estilo de pergunta única com multiSelect usado para confirmar as
+três ações de uma vez.
+
+**How to apply:** se o usuário quiser reverter, `rm
+~/.config/autostart/org.gnome.Software.desktop` restaura o autostart do
+gnome-software; `systemctl --user unmask localsearch-3.service &&
+systemctl --user start localsearch-3.service` restaura a indexação de
+arquivos.
