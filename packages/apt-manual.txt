@@ -1,4 +1,5 @@
 adduser
+aircrack-ng
 apt
 apt-listchanges
 apt-transport-https

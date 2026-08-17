@@ -6,7 +6,7 @@ window-width=439
 
 [org/gnome/control-center]
 last-panel='display'
-window-state=(980, 640, false)
+window-state=(915, 597, false)
 
 [org/gnome/deja-dup]
 backend='google'
@@ -86,7 +86,7 @@ application-id='google-chrome.desktop'
 application-id='org.gnome.Software.desktop'
 
 [org/gnome/desktop/peripherals/keyboard]
-numlock-state=true
+numlock-state=false
 
 [org/gnome/desktop/peripherals/touchpad]
 two-finger-scrolling-enabled=true
