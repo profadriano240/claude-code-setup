@@ -68,7 +68,10 @@ cursor-blink-time=1478
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-software', 'gnome-power-panel', 'firefox-esr', 'google-chrome']
+application-children=['org-gnome-software', 'gnome-power-panel', 'firefox-esr', 'google-chrome', 'code']
+
+[org/gnome/desktop/notifications/application/code]
+application-id='code.desktop'
 
 [org/gnome/desktop/notifications/application/firefox-esr]
 application-id='firefox-esr.desktop'
@@ -143,6 +146,10 @@ search-filter-time-type='last_modified'
 
 [org/gnome/nautilus/window-state]
 initial-size=(890, 550)
+initial-size-file-chooser=(890, 550)
+
+[org/gnome/portal/filechooser/code]
+last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTATÍSTICA/PROGRAMA v3.2'
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-schedule-automatic=false
