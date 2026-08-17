@@ -104,6 +104,19 @@ sort-order=['org.gnome.Settings.desktop', 'org.gnome.Contacts.desktop', 'org.gno
 [org/gnome/desktop/session]
 idle-delay=uint32 0
 
+[org/gnome/evince/default]
+continuous=true
+dual-page=false
+dual-page-odd-left=false
+enable-spellchecking=true
+fullscreen=false
+inverted-colors=false
+show-sidebar=false
+sidebar-page='thumbnails'
+sidebar-size=132
+sizing-mode='automatic'
+window-ratio=(1.007888513245401, 0.71268237934904566)
+
 [org/gnome/evolution-data-server]
 migrated=true
 
@@ -140,7 +153,7 @@ x=0
 y=0
 
 [org/gnome/nautilus/preferences]
-default-folder-viewer='icon-view'
+default-folder-viewer='list-view'
 migrated-gtk-settings=true
 search-filter-time-type='last_modified'
 
@@ -152,7 +165,7 @@ initial-size-file-chooser=(890, 550)
 last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTATÍSTICA/PROGRAMA v3.2'
 
 [org/gnome/portal/filechooser/com.google.Chrome]
-last-folder-path='/home/adriano/Downloads/ENEM'
+last-folder-path='/home/adriano/Downloads'
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-schedule-automatic=false
