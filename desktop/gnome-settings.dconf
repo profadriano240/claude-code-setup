@@ -1,3 +1,6 @@
+[org/gnome/TextEditor]
+last-save-directory='file:///home/adriano/Documentos'
+
 [org/gnome/Weather]
 locations=[<(uint32 2, <('Brasília', 'SBBR', true, [(-0.27692558046753113, -0.83659448230485101)], [(-0.27547112778867422, -0.83630360573171358)])>)>]
 window-height=494
@@ -86,7 +89,7 @@ application-id='google-chrome.desktop'
 application-id='org.gnome.Software.desktop'
 
 [org/gnome/desktop/peripherals/keyboard]
-numlock-state=false
+numlock-state=true
 
 [org/gnome/desktop/peripherals/touchpad]
 two-finger-scrolling-enabled=true
@@ -105,17 +108,18 @@ sort-order=['org.gnome.Settings.desktop', 'org.gnome.Contacts.desktop', 'org.gno
 idle-delay=uint32 0
 
 [org/gnome/evince/default]
-continuous=true
+continuous=false
 dual-page=false
 dual-page-odd-left=false
 enable-spellchecking=true
-fullscreen=false
+fullscreen=true
 inverted-colors=false
 show-sidebar=false
 sidebar-page='thumbnails'
 sidebar-size=132
-sizing-mode='automatic'
-window-ratio=(1.007888513245401, 0.71268237934904566)
+sizing-mode='free'
+window-ratio=(2.2946261818220295, 0.87422371866816262)
+zoom=1.4142135381698608
 
 [org/gnome/evolution-data-server]
 migrated=true
@@ -165,7 +169,10 @@ initial-size-file-chooser=(890, 550)
 last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTATÍSTICA/PROGRAMA v3.2'
 
 [org/gnome/portal/filechooser/com.google.Chrome]
-last-folder-path='/home/adriano/Downloads'
+last-folder-path='/home/adriano'
+
+[org/gnome/portal/filechooser/org.gnome.TextEditor]
+last-folder-path='/home/adriano/Documentos'
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-schedule-automatic=false
