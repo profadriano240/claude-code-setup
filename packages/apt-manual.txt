@@ -20,6 +20,7 @@ coreutils
 cpio
 cron
 cron-daemon-common
+crunch
 curl
 dash
 dbus
