@@ -114,11 +114,11 @@ dual-page-odd-left=true
 enable-spellchecking=true
 fullscreen=false
 inverted-colors=false
-show-sidebar=false
+show-sidebar=true
 sidebar-page='thumbnails'
-sidebar-size=132
+sidebar-size=148
 sizing-mode='free'
-window-ratio=(2.294735413311078, 0.87422368105659432)
+window-ratio=(2.2939174189729172, 0.87360556644533616)
 zoom=1.4142135381698608
 
 [org/gnome/evolution-data-server]
@@ -170,7 +170,7 @@ maximized=true
 last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTATÍSTICA/PROGRAMA v3.2'
 
 [org/gnome/portal/filechooser/com.google.Chrome]
-last-folder-path='/home/adriano'
+last-folder-path='/home/adriano/Downloads'
 
 [org/gnome/portal/filechooser/org.gnome.TextEditor]
 last-folder-path='/home/adriano/Documentos'
@@ -207,7 +207,7 @@ locations=@av []
 [org/gnome/software]
 check-timestamp=int64 1787074300
 first-run=false
-packagekit-historical-updates-timestamp=uint64 1786730424
+packagekit-historical-updates-timestamp=uint64 1787084630
 update-notification-timestamp=int64 1786970213
 
 [org/gnome/terminal/legacy]
