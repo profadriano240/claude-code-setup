@@ -110,15 +110,15 @@ idle-delay=uint32 0
 [org/gnome/evince/default]
 continuous=false
 dual-page=false
-dual-page-odd-left=false
+dual-page-odd-left=true
 enable-spellchecking=true
-fullscreen=true
+fullscreen=false
 inverted-colors=false
 show-sidebar=false
 sidebar-page='thumbnails'
 sidebar-size=132
 sizing-mode='free'
-window-ratio=(2.2946261818220295, 0.87422371866816262)
+window-ratio=(2.294735413311078, 0.87422368105659432)
 zoom=1.4142135381698608
 
 [org/gnome/evolution-data-server]
