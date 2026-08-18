@@ -56,6 +56,7 @@ groff-base
 grub-common
 grub-efi-amd64
 gzip
+hashcat
 hostname
 ifupdown
 inetutils-telnet
