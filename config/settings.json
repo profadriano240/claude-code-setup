@@ -91,5 +91,8 @@
       "**Org-specific CLIs**: None configured",
       "routine under adriano/ prefix: not established — no repo/org context to scope this qualifier"
     ]
+  },
+  "permissions": {
+    "defaultMode": "auto"
   }
 }
