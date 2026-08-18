@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-18T23:12:31.077Z
+  modified: 2026-08-18T23:58:11.827Z
 ---
 
 Usuário está criando uma coleção de ebooks de educação financeira que vai
@@ -35,14 +35,19 @@ em si mesma.
   imagens diretamente.
 - Projeto em `~/projetos/bolso-esperto/`, edições em `edicoes/edicao-XX/`.
 
-**Edição #1 (piloto):** tema proposto "Por que seu dinheiro some antes do
-fim do mês" (regra 50-30-20). Outline em
-`~/projetos/bolso-esperto/edicoes/edicao-01/outline.md`, aguardando
-aprovação do usuário antes de escrever conteúdo completo e gerar imagens.
+**Edição #1 (piloto):** tema "Por que seu dinheiro some antes do fim do
+mês" (regra 50-30-20). Outline aprovado pelo usuário em 2026-08-18.
+Conteúdo completo (todas as 9 seções do template) já escrito em
+`~/projetos/bolso-esperto/edicoes/edicao-01/conteudo.md`. Próximos
+passos pendentes: (1) gerar imagens no Gamma — capa + infográfico "Em
+Números" + ícones de seção, usando o briefing de
+`marca/identidade-visual.md`; (2) montar PDF/EPUB final (Pandoc ainda
+não instalado, ver [[maquina_debian_home]]).
 
 **Why:** usuário quer lançar várias edições/ebooks no mesmo padrão — vale
 manter marca e template consistentes entre sessões futuras.
 **How to apply:** ao continuar este projeto em conversas futuras, seguir
 o template de estrutura e o briefing de marca já definidos, sem redefinir
-do zero. Confirmar status da edição-01 (aprovada? já publicada?) antes de
-assumir onde o projeto parou.
+do zero. Edição-01 já tem texto pronto — próximo passo é imagens (Gamma)
+e depois montagem do arquivo final (Pandoc). Confirmar se usuário já fez
+isso manualmente antes de assumir onde o projeto parou.
