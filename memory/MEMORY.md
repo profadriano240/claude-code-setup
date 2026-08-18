@@ -4,3 +4,4 @@
 - [Diário de Classe SEDUC-PA](referencia_diario_classe_seduc_pa.md) — como registrar frequência no www4.seduc.pa.gov.br; URL/IDs da turma, passo a passo, botão "Todos"
 - [Lançamento de notas em paralelo](projeto_lancamento_notas_seduc.md) — outra sessão de terminal já cuida do lançamento de notas no mesmo diário; não duplicar aqui sem confirmar
 - [Backup claude-code-setup](referencia_backup_claude_code_setup.md) — repo GitHub profadriano240/claude-code-setup guarda backup de config/memória, sync automático via hooks
+- [Revista Bolso Esperto](projeto_revista_bolso_esperto.md) — projeto de ebooks/revista semanal educação financeira 18-37 anos, marca+template já definidos em ~/projetos/bolso-esperto/
