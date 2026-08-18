@@ -71,7 +71,7 @@ cursor-blink-time=1478
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-software', 'gnome-power-panel', 'firefox-esr', 'google-chrome', 'code']
+application-children=['org-gnome-software', 'gnome-power-panel', 'firefox-esr', 'google-chrome', 'code', 'libreoffice-writer']
 
 [org/gnome/desktop/notifications/application/code]
 application-id='code.desktop'
@@ -84,6 +84,9 @@ application-id='gnome-power-panel.desktop'
 
 [org/gnome/desktop/notifications/application/google-chrome]
 application-id='google-chrome.desktop'
+
+[org/gnome/desktop/notifications/application/libreoffice-writer]
+application-id='libreoffice-writer.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-software]
 application-id='org.gnome.Software.desktop'
@@ -170,7 +173,7 @@ maximized=true
 last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTATÍSTICA/PROGRAMA v3.2'
 
 [org/gnome/portal/filechooser/com.google.Chrome]
-last-folder-path='/home/adriano/Downloads'
+last-folder-path='/home/adriano/Documentos'
 
 [org/gnome/portal/filechooser/org.gnome.TextEditor]
 last-folder-path='/home/adriano/Documentos'

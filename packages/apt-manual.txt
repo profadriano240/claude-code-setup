@@ -181,6 +181,7 @@ openssh-client
 openssl-provider-legacy
 os-prober
 ovmf
+pandoc
 passwd
 pciutils
 perl
