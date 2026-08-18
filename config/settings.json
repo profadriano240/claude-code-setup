@@ -1,4 +1,7 @@
 {
+  "permissions": {
+    "defaultMode": "auto"
+  },
   "hooks": {
     "ConfigChange": [
       {
@@ -59,11 +62,10 @@
   },
   "language": "pt-BR",
   "voice": {
-    "enabled": true,
+    "enabled": false,
     "mode": "hold"
   },
   "theme": "auto",
-  "voiceEnabled": true,
   "autoMode": {
     "environment": [
       "### Org-wide",
@@ -92,7 +94,5 @@
       "routine under adriano/ prefix: not established — no repo/org context to scope this qualifier"
     ]
   },
-  "permissions": {
-    "defaultMode": "auto"
-  }
+  "voiceEnabled": false
 }
