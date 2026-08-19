@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-19T14:37:02.572Z
+  modified: 2026-08-19T14:37:09.978Z
 ---
 
 Adriano (usuário GitHub @profadriano240) tem um repositório privado **cotacoes-b3**
@@ -49,6 +49,14 @@ e a 5ª nem chegava) — limite de tamanho de mensagem/URL do CallMeBot. Reduzid
 VALE3, BBAS3 e PETR4 — removidos ITUB4 e todos os FIIs (RBVA11, GTWR11, LVBI11,
 HSML11, GGRC11) de `cotacoes_whatsapp.py` (confirmado explicitamente que os FIIs
 deveriam sair também). Commit `8fc7943`.
+
+**Atualizado em 2026-08-19 (3):** usuário pediu para receber notícias também às
+6:30 da manhã, já que notícias internacionais chegam frescas nesse horário. Como
+o filtro original só pegava notícias "de hoje até 18h", rodando às 6:30 quase
+nada seria capturado (só 00:00-06:30 de hoje) — refeita a lógica de janela em
+`noticias_whatsapp.py` para dois turnos (manha/tarde, ver acima). Novo cron
+"30 9 * * 1-5" (UTC) adicionado em `.github/workflows/noticias.yml`, turno
+determinado a partir de `github.event.schedule`. Commit `a999a79`.
 
 **Why:** Adriano optou explicitamente por não gastar com API (recusou usar a API da
 Anthropic para escolher/resumir notícias com IA, mesmo sendo a opção de melhor
