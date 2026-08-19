@@ -5,16 +5,17 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-19T14:31:38.699Z
+  modified: 2026-08-19T14:34:01.233Z
 ---
 
 Adriano (usuário GitHub @profadriano240) tem um repositório privado **cotacoes-b3**
 (https://github.com/profadriano240/cotacoes-b3) com duas automações rodando via
 GitHub Actions (não dependem do notebook estar ligado):
 
-- **cotacoes_whatsapp.py**: envia cotações de VALE3, BBAS3, ITUB4 (ações) e RBVA11,
-  GTWR11, LVBI11, HSML11, GGRC11 (FIIs) via brapi.dev (plano free, 1 ativo por
-  requisição) — roda 07:15 e 17:30 (seg-sex, horário de Brasília).
+- **cotacoes_whatsapp.py**: envia cotações apenas de VALE3, BBAS3 e PETR4 (ações;
+  antes era VALE3/BBAS3/ITUB4 + 5 FIIs, removidos em 2026-08-19) via brapi.dev
+  (plano free, 1 ativo por requisição) — roda 07:15 e 17:30 (seg-sex, horário de
+  Brasília).
 - **noticias_whatsapp.py**: busca as 2 notícias mais recentes (MAX_NOTICIAS, antes era 5)
   do feed `https://www.moneytimes.com.br/mercados/feed/` publicadas até 18h do próprio
   dia, sem IA (apenas RSS + filtro de horário) — roda às 18:30 (seg-sex).
