@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-19T14:31:28.934Z
+  modified: 2026-08-19T14:31:38.699Z
 ---
 
 Adriano (usuário GitHub @profadriano240) tem um repositório privado **cotacoes-b3**
@@ -33,6 +33,12 @@ Entrega via **CallMeBot** (API gratuita de WhatsApp) — número do usuário é
 o CallMeBot amarra o apikey ao número exato usado no opt-in). Credenciais
 (BRAPI_TOKEN, CALLMEBOT_PHONE, CALLMEBOT_APIKEY) ficam como GitHub Actions
 secrets no repositório, nunca hardcoded no código versionado.
+
+**Atualizado em 2026-08-19:** o CallMeBot estava truncando a mensagem de notícias
+a partir da 3ª (2 primeiras chegavam certas, a 3ª incompleta, a 4ª só aparecia "4."
+e a 5ª nem chegava) — limite de tamanho de mensagem/URL do CallMeBot. Reduzido
+`MAX_NOTICIAS` de 5 para 2 em `noticias_whatsapp.py`, commit `8fbb5fd`
+(mesmo fluxo: clone temporário no scratchpad, sem clone permanente na máquina).
 
 **Why:** Adriano optou explicitamente por não gastar com API (recusou usar a API da
 Anthropic para escolher/resumir notícias com IA, mesmo sendo a opção de melhor
