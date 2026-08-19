@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-18T23:58:11.827Z
+  modified: 2026-08-19T00:03:32.414Z
 ---
 
 Usuário está criando uma coleção de ebooks de educação financeira que vai
@@ -37,12 +37,20 @@ em si mesma.
 
 **Edição #1 (piloto):** tema "Por que seu dinheiro some antes do fim do
 mês" (regra 50-30-20). Outline aprovado pelo usuário em 2026-08-18.
-Conteúdo completo (todas as 9 seções do template) já escrito em
-`~/projetos/bolso-esperto/edicoes/edicao-01/conteudo.md`. Próximos
-passos pendentes: (1) gerar imagens no Gamma — capa + infográfico "Em
-Números" + ícones de seção, usando o briefing de
-`marca/identidade-visual.md`; (2) montar PDF/EPUB final (Pandoc ainda
-não instalado, ver [[maquina_debian_home]]).
+Conteúdo completo (todas as 9 seções do template) escrito em
+`~/projetos/bolso-esperto/edicoes/edicao-01/conteudo.md`. Imagens
+geradas via Gamma e salvas em
+`~/projetos/bolso-esperto/edicoes/edicao-01/imagens/` (capa.png,
+infografico.png, icones-secao.png) — texto+imagens prontos. Único
+passo pendente: montar o PDF/EPUB final (Pandoc ainda não instalado na
+máquina, ver [[maquina_debian_home]]).
+
+**Créditos do Gamma:** ficaram baixos após a edição-01 (19 restantes,
+cada `generate_image` consome ~70). Provavelmente será necessário
+comprar mais créditos antes de gerar imagens da edição-02. Nota de
+qualidade: usar `type: "illustration"` para infográficos com
+texto/números — `type: "abstract"` ignora o conteúdo pedido e gera arte
+genérica (aconteceu na primeira tentativa desta edição).
 
 **Why:** usuário quer lançar várias edições/ebooks no mesmo padrão — vale
 manter marca e template consistentes entre sessões futuras.
