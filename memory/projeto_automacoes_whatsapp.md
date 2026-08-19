@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-19T14:34:07.464Z
+  modified: 2026-08-19T14:37:02.572Z
 ---
 
 Adriano (usuário GitHub @profadriano240) tem um repositório privado **cotacoes-b3**
@@ -16,9 +16,13 @@ GitHub Actions (não dependem do notebook estar ligado):
   antes era VALE3/BBAS3/ITUB4 + 5 FIIs, removidos em 2026-08-19) via brapi.dev
   (plano free, 1 ativo por requisição) — roda 07:15 e 17:30 (seg-sex, horário de
   Brasília).
-- **noticias_whatsapp.py**: busca as 2 notícias mais recentes (MAX_NOTICIAS, antes era 5)
-  do feed `https://www.moneytimes.com.br/mercados/feed/` publicadas até 18h do próprio
-  dia, sem IA (apenas RSS + filtro de horário) — roda às 18:30 (seg-sex).
+- **noticias_whatsapp.py**: busca as 2 notícias mais recentes (MAX_NOTICIAS) do feed
+  `https://www.moneytimes.com.br/mercados/feed/`, sem IA (apenas RSS + filtro de
+  janela de horário) — roda duas vezes (seg-sex): 06:30 (turno "manha", pega notícias
+  publicadas desde as 18h de ontem até agora — cobre noticiário internacional
+  overnight) e 18:30 (turno "tarde", pega notícias de hoje publicadas até 18h,
+  comportamento original). O turno é passado via env var `TURNO` pelo workflow,
+  que o determina a partir do horário do cron que disparou o job.
 
 **Atualizado em 2026-08-14:** usuário pediu para adiantar os três horários em
 30 minutos (eram 07:45/18:00/19:00). Editado direto em
