@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-19T14:44:47.477Z
+  modified: 2026-08-19T14:44:53.723Z
 ---
 
 Adriano (usuário GitHub @profadriano240) tem um repositório privado **cotacoes-b3**
@@ -57,6 +57,11 @@ nada seria capturado (só 00:00-06:30 de hoje) — refeita a lógica de janela e
 `noticias_whatsapp.py` para dois turnos (manha/tarde, ver acima). Novo cron
 "30 9 * * 1-5" (UTC) adicionado em `.github/workflows/noticias.yml`, turno
 determinado a partir de `github.event.schedule`. Commit `a999a79`.
+
+**Atualizado em 2026-08-19 (4):** usuário adiantou o turno tarde de 18:30 para
+18:00. Alterado cron em `.github/workflows/noticias.yml` de "30 21 * * 1-5" para
+"0 21 * * 1-5" (UTC). O corte de conteúdo do turno tarde no script já era 18h,
+então não precisou mudar `noticias_whatsapp.py`. Commit `dd3218d`.
 
 **Why:** Adriano optou explicitamente por não gastar com API (recusou usar a API da
 Anthropic para escolher/resumir notícias com IA, mesmo sendo a opção de melhor
