@@ -8,7 +8,7 @@ window-maximized=false
 window-width=439
 
 [org/gnome/control-center]
-last-panel='display'
+last-panel='bluetooth'
 window-state=(915, 597, false)
 
 [org/gnome/deja-dup]
@@ -72,6 +72,7 @@ toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
 application-children=['org-gnome-software', 'gnome-power-panel', 'firefox-esr', 'google-chrome', 'code', 'libreoffice-writer']
+show-banners=false
 
 [org/gnome/desktop/notifications/application/code]
 application-id='code.desktop'
