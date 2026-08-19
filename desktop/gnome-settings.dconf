@@ -8,7 +8,7 @@ window-maximized=false
 window-width=439
 
 [org/gnome/control-center]
-last-panel='bluetooth'
+last-panel='wifi'
 window-state=(915, 597, false)
 
 [org/gnome/deja-dup]
@@ -120,10 +120,10 @@ fullscreen=false
 inverted-colors=false
 show-sidebar=true
 sidebar-page='thumbnails'
-sidebar-size=148
+sidebar-size=182
 sizing-mode='free'
-window-ratio=(2.2939174189729172, 0.87360556644533616)
-zoom=1.4142135381698608
+window-ratio=(2.2939134714499838, 0.87360556644533616)
+zoom=1.3640176872780294
 
 [org/gnome/evolution-data-server]
 migrated=true
