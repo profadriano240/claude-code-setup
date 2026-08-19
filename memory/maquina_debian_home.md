@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-17T20:24:28.235Z
+  modified: 2026-08-19T00:37:47.186Z
 ---
 
 Notebook pessoal do Adriano: Debian 13 (trixie), instalação limpa feita em
@@ -261,3 +261,23 @@ três ações de uma vez.
 gnome-software; `systemctl --user unmask localsearch-3.service &&
 systemctl --user start localsearch-3.service` restaura a indexação de
 arquivos.
+
+**Chrome instável em uso pesado (2026-08-18):** durante comparação visual de
+um HTML local com um design no editor do Canva (aba pesada, JS-heavy) via
+`claude-in-chrome`, o Chrome fechou sozinho duas vezes (processo some,
+`tabs_context_mcp` retorna "Browser extension is not connected"). Recuperação
+que funcionou: `nohup google-chrome --remote-debugging-port=9222 about:blank
+&` seguido de `tabs_context_mcp{createIfEmpty:true}` reconecta a extensão em
+poucos segundos (o flag de debug port é ignorado por já ter perfil padrão,
+mas o processo sobe e o native host da extensão reconecta sozinho).
+
+**Why:** RAM de 3,6GB é insuficiente para manter o editor do Canva (ou apps
+web pesadas similares) + outras abas abertas por muito tempo nesta máquina —
+ver hardware fraco no topo desta memória.
+
+**How to apply:** ao comparar/depurar visualmente algo contra um app web
+pesado (Canva, Figma, etc.) nesta máquina, esperar que o Chrome possa
+fechar sozinho no meio da tarefa; não é erro de ferramenta, é falta de RAM.
+Preferir abrir só uma aba pesada por vez, fechar assim que não precisar mais
+dela, e ter o comando de relançamento acima pronto em vez de insistir em
+retries de `tabs_context_mcp`.
