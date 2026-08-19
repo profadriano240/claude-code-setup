@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-19T14:37:09.978Z
+  modified: 2026-08-19T14:44:47.477Z
 ---
 
 Adriano (usuário GitHub @profadriano240) tem um repositório privado **cotacoes-b3**
@@ -20,8 +20,8 @@ GitHub Actions (não dependem do notebook estar ligado):
   `https://www.moneytimes.com.br/mercados/feed/`, sem IA (apenas RSS + filtro de
   janela de horário) — roda duas vezes (seg-sex): 06:30 (turno "manha", pega notícias
   publicadas desde as 18h de ontem até agora — cobre noticiário internacional
-  overnight) e 18:30 (turno "tarde", pega notícias de hoje publicadas até 18h,
-  comportamento original). O turno é passado via env var `TURNO` pelo workflow,
+  overnight) e 18:00 (turno "tarde", pega notícias de hoje publicadas até 18h).
+  O turno é passado via env var `TURNO` pelo workflow,
   que o determina a partir do horário do cron que disparou o job.
 
 **Atualizado em 2026-08-14:** usuário pediu para adiantar os três horários em
