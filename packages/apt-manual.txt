@@ -129,6 +129,7 @@ libpam-modules-bin
 libpam-runtime
 libpam-systemd
 libpam0g
+libpcap-dev
 libpcre2-8-0
 libpopt0
 libproc2-0
@@ -142,6 +143,7 @@ libslang2
 libsmartcols1
 libsqlite3-0
 libss2
+libssl-dev
 libssl3t64
 libstdc++6
 libsystemd-shared
@@ -191,8 +193,11 @@ perl
 perl-base
 pipx
 procps
+python3-dev
 python3-pip
+python3-setuptools
 python3-tk
+python3-venv
 qemu-system-x86
 readline-common
 reportbug
