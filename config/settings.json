@@ -62,7 +62,7 @@
   },
   "language": "pt-BR",
   "voice": {
-    "enabled": false,
+    "enabled": true,
     "mode": "hold"
   },
   "theme": "auto",
@@ -94,5 +94,5 @@
       "routine under adriano/ prefix: not established — no repo/org context to scope this qualifier"
     ]
   },
-  "voiceEnabled": false
+  "voiceEnabled": true
 }
