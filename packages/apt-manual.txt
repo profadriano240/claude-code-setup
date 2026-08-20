@@ -172,6 +172,7 @@ logsave
 lsof
 man-db
 manpages
+manpages-pt-br
 mawk
 media-types
 mount
