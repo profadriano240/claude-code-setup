@@ -8,7 +8,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash $HOME/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
+            "command": "bash $HOME/.claude/hooks/sync-config-repo.sh || true",
             "statusMessage": "Sincronizando config/ com claude-code-setup..."
           }
         ]
@@ -19,7 +19,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash $HOME/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
+            "command": "bash $HOME/.claude/hooks/sync-config-repo.sh || true",
             "statusMessage": "Verificando sincronização de config/packages..."
           }
         ]
@@ -41,7 +41,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash $HOME/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
+            "command": "bash $HOME/.claude/hooks/sync-config-repo.sh || true",
             "statusMessage": "Verificando pacotes instalados..."
           }
         ]
