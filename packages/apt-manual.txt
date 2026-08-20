@@ -177,6 +177,7 @@ nano
 ncurses-base
 ncurses-bin
 ncurses-term
+net-tools
 netbase
 netcat-traditional
 nftables
