@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-21T18:32:29.299Z
+  modified: 2026-08-21T20:32:14.301Z
 ---
 
 Usuário está criando uma coleção de ebooks de educação financeira que vai
@@ -129,10 +129,50 @@ e-mail, reações no reel.
      menu de navegação (Home/About/Publishers/Contact) também ficou no
      template, é inofensivo mas não faz sentido para uma página de
      captura única — pode ser removido depois.
-3. ⬜ Subir PDF/EPUB da edição-01 e configurar automação de entrega
-   (e-mail automático ao preencher o formulário) — ainda não feito.
-4. ⬜ Testar com e-mail próprio.
-5. ⬜ Colocar link da landing page (`adrianofreire-h5hnp5.subscribepage.io`)
+3. 🔶 EM ANDAMENTO (pausado em 2026-08-21, usuário ficou sem internet) —
+   configurar automação de entrega. Estado exato onde paramos:
+   - Criado o workflow "Bolso Esperto - Captura Edição 1 Workflow" em
+     Sites → Bolso Esperto - Captura Edição 1 → aba Automation → "Create
+     an automation for your site" (URL:
+     `dashboard.mailerlite.com/automations/196444252032468090/edit`).
+   - Trigger já configurado automaticamente: "Completes a form 1" (o
+     formulário da landing page).
+   - Adicionado um passo de ação "Email 1" (Send email) após o trigger,
+     com: Email name = "Entrega - Edição 1"; Subject = "Sua edição #1 do
+     Bolso Esperto chegou 🦊"; Who is it from = "Bolso Esperto". Campo
+     "Sender email" ainda não foi conferido/preenchido.
+   - Entrei no editor do conteúdo do e-mail (Simple editor, URL:
+     `dashboard.mailerlite.com/emails/196444418349205257/edit`) e escrevi
+     o corpo em português (baseado no texto pronto do plano de
+     marketing): título "Sua edição #1 chegou", saudação, parágrafo
+     citando "Cadê meu dinheiro?", parágrafo sobre 15 min de leitura,
+     teaser da edição #2 ("O cartão de crédito não é vilão..."),
+     assinatura "Bolso Esperto — menos susto, mais estratégia."
+   - Inseri um bloco `/button` com texto "Baixar PDF" logo abaixo da
+     linha "Cadê meu dinheiro?", mas **ainda não linkei esse botão a
+     nenhum arquivo** (não cheguei a clicar no ícone de link da toolbar
+     do botão nem fazer upload do PDF).
+   - **Próximos passos exatos para retomar:**
+     1. Fazer upload de `~/projetos/bolso-esperto/edicoes/edicao-01/bolso-esperto-01.pdf`
+        e `bolso-esperto-01.epub` (via file manager do MailerLite, deve
+        aparecer ao clicar no ícone de link 🔗 do botão "Baixar PDF" e
+        escolher "Upload file" ou similar).
+     2. Linkar o botão "Baixar PDF" ao PDF enviado.
+     3. Duplicar o botão (ou inserir outro `/button`) para "Baixar EPUB"
+        e linkar ao EPUB.
+     4. Salvar/fechar o editor de e-mail (botão "Next" no topo), voltar
+        ao workflow.
+     5. Conferir "Sender email" no passo Email 1 (precisa ser um e-mail
+        verificado no MailerLite — provavelmente
+        adrianofreire240@gmail.com).
+     6. Clicar "Activate" no workflow (topo direito) para ligar a
+        automação — sem isso, o e-mail de entrega NÃO é enviado quando
+        alguém preenche o formulário.
+     7. Testar preenchendo o formulário da landing page
+        (`https://adrianofreire-h5hnp5.subscribepage.io`) com o próprio
+        e-mail para confirmar que a entrega funciona (passo 4 do setup
+        original).
+4. ⬜ Colocar link da landing page (`adrianofreire-h5hnp5.subscribepage.io`)
    na bio do Instagram.
 
 **Why:** usuário quer lançar várias edições/ebooks no mesmo padrão — vale
