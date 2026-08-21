@@ -168,7 +168,7 @@ search-filter-time-type='last_modified'
 [org/gnome/nautilus/window-state]
 initial-size=(890, 550)
 initial-size-file-chooser=(890, 550)
-maximized=false
+maximized=true
 
 [org/gnome/portal/filechooser/code]
 last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTATÍSTICA/PROGRAMA v3.2'
