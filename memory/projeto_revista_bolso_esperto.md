@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-21T16:57:35.814Z
+  modified: 2026-08-21T18:32:29.299Z
 ---
 
 Usuário está criando uma coleção de ebooks de educação financeira que vai
@@ -104,11 +104,36 @@ reel, e-mail de entrega) já estão escritos no artifact. Métricas a
 acompanhar: downloads, cliques no link da bio, taxa de abertura do
 e-mail, reações no reel.
 
-**Status do setup técnico de marketing (ainda NÃO iniciado):** 1) criar
-conta MailerLite, 2) montar landing page de captura, 3) subir PDF/EPUB e
-configurar automação de entrega, 4) testar com e-mail próprio, 5) colocar
-link na bio do Instagram. Nenhum desses passos foi confirmado como feito
-ainda — confirmar com o usuário antes de assumir progresso.
+**Status do setup técnico de marketing (2026-08-21):**
+1. ✅ Conta MailerLite criada (login via Google, e-mail
+   adrianofreire240@gmail.com), trial de 14 dias de recursos Advanced.
+2. ✅ Landing page de captura criada e **publicada**:
+   `https://adrianofreire-h5hnp5.subscribepage.io`. Gerada via "Build with
+   AI" do MailerLite (goal "Capture subscribers", estilo Friendly +
+   Minimalist) e depois editada manualmente: título "Cadê meu dinheiro?",
+   subtítulo com a regra 50-30-20, checklist ("Sem enrolação, direto ao
+   ponto" / "Sem planilha complicada") e um bloco de formulário
+   (Signup form) com campo de e-mail + botão "Quero minha edição" — tudo
+   em português, cores da marca preservadas. O botão estático original
+   gerado pela IA foi removido (não tinha ação; um "Redirect to Pop-up"
+   exigiria criar um pop-up à parte, então optei por um formulário
+   embutido na própria página, mais simples). Formulário associado ao
+   grupo de assinantes "Assinantes Bolso Esperto" (grupo do site, 0
+   assinantes até agora). Double opt-in está ativado (padrão do
+   MailerLite).
+   - Pendência cosmética: o nome da marca no cabeçalho ainda está como
+     "Company" (texto genérico do template) em vez de "Bolso Esperto" —
+     tentativas de editar via automação de browser não colaram (o campo
+     não aceitou digitação após seleção); precisa correção manual no
+     editor (Sites → Bolso Esperto - Captura Edição 1 → Edit design). O
+     menu de navegação (Home/About/Publishers/Contact) também ficou no
+     template, é inofensivo mas não faz sentido para uma página de
+     captura única — pode ser removido depois.
+3. ⬜ Subir PDF/EPUB da edição-01 e configurar automação de entrega
+   (e-mail automático ao preencher o formulário) — ainda não feito.
+4. ⬜ Testar com e-mail próprio.
+5. ⬜ Colocar link da landing page (`adrianofreire-h5hnp5.subscribepage.io`)
+   na bio do Instagram.
 
 **Why:** usuário quer lançar várias edições/ebooks no mesmo padrão — vale
 manter marca e template consistentes entre sessões futuras.
