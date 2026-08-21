@@ -71,7 +71,7 @@ cursor-blink-time=1478
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-software', 'gnome-power-panel', 'firefox-esr', 'google-chrome', 'code', 'libreoffice-writer']
+application-children=['org-gnome-software', 'gnome-power-panel', 'firefox-esr', 'google-chrome', 'code', 'libreoffice-writer', 'org-gnome-evince']
 show-banners=false
 
 [org/gnome/desktop/notifications/application/code]
@@ -88,6 +88,9 @@ application-id='google-chrome.desktop'
 
 [org/gnome/desktop/notifications/application/libreoffice-writer]
 application-id='libreoffice-writer.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-evince]
+application-id='org.gnome.Evince.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-software]
 application-id='org.gnome.Software.desktop'
@@ -112,7 +115,7 @@ sort-order=['org.gnome.Settings.desktop', 'org.gnome.Contacts.desktop', 'org.gno
 idle-delay=uint32 0
 
 [org/gnome/evince/default]
-continuous=false
+continuous=true
 dual-page=false
 dual-page-odd-left=true
 enable-spellchecking=true
@@ -122,7 +125,7 @@ show-sidebar=true
 sidebar-page='thumbnails'
 sidebar-size=182
 sizing-mode='free'
-window-ratio=(2.294735413311078, 0.87303587714211528)
+window-ratio=(2.2952380952380951, 0.87232761007984483)
 zoom=1.3640176872780294
 
 [org/gnome/evolution-data-server]
