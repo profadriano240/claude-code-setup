@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-21T14:37:19.774Z
+  modified: 2026-08-21T16:57:35.814Z
 ---
 
 Usuário está criando uma coleção de ebooks de educação financeira que vai
@@ -88,10 +88,34 @@ próximas edições):
   always` forçado entre subseções curtas relacionadas (desperdiça
   página em branco) — deixar o fluxo natural quebrar quando possível.
 
+**Estratégia de lançamento (marketing) — definida em artifact "Lançamento
+Bolso Esperto"** (https://claude.ai/code/artifact/54b1bb84-77bc-42c7-a324-4e426a4b94e0):
+edição #1 é **grátis**, objetivo é capturar contato (e-mail), não vender.
+Funil: Instagram → landing page de captura → entrega automática por
+e-mail → oferta paga só depois de 3-4 edições prontas. Decisão: nem KDP
+nem Hotmart agora (nenhuma resolve captura de contato bem) — usar
+**MailerLite** (plano free, até 1.000 contatos, sem cartão) para landing
+page + entrega + boas-vindas. Hotmart entra quando existir produto pago
+(Pix/boleto/afiliados, público BR); KDP fica para quando houver um
+"volume" compilado de várias edições. Cronograma de lançamento de 7 dias
+(setup → teaser → lançamento → reel de valor → prova social → lembrete
+final) e todos os textos prontos (bio, legenda, stories, roteiro de
+reel, e-mail de entrega) já estão escritos no artifact. Métricas a
+acompanhar: downloads, cliques no link da bio, taxa de abertura do
+e-mail, reações no reel.
+
+**Status do setup técnico de marketing (ainda NÃO iniciado):** 1) criar
+conta MailerLite, 2) montar landing page de captura, 3) subir PDF/EPUB e
+configurar automação de entrega, 4) testar com e-mail próprio, 5) colocar
+link na bio do Instagram. Nenhum desses passos foi confirmado como feito
+ainda — confirmar com o usuário antes de assumir progresso.
+
 **Why:** usuário quer lançar várias edições/ebooks no mesmo padrão — vale
 manter marca e template consistentes entre sessões futuras.
 **How to apply:** ao continuar este projeto em conversas futuras, seguir
-o template de estrutura, o briefing de marca e o processo de montagem
-PDF/EPUB acima descrito. Créditos do Gamma ficaram baixos após
-edição-01 (19 restantes) — confirmar com o usuário antes de gerar
-imagens novas para a edição-02 ("O cartão de crédito não é vilão").
+o template de estrutura, o briefing de marca, o processo de montagem
+PDF/EPUB e o plano de lançamento acima descritos. Créditos do Gamma
+ficaram baixos após edição-01 (19 restantes) — confirmar com o usuário
+antes de gerar imagens novas para a edição-02 ("O cartão de crédito não
+é vilão"). Preferência geral do usuário por ferramentas gratuitas antes
+de considerar pagas (mesmo padrão de [[projeto_automacoes_whatsapp]]).
