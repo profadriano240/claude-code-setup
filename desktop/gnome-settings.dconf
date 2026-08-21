@@ -122,7 +122,7 @@ show-sidebar=true
 sidebar-page='thumbnails'
 sidebar-size=182
 sizing-mode='free'
-window-ratio=(2.2939134714499838, 0.87360556644533616)
+window-ratio=(2.294735413311078, 0.87303587714211528)
 zoom=1.3640176872780294
 
 [org/gnome/evolution-data-server]
@@ -168,13 +168,13 @@ search-filter-time-type='last_modified'
 [org/gnome/nautilus/window-state]
 initial-size=(890, 550)
 initial-size-file-chooser=(890, 550)
-maximized=true
+maximized=false
 
 [org/gnome/portal/filechooser/code]
 last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTATÍSTICA/PROGRAMA v3.2'
 
 [org/gnome/portal/filechooser/com.google.Chrome]
-last-folder-path='/home/adriano/wordlists/custom'
+last-folder-path='/home/adriano/Downloads/files'
 
 [org/gnome/portal/filechooser/org.gnome.TextEditor]
 last-folder-path='/home/adriano/Documentos'
