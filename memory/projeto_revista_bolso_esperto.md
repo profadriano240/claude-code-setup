@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-19T00:03:32.414Z
+  modified: 2026-08-21T14:37:19.774Z
 ---
 
 Usuário está criando uma coleção de ebooks de educação financeira que vai
@@ -52,10 +52,46 @@ qualidade: usar `type: "illustration"` para infográficos com
 texto/números — `type: "abstract"` ignora o conteúdo pedido e gera arte
 genérica (aconteceu na primeira tentativa desta edição).
 
+**Edição #1 — CONCLUÍDA (2026-08-21):** PDF (A5, 10 páginas) e EPUB
+gerados em `~/projetos/bolso-esperto/edicoes/edicao-01/` —
+`bolso-esperto-01.pdf` e `bolso-esperto-01.epub`. Pandoc já estava
+instalado (resolvido sem ação extra). Processo usado (repetir em
+próximas edições):
+- HTML customizado (`edicao-01.html`) com CSS de marca (fontes já no
+  sistema: Quicksand para títulos, Liberation Sans para corpo,
+  Bitstream Charter itálico para tagline/citações — sem precisar de
+  internet/Google Fonts) → PDF via `google-chrome --headless
+  --print-to-pdf` (wkhtmltopdf/weasyprint/LaTeX não instalados; Chrome
+  headless funcionou bem e é o que já está disponível).
+- EPUB via `pandoc conteudo-epub.md -o saida.epub --css=epub.css
+  --epub-cover-image=...` a partir de um markdown derivado do
+  conteúdo original com imagens embutidas.
+- Capa completa (proporção 2:3, com título/tagline) precisa ser
+  gerada à parte via screenshot de HTML standalone
+  (`capa-standalone.html` + `chrome --headless --screenshot`) — as
+  imagens do Gamma são só o ícone da raposa isolado, não uma capa
+  pronta.
+- Imagens do Gamma vêm em alta resolução (~3-4 MB cada) — sempre
+  redimensionar/otimizar com PIL antes de embutir (reduziu o PDF de
+  9,8 MB para 1,7 MB).
+- Ícone da raposa tem fundo branco opaco (sem alpha): para fundo
+  escuro, ou usar fundo claro na peça, ou colocar a logo dentro de um
+  selo/card branco — transparência direta do PNG deixa o contorno
+  escuro quase invisível contra grafite.
+- Ao cortar `icones-secao.png` (3 ícones lado a lado) em peças
+  separadas, NÃO dividir em terços fixos — os ícones não estão
+  perfeitamente centralizados e isso vaza pixels do ícone vizinho.
+  Detectar as colunas de conteúdo real via numpy (limiar de
+  não-brancura) e cortar pelos grupos encontrados.
+- CSS de impressão: usar `break-inside: avoid` em cards/caixinhas
+  (senão quebram feio entre páginas do PDF) e evitar `page-break-after:
+  always` forçado entre subseções curtas relacionadas (desperdiça
+  página em branco) — deixar o fluxo natural quebrar quando possível.
+
 **Why:** usuário quer lançar várias edições/ebooks no mesmo padrão — vale
 manter marca e template consistentes entre sessões futuras.
 **How to apply:** ao continuar este projeto em conversas futuras, seguir
-o template de estrutura e o briefing de marca já definidos, sem redefinir
-do zero. Edição-01 já tem texto pronto — próximo passo é imagens (Gamma)
-e depois montagem do arquivo final (Pandoc). Confirmar se usuário já fez
-isso manualmente antes de assumir onde o projeto parou.
+o template de estrutura, o briefing de marca e o processo de montagem
+PDF/EPUB acima descrito. Créditos do Gamma ficaram baixos após
+edição-01 (19 restantes) — confirmar com o usuário antes de gerar
+imagens novas para a edição-02 ("O cartão de crédito não é vilão").
