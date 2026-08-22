@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-21T20:32:14.301Z
+  modified: 2026-08-22T14:04:16.189Z
 ---
 
 Usuário está criando uma coleção de ebooks de educação financeira que vai
@@ -129,51 +129,26 @@ e-mail, reações no reel.
      menu de navegação (Home/About/Publishers/Contact) também ficou no
      template, é inofensivo mas não faz sentido para uma página de
      captura única — pode ser removido depois.
-3. 🔶 EM ANDAMENTO (pausado em 2026-08-21, usuário ficou sem internet) —
-   configurar automação de entrega. Estado exato onde paramos:
-   - Criado o workflow "Bolso Esperto - Captura Edição 1 Workflow" em
-     Sites → Bolso Esperto - Captura Edição 1 → aba Automation → "Create
-     an automation for your site" (URL:
-     `dashboard.mailerlite.com/automations/196444252032468090/edit`).
-   - Trigger já configurado automaticamente: "Completes a form 1" (o
-     formulário da landing page).
-   - Adicionado um passo de ação "Email 1" (Send email) após o trigger,
-     com: Email name = "Entrega - Edição 1"; Subject = "Sua edição #1 do
-     Bolso Esperto chegou 🦊"; Who is it from = "Bolso Esperto". Campo
-     "Sender email" ainda não foi conferido/preenchido.
-   - Entrei no editor do conteúdo do e-mail (Simple editor, URL:
-     `dashboard.mailerlite.com/emails/196444418349205257/edit`) e escrevi
-     o corpo em português (baseado no texto pronto do plano de
-     marketing): título "Sua edição #1 chegou", saudação, parágrafo
-     citando "Cadê meu dinheiro?", parágrafo sobre 15 min de leitura,
-     teaser da edição #2 ("O cartão de crédito não é vilão..."),
-     assinatura "Bolso Esperto — menos susto, mais estratégia."
-   - Inseri um bloco `/button` com texto "Baixar PDF" logo abaixo da
-     linha "Cadê meu dinheiro?", mas **ainda não linkei esse botão a
-     nenhum arquivo** (não cheguei a clicar no ícone de link da toolbar
-     do botão nem fazer upload do PDF).
-   - **Próximos passos exatos para retomar:**
-     1. Fazer upload de `~/projetos/bolso-esperto/edicoes/edicao-01/bolso-esperto-01.pdf`
-        e `bolso-esperto-01.epub` (via file manager do MailerLite, deve
-        aparecer ao clicar no ícone de link 🔗 do botão "Baixar PDF" e
-        escolher "Upload file" ou similar).
-     2. Linkar o botão "Baixar PDF" ao PDF enviado.
-     3. Duplicar o botão (ou inserir outro `/button`) para "Baixar EPUB"
-        e linkar ao EPUB.
-     4. Salvar/fechar o editor de e-mail (botão "Next" no topo), voltar
-        ao workflow.
-     5. Conferir "Sender email" no passo Email 1 (precisa ser um e-mail
-        verificado no MailerLite — provavelmente
-        adrianofreire240@gmail.com).
-     6. Clicar "Activate" no workflow (topo direito) para ligar a
-        automação — sem isso, o e-mail de entrega NÃO é enviado quando
-        alguém preenche o formulário.
-     7. Testar preenchendo o formulário da landing page
-        (`https://adrianofreire-h5hnp5.subscribepage.io`) com o próprio
-        e-mail para confirmar que a entrega funciona (passo 4 do setup
-        original).
-4. ⬜ Colocar link da landing page (`adrianofreire-h5hnp5.subscribepage.io`)
-   na bio do Instagram.
+3. ✅ CONCLUÍDO (2026-08-22) — automação de entrega configurada e
+   ativada. Workflow "Bolso Esperto - Captura Edição 1 Workflow"
+   (`dashboard.mailerlite.com/automations/196444252032468090/edit`):
+   trigger "Completes a form 1" → ação "Email 1" ("Entrega - Edição 1",
+   assunto "Sua edição #1 do Bolso Esperto chegou 🦊", sender
+   adrianofreire240@gmail.com). Corpo do e-mail com dois botões
+   linkados via URL type "File" (upload direto no editor do e-mail,
+   ícone de link 🔗 → File → Upload): "Baixar PDF" →
+   bolso-esperto-01.pdf (1.66 MB) e "Baixar EPUB" →
+   bolso-esperto-01.epub (1.51 MB), ambos abrindo em nova aba. Workflow
+   **ativado** (botão "Activate" clicado, confirmado pelo usuário antes).
+   Teste ponta a ponta feito: preenchido o formulário da landing page
+   com o e-mail do próprio usuário → assinante entrou como "Active"
+   direto (sem etapa de double opt-in bloqueando) → Activity hub do
+   workflow confirmou "Started: 1, Completed: 1, Total emails sent: 1,
+   Failed: 0". Setup técnico de captura+entrega está 100% funcional.
+4. ⬜ PRÓXIMO PASSO: colocar o link da landing page
+   (`adrianofreire-h5hnp5.subscribepage.io`) na bio do Instagram, depois
+   seguir o cronograma de lançamento de 7 dias do artifact (teaser →
+   post de lançamento → reel → prova social → lembrete final).
 
 **Why:** usuário quer lançar várias edições/ebooks no mesmo padrão — vale
 manter marca e template consistentes entre sessões futuras.
