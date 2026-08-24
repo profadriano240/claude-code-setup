@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-24T14:35:47.579Z
+  modified: 2026-08-24T19:37:11.268Z
 ---
 
 Usuário está criando uma coleção de ebooks de educação financeira que vai
@@ -200,37 +200,95 @@ e-mail, reações no reel.
 que quer aparecer o mínimo possível e não tem tempo para mexer em redes
 sociais (ver [[feedback_baixo_envolvimento_redes_sociais]]). Por isso o
 cronograma original de 7 dias (teaser+lançamento+reel+prova social+
-lembrete, cross Stories/feed/Reels) foi **reduzido a 2-3 posts de feed
-com imagem estática (sem vídeo, sem aparecer)**, que a Claude prepara e
-publica sozinha via Instagram Web após aprovação do usuário por
-mensagem — Stories e Reels ficaram de fora (exigem app
+lembrete, cross Stories/feed/Reels) foi **reduzido a posts de feed com
+imagem estática (sem vídeo, sem aparecer)**, que a Claude prepara e
+publica/programa sozinha — Stories e Reels ficaram de fora (exigem app
 mobile/gravação, não dá pra automatizar via browser).
-- **Post 1 pronto e aprovado pelo usuário**, mas ainda NÃO publicado
-  (bloqueio técnico, ver abaixo): infográfico da regra 50-30-20 (mais
-  educativo que só "teaser", por sugestão do próprio usuário — bate com
-  o conceito da marca de "gancho é conhecimento, não brinde") + legenda
-  educativa com CTA pro link na bio.
-  - Imagem: `~/projetos/bolso-esperto/marketing/post-01-lancamento.png`
-    (1080x1350, 4:5, gerada via HTML
-    `~/projetos/bolso-esperto/marketing/post-01-lancamento.html` +
-    `google-chrome --headless --hide-scrollbars --screenshot=...`).
-    Nota técnica: sem `--hide-scrollbars` E `overflow:hidden` no
-    html/body, o Chrome headless desenha uma barra de rolagem dentro da
-    própria imagem capturada — sempre incluir os dois ao gerar imagens
-    assim.
-  - Legenda: `~/projetos/bolso-esperto/marketing/post-01-legenda.txt`.
-  - ✅ PUBLICADO (2026-08-24) — extensão Claude in Chrome reconectou
-    depois que o usuário reabriu o Chrome; post publicado com sucesso
-    no feed do @profadrianofreire via automação de browser (upload da
-    imagem via `file_upload` no input `type=file` do modal "Criar novo
-    post", legenda digitada, aprovação do usuário confirmada antes do
-    clique em "Compartilhar"). Confirmado visualmente no grid do
-    perfil.
-- **Post 2 (ainda não feito):** cobrir o conteúdo que seria do "Reel"
-  do plano original (prova de valor) em formato de imagem estática
-  também, seguindo o mesmo processo (HTML → screenshot → aprovação →
-  publicar). Post 3 (prova social/lembrete final) fica pra depois,
-  avaliar se ainda faz sentido dado o formato reduzido.
+
+**Data-alvo da edição #2: 31/08/2026** (definida pelo usuário em
+2026-08-24). ⚠️ Em 24/08 a edição #2 ("O cartão de crédito não é vilão")
+**ainda não tinha sido produzida** (nem texto nem imagens) — é o
+principal risco pro prazo. Próxima sessão relevante deve checar se a
+produção da edição #2 já começou antes de assumir que o dia 31/08 vai
+ter conteúdo pra lançar.
+
+**✅ Agendamento nativo do Instagram descoberto e em uso (2026-08-24):**
+a conta @profadrianofreire já é profissional e tem acesso ao **Meta
+Business Suite** (`business.facebook.com`, login "Continuar com o
+Instagram"). O composer do Instagram Web (Criar → Postar) tem um toggle
+**"Programar conteúdo"** que agenda o post nos servidores da Meta —
+publica sozinho, sem precisar de sessão/Chrome ativos no horário. Muito
+melhor que o Meta Business Suite direto (`/latest/composer/`), cujo
+upload de imagem usa uma API de arquivo não convencional (sem
+`<input type=file>` no DOM, `file_upload` não funciona lá — só dá pra
+fazer upload pelo composer normal do instagram.com).
+
+**⚠️ Bug crítico descoberto e corrigido: corte da imagem no post.** O
+Instagram aplica por padrão um crop mais estreito que 4:5 na etapa
+"Cortar", cortando a parte de cima de imagens 1080x1350 (a logo da
+raposa sumia). **Sempre**, na tela "Cortar" do composer, clicar no ícone
+de proporção (canto inferior esquerdo) e selecionar explicitamente
+**"4:5"** antes de avançar — sem isso a prévia parece mostrar a imagem
+inteira mas o post publicado vem cortado. O post 1 foi publicado sem
+essa correção, teve que ser **excluído e republicado** depois de o
+usuário notar o corte.
+
+**Fluxo validado pra publicar/agendar post de imagem única:**
+1. Criar → Postar → achar o `<input type=file>` via `find` (não clicar
+   direto no botão "Selecionar do computador", abre picker nativo que
+   trava a automação) → `file_upload`.
+2. Na tela "Cortar": clicar no ícone de proporção → escolher **4:5**.
+3. Avançar (Filtros) → Avançar (chega na legenda).
+4. Digitar a legenda.
+5. Achar o toggle "Programar conteúdo" via `find` e clicar (clique
+   direto por coordenada, ref às vezes fica stale e não registra —
+   confirmar com screenshot).
+6. Escolher a data: o dropdown de calendário tem 42 `gridcell` sem
+   texto legível por `find`; calcular o ref pela posição (agosto de
+   2026 começa no sábado dia 1 → dia N = índice 6+N na grade) e clicar
+   por `ref`, ou clicar direto na coordenada visível.
+7. Em "Compartilhar no", desligar o toggle do Facebook pessoal (vem
+   ligado por padrão e não foi pedido) → escolher "Não compartilhar
+   este post" no dialog que aparece.
+8. Clicar "Programar" (ou "Compartilhar" se for publicar na hora).
+9. **Cuidado com scroll manual by coordinate dentro do modal** — em
+   pelo menos uma tentativa isso disparou atalhos de teclado do
+   Instagram por trás (abriu painel de Notificações, atalhos de
+   teclado) e quase descartou o post ("Descartar post?"). Preferir
+   `find` + clique por `ref`/coordenada pontual em vez de `scroll`.
+
+**Posts do cronograma (24/08 → 30/08, todos evergreen sobre a edição
+#1, sem prometer nada da #2 que ainda não existe):**
+1. ✅ PUBLICADO 2026-08-24 (republicado após corrigir o corte) — "A
+   regra que organiza qualquer salário em 3 números" (50-30-20).
+   Imagem: `~/projetos/bolso-esperto/marketing/post-01-lancamento.png`
+   + `.html`. Legenda: `post-01-legenda.txt`.
+2. ✅ PROGRAMADO pra 26/08 13:10 — "O Golpe da Semana: o gastinho
+   invisível" (conteúdo real tirado de
+   `edicoes/edicao-01/conteudo.md`). Imagem:
+   `marketing/post-03-golpe-semana.png` + `.html`. Legenda:
+   `post-03-legenda.txt`.
+3. ✅ PROGRAMADO pra 28/08 14:22 — "Na Prática: mapeie seus gastos em
+   15 minutos" (checklist de 4 passos, também da edição #1). Imagem:
+   `marketing/post-04-na-pratica.png` + `.html`. Legenda:
+   `post-04-legenda.txt`.
+4. ✅ PROGRAMADO pra 30/08 16:05 — "Em Números: realidade vs. ideal" +
+   Termo da Semana (reserva de emergência). Imagem:
+   `marketing/post-05-reserva.png` + `.html`. Legenda:
+   `post-05-legenda.txt`.
+5. 🔶 PENDENTE — post de lançamento da edição #2 pro dia **31/08**:
+   NÃO criado ainda de propósito, porque depende do conteúdo da #2
+   estar pronto (texto+imagens+PDF/EPUB+página de entrega no
+   MailerLite) — não faz sentido programar um post prometendo download
+   antes de a entrega existir. Existe um rascunho descartado
+   (`marketing/post-02-lembrete.png/.html/.legenda.txt`) com esse
+   teaser que pode servir de base quando a #2 estiver pronta, mas o
+   texto "em breve"/datas precisam ser revisados pra bater com o
+   status real na hora.
+   **Próximo passo ao retomar:** (a) checar/produzir a edição #2
+   (texto + imagens + PDF/EPUB, mesmo processo da #1) a tempo do
+   31/08; (b) só depois montar e programar o post de lançamento da #2,
+   reaproveitando o fluxo de agendamento validado acima.
 
 **Why:** usuário quer lançar várias edições/ebooks no mesmo padrão — vale
 manter marca e template consistentes entre sessões futuras.
