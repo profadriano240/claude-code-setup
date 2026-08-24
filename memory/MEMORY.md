@@ -5,3 +5,4 @@
 - [Lançamento de notas em paralelo](projeto_lancamento_notas_seduc.md) — outra sessão de terminal já cuida do lançamento de notas no mesmo diário; não duplicar aqui sem confirmar
 - [Backup claude-code-setup](referencia_backup_claude_code_setup.md) — repo GitHub profadriano240/claude-code-setup guarda backup de config/memória, sync automático via hooks
 - [Revista Bolso Esperto](projeto_revista_bolso_esperto.md) — projeto de ebooks/revista semanal educação financeira 18-37 anos, marca+template já definidos em ~/projetos/bolso-esperto/
+- [Baixo envolvimento em redes sociais](feedback_baixo_envolvimento_redes_sociais.md) — usuário quer aparecer o mínimo possível e tem pouco tempo; preferir formatos que a Claude produz/publica sozinha
