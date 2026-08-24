@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-24T12:44:31.668Z
+  modified: 2026-08-24T13:27:05.040Z
 ---
 
 Usuário está criando uma coleção de ebooks de educação financeira que vai
@@ -176,6 +176,24 @@ e-mail, reações no reel.
    **Próximo passo ao retomar:** seguir o cronograma de lançamento de 7
    dias do artifact (teaser → post de lançamento → reel → prova social →
    lembrete final).
+6. ✅ Bug do link "Baixar PDF" quebrado corrigido (2026-08-24). Usuário
+   percebeu que o botão não era clicável no e-mail de entrega. Causa:
+   o botão "Baixar PDF" no editor de e-mail do MailerLite
+   (`Edit content` → bloco de botão) tinha o link vazio (href="#...",
+   uma âncora sem destino) — só o "Baixar EPUB" estava correto. O botão
+   é um "node-button" do editor rich-text (TipTap/ProseMirror); só
+   clicar nele e escolher o arquivo pelo ícone de link não bastava. O
+   que funcionou: **selecionar o texto do botão por clique-arrasta
+   (drag) antes de abrir o painel de link** → ícone de link → File →
+   File manager → clicar "Insert" no card do arquivo certo
+   (`bolso-esperto-01.pdf`). Confirmado via "Send a test email" e
+   inspeção do href real no Gmail (`storage.googleapis.com/mailerlite-
+   uploads-prod/...pdf`). **Sempre validar links de botão em e-mails do
+   MailerLite assim** — enviar teste e checar o href real no Gmail, não
+   confiar só na aparência do editor.
+   Nota lateral: nesse processo, sem querer, os e-mails de teste
+   antigos na pasta Spam foram marcados "Não é spam" (não afeta
+   produção, é só a caixa pessoal do usuário).
 
 **Why:** usuário quer lançar várias edições/ebooks no mesmo padrão — vale
 manter marca e template consistentes entre sessões futuras.
