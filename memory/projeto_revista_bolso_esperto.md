@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-24T14:26:02.428Z
+  modified: 2026-08-24T14:35:47.579Z
 ---
 
 Usuário está criando uma coleção de ebooks de educação financeira que vai
@@ -219,13 +219,13 @@ mobile/gravação, não dá pra automatizar via browser).
     própria imagem capturada — sempre incluir os dois ao gerar imagens
     assim.
   - Legenda: `~/projetos/bolso-esperto/marketing/post-01-legenda.txt`.
-  - 🔶 BLOQUEADO: extensão Claude in Chrome caiu a conexão bem na hora
-    de publicar (`tabs_context_mcp` retornando "Browser extension is
-    not connected" mesmo após o usuário reabrir o Chrome). **Próximo
-    passo ao retomar:** tentar reconectar a extensão de novo; se
-    reconectar, publicar o post 1 (imagem + legenda já prontas acima)
-    no feed do Instagram via automação de browser, com aprovação do
-    usuário antes do clique final de "Compartilhar".
+  - ✅ PUBLICADO (2026-08-24) — extensão Claude in Chrome reconectou
+    depois que o usuário reabriu o Chrome; post publicado com sucesso
+    no feed do @profadrianofreire via automação de browser (upload da
+    imagem via `file_upload` no input `type=file` do modal "Criar novo
+    post", legenda digitada, aprovação do usuário confirmada antes do
+    clique em "Compartilhar"). Confirmado visualmente no grid do
+    perfil.
 - **Post 2 (ainda não feito):** cobrir o conteúdo que seria do "Reel"
   do plano original (prova de valor) em formato de imagem estática
   também, seguindo o mesmo processo (HTML → screenshot → aprovação →
