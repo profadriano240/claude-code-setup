@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-24T12:24:18.270Z
+  modified: 2026-08-24T12:44:31.668Z
 ---
 
 Usuário está criando uma coleção de ebooks de educação financeira que vai
@@ -156,9 +156,25 @@ e-mail, reações no reel.
    no navegador desktop (mensagem: "Somente é possível editar os links no
    celular"). Usuário precisa colar o link
    `https://adrianofreire-h5hnp5.subscribepage.io` pelo celular.
-   **Próximo passo ao retomar:** perguntar se o usuário já colou o link
-   pelo celular; se sim, seguir o cronograma de lançamento de 7 dias do
-   artifact (teaser → post de lançamento → reel → prova social →
+   ✅ Link colado pelo usuário no app mobile (confirmado em 2026-08-24).
+5. ✅ Bug de reentrada corrigido (2026-08-24) — usuário testou o
+   formulário de novo com o mesmo e-mail (`adrianofreire240@gmail.com`)
+   e não recebeu o e-mail de entrega. Causa: por padrão o MailerLite só
+   deixa um assinante disparar o workflow **uma vez** por gatilho
+   ("Completes a form"); como esse e-mail já tinha completado o
+   formulário em 2026-08-21, o segundo teste não recriou o envio (não
+   era bug de configuração de entrega, e sim da automação). Corrigido
+   habilitando, nas Settings do workflow
+   (`dashboard.mailerlite.com/automations/196444252032468090/edit` →
+   ícone de engrenagem → Settings), a opção "Allow subscribers re-enter
+   automation" com "As soon as they match the triggers" (sem delay) —
+   precisou pausar a automação pra editar e depois reativar (Activate).
+   Nota: o próprio MailerLite avisa que não reenvia o mesmo e-mail pro
+   mesmo assinante dentro de uma janela de 24h, então testes repetidos
+   muito seguidos (mesmo dia, mesmo e-mail) ainda podem não gerar novo
+   envio — isso é esperado, não é bug.
+   **Próximo passo ao retomar:** seguir o cronograma de lançamento de 7
+   dias do artifact (teaser → post de lançamento → reel → prova social →
    lembrete final).
 
 **Why:** usuário quer lançar várias edições/ebooks no mesmo padrão — vale
