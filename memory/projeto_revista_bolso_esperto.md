@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-22T14:26:54.219Z
+  modified: 2026-08-24T12:24:18.270Z
 ---
 
 Usuário está criando uma coleção de ebooks de educação financeira que vai
@@ -145,25 +145,21 @@ e-mail, reações no reel.
    direto (sem etapa de double opt-in bloqueando) → Activity hub do
    workflow confirmou "Started: 1, Completed: 1, Total emails sent: 1,
    Failed: 0". Setup técnico de captura+entrega está 100% funcional.
-4. 🔶 EM ANDAMENTO (pausado em 2026-08-22) — colocar o link da landing
-   page (`adrianofreire-h5hnp5.subscribepage.io`) na bio do Instagram.
-   Bloqueio: usuário não conseguiu logar no Instagram pelo navegador
-   (Chrome não estava logado na conta) — tentativa de login apresentou
-   reCAPTCHA ("Não sou um robô", resolvido manualmente pelo usuário) e
-   depois a mensagem "As informações de login que você inseriu estão
-   incorretas". Usuário ficou de tentar recuperar a senha ("Esqueceu a
-   senha?") por conta própria — login/senha e captcha são ações que a
-   Claude não pode executar (credenciais e verificação anti-bot). Texto
-   pronto pra colar assim que logar:
-   - Bio: "Educação financeira sem enrolação 🦊 / Toda semana, 1 tema,
-     15 min de leitura. / Bolso Esperto #1 é grátis ↓"
-   - Link da bio: `https://adrianofreire-h5hnp5.subscribepage.io`
-   **Próximo passo ao retomar:** perguntar se o usuário já conseguiu
-   recuperar a senha/logar; se sim, seguir para editar a bio do
-   Instagram (via `instagram.com/accounts/edit/`) com o texto acima e
-   depois seguir o cronograma de lançamento de 7 dias do artifact
-   (teaser → post de lançamento → reel → prova social → lembrete
-   final).
+4. ✅ Bio do Instagram atualizada (2026-08-24) — login já resolvido pelo
+   usuário. Texto novo salvo com sucesso via `instagram.com/accounts/edit/`
+   no Chrome desktop: "Educação financeira sem enrolação 🦊 / Toda
+   semana, 1 tema, 15 min de leitura. / Bolso Esperto #1 é grátis ↓"
+   (substituiu a bio antiga de prof/consultor financeiro, por decisão do
+   usuário).
+   🔶 PENDENTE — o campo "Site" (link da bio) só é editável pelo **app
+   mobile** do Instagram; o Instagram bloqueia essa edição especificamente
+   no navegador desktop (mensagem: "Somente é possível editar os links no
+   celular"). Usuário precisa colar o link
+   `https://adrianofreire-h5hnp5.subscribepage.io` pelo celular.
+   **Próximo passo ao retomar:** perguntar se o usuário já colou o link
+   pelo celular; se sim, seguir o cronograma de lançamento de 7 dias do
+   artifact (teaser → post de lançamento → reel → prova social →
+   lembrete final).
 
 **Why:** usuário quer lançar várias edições/ebooks no mesmo padrão — vale
 manter marca e template consistentes entre sessões futuras.
