@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-24T14:25:36.521Z
+  modified: 2026-08-24T14:26:02.428Z
 ---
 
 Usuário está criando uma coleção de ebooks de educação financeira que vai
@@ -195,6 +195,42 @@ e-mail, reações no reel.
    Nota lateral: nesse processo, sem querer, os e-mails de teste
    antigos na pasta Spam foram marcados "Não é spam" (não afeta
    produção, é só a caixa pessoal do usuário).
+
+**Cronograma de lançamento ADAPTADO (2026-08-24)** — usuário deixou claro
+que quer aparecer o mínimo possível e não tem tempo para mexer em redes
+sociais (ver [[feedback_baixo_envolvimento_redes_sociais]]). Por isso o
+cronograma original de 7 dias (teaser+lançamento+reel+prova social+
+lembrete, cross Stories/feed/Reels) foi **reduzido a 2-3 posts de feed
+com imagem estática (sem vídeo, sem aparecer)**, que a Claude prepara e
+publica sozinha via Instagram Web após aprovação do usuário por
+mensagem — Stories e Reels ficaram de fora (exigem app
+mobile/gravação, não dá pra automatizar via browser).
+- **Post 1 pronto e aprovado pelo usuário**, mas ainda NÃO publicado
+  (bloqueio técnico, ver abaixo): infográfico da regra 50-30-20 (mais
+  educativo que só "teaser", por sugestão do próprio usuário — bate com
+  o conceito da marca de "gancho é conhecimento, não brinde") + legenda
+  educativa com CTA pro link na bio.
+  - Imagem: `~/projetos/bolso-esperto/marketing/post-01-lancamento.png`
+    (1080x1350, 4:5, gerada via HTML
+    `~/projetos/bolso-esperto/marketing/post-01-lancamento.html` +
+    `google-chrome --headless --hide-scrollbars --screenshot=...`).
+    Nota técnica: sem `--hide-scrollbars` E `overflow:hidden` no
+    html/body, o Chrome headless desenha uma barra de rolagem dentro da
+    própria imagem capturada — sempre incluir os dois ao gerar imagens
+    assim.
+  - Legenda: `~/projetos/bolso-esperto/marketing/post-01-legenda.txt`.
+  - 🔶 BLOQUEADO: extensão Claude in Chrome caiu a conexão bem na hora
+    de publicar (`tabs_context_mcp` retornando "Browser extension is
+    not connected" mesmo após o usuário reabrir o Chrome). **Próximo
+    passo ao retomar:** tentar reconectar a extensão de novo; se
+    reconectar, publicar o post 1 (imagem + legenda já prontas acima)
+    no feed do Instagram via automação de browser, com aprovação do
+    usuário antes do clique final de "Compartilhar".
+- **Post 2 (ainda não feito):** cobrir o conteúdo que seria do "Reel"
+  do plano original (prova de valor) em formato de imagem estática
+  também, seguindo o mesmo processo (HTML → screenshot → aprovação →
+  publicar). Post 3 (prova social/lembrete final) fica pra depois,
+  avaliar se ainda faz sentido dado o formato reduzido.
 
 **Why:** usuário quer lançar várias edições/ebooks no mesmo padrão — vale
 manter marca e template consistentes entre sessões futuras.
