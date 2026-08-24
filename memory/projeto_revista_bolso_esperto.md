@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-24T13:27:05.040Z
+  modified: 2026-08-24T14:25:36.521Z
 ---
 
 Usuário está criando uma coleção de ebooks de educação financeira que vai
@@ -88,8 +88,9 @@ próximas edições):
   always` forçado entre subseções curtas relacionadas (desperdiça
   página em branco) — deixar o fluxo natural quebrar quando possível.
 
-**Estratégia de lançamento (marketing) — definida em artifact "Lançamento
-Bolso Esperto"** (https://claude.ai/code/artifact/54b1bb84-77bc-42c7-a324-4e426a4b94e0):
+**Estratégia de lançamento (marketing) — EM EXECUÇÃO, adaptada
+(2026-08-24).** Definida originalmente em artifact "Lançamento Bolso
+Esperto" (https://claude.ai/code/artifact/54b1bb84-77bc-42c7-a324-4e426a4b94e0):
 edição #1 é **grátis**, objetivo é capturar contato (e-mail), não vender.
 Funil: Instagram → landing page de captura → entrega automática por
 e-mail → oferta paga só depois de 3-4 edições prontas. Decisão: nem KDP
