@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-24T19:37:11.268Z
+  modified: 2026-08-25T01:43:35.955Z
 ---
 
 Usuário está criando uma coleção de ebooks de educação financeira que vai
@@ -290,12 +290,22 @@ usuário notar o corte.
    31/08; (b) só depois montar e programar o post de lançamento da #2,
    reaproveitando o fluxo de agendamento validado acima.
 
+**✅ Gerador de imagem trocado para Pollinations.ai (2026-08-24, gratuito).**
+Créditos do Gamma ficaram baixos (19 restantes, ~70 por imagem) e o
+usuário pediu alternativa gratuita. Testado e aprovado:
+**Pollinations.ai** (`image.pollinations.ai/prompt/...`, via `curl`, sem
+cadastro/chave). Estilo escolhido pelo usuário: **low-poly geométrico**
+(`model=flux`). Prompt-base e detalhes técnicos completos em
+`~/projetos/bolso-esperto/marca/identidade-visual.md` (seção "Gerador de
+imagem: Pollinations.ai"). Usar esse fluxo para as imagens da edição #2
+em diante — não usar mais o Gamma para gerar imagens deste projeto
+(pode continuar valendo para outros usos que não envolvam custo).
+
 **Why:** usuário quer lançar várias edições/ebooks no mesmo padrão — vale
 manter marca e template consistentes entre sessões futuras.
 **How to apply:** ao continuar este projeto em conversas futuras, seguir
-o template de estrutura, o briefing de marca, o processo de montagem
-PDF/EPUB e o plano de lançamento acima descritos. Créditos do Gamma
-ficaram baixos após edição-01 (19 restantes) — confirmar com o usuário
-antes de gerar imagens novas para a edição-02 ("O cartão de crédito não
-é vilão"). Preferência geral do usuário por ferramentas gratuitas antes
-de considerar pagas (mesmo padrão de [[projeto_automacoes_whatsapp]]).
+o template de estrutura, o briefing de marca (incluindo o novo fluxo de
+imagem via Pollinations.ai), o processo de montagem PDF/EPUB e o plano
+de lançamento acima descritos. Preferência geral do usuário por
+ferramentas gratuitas antes de considerar pagas (mesmo padrão de
+[[projeto_automacoes_whatsapp]]).
