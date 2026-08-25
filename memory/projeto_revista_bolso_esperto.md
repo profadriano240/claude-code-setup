@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-25T21:48:23.305Z
+  modified: 2026-08-25T21:54:44.630Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -425,9 +425,10 @@ o conceito de mascote em si. Se retomar vídeo no futuro, perguntar antes
 de já default de novo pra um personagem — o teaser original (edição #1,
 sem personagem, só texto/tipografia animada) **não** foi rejeitado, só
 esse segundo formato com mascote.
-Código da composição ficou no repo (`video/src/Regra502030.tsx` +
-imagens em `video/public/raposa/`) só por histórico — não reaproveitar
-como base pra próximas peças sem consultar o usuário primeiro.
+Código da composição (`video/src/Regra502030.tsx` + imagens em
+`video/public/raposa/`) foi **removido do repo a pedido do usuário**
+logo depois (commit `afa7cf3`) — só existe no histórico do git, não no
+working tree. Não recriar sem o usuário pedir de novo.
 
 **Ajustes de feedback do usuário (2026-08-25), aplicados antes do
 publish:** duração 18s → ~22,7s (achou rápido demais) e depois fontes/
