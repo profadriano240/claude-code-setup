@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-25T16:24:39.490Z
+  modified: 2026-08-25T17:21:06.316Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -368,6 +368,53 @@ cadastro/chave). Estilo escolhido pelo usuário: **low-poly geométrico**
 imagem: Pollinations.ai"). Usar esse fluxo para as imagens da edição #2
 em diante — não usar mais o Gamma para gerar imagens deste projeto
 (pode continuar valendo para outros usos que não envolvam custo).
+
+**✅ Protótipo de teaser em vídeo via Remotion (2026-08-25).** Explorado a
+pedido do usuário ("quero ver essa aplicação para a Revista Bolso
+Esperto") como formato adicional de marketing que a Claude produz
+sozinha (sem gravação/câmera, ver
+[[feedback_baixo_envolvimento_redes_sociais]]). Projeto em
+`~/projetos/bolso-esperto/video/` (React + Remotion, commitado no
+mesmo repo). Composição `Edicao01Teaser` (18s, 1080×1920, 4 cenas:
+capa → Golpe da Semana animado → Em Números com barras animadas real
+vs. ideal → CTA final), reaproveitando texto/paleta/fontes (Quicksand
+via `@remotion/google-fonts`, mesma paleta laranja/grafite) e imagens
+já existentes da edição #1. MP4 final baixado em
+`video/out/video.mp4` (não versionado, `out/` está no `.gitignore`).
+
+**Decisões técnicas importantes:**
+- **Render roda só via GitHub Actions** (`.github/workflows/render-video.yml`,
+  `workflow_dispatch`, disparado com `gh workflow run render-video.yml -f
+  composition=<ID>` e baixado com `gh run download <run-id> -n <ID> -D
+  out`), nunca localmente — Chrome headless do Remotion é pesado demais
+  pro notebook fraco (ver [[maquina_debian_home]]; RAM já ficou abaixo de
+  600Mi disponível durante o trabalho). Grátis (dentro do free tier do
+  GitHub Actions).
+- Instalação local do `npm install` em `video/` é só para checar tipos
+  (`npx tsc --noEmit`) e gerar **frames estáticos isolados** para QA
+  visual (`npx remotion still src/index.ts <ID> out/frame.png
+  --frame=N`) — isso sim é leve o bastante pra rodar na máquina (abre
+  Chrome headless uma vez só, não renderiza vídeo inteiro) e foi como o
+  ícone do Golpe da Semana com fundo branco sobrando foi detectado e
+  corrigido antes do render final.
+- **Não tentar abrir o MP4 renderizado na aba do `claude-in-chrome` pra
+  conferir visualmente** — a aba roda em segundo plano
+  (`document.hidden = true`), o Chrome suspende o decode do `<video>` e
+  `currentTime`/`play()` não avançam de verdade (trava, não é bug de
+  seek). Usar `remotion still` pra extrair frames específicos é o
+  caminho confiável de QA visual.
+- Ícone `icone-golpe.png` (recortado da edição #1) tinha ~50% de altura
+  de fundo branco sobrando (herdado do corte imperfeito documentado
+  acima) — corrigido cropando pelas linhas de conteúdo real (numpy,
+  mesma técnica de detecção de não-branco já usada antes).
+
+**🔶 Pendente/não validado:** publicar um Reels pronto (arquivo de vídeo,
+não gravado ao vivo) pelo composer do Instagram Web/Meta Business Suite
+usando o mesmo fluxo de agendamento já validado pra imagem estática
+(seção de marketing acima) — provavelmente aceita upload de vídeo do
+mesmo jeito (trocar `file_upload` de imagem por vídeo), mas isso ainda
+não foi testado na prática. Próxima sessão que retomar isso deve validar
+esse passo antes de assumir que o teaser pode ser agendado sozinho.
 
 **Why:** usuário quer lançar várias edições/ebooks no mesmo padrão — vale
 manter marca e template consistentes entre sessões futuras.
