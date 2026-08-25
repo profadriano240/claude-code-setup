@@ -5,8 +5,14 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-25T03:22:32.679Z
+  modified: 2026-08-25T16:24:39.490Z
 ---
+
+**Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
+(privado, criado em 2026-08-25 a partir de `~/projetos/bolso-esperto/`).
+Lembrar de commitar/dar push quando novos arquivos forem gerados (edições
+novas, materiais de marketing etc.) — o diretório não tem sync automático
+como o [[referencia_backup_claude_code_setup]].
 
 Usuário está criando uma coleção de ebooks de educação financeira que vai
 evoluir para uma **publicação semanal estilo revista simples** (inspirada
