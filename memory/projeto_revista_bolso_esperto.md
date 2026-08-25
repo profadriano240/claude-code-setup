@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-25T17:21:06.316Z
+  modified: 2026-08-25T20:05:07.438Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -408,13 +408,66 @@ já existentes da edição #1. MP4 final baixado em
   acima) — corrigido cropando pelas linhas de conteúdo real (numpy,
   mesma técnica de detecção de não-branco já usada antes).
 
-**🔶 Pendente/não validado:** publicar um Reels pronto (arquivo de vídeo,
-não gravado ao vivo) pelo composer do Instagram Web/Meta Business Suite
-usando o mesmo fluxo de agendamento já validado pra imagem estática
-(seção de marketing acima) — provavelmente aceita upload de vídeo do
-mesmo jeito (trocar `file_upload` de imagem por vídeo), mas isso ainda
-não foi testado na prática. Próxima sessão que retomar isso deve validar
-esse passo antes de assumir que o teaser pode ser agendado sozinho.
+**Ajustes de feedback do usuário (2026-08-25), aplicados antes do
+publish:** duração 18s → ~22,7s (achou rápido demais) e depois fontes/
+ícone/barras aumentadas em duas rodadas (achou letras difíceis de ler)
+— versão final bem maior/mais ousada que o primeiro rascunho. Lição:
+**não economizar no tamanho de fonte em vídeo vertical pra Reels** —
+o que parece "ok" olhando frame a frame num preview de desktop ainda
+pode estar pequeno demais no contexto real (tela cheia de celular,
+concorrendo com UI do Instagram por cima). Calibrar mais generoso da
+próxima vez, direto na primeira versão.
+
+**✅ Publicação de vídeo/Reels pelo Instagram Web — VALIDADO E
+FUNCIONANDO (2026-08-25).** Ao contrário do que a nota anterior temia,
+o upload de vídeo pelo composer funciona sim, mas com comportamento
+diferente da imagem estática:
+- O mesmo fluxo "Criar → Postar" (`find` pro `<input type=file>` →
+  `file_upload`) funciona pra vídeo também, mas o **processamento
+  inicial demora bem mais que uma foto** (thumbnail/preview do vídeo
+  leva vários segundos, ao contrário do quase-instantâneo da imagem) —
+  não julgar "não funcionou" só porque a tela "Arraste as fotos e os
+  vídeos aqui" ainda está visível 3s depois; esperar mais e reconferir.
+- Qualquer vídeo enviado por esse fluxo vira automaticamente um
+  **"Novo reel"** (não um post de feed comum) — a etapa de corte tem
+  opções "Original / 1:1 / 9:16 / 16:9" (sem 4:5 como nas fotos); pra
+  vídeo já nativamente 9:16 (1080×1920), escolher **"Original"** evita
+  qualquer corte. Depois da etapa de corte vem uma etapa extra que as
+  fotos não têm ("Editar": aparar duração, escolher capa, som) — só
+  clicar "Avançar" de novo se não precisar mexer nisso.
+- **A aba trava pra `screenshot` (CDP `Page.captureScreenshot` estoura
+  timeout) enquanto o preview de vídeo está ativo/decodificando** —
+  isso é sobrecarga de CPU/compositor do notebook fraco, não a
+  extensão caindo de verdade. Nessas horas, `javascript_tool` continua
+  respondendo normalmente (`document.title`, `innerText` etc.) — dá
+  pra navegar o fluxo "às cegas" (achar botões via `find`/`innerText`
+  e clicar por `ref`) até chegar numa tela sem vídeo tocando, onde o
+  screenshot volta a funcionar. Rodar `v.pause()` num `<video>` via JS
+  antes de tentar screenshot também ajuda.
+- A extensão do `claude-in-chrome` **caiu de vez uma vez** no meio do
+  fluxo (`tabs_context_mcp` retornou "Browser extension is not
+  connected"), mesmo com o Chrome ainda rodando — a recuperação
+  documentada em [[maquina_debian_home]] (`nohup google-chrome
+  --remote-debugging-port=9222 about:blank &` + `tabs_context_mcp`)
+  funcionou e o estado do modal (já com vídeo carregado) sobreviveu à
+  reconexão.
+- Upload de vídeo por essa via **não pode vir de `fetch()`/blob**
+  (tentei simular um `drop` real com `DataTransfer` a partir de um
+  blob buscado num servidor HTTP local — bloqueado pelo CSP do próprio
+  instagram.com, `Failed to fetch`). O que funcionou de verdade foi só
+  reesperar mais tempo pelo `file_upload` original via `<input
+  type=file>` mesmo — não precisou de drag-and-drop simulado no fim.
+- Antes de publicar: desmarcar "Adicionar rótulo de IA" (o conteúdo é
+  motion graphics/tipografia, não mídia fotorrealista — não se
+  enquadra na exigência de rotulagem de IA da Meta) e desligar o
+  toggle de compartilhamento automático no Facebook pessoal (mesmo
+  passo documentado acima pra fotos: toggle → dialog → "Não
+  compartilhar este reel").
+- Resultado confirmado publicado (não é só a UI dizendo "sucesso"):
+  conferido abrindo `instagram.com/profadrianofreire/reel/DcecbegRA8l/`
+  direto e validando timestamp ("4 min") + legenda batendo. Legenda
+  usada salva em
+  `marketing/post-06-video-teaser-legenda.txt`.
 
 **Why:** usuário quer lançar várias edições/ebooks no mesmo padrão — vale
 manter marca e template consistentes entre sessões futuras.
