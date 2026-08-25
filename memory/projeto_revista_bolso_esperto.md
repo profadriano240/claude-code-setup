@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-25T20:05:07.438Z
+  modified: 2026-08-25T21:48:23.305Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -407,6 +407,27 @@ já existentes da edição #1. MP4 final baixado em
   de fundo branco sobrando (herdado do corte imperfeito documentado
   acima) — corrigido cropando pelas linhas de conteúdo real (numpy,
   mesma técnica de detecção de não-branco já usada antes).
+
+**❌ REJEITADO (2026-08-25): vídeo com personagem-mascote (raposa 3D
+fofa) explicando a regra 50-30-20.** Segundo vídeo da série teaser,
+gerado com o mesmo pipeline Remotion+GitHub Actions do primeiro, mas
+com a raposa da marca em corpo inteiro (estilo "3D fofo/pixar", gerada
+via Pollinations.ai `model=turbo` + fundo removido com `rembg`
+`u2netp`) reagindo a cada fatia da regra. Usuário assistiu e respondeu
+direto: **"não gostei. Não vamos mais fazer vídeos assim."** Não pediu
+ajuste — foi rejeição do formato inteiro, não do texto/tema.
+**Não propor de novo vídeos com esse personagem-mascote 3D** (nem essa
+raposa fofa específica, nem variações do mesmo conceito) neste projeto,
+a menos que o usuário peça isso explicitamente de novo. Motivo exato da
+rejeição não foi detalhado pelo usuário — pode ser o estilo visual (foge
+do flat-geométrico da marca, ver nota de brand-mismatch acima), pode ser
+o conceito de mascote em si. Se retomar vídeo no futuro, perguntar antes
+de já default de novo pra um personagem — o teaser original (edição #1,
+sem personagem, só texto/tipografia animada) **não** foi rejeitado, só
+esse segundo formato com mascote.
+Código da composição ficou no repo (`video/src/Regra502030.tsx` +
+imagens em `video/public/raposa/`) só por histórico — não reaproveitar
+como base pra próximas peças sem consultar o usuário primeiro.
 
 **Ajustes de feedback do usuário (2026-08-25), aplicados antes do
 publish:** duração 18s → ~22,7s (achou rápido demais) e depois fontes/
