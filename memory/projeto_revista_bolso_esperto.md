@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-25T03:11:03.673Z
+  modified: 2026-08-25T03:22:32.679Z
 ---
 
 Usuário está criando uma coleção de ebooks de educação financeira que vai
@@ -313,12 +313,44 @@ rotativo, fechamento x vencimento). Outline aprovado, conteúdo completo
   (conferido dentro do `.epub`: o cover real nas duas saídas é
   `capa-final.png`) — não vale a pena gerar esse arquivo extra nas
   próximas edições.
-**Próximo passo ao retomar:** montar `edicao-02.html` (mesmo CSS/estrutura
-de `edicao-01.html`) → PDF via Chrome headless → `conteudo-epub.md` +
-`epub.css` → EPUB via pandoc (mesmo processo da edição #1). Depois disso,
-criar o post de lançamento da #2 (ver pendência de marketing acima) e
-configurar a entrega no MailerLite (novo workflow ou reaproveitar o
-existente com novo link de arquivo).
+**✅ Edição #2 — PDF e EPUB CONCLUÍDOS (2026-08-25).**
+`bolso-esperto-02.pdf` (11 páginas, A5) e `bolso-esperto-02.epub`
+gerados em `edicoes/edicao-02/`, mesmo processo da edição #1 (HTML+CSS
+→ Chrome headless `--print-to-pdf`; `conteudo-epub.md` + `epub.css` →
+pandoc, cover `--epub-cover-image=imagens/capa-final.png`). Conferido
+visualmente página a página (via `pdftoppm`) antes de dar por
+concluído — vale repetir essa checagem em futuras edições.
+
+Aprendizados novos desta edição (aplicar nas próximas):
+- **Chrome headless `--print-to-pdf` com `break-inside:avoid` pode
+  jogar uma caixinha inteira pra página seguinte mesmo sobrando bastante
+  espaço na página atual** (comportamento não totalmente previsível/
+  determinístico com margens em `mm`). Solução robusta: não confiar no
+  fluxo automático pra seções com 2+ caixinhas grandes — **dividir
+  manualmente em `.pagina` separadas** quando o conteúdo for longo, em
+  vez de deixar tudo num único `<div class="pagina">` e torcer pra
+  quebrar bem.
+- Quando uma dessas páginas divididas manualmente sobra com pouco
+  conteúdo (uma caixinha só), **centralizar verticalmente** (`display:
+  flex; justify-content:center`) em vez de deixar o conteúdo colado no
+  topo com espaço em branco embaixo — transforma "página vazia por
+  acidente" em "página com respiro intencional".
+- **Novo recurso editorial: página de "pull quote"** — quando uma seção
+  tem uma frase-síntese forte, dar a ela uma página inteira só com a
+  frase centralizada (estilo `.pullquote`, fundo `--cinza-claro`,
+  Quicksand bold ~19pt) em vez de enfiá-la como mais um parágrafo. Ficou
+  ótimo visualmente e é reaproveitável como recurso de design pra
+  próximas edições sempre que o "Tema Central" tiver uma virada de
+  chave clara.
+- Confirmado de novo: **infográfico com números/texto específico deve
+  ser HTML/SVG + screenshot, nunca gerador de imagem de IA** (ver nota
+  anterior sobre Pollinations.ai) — deu muito mais controle e ficou
+  perfeitamente legível.
+
+**Próximo passo ao retomar:** criar o post de lançamento da edição #2
+(ver pendência de marketing abaixo) e configurar a entrega no
+MailerLite (novo workflow ou reaproveitar o existente trocando os links
+dos arquivos pra `bolso-esperto-02.pdf`/`.epub`).
 
 **✅ Gerador de imagem trocado para Pollinations.ai (2026-08-24, gratuito).**
 Créditos do Gamma ficaram baixos (19 restantes, ~70 por imagem) e o
