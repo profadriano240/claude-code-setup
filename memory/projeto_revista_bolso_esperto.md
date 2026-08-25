@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-25T01:43:35.955Z
+  modified: 2026-08-25T03:11:03.673Z
 ---
 
 Usuário está criando uma coleção de ebooks de educação financeira que vai
@@ -289,6 +289,36 @@ usuário notar o corte.
    (texto + imagens + PDF/EPUB, mesmo processo da #1) a tempo do
    31/08; (b) só depois montar e programar o post de lançamento da #2,
    reaproveitando o fluxo de agendamento validado acima.
+
+**✅ Edição #2 — outline, conteúdo e imagens CONCLUÍDOS (2026-08-25).**
+Tema: "O cartão de crédito não é vilão, você que usa errado" (juros
+rotativo, fechamento x vencimento). Outline aprovado, conteúdo completo
+(9 seções) em `edicoes/edicao-02/conteudo.md`. Imagens em
+`edicoes/edicao-02/imagens/`:
+- `capa-final.png` — mesma logo da raposa (reaproveitada, ver marca de
+  consistência abaixo), só título/edição trocados.
+- `icone-golpe.png`, `icone-pratica.png`, `icone-termo.png` —
+  **reaproveitados 100% da edição #1** (são selo fixo de seção
+  recorrente da revista, não deveriam ser regerados a cada edição —
+  regra a manter daqui pra frente).
+- `infografico.png` — **não gerado por IA**: construído como HTML/SVG
+  (`infografico.html`, renderizado via `google-chrome --headless
+  --screenshot`) seguindo a skill de dataviz (paleta
+  laranja/grafite validada, legenda, marcadores com anel de superfície,
+  rótulos diretos em tinta neutra). Decisão importante: **qualquer
+  infográfico com números/texto específico deve ser feito assim (HTML/CSS
+  + screenshot), não via gerador de imagem de IA** — texto em imagem de
+  IA (Gamma ou Pollinations) não garante precisão nem legibilidade.
+- Descoberto que `capa-epub.png` da edição #1 nunca foi usado de fato
+  (conferido dentro do `.epub`: o cover real nas duas saídas é
+  `capa-final.png`) — não vale a pena gerar esse arquivo extra nas
+  próximas edições.
+**Próximo passo ao retomar:** montar `edicao-02.html` (mesmo CSS/estrutura
+de `edicao-01.html`) → PDF via Chrome headless → `conteudo-epub.md` +
+`epub.css` → EPUB via pandoc (mesmo processo da edição #1). Depois disso,
+criar o post de lançamento da #2 (ver pendência de marketing acima) e
+configurar a entrega no MailerLite (novo workflow ou reaproveitar o
+existente com novo link de arquivo).
 
 **✅ Gerador de imagem trocado para Pollinations.ai (2026-08-24, gratuito).**
 Créditos do Gamma ficaram baixos (19 restantes, ~70 por imagem) e o
