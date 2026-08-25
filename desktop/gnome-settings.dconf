@@ -7,8 +7,18 @@ window-height=494
 window-maximized=false
 window-width=439
 
+[org/gnome/calculator]
+base=10
+button-mode='basic'
+source-currency=''
+source-units='degree'
+target-currency=''
+target-units='radian'
+window-maximized=false
+window-size=(360, 616)
+
 [org/gnome/control-center]
-last-panel='wifi'
+last-panel='power'
 window-state=(915, 597, false)
 
 [org/gnome/deja-dup]
