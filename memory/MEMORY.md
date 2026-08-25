@@ -6,3 +6,4 @@
 - [Backup claude-code-setup](referencia_backup_claude_code_setup.md) — repo GitHub profadriano240/claude-code-setup guarda backup de config/memória, sync automático via hooks
 - [Revista Bolso Esperto](projeto_revista_bolso_esperto.md) — projeto de ebooks/revista semanal educação financeira 18-37 anos, marca+template já definidos em ~/projetos/bolso-esperto/
 - [Baixo envolvimento em redes sociais](feedback_baixo_envolvimento_redes_sociais.md) — usuário quer aparecer o mínimo possível e tem pouco tempo; preferir formatos que a Claude produz/publica sozinha
+- [Declaração de frequência](projeto_declaracao_frequencia.md) — HTML gerador feito no claude.ai (não Claude Code), repo declaracao-frequencia; há outro similar (diploma) ainda não migrado
