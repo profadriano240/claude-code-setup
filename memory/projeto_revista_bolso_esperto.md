@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-25T21:54:44.630Z
+  modified: 2026-08-26T13:11:14.225Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -491,6 +491,54 @@ diferente da imagem estática:
   usada salva em
   `marketing/post-06-video-teaser-legenda.txt`.
 
+**✅ Novo formato validado e PUBLICADO (2026-08-26): carrossel
+"panorâmico"/conectado.** A pedido do usuário (formato onde cada slide
+se conecta visualmente com o anterior, dando impressão de uma arte só
+ao arrastar). Técnica: uma arte HTML única e larga (5400×1080 = 5
+slides de 1080×1080), renderizada via `google-chrome --headless
+--window-size=5400,1080 --screenshot=...`, depois cortada em 5
+quadrados iguais com PIL (`im.crop((i*1080, 0, (i+1)*1080, 1080))`).
+Como é literalmente uma imagem só cortada, qualquer elemento decorativo
+que atravesse a largura toda (usei uma trilha pontilhada SVG com 5
+"paradas" numeradas, uma por seção) fica perfeitamente contínuo entre
+os slides sem esforço extra. Arquivos em
+`marketing/carrossel-01/` (`panorama.html` fonte reaproveitável como
+template, `panorama.png` render completo, `slide-1..5.png` finais,
+`legenda.txt`). Conteúdo: as 5 seções-chave da edição #1 (hook →
+regra 50-30-20 → golpe da semana → reserva de emergência → CTA),
+reaproveitando ícones já aprovados (`icone-golpe.png`,
+`icone-termo.png`) e a logo flat da raposa (`capa-transparente.png`) —
+sem gerar imagem nova, sem personagem 3D (ver rejeição acima).
+**Publicado com sucesso**: `instagram.com/profadrianofreire/p/DcgR5a-lTLg/`.
+
+**Armadilhas técnicas encontradas e corrigidas (aplicar de novo no
+próximo carrossel):**
+- Os ícones reaproveitados de `edicoes/edicao-01/imagens/` (fundo RGB
+  branco, sem alpha) deixam um retângulo branco visível contra o fundo
+  creme do carrossel — **sempre rodar a mesma conversão de
+  branco-pra-transparente** (threshold ≥245 em RGB → alpha 0, via PIL/
+  numpy) antes de usar esses ícones em uma peça nova com fundo diferente
+  de branco puro.
+- A logo da raposa (`capa-transparente.png`, contorno grafite escuro)
+  fica quase invisível sobre fundo escuro (grafite) — mesmo problema já
+  documentado antes para a capa. Solução aplicada: colocar a logo dentro
+  de um círculo/selo claro (`background:#F4F1EE`, `border-radius:50%`)
+  quando a peça tiver fundo escuro.
+- No upload de carrossel (múltiplos arquivos de uma vez via
+  `file_upload` no mesmo `<input type=file>`), a tela de "Cortar" tem
+  um ícone de proporção que só aparece depois de clicar no ícone de
+  "expandir/encaixar" (canto inferior esquerdo) — dá as opções
+  Original/1:1/4:5/16:9. Selecionar **1:1** explicitamente (imagens já
+  são quadradas 1080×1080, então não corta nada, mas evita qualquer
+  crop-padrão inesperado). Existe também um ícone de "quadrados
+  empilhados" que abre um painel de reordenar/remover slides — útil pra
+  conferir a ordem antes de publicar.
+- Extensão do `claude-in-chrome` caiu de novo nessa sessão (2ª vez,
+  mesma máquina) — recuperação de sempre funcionou: `nohup
+  google-chrome --remote-debugging-port=9222 about:blank &` +
+  `tabs_context_mcp{createIfEmpty:true}` (só precisou de ~4s de espera
+  extra dessa vez).
+
 **Why:** usuário quer lançar várias edições/ebooks no mesmo padrão — vale
 manter marca e template consistentes entre sessões futuras.
 **How to apply:** ao continuar este projeto em conversas futuras, seguir
@@ -498,4 +546,7 @@ o template de estrutura, o briefing de marca (incluindo o novo fluxo de
 imagem via Pollinations.ai), o processo de montagem PDF/EPUB e o plano
 de lançamento acima descritos. Preferência geral do usuário por
 ferramentas gratuitas antes de considerar pagas (mesmo padrão de
-[[projeto_automacoes_whatsapp]]).
+[[projeto_automacoes_whatsapp]]). Pra próximas edições, o carrossel
+panorâmico (`marketing/carrossel-01/panorama.html`) é um bom formato
+padrão a oferecer de novo — reaproveitar a estrutura HTML como template,
+só trocando conteúdo/ícones por seção.
