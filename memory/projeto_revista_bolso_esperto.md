@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-26T13:11:14.225Z
+  modified: 2026-08-26T15:01:50.289Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -538,6 +538,41 @@ próximo carrossel):**
   google-chrome --remote-debugging-port=9222 about:blank &` +
   `tabs_context_mcp{createIfEmpty:true}` (só precisou de ~4s de espera
   extra dessa vez).
+
+**✅ PADRÃO CONFIRMADO (2026-08-26): narração em áudio nos vídeos, via
+Piper TTS.** Testado adicionando narração ao teaser já publicado
+(`Edicao01Teaser`) e usuário aprovou explicitamente: **"gostei. Quando
+formos fazer os próximos vídeos iremos utilizar essa estrutura."** —
+ou seja, **todo vídeo novo da Bolso Esperto daqui pra frente deve
+incluir narração em áudio** por padrão, não só sob pedido.
+
+**Como fazer (processo validado, repetir nos próximos vídeos):**
+1. Escrever um roteiro de narração curto por cena (não é o texto da
+   tela lido literalmente — reescrever pra soar natural falado, ex.:
+   números por extenso).
+2. Gerar cada trecho com o Piper já instalado na máquina:
+   `~/.local/bin/piper -m
+   ~/.local/share/piper-voices/pt_BR-faber-medium.onnx --output_file
+   <nome>.wav` (mesma voz do hook de leitura em voz alta, ver
+   [[maquina_debian_home]]), salvando em `video/public/audio/`.
+3. Medir a duração de cada `.wav` com Python (`wave.open` +
+   `getnframes()/getframerate()`) — **não estimar de ouvido**.
+4. Calibrar a duração de cada cena/`Sequence` do Remotion pra caber o
+   áudio + ~15-20 frames de folga (aprendizado: a narração quase sempre
+   é mais longa que a duração "visual" que pareceria suficiente só
+   olhando o texto na tela — a cena "Em Números" original de 230 frames
+   precisou virar 375 pra caber 11,75s de fala).
+5. Se a cena tem elementos que revelam em sequência (ex.: 3 barras),
+   **reescalonar os delays de entrada proporcionalmente ao ritmo da
+   fala** (calculado por proporção de caracteres de cada trecho do
+   texto), não deixar tudo aparecer nos primeiros 2s enquanto a
+   narração ainda está no primeiro item.
+6. `<Audio src={staticFile("audio/<nome>.wav")} />` dentro de cada
+   `<Sequence>` (um áudio por cena, não um arquivo único pro vídeo
+   inteiro — mais fácil de recalibrar se uma cena mudar depois).
+7. Testar só via render completo (`gh workflow run` + download) — **não
+   dá pra validar áudio com `remotion still`** (só gera frame estático,
+   sem som), diferente do fluxo de QA visual que já usávamos.
 
 **Why:** usuário quer lançar várias edições/ebooks no mesmo padrão — vale
 manter marca e template consistentes entre sessões futuras.
