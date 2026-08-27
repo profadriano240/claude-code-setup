@@ -1,6 +1,10 @@
 [org/gnome/TextEditor]
 last-save-directory='file:///home/adriano/Documentos'
 
+[org/gnome/Totem]
+active-plugins=['variable-rate', 'screensaver', 'rotation', 'recent', 'mpris', 'movie-properties', 'screenshot', 'autoload-subtitles', 'save-file', 'skipto', 'open-directory']
+subtitle-encoding='UTF-8'
+
 [org/gnome/Weather]
 locations=[<(uint32 2, <('Brasília', 'SBBR', true, [(-0.27692558046753113, -0.83659448230485101)], [(-0.27547112778867422, -0.83630360573171358)])>)>]
 window-height=494
@@ -181,13 +185,13 @@ search-filter-time-type='last_modified'
 [org/gnome/nautilus/window-state]
 initial-size=(890, 550)
 initial-size-file-chooser=(890, 550)
-maximized=true
+maximized=false
 
 [org/gnome/portal/filechooser/code]
 last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTATÍSTICA/PROGRAMA v3.2'
 
 [org/gnome/portal/filechooser/com.google.Chrome]
-last-folder-path='/home/adriano/projetos/bolso-esperto/edicoes/edicao-01/imagens'
+last-folder-path='/home/adriano/Downloads'
 
 [org/gnome/portal/filechooser/org.gnome.TextEditor]
 last-folder-path='/home/adriano/Documentos'
