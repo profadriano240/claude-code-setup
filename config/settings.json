@@ -82,5 +82,7 @@
       "routine under adriano/ prefix: not established — no repo/org context to scope this qualifier"
     ]
   },
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "agentPushNotifEnabled": true,
+  "inputNeededNotifEnabled": true
 }
