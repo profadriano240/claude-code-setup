@@ -7,4 +7,4 @@
 - [Revista Bolso Esperto](projeto_revista_bolso_esperto.md) — projeto de ebooks/revista semanal educação financeira 18-37 anos, marca+template já definidos em ~/projetos/bolso-esperto/
 - [Baixo envolvimento em redes sociais](feedback_baixo_envolvimento_redes_sociais.md) — usuário quer aparecer o mínimo possível e tem pouco tempo; preferir formatos que a Claude produz/publica sozinha
 - [Declaração de frequência](projeto_declaracao_frequencia.md) — HTML gerador feito no claude.ai (não Claude Code), repo declaracao-frequencia; há outro similar (diploma) ainda não migrado
-- [Site Projetar Soluções Engenharia](projeto_site_projetar_solucoes.md) — landing page Artifact publicada, v1; pausado aguardando material do dono (Sobre, logo, região, serviços, hospedagem)
+- [Site Projetar Soluções Engenharia](projeto_site_projetar_solucoes.md) — v1 no ar em projetar-solucoes.netlify.app (Netlify); aguardando material do dono (Sobre, logo, região, lista de serviços)
