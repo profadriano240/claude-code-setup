@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-31T00:09:37.111Z
+  modified: 2026-08-31T00:27:48.506Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -398,6 +398,27 @@ manter a landing page prometendo a edição #1 e entregar a #2 como
 assinantes que já estão na lista ("Assinantes Bolso Esperto") — ainda
 não feita. Lista hoje é ~só o próprio usuário (testes), então valor
 baixo por ora; confirmar com o usuário se quer disparar mesmo assim.
+
+**✅ Post de lançamento da edição #2 — PROGRAMADO no Instagram para
+31/08/2026 12:40 (2026-08-30).** Arquivos em `marketing/`:
+`post-07-lancamento-ed2.html` (+ `.png` 1080×1350, + `post-07-legenda.txt`),
+commitados e no GitHub. Arte: fundo creme, logo raposa, título "O cartão
+de crédito não é vilão. Você que usa errado." + 3 mini-cards (parcela sem
+pensar / paga só o mínimo / trata o limite como salário) + badge "ASSINE
+GRÁTIS · LINK NA BIO". Baseado no rascunho descartado `post-02-lembrete`
+(que era "em breve") — agora a #2 existe, e o CTA é honesto sobre o funil
+("assine, começa pela #1, a #2 chega na sequência", porque a entrega da
+#2 é o 2º e-mail do workflow, 3 dias depois do cadastro). Programado via
+composer do instagram.com (Criar → Postar → 4:5 explícito → legenda →
+"Programar conteúdo" ON → data 31 no calendário de agosto → hora ajustada
+com **seta Up no segmento de horas** do `<input type=time>` (digitar não
+colou; 12 Ups de 00→12) → Facebook pessoal OFF ("Não compartilhar este
+post") → Programar). Confirmado em `instagram.com/scheduled_content/`:
+aparece em "Seg 31" às 12:40 com a arte e legenda certas.
+
+**Cronograma de marketing atualizado:** posts 1–5 (feed, evergreen da #1)
+publicados/programados entre 24 e 30/08; post 6 = Reel teaser em vídeo com
+narração (25/08); **post 7 = lançamento da #2, programado p/ 31/08 12:40**.
 
 **✅ Gerador de imagem trocado para Pollinations.ai (2026-08-24, gratuito).**
 Créditos do Gamma ficaram baixos (19 restantes, ~70 por imagem) e o
