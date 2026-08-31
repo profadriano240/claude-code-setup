@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-31T13:45:56.792Z
+  modified: 2026-08-31T14:27:14.509Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -535,24 +535,37 @@ já aponta pra landing page repositionada). Conta: 852 seguidores.
 Todos 1080×1350 (posts) / 1080×1080 (slides), evergreen, tom Bolso
 Esperto, sem ticker real.
 
-**❌ Agendamento no Instagram — FALHOU nesta sessão (ambiente).** A aba
-do `claude-in-chrome` ficou presa em segundo plano (`document.hidden =
-true`) → screenshots morrem (CDP timeout), e o composer do Instagram
-**para de responder a cliques/Escape/refs** nesse estado (o diálogo
-"Parar de compartilhar no Facebook?" travou aberto e não fechava por
-nenhum meio). Cheguei a preencher tudo do carrossel (6 slides, legenda,
-Programar ON, data qua. 02/09, hora 12:40, Facebook OFF) mas o botão
-"Programar" nunca colou. Naveguei pra fora → **nada foi publicado nem
-mal-agendado** (conferido em `instagram.com/scheduled_content/`: só o
-post-07 da edição #2 segue lá pra hoje 31/08 12:40). Aprendizado: quando
-`document.hidden` estiver true na aba MCP, o composer do Instagram é
-inutilizável — não insistir; entregar os arquivos pro usuário agendar no
-app.
+**✅ Série agendada no Instagram (2026-08-31, 2ª tentativa).** A 1ª
+falhou porque a aba do `claude-in-chrome` estava com `document.hidden =
+true` (screenshots com CDP timeout, composer não responde a
+cliques/refs). Na 2ª tentativa a aba voltou a `visibilityState:visible`
+(conferir sempre com `document.hidden` antes de começar) e deu tudo
+certo. Agenda final (todos 12:40):
+- **31/08 (seg)** — post-07, lançamento edição #2 ("O cartão não é vilão")
+- **02/09 (qua)** — carrossel `carrossel-02-7numeros` (6 slides, 7 números)
+- **04/09 (sex)** — post-08 ("Barato ≠ boa compra")
+- **06/09 (dom)** — post-09 ("Dividend yield 10%+ quase nunca é pechincha")
+Confirmado em `instagram.com/scheduled_content/`.
 
-**🔶 PENDENTE (usuário agenda no app do Instagram):** os 3 posts da série
-acima. Cadência sugerida, todos 12:40: carrossel **qua. 02/09**, post-08
-**sex. 04/09**, post-09 **dom. 06/09**. Arquivos e legendas prontos em
-`marketing/carrossel-02-7numeros/` e `marketing/post-08*/post-09*`.
+**Notas do fluxo de agendamento (repetir nos próximos):**
+- Screenshots ainda congelam de vez em quando (máquina fraca) mas
+  voltam; `find`+`ref` e `javascript_tool` seguem funcionando — dá pra
+  navegar o composer por eles.
+- Múltiplas fotos → recorte **1:1** (slides já quadrados); foto única
+  1080×1350 → recorte **4:5**. O menu de proporção abre no ícone
+  expandir (canto inf. esq., ~533,442).
+- Data: abrir campo → botão "Next month" (~1017,371) → clicar o
+  `[role=gridcell]` do dia (achar rect por JS; dias passados vêm
+  `aria-disabled=true`).
+- Hora: dois `<input>` colados (aria-label "Horas"/"Minutos", ~721 e
+  ~740, y~372) — clicar e usar setas Up/Down (digitar não cola bem).
+- **Facebook**: o toggle (5º `[role=switch]`, "Compartilhar no
+  Facebook…") **volta ligado a cada post** — desligar sempre: clicar
+  nele (~969,354 depois de `scrollIntoView`) → diálogo → "Não
+  compartilhar este post". `visDialogs:2` no JS pode persistir mesmo com
+  o diálogo já fechado visualmente — conferir por screenshot, não só JS.
+- ⚠️ Cliques perto de (872-970, 104) antes do layout "alargar" caem no
+  X e abrem "Descartar post?" → clicar **Cancelar** (~676,218), não sair.
 
 **Próximos passos ao retomar:** (1) **série de posts no Threads** puxando
 o guia (Claude escreve e publica/programa, conta já linkada, Threads
