@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-31T14:27:14.509Z
+  modified: 2026-08-31T14:52:56.704Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -567,10 +567,27 @@ Confirmado em `instagram.com/scheduled_content/`.
 - ⚠️ Cliques perto de (872-970, 104) antes do layout "alargar" caem no
   X e abrem "Descartar post?" → clicar **Cancelar** (~676,218), não sair.
 
-**Próximos passos ao retomar:** (1) **série de posts no Threads** puxando
-o guia (Claude escreve e publica/programa, conta já linkada, Threads
-entrega bem conta pequena) — pode ter o mesmo problema de aba em segundo
-plano; (2) escrever a edição #3 (reserva de emergência) pra manter
+**✅ Série do Threads — INICIADA (2026-08-31).** 6 posts de texto (<500
+caract.) escritos em `marketing/threads/posts.md` (hook das 4 perguntas,
+P/L baixo ≠ barato, dividend yield alto é alerta, ROE dopado por dívida,
+barato ≠ boa compra, posicionamento/credibilidade). **Posts 1 e 2
+publicados**; 3-6 pendentes (Threads **não tem agendamento no site** — só
+"quem pode responder" e "compartilhar em outro app"; publicar ~1 por
+dia, copiando do `.md` — a URL já vira link clicável no Threads).
+- Login no Threads web: **estava deslogado**; entrei com "Continuar com
+  o Instagram" (usuário autorizou aceitar os Termos do Threads). Conta
+  agora logada.
+- ⚠️ **Link da bio do Threads ≠ Instagram.** No Threads o link da bio é
+  `wa.me/...` (WhatsApp). Por isso os posts do Threads **levam a URL da
+  landing (`adrianofreire-h5hnp5.subscribepage.io`) escrita no texto**,
+  não "link na bio". Post 1 foi publicado com "link na bio" e depois
+  **editado** (Threads dá janela de edição ~15 min: post → ⋮ → Editar).
+- Bio do Threads (perfil): tem formação (Licenciatura em Matemática,
+  Pós em Finanças, Especialista em Educação Mat. e Financeira) — já bate
+  com o posicionamento novo. Conta tem ~134 seguidores no Threads.
+
+**Próximos passos ao retomar:** (1) publicar posts 3-6 do Threads
+(1/dia); (2) escrever a edição #3 (reserva de emergência) pra manter
 cadência. Campanha da #2 pra lista atual segue **não disparada** — grupo
 "Assinantes Bolso Esperto" tem só 1 assinante, adiada até ter público
 real. Dados da landing page antes da virada: 10 views / 1 assinante /
