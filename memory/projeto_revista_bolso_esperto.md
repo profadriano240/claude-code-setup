@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-26T15:01:50.289Z
+  modified: 2026-08-31T00:09:37.111Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -357,6 +357,47 @@ Aprendizados novos desta edição (aplicar nas próximas):
 (ver pendência de marketing abaixo) e configurar a entrega no
 MailerLite (novo workflow ou reaproveitar o existente trocando os links
 dos arquivos pra `bolso-esperto-02.pdf`/`.epub`).
+
+**✅ Entrega da edição #2 no MailerLite — CONFIGURADA E ATIVA (2026-08-30).**
+Decisão do usuário: "follow-up no workflow + campanha p/ lista atual" —
+manter a landing page prometendo a edição #1 e entregar a #2 como
+2º e-mail no mesmo workflow. Feito no workflow existente
+(`dashboard.mailerlite.com/automations/196444252032468090/edit`):
+- Pausar → adicionar **Time delay 1 = 3 dias** após "Email 1: Entrega -
+  Edição 1" → adicionar **Email 2: "Entrega - Edição 2"** (assunto "Sua
+  edição #2 do Bolso Esperto chegou 🦊", sender Bolso Esperto /
+  adrianofreire240@gmail.com) → reativar. Novo assinante recebe a #1 na
+  hora e a #2 três dias depois.
+- Email 2 criado por **Copy/Paste do bloco "Email 1"** (menu ⋮ → Copy →
+  "Paste step here" após o delay) — muito mais confiável que o
+  drag-and-drop da paleta "Add step", que **não funcionou** nem via
+  `left_click_drag` nem via eventos HTML5/pointer sintéticos nesta
+  máquina. Depois: editar textos inline (triple-click + digitar) e trocar
+  o link do botão.
+- Botão "Baixar PDF" religado pra `bolso-esperto-02.pdf` via link → File →
+  **Replace** → File manager → **Upload** (achar `<input type=file>` com
+  `find` + `file_upload`) → hover no card → **Insert**. Verificado no
+  e-mail real (Gmail, `[Test]`): href =
+  `storage.googleapis.com/mailerlite-uploads-prod/t2589166/…bolso-esperto-02.pdf`.
+- ⚠️ **Botão "Baixar EPUB" foi REMOVIDO do Email 2** (bloco → menu ⣿ →
+  Delete). Motivo: o upload de `.epub` via `file_upload` é **rejeitado
+  pelo MailerLite** ("The file must be of type: jpeg, png, gif, ico, pdf,
+  epub.") — a ferramenta manda o arquivo sem MIME `application/epub+zip`
+  e a validação é por MIME, não extensão. O `.epub` da edição #1 entrou
+  numa sessão antiga via seletor nativo do SO. **Para repor o EPUB:** o
+  usuário sobe `edicoes/edicao-02/bolso-esperto-02.epub` manualmente no
+  File manager do MailerLite (arrastar do explorador de arquivos), depois
+  é trivial recriar o botão duplicando o "Baixar PDF" e trocando o link.
+- Screenshots do `claude-in-chrome` **congelam muito** com o editor de
+  e-mail do MailerLite aberto nesta máquina fraca (`Page.captureScreenshot`
+  timeout 30s repetido) — `javascript_tool`/`find`/`read_page` continuam
+  respondendo; dá pra navegar às cegas por `find`+ref. Ver
+  [[maquina_debian_home]].
+
+**🔶 PENDENTE da entrega #2:** campanha única da edição #2 para os
+assinantes que já estão na lista ("Assinantes Bolso Esperto") — ainda
+não feita. Lista hoje é ~só o próprio usuário (testes), então valor
+baixo por ora; confirmar com o usuário se quer disparar mesmo assim.
 
 **✅ Gerador de imagem trocado para Pollinations.ai (2026-08-24, gratuito).**
 Créditos do Gamma ficaram baixos (19 restantes, ~70 por imagem) e o
