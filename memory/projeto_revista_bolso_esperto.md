@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-31T00:27:48.506Z
+  modified: 2026-08-31T01:56:26.603Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -419,6 +419,64 @@ aparece em "Seg 31" às 12:40 com a arte e legenda certas.
 **Cronograma de marketing atualizado:** posts 1–5 (feed, evergreen da #1)
 publicados/programados entre 24 e 30/08; post 6 = Reel teaser em vídeo com
 narração (25/08); **post 7 = lançamento da #2, programado p/ 31/08 12:40**.
+
+**🔀 VIRADA DE POSICIONAMENTO (2026-08-30): o Bolso Esperto vira uma
+progressão até análise fundamentalista.** Diante de 0 assinantes reais
+após ~1 semana de posts (conta @profadrianofreire é pequena, alcance
+orgânico ~nulo), o usuário decidiu **subir o nível da revista** em vez de
+só empurrar mais tráfego: de "organizar o salário" (defesa) para
+"analisar uma empresa como sócio" (ataque). Não é rebrand nem produto
+separado — é a mesma revista progredindo. Usuário tem **formação em
+matemática + pós em finanças** (bagagem intermediária no tema) — isso
+passa a ser argumento de marca ("quem ensina tem formação, não é palpite
+de influencer"). Público-alvo sobe junto: de 18-37 "pouco dinheiro
+sobrando" para quem já investe / quer investir — mais velho, renda maior,
+**disposição a pagar alta** (nicho de curso/newsletter). Concorrência é
+feroz (Suno, Primo Rico etc.), então conteúdo raso não serve neste nicho.
+
+**Escada editorial definida:** #1 regra 50-30-20 ✅ · #2 cartão/rotativo
+✅ · #3 reserva de emergência (ponte) · #4 renda fixa sem mistério · #5
+comprar a 1ª ação · #6 como ler o balanço (início da análise
+fundamentalista) · #7 múltiplos (P/L, P/VP, EV/EBITDA, DY) · #8 qualidade
+(ROE, ROIC, margem, moat, endividamento) · #9 valuation (comparáveis +
+noção de fluxo de caixa descontado) · #10 montar a tese (checklist).
+Edições #6-10 são o núcleo de análise fundamentalista; #3-5 são ponte.
+
+**Cuidado regulatório (CVM):** ensinar a *metodologia* de análise é
+conteúdo educacional, ok. Publicar *análises de empresas específicas* com
+viés de compra/venda entra em recomendação (exige CNPI). Todo o material
+deve ficar no lado educacional — exemplos com empresas fictícias, sem
+ticker real. Incluir sempre disclaimer: educacional, autor com formação
+em finanças mas não analista credenciado (CNPI), decisão é do leitor.
+
+**✅ Isca #1 de captação PRODUZIDA (2026-08-30):
+`iscas/7-numeros-acao/`.** Guia rápido gratuito (não é edição numerada),
+15 páginas A5, mesmo pipeline/CSS das edições (HTML → Chrome headless
+`--print-to-pdf`; markdown → pandoc → EPUB com `--epub-cover-image`).
+Arquivos: `guia.html` (build), `capa-standalone.html` (+ `capa.png` 2:3 e
+`capa-thumb.png`), `conteudo-epub.md` + `epub.css`,
+`bolso-esperto-guia-7-numeros.pdf` (280 KB) e `.epub` (144 KB),
+`imagens/capa-transparente.png` (logo raposa reaproveitada). Commitados e
+no GitHub (commit `560ccb7`). Conteúdo: os 7 números pré-compra de ação —
+P/L, P/VP, ROE, margem líquida/operacional, dívida líquida/EBITDA,
+dividend yield, payout — cada um com "o que é / como ler (faixa) / a
+armadilha (o que esconde)"; página "juntando tudo" com exemplo fictício
+("Varejista A") passando pelos 7 na ordem preço→qualidade→risco→retorno;
+pull quote; teaser do 8º número (ROIC) puxando pra fase de análise
+fundamentalista; página de disclaimer. Serve como **novo ímã de
+captação** (promessa mais forte que "reserva de emergência").
+
+**Próximos passos ao retomar:** (1) reposicionar landing page + bio pra
+promessa nova (a página de captura `adrianofreire-h5hnp5.subscribepage.io`
+ainda promete a edição #1 / regra 50-30-20, e o cabeçalho pode estar
+como "Company"); (2) montar entrega da isca no MailerLite (novo form/
+workflow, ou a isca vira o brinde de entrada e as edições #1-2 vêm na
+sequência); (3) distribuição — melhor aposta hands-off é **Threads** (já
+linkado na conta, entrega bem conta pequena); (4) escrever a edição #3
+(reserva de emergência) pra manter cadência. Campanha da #2 pra lista
+atual segue **não disparada** — grupo "Assinantes Bolso Esperto" tem só
+1 assinante (o próprio e-mail de teste do usuário, confirmado em Groups),
+então adiada até ter público real.
 
 **✅ Gerador de imagem trocado para Pollinations.ai (2026-08-24, gratuito).**
 Créditos do Gamma ficaram baixos (19 restantes, ~70 por imagem) e o
