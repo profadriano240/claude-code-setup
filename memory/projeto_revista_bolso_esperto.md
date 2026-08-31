@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-31T13:02:38.715Z
+  modified: 2026-08-31T13:12:20.895Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -510,10 +510,15 @@ de `double_click` em palavras que não sejam a última do bloco às vezes
 caem no fim do texto (iframe) — mirar numa palavra perto do fim e
 navegar por teclado a partir daí.
 
-**🔶 PENDENTE (usuário faz à mão):** bio do Instagram — trocar "Bolso
-Esperto #1 é grátis ↓" por algo tipo "Guia grátis: aprenda a analisar
-uma ação ↓" (texto edita no desktop; só o link exige app mobile, e o
-link já aponta pra landing page certa).
+**✅ Bio do Instagram atualizada (2026-08-31)** via
+`instagram.com/accounts/edit/` no desktop (texto salvou de boa; toast
+"Perfil salvo"). Bio nova (138/150):
+> Do salário organizado à análise de ações 🦊
+> Sem economês, por quem tem pós em finanças.
+> Guia grátis: 7 números antes de comprar uma ação ↓
+
+Link da bio segue `adrianofreire-h5hnp5.subscribepage.io` (não mexi,
+já aponta pra landing page repositionada). Conta: 852 seguidores.
 
 **Próximos passos ao retomar:** (1) **série de posts no Threads** puxando
 o guia (próxima tarefa combinada — Claude escreve e publica/programa,
