@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-31T01:56:26.603Z
+  modified: 2026-08-31T03:27:45.723Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -466,17 +466,59 @@ pull quote; teaser do 8º número (ROIC) puxando pra fase de análise
 fundamentalista; página de disclaimer. Serve como **novo ímã de
 captação** (promessa mais forte que "reserva de emergência").
 
-**Próximos passos ao retomar:** (1) reposicionar landing page + bio pra
-promessa nova (a página de captura `adrianofreire-h5hnp5.subscribepage.io`
-ainda promete a edição #1 / regra 50-30-20, e o cabeçalho pode estar
-como "Company"); (2) montar entrega da isca no MailerLite (novo form/
-workflow, ou a isca vira o brinde de entrada e as edições #1-2 vêm na
-sequência); (3) distribuição — melhor aposta hands-off é **Threads** (já
-linkado na conta, entrega bem conta pequena); (4) escrever a edição #3
-(reserva de emergência) pra manter cadência. Campanha da #2 pra lista
-atual segue **não disparada** — grupo "Assinantes Bolso Esperto" tem só
-1 assinante (o próprio e-mail de teste do usuário, confirmado em Groups),
-então adiada até ter público real.
+**✅ Entrega da isca no MailerLite — FEITA E ATIVA (2026-08-31).** A isca
+virou o **1º e-mail do workflow** de captação existente (mesmo form/
+landing page), antes das edições. Estrutura final do workflow
+(`automations/196444252032468090`):
+1. **Email 1: "Entrega - Guia 7 números"** (imediato) — assunto "Seu
+   guia: 7 números pra olhar antes de comprar uma ação", botão "Baixar
+   PDF" → `bolso-esperto-guia-7-numeros.pdf` (subido no file manager;
+   href real conferido no Gmail teste). Botão EPUB removido (upload de
+   .epub no MailerLite falha, ver acima).
+2. **Email 2: "Entrega - Edição 1"** (imediato depois) — cópia intacta.
+3. **Time delay 3 dias**.
+4. **Email 3: "Entrega - Edição 2"**.
+Feito por Copy/Paste do bloco "Email 1" original → colar antes dele →
+editar. ⚠️ O "Paste step here" do MailerLite **cola em duplicidade se
+clicado 2x** (colou 3 cópias sem querer; deletei 2 via bloco → ⋮ →
+Delete → "Permanently delete"). Workflow reativado e testado ponta a
+ponta (Gmail).
+
+**❌ Reposicionamento da landing page — NÃO FEITO (bloqueado pelo
+editor).** A página `adrianofreire-h5hnp5.subscribepage.io` (editor
+"Nebula" / drag-and-drop do MailerLite, `pages/196432003810199271`)
+**perde toda a formatação do bloco quando o texto é substituído via
+teclado sintético** (ctrl+a + digitar, ou ctrl+a + Delete + digitar):
+o H1 laranja grande virou texto de corpo minúsculo. Mesmo problema já
+documentado em sessões antigas. Desfiz tudo (undo), nada foi salvo, a
+página live segue intacta ("Cadê meu dinheiro?"). **Precisa ser editada
+à mão pelo usuário.** Dados da página: 10 views / 1 assinante / 10%
+conversão — o gargalo é tráfego, não conversão, mas o texto ainda
+precisa casar com a promessa nova.
+
+**Copy nova pra landing page (usuário cola à mão):**
+- H1: "7 números antes de comprar uma ação"
+- Sub: "Guia gratuito: o que cada número diz sobre uma empresa — se ela
+  está cara, se é um bom negócio, se paga bem o sócio — e o que cada um
+  esconde. 15 minutos de leitura."
+- Bullet 1: "Sem economês, com exemplos práticos"
+- Bullet 2: "Escrito por quem tem formação em matemática e pós em
+  finanças"
+- Botão: "Quero o guia grátis"
+- (conferir se há "Company" em algum cabeçalho/nav e trocar por "Bolso
+  Esperto")
+- Bio do Instagram (texto editável no desktop; só o link exige app):
+  trocar "Bolso Esperto #1 é grátis ↓" por algo como "Guia grátis:
+  aprenda a analisar uma ação ↓".
+
+**Próximos passos ao retomar:** (1) usuário cola a copy nova na landing
+page + bio; (2) **série de posts no Threads** puxando o guia (próxima
+tarefa combinada — Claude escreve e publica/programa, conta já linkada,
+Threads entrega bem conta pequena); (3) escrever a edição #3 (reserva de
+emergência) pra manter cadência. Campanha da #2 pra lista atual segue
+**não disparada** — grupo "Assinantes Bolso Esperto" tem só 1 assinante
+(e-mail de teste do usuário, confirmado em Groups), adiada até ter
+público real.
 
 **✅ Gerador de imagem trocado para Pollinations.ai (2026-08-24, gratuito).**
 Créditos do Gamma ficaram baixos (19 restantes, ~70 por imagem) e o
