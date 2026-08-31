@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-31T03:27:45.723Z
+  modified: 2026-08-31T13:02:38.715Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -484,41 +484,46 @@ clicado 2x** (colou 3 cópias sem querer; deletei 2 via bloco → ⋮ →
 Delete → "Permanently delete"). Workflow reativado e testado ponta a
 ponta (Gmail).
 
-**❌ Reposicionamento da landing page — NÃO FEITO (bloqueado pelo
-editor).** A página `adrianofreire-h5hnp5.subscribepage.io` (editor
-"Nebula" / drag-and-drop do MailerLite, `pages/196432003810199271`)
-**perde toda a formatação do bloco quando o texto é substituído via
-teclado sintético** (ctrl+a + digitar, ou ctrl+a + Delete + digitar):
-o H1 laranja grande virou texto de corpo minúsculo. Mesmo problema já
-documentado em sessões antigas. Desfiz tudo (undo), nada foi salvo, a
-página live segue intacta ("Cadê meu dinheiro?"). **Precisa ser editada
-à mão pelo usuário.** Dados da página: 10 views / 1 assinante / 10%
-conversão — o gargalo é tráfego, não conversão, mas o texto ainda
-precisa casar com a promessa nova.
-
-**Copy nova pra landing page (usuário cola à mão):**
+**✅ Reposicionamento da landing page — FEITO E PUBLICADO (2026-08-31).**
+`adrianofreire-h5hnp5.subscribepage.io` (editor "Nebula" drag-and-drop,
+`pages/196432003810199271`). Texto novo, já live:
 - H1: "7 números antes de comprar uma ação"
 - Sub: "Guia gratuito: o que cada número diz sobre uma empresa — se ela
   está cara, se é um bom negócio, se paga bem o sócio — e o que cada um
   esconde. 15 minutos de leitura."
-- Bullet 1: "Sem economês, com exemplos práticos"
-- Bullet 2: "Escrito por quem tem formação em matemática e pós em
-  finanças"
+- Item 1: "Sem economês, com exemplos práticos"
+- Item 2: "Escrito por quem tem formação em matemática e pós em finanças"
 - Botão: "Quero o guia grátis"
-- (conferir se há "Company" em algum cabeçalho/nav e trocar por "Bolso
-  Esperto")
-- Bio do Instagram (texto editável no desktop; só o link exige app):
-  trocar "Bolso Esperto #1 é grátis ↓" por algo como "Guia grátis:
-  aprenda a analisar uma ação ↓".
+Não achei "Company" em lugar nenhum (o `get_page_text` da página live
+só tem esses 5 elementos — provavelmente já tinha sido limpo).
 
-**Próximos passos ao retomar:** (1) usuário cola a copy nova na landing
-page + bio; (2) **série de posts no Threads** puxando o guia (próxima
-tarefa combinada — Claude escreve e publica/programa, conta já linkada,
-Threads entrega bem conta pequena); (3) escrever a edição #3 (reserva de
-emergência) pra manter cadência. Campanha da #2 pra lista atual segue
-**não disparada** — grupo "Assinantes Bolso Esperto" tem só 1 assinante
-(e-mail de teste do usuário, confirmado em Groups), adiada até ter
-público real.
+**⚠️ TÉCNICA que funciona pra editar texto no editor Nebula sem perder a
+formatação do bloco:** NÃO usar `ctrl+a` + digitar (isso zera a
+formatação — o H1 laranja grande vira corpo minúsculo). O que funciona:
+`double_click` numa palavra pra entrar em modo de edição de texto →
+`End` → `shift+Home` (linha única) ou `ctrl+End` → `ctrl+shift+Home`
+(parágrafo multi-linha) → digitar. Selecionar o *conteúdo de texto* pelo
+teclado (não o elemento do bloco) preserva os marks. Depois: "Done
+editing" salva rascunho → na tela Overview aparece banner "New version
+available" → clicar **"Publish new version"** pra ir pro ar. Coordenadas
+de `double_click` em palavras que não sejam a última do bloco às vezes
+caem no fim do texto (iframe) — mirar numa palavra perto do fim e
+navegar por teclado a partir daí.
+
+**🔶 PENDENTE (usuário faz à mão):** bio do Instagram — trocar "Bolso
+Esperto #1 é grátis ↓" por algo tipo "Guia grátis: aprenda a analisar
+uma ação ↓" (texto edita no desktop; só o link exige app mobile, e o
+link já aponta pra landing page certa).
+
+**Próximos passos ao retomar:** (1) **série de posts no Threads** puxando
+o guia (próxima tarefa combinada — Claude escreve e publica/programa,
+conta já linkada, Threads entrega bem conta pequena); (2) escrever a
+edição #3 (reserva de emergência) pra manter cadência. Campanha da #2
+pra lista atual segue **não disparada** — grupo "Assinantes Bolso
+Esperto" tem só 1 assinante (e-mail de teste do usuário, confirmado em
+Groups), adiada até ter público real. Dados da landing page antes da
+virada: 10 views / 1 assinante / 10% conversão — gargalo é tráfego, não
+conversão.
 
 **✅ Gerador de imagem trocado para Pollinations.ai (2026-08-24, gratuito).**
 Créditos do Gamma ficaram baixos (19 restantes, ~70 por imagem) e o
