@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-31T13:12:20.895Z
+  modified: 2026-08-31T13:45:56.792Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -520,15 +520,48 @@ navegar por teclado a partir daí.
 Link da bio segue `adrianofreire-h5hnp5.subscribepage.io` (não mexi,
 já aponta pra landing page repositionada). Conta: 852 seguidores.
 
+**✅ Série de posts do Instagram pra virada — PRODUZIDA (2026-08-31),
+`marketing/`, commit `21e72c1`:**
+- `carrossel-02-7numeros/` — carrossel panorâmico de **6 slides**
+  (6480×1080 → cortado em 6 quadrados), mesma técnica do carrossel-01
+  (trilha pontilhada SVG contínua + stops numerados). Slides: hook / P·L
+  e P/VP / ROE e Margem / Dív.líq÷EBITDA / DY e Payout / CTA escuro
+  ("cada número esconde uma armadilha — guia grátis, link na bio"). +
+  `legenda.txt`.
+- `post-08-barato-boa-compra` (.html/.png/.legenda) — "'Barato' ≠ boa
+  compra", exemplo fictício com 3 leituras que se contradizem.
+- `post-09-yield-alto` (.html/.png/.legenda) — "Dividend yield 10%+ quase
+  nunca é pechincha", as 3 armadilhas.
+Todos 1080×1350 (posts) / 1080×1080 (slides), evergreen, tom Bolso
+Esperto, sem ticker real.
+
+**❌ Agendamento no Instagram — FALHOU nesta sessão (ambiente).** A aba
+do `claude-in-chrome` ficou presa em segundo plano (`document.hidden =
+true`) → screenshots morrem (CDP timeout), e o composer do Instagram
+**para de responder a cliques/Escape/refs** nesse estado (o diálogo
+"Parar de compartilhar no Facebook?" travou aberto e não fechava por
+nenhum meio). Cheguei a preencher tudo do carrossel (6 slides, legenda,
+Programar ON, data qua. 02/09, hora 12:40, Facebook OFF) mas o botão
+"Programar" nunca colou. Naveguei pra fora → **nada foi publicado nem
+mal-agendado** (conferido em `instagram.com/scheduled_content/`: só o
+post-07 da edição #2 segue lá pra hoje 31/08 12:40). Aprendizado: quando
+`document.hidden` estiver true na aba MCP, o composer do Instagram é
+inutilizável — não insistir; entregar os arquivos pro usuário agendar no
+app.
+
+**🔶 PENDENTE (usuário agenda no app do Instagram):** os 3 posts da série
+acima. Cadência sugerida, todos 12:40: carrossel **qua. 02/09**, post-08
+**sex. 04/09**, post-09 **dom. 06/09**. Arquivos e legendas prontos em
+`marketing/carrossel-02-7numeros/` e `marketing/post-08*/post-09*`.
+
 **Próximos passos ao retomar:** (1) **série de posts no Threads** puxando
-o guia (próxima tarefa combinada — Claude escreve e publica/programa,
-conta já linkada, Threads entrega bem conta pequena); (2) escrever a
-edição #3 (reserva de emergência) pra manter cadência. Campanha da #2
-pra lista atual segue **não disparada** — grupo "Assinantes Bolso
-Esperto" tem só 1 assinante (e-mail de teste do usuário, confirmado em
-Groups), adiada até ter público real. Dados da landing page antes da
-virada: 10 views / 1 assinante / 10% conversão — gargalo é tráfego, não
-conversão.
+o guia (Claude escreve e publica/programa, conta já linkada, Threads
+entrega bem conta pequena) — pode ter o mesmo problema de aba em segundo
+plano; (2) escrever a edição #3 (reserva de emergência) pra manter
+cadência. Campanha da #2 pra lista atual segue **não disparada** — grupo
+"Assinantes Bolso Esperto" tem só 1 assinante, adiada até ter público
+real. Dados da landing page antes da virada: 10 views / 1 assinante /
+10% conversão — gargalo é tráfego, não conversão.
 
 **✅ Gerador de imagem trocado para Pollinations.ai (2026-08-24, gratuito).**
 Créditos do Gamma ficaram baixos (19 restantes, ~70 por imagem) e o
