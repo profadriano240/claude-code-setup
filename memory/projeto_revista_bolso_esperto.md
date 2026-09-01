@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-09-01T19:13:50.385Z
+  modified: 2026-09-01T19:59:40.067Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -89,12 +89,30 @@ GitHub):
   botões: guia grátis + ebook R$ 12), 2 versões de bio nova, e Email 4 a
   adicionar no workflow (`automations/196444252032468090`) ofertando o
   ebook 2 dias após a edição #2.
-**🔶 BLOQUEIO:** nada disso vai pro ar até o usuário criar o produto no
-Hotmart e passar o **link de checkout** (`pay.hotmart.com/...`). Só depois
-eu: (1) monto página de vendas no MailerLite; (2) monto a página-hub; (3)
-troco link+texto da bio; (4) adiciono Email 4; (5) ajusto legendas dos
-posts agendados (carrossel 7 números, posts 08/09) pra citar o ebook.
-Ebook ainda pende **leitura final do usuário** antes de publicar no Hotmart.
+**✅ PRODUTO CRIADO E APROVADO NO HOTMART (2026-09-01).** Cadastro feito
+via browser automation (`claude-in-chrome`), usuário acompanhando. Produto
+"Sócio, Não Apostador", **ID 8436144**, status **"Vendas ativas"**
+(aprovação foi quase instantânea, não os 1-2 dias esperados). Config:
+categoria Finanças e Investimentos, moeda BRL, preço **R$ 12,00**, garantia
+7 dias, forma de pagamento **"Parcelado com taxas para seu cliente"**
+(irreversível — permite 1x + parcelado no cartão sem custo pro produtor),
+imagem de capa 600×600 (`ebook/imagens/capa-hotmart-600.png`, gerada por
+PIL a partir da `capa.png`), PDF + EPUB enviados em "Conteúdo do Produto"
+(o EPUB só subiu sozinho, não no upload múltiplo). Área de membros nova
+**"Bolso Esperto"** criada (`hotmart.com/club/bolso-esperto`).
+**🔑 LINK DE CHECKOUT: `https://pay.hotmart.com/A107424434W`**
+(página do produto hospedada pelo Hotmart: `https://go.hotmart.com/A107424434W?dp=1`).
+⚠️ Enviado pra venda **antes** da leitura final do usuário (usuário
+autorizou: lê no meio-tempo, troca o arquivo em Conteúdo do Produto se
+precisar antes de divulgar).
+
+**Próximos passos (minha parte, browser/MailerLite):** (1) montar página de
+vendas no MailerLite com o texto de `pagina-vendas.md`, botão → link de
+checkout acima; (2) montar a página-hub (2 botões: guia grátis + ebook);
+(3) trocar link+texto da bio do Instagram (ver `bio-e-funil.md`); (4)
+adicionar Email 4 no workflow `automations/196444252032468090`; (5) ajustar
+legendas dos posts agendados (carrossel 7 números, posts 08/09) pra citar
+o ebook.
 
 A escada editorial antiga (#3 reserva → #10 valuation) descrita mais
 abaixo neste arquivo está **OBSOLETA** — virou o índice do ebook.
