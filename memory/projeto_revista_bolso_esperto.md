@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-09-01T14:16:10.234Z
+  modified: 2026-09-01T14:16:27.900Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -477,6 +477,10 @@ de influencer"). Público-alvo sobe junto: de 18-37 "pouco dinheiro
 sobrando" para quem já investe / quer investir — mais velho, renda maior,
 **disposição a pagar alta** (nicho de curso/newsletter). Concorrência é
 feroz (Suno, Primo Rico etc.), então conteúdo raso não serve neste nicho.
+**[Correção 2026-09-01: o usuário depois esclareceu que o ebook é pra
+LEIGO TOTAL e deve ser "mais simples". Não é contradição — a proposta é
+"premium porém do zero / acessível", não "avançado". Ver LEIA PRIMEIRO no
+topo.]**
 
 **Escada editorial definida:** #1 regra 50-30-20 ✅ · #2 cartão/rotativo
 ✅ · #3 reserva de emergência (ponte) · #4 renda fixa sem mistério · #5
