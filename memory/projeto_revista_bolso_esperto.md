@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-08-31T14:52:56.704Z
+  modified: 2026-09-01T14:10:42.731Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -13,6 +13,39 @@ metadata:
 Lembrar de commitar/dar push quando novos arquivos forem gerados (edições
 novas, materiais de marketing etc.) — o diretório não tem sync automático
 como o [[referencia_backup_claude_code_setup]].
+
+---
+
+## ⚠️ LEIA PRIMEIRO — REDEFINIÇÃO DO PROJETO (2026-09-01)
+
+O usuário redefiniu o foco: **o projeto agora é ensinar análise
+fundamentalista de ações E FIIs (fundos imobiliários)**. Foco secundário:
+**vender UM ebook único** que ensina todo esse conhecimento.
+
+Decisões firmes desta sessão (respondidas via AskUserQuestion):
+1. **Revista semanal APOSENTADA.** Sem mais edições numeradas. As edições
+   #1 (50-30-20) e #2 (cartão) seguem publicadas/no funil do MailerLite,
+   mas viram material de bônus/entrada — não há edição #3 em diante. (O
+   outline de "edição #3 — reserva de emergência" que cheguei a escrever
+   foi apagado, `edicoes/edicao-03/` não existe mais.)
+2. **Conteúdo gratuito** passa a ser só posts / carrosséis / Threads de
+   análise fundamentalista, funil pro ebook + a isca "7 números".
+3. **Ebook pago = produto principal.** Índice completo proposto em
+   `~/projetos/bolso-esperto/ebook/estrutura.md` (Parte 0 mindset →
+   Partes 1-4 ações → Partes 5-7 FIIs → Parte 8 tese/carteira/psicologia
+   → anexos). Aguardando aprovação do usuário para começar a escrever.
+4. **FIIs entram na MESMA profundidade que ações** (indicadores próprios:
+   P/VP, DY, vacância, cap rate, WAULT, segmento, gestão, LTV/PDD em FII
+   de papel, FOF etc.).
+5. Regulatório: tudo educacional, **empresas e FIIs fictícios, sem ticker
+   real**, disclaimer (autor com formação mas sem CNPI).
+
+A escada editorial antiga (#3 reserva → #10 valuation) descrita mais
+abaixo neste arquivo está **OBSOLETA** — virou o índice do ebook.
+Aprendizados de produção (pipeline HTML→PDF via Chrome headless, EPUB via
+pandoc, infográfico sempre HTML/SVG e nunca IA, imagens via
+Pollinations.ai, fluxo de agendamento no Instagram, etc.) continuam
+válidos e reaproveitáveis pro ebook e pro marketing.
 
 Usuário está criando uma coleção de ebooks de educação financeira que vai
 evoluir para uma **publicação semanal estilo revista simples** (inspirada
