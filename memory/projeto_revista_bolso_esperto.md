@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-09-01T19:59:40.067Z
+  modified: 2026-09-01T20:22:10.001Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -106,13 +106,38 @@ PIL a partir da `capa.png`), PDF + EPUB enviados em "Conteúdo do Produto"
 autorizou: lê no meio-tempo, troca o arquivo em Conteúdo do Produto se
 precisar antes de divulgar).
 
-**Próximos passos (minha parte, browser/MailerLite):** (1) montar página de
-vendas no MailerLite com o texto de `pagina-vendas.md`, botão → link de
-checkout acima; (2) montar a página-hub (2 botões: guia grátis + ebook);
-(3) trocar link+texto da bio do Instagram (ver `bio-e-funil.md`); (4)
-adicionar Email 4 no workflow `automations/196444252032468090`; (5) ajustar
-legendas dos posts agendados (carrossel 7 números, posts 08/09) pra citar
-o ebook.
+**✅ Decisão sobre página de vendas (2026-09-01): usar a PÁGINA DO PRÓPRIO
+HOTMART**, não construir no MailerLite. `go.hotmart.com/A107424434W?dp=1`
+redireciona pra listagem do marketplace
+(`hotmart.com/pt-br/marketplace/produtos/socio-nao-apostador/A107424434W`) —
+mostra a descrição (a que escrevi no cadastro, boa), capa, R$ 12 / 4x de
+R$ 3,27, "Garantia de 7 dias", botão "Ir para o carrinho". Tem chrome do
+marketplace Hotmart em volta e o `<title>` expõe o nome legal do produtor
+("Adriano Freire Rodrigues"), mas é funcional e confiável. `pagina-vendas.md`
+continua no repo como referência/roteiro caso um dia se queira uma página
+própria.
+**❌ Tentativa de página no MailerLite abandonada.** Cheguei a gerar uma via
+IA do MailerLite ("Sócio Não Apostador - Vendas", page id 197439734471984430,
+site 197439734388098323) — ficou **ruim**: inventou cronômetro de "oferta
+por tempo limitado" (texto em inglês), uma grade de "equipe" fictícia com
+um "Analista CNPI-1" (contradiz o disclaimer), imagens de banco genéricas,
+textos rasos. Removi o cronômetro e a grade fake; a página está como
+**rascunho não publicado** (pode deletar em Sites depois). Lição: a IA de
+landing do MailerLite não presta pra página com regras/compliance —
+melhor bloco a bloco ou a do Hotmart.
+⚠️ MailerLite: **trial acaba em ~3 dias** (visto em 2026-09-01) — depois cai
+pro plano free (até 1.000 contatos), landing pages seguem funcionando.
+
+**Próximos passos:** (1) DECIDIR pra onde o link único da bio do Instagram
+aponta — opções em `bio-e-funil.md`, mas agora "página de vendas" = página
+do Hotmart (`go.hotmart.com/A107424434W`); recomendação revista: manter bio
+na landing do guia grátis (topo de funil / lista) e vender o ebook via
+Email 4 + posts; (2) adicionar **Email 4** no workflow
+`automations/196444252032468090` ofertando o ebook, botão → link de checkout
+`pay.hotmart.com/A107424434W` (editor de e-mail do MailerLite também
+congela nessa máquina — navegar por `find`); (3) ajustar legendas dos posts
+agendados (carrossel 7 números, posts 08/09) pra citar o ebook; (4) trocar
+texto da bio do Instagram (2 versões em `bio-e-funil.md`).
 
 A escada editorial antiga (#3 reserva → #10 valuation) descrita mais
 abaixo neste arquivo está **OBSOLETA** — virou o índice do ebook.
