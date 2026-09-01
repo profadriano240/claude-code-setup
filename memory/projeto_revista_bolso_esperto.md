@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-09-01T20:22:10.001Z
+  modified: 2026-09-01T20:24:55.834Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -128,11 +128,13 @@ melhor bloco a bloco ou a do Hotmart.
 ⚠️ MailerLite: **trial acaba em ~3 dias** (visto em 2026-09-01) — depois cai
 pro plano free (até 1.000 contatos), landing pages seguem funcionando.
 
-**Próximos passos:** (1) DECIDIR pra onde o link único da bio do Instagram
-aponta — opções em `bio-e-funil.md`, mas agora "página de vendas" = página
-do Hotmart (`go.hotmart.com/A107424434W`); recomendação revista: manter bio
-na landing do guia grátis (topo de funil / lista) e vender o ebook via
-Email 4 + posts; (2) adicionar **Email 4** no workflow
+**✅ Decisão (2026-09-01): link da bio do Instagram FICA na landing do guia
+grátis** (`adrianofreire-h5hnp5.subscribepage.io`) — topo de funil, alimenta
+a lista. Ebook vendido por dentro (Email 4 + posts), não pela bio. Nenhuma
+página-hub a construir.
+
+**Próximos passos (sessão encerrada em 2026-09-01 a pedido do usuário —
+NADA disso feito ainda):** (2) adicionar **Email 4** no workflow
 `automations/196444252032468090` ofertando o ebook, botão → link de checkout
 `pay.hotmart.com/A107424434W` (editor de e-mail do MailerLite também
 congela nessa máquina — navegar por `find`); (3) ajustar legendas dos posts
