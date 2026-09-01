@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-09-01T14:50:20.676Z
+  modified: 2026-09-01T19:13:50.385Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -72,6 +72,29 @@ Decisões firmes desta sessão (respondidas via AskUserQuestion):
    iniciante (Parte 4 espelha as Partes 2-3).
 5. Regulatório: tudo educacional, **empresas e FIIs fictícios, sem ticker
    real**, disclaimer (autor com formação mas sem CNPI).
+
+**✅ Monetização do ebook — DECIDIDA e materiais prontos (2026-09-01).**
+Usuário definiu: **preço R$ 12** (entrada, impulso, público frio) e
+**checkout no Hotmart**. Página de vendas fica no **MailerLite (free)**,
+separada da landing da isca gratuita; botão aponta pro checkout Hotmart.
+Materiais escritos e commitados em `ebook/vendas/` (commit `d314a79`, no
+GitHub):
+- `hotmart-cadastro.md` — passo a passo do que o **usuário** tem que fazer
+  no Hotmart (criar conta produtor, cadastrar produto, subir PDF+EPUB,
+  preço R$ 12, garantia 7 dias, enviar pra análise) + descrição/palavras-
+  chave prontas pra colar.
+- `pagina-vendas.md` — copy completa da página de vendas (9 blocos + FAQ),
+  pronta pra montar bloco a bloco no MailerLite.
+- `bio-e-funil.md` — recomendação de **página-hub** (link único da bio → 2
+  botões: guia grátis + ebook R$ 12), 2 versões de bio nova, e Email 4 a
+  adicionar no workflow (`automations/196444252032468090`) ofertando o
+  ebook 2 dias após a edição #2.
+**🔶 BLOQUEIO:** nada disso vai pro ar até o usuário criar o produto no
+Hotmart e passar o **link de checkout** (`pay.hotmart.com/...`). Só depois
+eu: (1) monto página de vendas no MailerLite; (2) monto a página-hub; (3)
+troco link+texto da bio; (4) adiciono Email 4; (5) ajusto legendas dos
+posts agendados (carrossel 7 números, posts 08/09) pra citar o ebook.
+Ebook ainda pende **leitura final do usuário** antes de publicar no Hotmart.
 
 A escada editorial antiga (#3 reserva → #10 valuation) descrita mais
 abaixo neste arquivo está **OBSOLETA** — virou o índice do ebook.
