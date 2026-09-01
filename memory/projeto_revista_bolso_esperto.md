@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-09-01T14:48:51.239Z
+  modified: 2026-09-01T14:50:20.676Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -52,9 +52,9 @@ Decisões firmes desta sessão (respondidas via AskUserQuestion):
      feias. Sem infográficos (livro é text-forward; blockquotes fazem o
      respiro visual). Empresas fictícias: "Lojas Aurora S.A." (Parte 2),
      "Galpões do Brasil FII" (Parte 4).
-   - Ainda **NÃO commitado** no GitHub. Falta: leitura final do usuário;
-     decidir isca-irmã de FII; precificar; publicar (Hotmart? — ver
-     estratégia de lançamento).
+   - Commitado e no GitHub (commit `57d2765`, 2026-09-01). Falta: leitura
+     final do usuário; decidir isca-irmã de FII; precificar; publicar
+     (Hotmart? — ver estratégia de lançamento).
    **⚠️ Nível LEIGO TOTAL** (usuário pediu explicitamente 2026-09-01:
    "deve ser mais simples, será ensinado para leigos que não sabem
    exatamente nada sobre investimentos"). Estrutura enxugada pra 5 partes:
