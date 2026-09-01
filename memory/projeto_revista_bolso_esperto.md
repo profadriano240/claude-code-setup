@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-09-01T14:38:19.316Z
+  modified: 2026-09-01T14:48:51.239Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -30,15 +30,31 @@ Decisões firmes desta sessão (respondidas via AskUserQuestion):
    foi apagado, `edicoes/edicao-03/` não existe mais.)
 2. **Conteúdo gratuito** passa a ser só posts / carrosséis / Threads de
    análise fundamentalista, funil pro ebook + a isca "7 números".
-3. **Ebook pago = produto principal.** Índice em
-   `~/projetos/bolso-esperto/ebook/estrutura.md`. **Rascunho completo do
-   texto já escrito** em `~/projetos/bolso-esperto/ebook/conteudo.md`
-   (~10,3 mil palavras, 5 partes + 4 anexos; tom aprovado pelo usuário na
-   Parte 1). Falta: revisão das Partes 2-5 pelo usuário, escolher título
-   (lista de 5 opções no fim do conteudo.md), e então o pipeline de
-   montagem (HTML+CSS→PDF via Chrome headless; pandoc→EPUB; infográficos
-   em HTML/SVG; capa standalone) — mesmo processo das edições #1-2.
-   Ainda NÃO commitado no GitHub.
+3. **Ebook pago = produto principal.** Título aprovado pelo usuário:
+   **"Sócio, Não Apostador"** (subtítulo "Análise de ações e fundos
+   imobiliários para quem está começando do zero"; "Um livro Bolso
+   Esperto"). **V1 MONTADA (2026-09-01)** em
+   `~/projetos/bolso-esperto/ebook/`:
+   - `conteudo.md` — texto canônico, ~10,3 mil palavras, YAML front
+     matter + Aviso + 5 partes + 4 anexos. Tom aprovado pelo usuário
+     ("está bom", não engordar).
+   - `socio-nao-apostador.pdf` (47 pág. A5, ~580 KB) e
+     `socio-nao-apostador.epub` (~162 KB, capa embutida) gerados.
+   - `estrutura.md` — o índice/escopo aprovado.
+   - Pipeline num script: **`ebook/build.sh`** (capa PNG via Chrome
+     screenshot 1600×2400 de `capa-standalone.html` → HTML via `pandoc`
+     com `template.html`+`print-style.html`+`cover.html` → PDF via
+     `google-chrome --headless --print-to-pdf` → EPUB via `pandoc
+     --epub-cover-image`). Reexecutar `./build.sh` após editar
+     `conteudo.md`. Fontes do sistema (Quicksand/Liberation Sans/Bitstream
+     Charter), paleta laranja/grafite — mesmo padrão das edições.
+   - Revisado página a página via `pdftoppm` — layout limpo, sem quebras
+     feias. Sem infográficos (livro é text-forward; blockquotes fazem o
+     respiro visual). Empresas fictícias: "Lojas Aurora S.A." (Parte 2),
+     "Galpões do Brasil FII" (Parte 4).
+   - Ainda **NÃO commitado** no GitHub. Falta: leitura final do usuário;
+     decidir isca-irmã de FII; precificar; publicar (Hotmart? — ver
+     estratégia de lançamento).
    **⚠️ Nível LEIGO TOTAL** (usuário pediu explicitamente 2026-09-01:
    "deve ser mais simples, será ensinado para leigos que não sabem
    exatamente nada sobre investimentos"). Estrutura enxugada pra 5 partes:
