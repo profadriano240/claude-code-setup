@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-09-01T14:16:27.900Z
+  modified: 2026-09-01T14:38:19.316Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -30,9 +30,15 @@ Decisões firmes desta sessão (respondidas via AskUserQuestion):
    foi apagado, `edicoes/edicao-03/` não existe mais.)
 2. **Conteúdo gratuito** passa a ser só posts / carrosséis / Threads de
    análise fundamentalista, funil pro ebook + a isca "7 números".
-3. **Ebook pago = produto principal.** Índice proposto em
-   `~/projetos/bolso-esperto/ebook/estrutura.md`. Aguardando aprovação do
-   usuário para começar a escrever.
+3. **Ebook pago = produto principal.** Índice em
+   `~/projetos/bolso-esperto/ebook/estrutura.md`. **Rascunho completo do
+   texto já escrito** em `~/projetos/bolso-esperto/ebook/conteudo.md`
+   (~10,3 mil palavras, 5 partes + 4 anexos; tom aprovado pelo usuário na
+   Parte 1). Falta: revisão das Partes 2-5 pelo usuário, escolher título
+   (lista de 5 opções no fim do conteudo.md), e então o pipeline de
+   montagem (HTML+CSS→PDF via Chrome headless; pandoc→EPUB; infográficos
+   em HTML/SVG; capa standalone) — mesmo processo das edições #1-2.
+   Ainda NÃO commitado no GitHub.
    **⚠️ Nível LEIGO TOTAL** (usuário pediu explicitamente 2026-09-01:
    "deve ser mais simples, será ensinado para leigos que não sabem
    exatamente nada sobre investimentos"). Estrutura enxugada pra 5 partes:
