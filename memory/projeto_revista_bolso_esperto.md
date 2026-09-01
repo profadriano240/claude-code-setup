@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-09-01T14:10:42.731Z
+  modified: 2026-09-01T14:16:10.234Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -30,13 +30,24 @@ Decisões firmes desta sessão (respondidas via AskUserQuestion):
    foi apagado, `edicoes/edicao-03/` não existe mais.)
 2. **Conteúdo gratuito** passa a ser só posts / carrosséis / Threads de
    análise fundamentalista, funil pro ebook + a isca "7 números".
-3. **Ebook pago = produto principal.** Índice completo proposto em
-   `~/projetos/bolso-esperto/ebook/estrutura.md` (Parte 0 mindset →
-   Partes 1-4 ações → Partes 5-7 FIIs → Parte 8 tese/carteira/psicologia
-   → anexos). Aguardando aprovação do usuário para começar a escrever.
-4. **FIIs entram na MESMA profundidade que ações** (indicadores próprios:
-   P/VP, DY, vacância, cap rate, WAULT, segmento, gestão, LTV/PDD em FII
-   de papel, FOF etc.).
+3. **Ebook pago = produto principal.** Índice proposto em
+   `~/projetos/bolso-esperto/ebook/estrutura.md`. Aguardando aprovação do
+   usuário para começar a escrever.
+   **⚠️ Nível LEIGO TOTAL** (usuário pediu explicitamente 2026-09-01:
+   "deve ser mais simples, será ensinado para leigos que não sabem
+   exatamente nada sobre investimentos"). Estrutura enxugada pra 5 partes:
+   (1) o básico do básico — o que é ação/FII, bolsa, corretora, de onde
+   vem o retorno, preço x valor; (2) ação em 5 perguntas simples (ganha
+   dinheiro? bom negócio? deve demais? paga o sócio? cara ou barata?) com
+   só P/L, P/VP, margem, ROE, dívida/lucro, DY; (3) qualidade/red flags
+   versão leiga; (4) FII no mesmo roteiro de perguntas (tijolo x papel x
+   FOF, vacância, contratos, rendimento, P/VP, gestão); (5) carteira +
+   erros psicológicos + checklists. **Cortado de propósito:** EV/EBITDA,
+   PSR, ROIC, FCD, Gordon, ler as 3 demonstrações linha a linha, cap
+   rate, WAULT, LTV/PDD, yield-alvo vs NTN-B — reservado pra um eventual
+   "volume 2 — intermediário". ~70-110 páginas A5.
+4. **FIIs entram na MESMA profundidade que ações** — mas ambos no nível
+   iniciante (Parte 4 espelha as Partes 2-3).
 5. Regulatório: tudo educacional, **empresas e FIIs fictícios, sem ticker
    real**, disclaimer (autor com formação mas sem CNPI).
 
