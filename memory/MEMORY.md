@@ -1,5 +1,6 @@
 - [Automações WhatsApp](projeto_automacoes_whatsapp.md) — repositório GitHub cotacoes-b3, CallMeBot, preferência por soluções gratuitas sem API paga
 - [Máquina Debian pessoal](maquina_debian_home.md) — notebook fraco (Celeron N4020, 3,6GB RAM), estado de ferramentas instaladas, sudo não-interativo sempre falha
+- [Máquina desktop Ubuntu](maquina_desktop_ubuntu.md) — desktop forte (Ryzen 5 5600GT, 14GB RAM), Ubuntu 24.04, claude-code-setup já clonado aqui
 - [Economia de tokens](feedback_economia_tokens.md) — usuário pede sempre economizar tokens: usar browser_batch, evitar screenshots/confirmações redundantes
 - [Diário de Classe SEDUC-PA](referencia_diario_classe_seduc_pa.md) — como registrar frequência no www4.seduc.pa.gov.br; URL/IDs da turma, passo a passo, botão "Todos"
 - [Lançamento de notas em paralelo](projeto_lancamento_notas_seduc.md) — outra sessão de terminal já cuida do lançamento de notas no mesmo diário; não duplicar aqui sem confirmar
