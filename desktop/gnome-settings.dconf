@@ -1,13 +1,13 @@
 [apps/update-manager]
 first-run=false
-launch-count=14
-launch-time=int64 1786202309
+launch-count=15
+launch-time=int64 1787799705
 show-details=true
 window-height=400
 window-width=612
 
 [com/ubuntu/update-notifier]
-release-check-time=uint32 1786202305
+release-check-time=uint32 1787799701
 
 [org/gnome/Disks]
 image-dir-uri='file:///home/adriano/Downloads'
@@ -147,8 +147,8 @@ show-sidebar=true
 sidebar-page='thumbnails'
 sidebar-size=182
 sizing-mode='free'
-window-ratio=(1.611006503947394, 1.2424425846316909)
-zoom=0.70710676908493042
+window-ratio=(1.6113416320885201, 0.11685782298203852)
+zoom=0.52521134680642356
 
 [org/gnome/evolution-data-server]
 migrated=true
@@ -189,7 +189,7 @@ search-filter-time-type='last_modified'
 
 [org/gnome/nautilus/window-state]
 initial-size=(890, 550)
-maximized=false
+maximized=true
 
 [org/gnome/portal/filechooser/code]
 last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTATÍSTICA/PROGRAMA v3.2'
@@ -198,7 +198,7 @@ last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTA
 last-folder-path='/home/adriano/Downloads'
 
 [org/gnome/portal/filechooser/com.google.Chrome]
-last-folder-path='/home/adriano/Área de trabalho/demanda'
+last-folder-path='/home/adriano/Downloads'
 
 [org/gnome/portal/filechooser/org.gnome.Settings]
 last-folder-path='/home/adriano/Imagens'
@@ -243,7 +243,7 @@ overridden-settings={'org.gnome.mutter.edge-tiling': <@mb nothing>, 'org.gnome.m
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1786708698
+check-timestamp=int64 1788314627
 
 [org/gtk/gtk4/settings/color-chooser]
 selected-color=(true, 0.38431373238563538, 0.62745100259780884, 0.91764706373214722, 1.0)
