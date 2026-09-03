@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-09-01T20:24:55.834Z
+  modified: 2026-09-03T15:29:50.379Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -684,6 +684,32 @@ certo. Agenda final (todos 12:40):
 - **04/09 (sex)** — post-08 ("Barato ≠ boa compra")
 - **06/09 (dom)** — post-09 ("Dividend yield 10%+ quase nunca é pechincha")
 Confirmado em `instagram.com/scheduled_content/`.
+
+**⚠️ 2 posts dessa série SUMIRAM da fila sem publicar (descoberto 2026-09-03).**
+Ao conferir em 03/09: só o post-09 (06/09 12:40) ainda estava agendado. O
+carrossel `carrossel-02-7numeros` (era 02/09) e o post-08 "Barato ≠ boa
+compra" (era 04/09) **não publicaram nem apareciam na fila** — o Instagram
+provavelmente falhou ao autopublicar o carrossel agendado pelo web e
+descartou. Publicaram de fato: post-07 (31/08) e os anteriores da edição #1.
+Todos os posts Bolso Esperto seguem com **0 curtidas** (conta pequena,
+alcance orgânico ~nulo).
+
+**✅ Reagendamento feito (2026-09-03), usando a `serie-v2/` (redesign):** o
+usuário escolheu publicar as artes da `marketing/serie-v2/` (6 posts avulsos
+com metáfora visual, feitos em sessão anterior não registrada aqui —
+commit `02d4d75`) no lugar das originais.
+- **Carrossel único com os 6 slides da serie-v2** (01-hook → 06-posicionamento,
+  1080×1350, recorte 4:5) — **PUBLICADO na hora** (perfil 203→204 posts).
+  Legenda adaptada da `carrossel-02-7numeros/legenda.txt` (+ "arrasta pra ver
+  os 6"). serie-v2 não tinha legendas — escrevi na hora.
+- **`serie-v2/05-barato-boletim.png`** — **AGENDADO p/ 04/09 07:00**
+  (legenda `post-08-legenda.txt`). Confirmado em `scheduled_content/`.
+- Facebook OFF nos dois. Aba estava com `document.hidden=true` mas dessa vez
+  o composer respondeu normal (screenshots + `find`+ref funcionaram).
+- **PENDENTE:** o post-09 de 06/09 ainda usa o **design original**; oferecido
+  trocar por `serie-v2/03-yield-retrovisor.png` pra consistência — usuário
+  ainda não respondeu. Sobram na serie-v2 sem uso: 02-pl-iceberg,
+  04-roe-podio (03 e 06 e 05 e 01 já entraram no carrossel/agendamento).
 
 **Notas do fluxo de agendamento (repetir nos próximos):**
 - Screenshots ainda congelam de vez em quando (máquina fraca) mas
