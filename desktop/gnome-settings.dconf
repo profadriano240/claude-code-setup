@@ -22,7 +22,7 @@ window-maximized=false
 window-size=(360, 616)
 
 [org/gnome/control-center]
-last-panel='power'
+last-panel='display'
 window-state=(915, 597, false)
 
 [org/gnome/deja-dup]
@@ -135,12 +135,12 @@ dual-page-odd-left=true
 enable-spellchecking=true
 fullscreen=false
 inverted-colors=false
-show-sidebar=true
+show-sidebar=false
 sidebar-page='thumbnails'
 sidebar-size=182
 sizing-mode='free'
-window-ratio=(2.2320261437908497, 0.87247474747474751)
-zoom=1.3640176872780294
+window-ratio=(2.0510531244543908, 0.80057987280209453)
+zoom=3.1962297427942428
 
 [org/gnome/evolution-data-server]
 migrated=true
