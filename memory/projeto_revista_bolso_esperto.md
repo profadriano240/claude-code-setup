@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-09-03T15:29:50.379Z
+  modified: 2026-09-03T18:44:56.724Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -706,10 +706,35 @@ commit `02d4d75`) no lugar das originais.
   (legenda `post-08-legenda.txt`). Confirmado em `scheduled_content/`.
 - Facebook OFF nos dois. Aba estava com `document.hidden=true` mas dessa vez
   o composer respondeu normal (screenshots + `find`+ref funcionaram).
-- **PENDENTE:** o post-09 de 06/09 ainda usa o **design original**; oferecido
-  trocar por `serie-v2/03-yield-retrovisor.png` pra consistência — usuário
-  ainda não respondeu. Sobram na serie-v2 sem uso: 02-pl-iceberg,
-  04-roe-podio (03 e 06 e 05 e 01 já entraram no carrossel/agendamento).
+- Sobram na serie-v2 sem uso: 02-pl-iceberg, 04-roe-podio (03 e 06 e 05 e
+  01 já entraram no carrossel/agendamento).
+
+**✅ Troca dos 2 posts agendados p/ a serie-v2 refinada — FEITA (2026-09-03,
+sessão posterior).** O usuário pediu (via AskUserQuestion) finalizar os
+slides 03/05 da serie-v2, trocar o post-09 e refazer o post-08.
+- Slides `serie-v2/03-yield-retrovisor` e `05-barato-boletim` **refinados**
+  (fontes maiores, metade inferior num flex `.content` centralizado, copy
+  enxuta) e re-renderizados via `google-chrome --headless --screenshot`
+  `--window-size=1080,1350`. Commit `2c0a55c`, no GitHub.
+- **04/09 (sex) 07:00** — post-08 "Barato ≠ boa compra": excluído o
+  agendamento antigo (render velho da serie-v2/05) e recriado com o
+  **render refinado** `serie-v2/05-barato-boletim.png`, legenda
+  `post-08-legenda.txt`.
+- **06/09 (dom) 12:40** — post-09 "Dividend yield 10%+": excluído o
+  agendamento com o **design original** (`post-09-yield-alto.png`) e
+  recriado com `serie-v2/03-yield-retrovisor.png`, legenda
+  `post-09-legenda.txt`.
+- Ambos: composer instagram.com (Criar → Postar → 4:5 explícito → legenda
+  → "Programar conteúdo" ON → data no calendário → hora por setas Up/Down
+  nos segmentos Hours/Minutes → Facebook OFF "Não compartilhar este post"
+  → Programar). Confirmado em `scheduled_content/` (miniaturas com as artes
+  novas). Aba com `document.hidden=true` mas composer respondeu normal a
+  screenshots e `find`+ref o tempo todo.
+- O editor de post agendado do Instagram **não deixa trocar a imagem**, só
+  legenda/local/colab/rótulo IA — por isso o fluxo é sempre excluir +
+  recriar (o "Excluir conteúdo programado" é irreversível, mas a legenda
+  fica salva nos `.txt` do repo e a arte no `serie-v2/`).
+- **PENDENTE:** posts 3–6 do Threads (1/dia; post 2 foi 31/08); edição #3.
 
 **Notas do fluxo de agendamento (repetir nos próximos):**
 - Screenshots ainda congelam de vez em quando (máquina fraca) mas
