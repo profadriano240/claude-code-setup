@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-09-03T19:10:08.716Z
+  modified: 2026-09-03T19:14:09.515Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -738,9 +738,12 @@ slides 03/05 da serie-v2, trocar o post-09 e refazer o post-08.
   2026-09-03** via composer do `threads.com` (logado; "Quais são as
   novidades?" → digitar → Postar). A URL da landing virou link clicável
   sozinha + Threads anexou um card de preview da landing (og-image da
-  raposa). **Posts 4 e 5** ("ROE alto nem sempre é empresa boa"; "Barato ≠
-  boa compra") **PUBLICADOS 2026-09-03** no mesmo fluxo. **PENDENTE:** post
-  6 do Threads (posicionamento/credibilidade — o último da série); edição #3.
+  raposa). **Posts 4, 5 e 6 PUBLICADOS 2026-09-03** no mesmo fluxo — com
+  isso a **série 1–6 do Threads está COMPLETA** (`marketing/threads/posts.md`).
+  ⚠️ Ao sair do composer depois de postar aparece um "Leave site?"
+  (beforeunload residual) — o post já foi publicado; é só forçar a
+  navegação. **PENDENTE:** próxima leva de posts do Threads (ainda não
+  escrita); edição #3.
 
 **Notas do fluxo de agendamento (repetir nos próximos):**
 - Screenshots ainda congelam de vez em quando (máquina fraca) mas
