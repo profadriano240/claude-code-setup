@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-09-03T18:44:56.724Z
+  modified: 2026-09-03T19:01:05.180Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -734,7 +734,11 @@ slides 03/05 da serie-v2, trocar o post-09 e refazer o post-08.
   legenda/local/colab/rótulo IA — por isso o fluxo é sempre excluir +
   recriar (o "Excluir conteúdo programado" é irreversível, mas a legenda
   fica salva nos `.txt` do repo e a arte no `serie-v2/`).
-- **PENDENTE:** posts 3–6 do Threads (1/dia; post 2 foi 31/08); edição #3.
+- **Threads post 3** ("Dividend yield de 12%? Desconfia.") **PUBLICADO
+  2026-09-03** via composer do `threads.com` (logado; "Quais são as
+  novidades?" → digitar → Postar). A URL da landing virou link clicável
+  sozinha + Threads anexou um card de preview da landing (og-image da
+  raposa). **PENDENTE:** posts 4–6 do Threads (1/dia); edição #3.
 
 **Notas do fluxo de agendamento (repetir nos próximos):**
 - Screenshots ainda congelam de vez em quando (máquina fraca) mas
