@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: db22fb26-9784-46ba-ba2c-b8c68c787ce7
-  modified: 2026-09-03T19:04:39.972Z
+  modified: 2026-09-03T19:10:08.716Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/revista-bolso-esperto`
@@ -738,9 +738,9 @@ slides 03/05 da serie-v2, trocar o post-09 e refazer o post-08.
   2026-09-03** via composer do `threads.com` (logado; "Quais são as
   novidades?" → digitar → Postar). A URL da landing virou link clicável
   sozinha + Threads anexou um card de preview da landing (og-image da
-  raposa). **Post 4** ("ROE alto nem sempre é empresa boa") **PUBLICADO
-  2026-09-03** no mesmo fluxo. **PENDENTE:** posts 5–6 do Threads (1/dia);
-  edição #3.
+  raposa). **Posts 4 e 5** ("ROE alto nem sempre é empresa boa"; "Barato ≠
+  boa compra") **PUBLICADOS 2026-09-03** no mesmo fluxo. **PENDENTE:** post
+  6 do Threads (posicionamento/credibilidade — o último da série); edição #3.
 
 **Notas do fluxo de agendamento (repetir nos próximos):**
 - Screenshots ainda congelam de vez em quando (máquina fraca) mas
