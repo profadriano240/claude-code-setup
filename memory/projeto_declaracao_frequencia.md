@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 490728ca-98e7-491b-b8cc-4207fcbeb459
-  modified: 2026-08-25T16:50:46.971Z
+  modified: 2026-09-08T17:19:36.516Z
 ---
 
 **Repositório GitHub:** `https://github.com/profadriano240/declaracao-frequencia`
@@ -28,6 +28,11 @@ em `~/Downloads/diploma-ensino-medio-janelas.html` (e pasta `~/Downloads/diploma
 provavelmente outro projeto feito no claude.ai no mesmo estilo (gerador de
 diploma). Não foi perguntado ao usuário se esse também deve virar repositório
 — perguntar antes de agir nele.
+
+**Atualização 2026-09-08:** desdobrou num projeto próprio — ver
+[[projeto_certificado_conclusao_ensino_medio]] (gerador do Certificado de
+Conclusão do Ensino Médio, feito no Claude Code a partir do modelo oficial).
+Ainda não versionado no GitHub.
 
 **Why:** usuário está migrando para o GitHub os projetos que foram feitos na
 interface web do claude.ai (fora do Claude Code), para terem histórico/versionamento
