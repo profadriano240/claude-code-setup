@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: c22a4ac6-15b6-47d8-a03d-2d3b6edd91d2
-  modified: 2026-09-04T15:58:14.495Z
+  modified: 2026-09-08T19:57:27.796Z
 ---
 
 Planilha original (intocada): `https://docs.google.com/spreadsheets/d/1Hbrt-zJaFxpFIGyg-w8XhCJN8EUqkhPE6S_dRsupbdM/edit`
@@ -17,7 +17,8 @@ Cópia de trabalho onde as correções são aplicadas: `https://docs.google.com/
 2. **Câmbio cancelado no cálculo de rentabilidade em USD** (Stock e Reat & ETF & USD) — o "Capital Aportado" usava a cotação atual do dólar em vez da cotação média histórica de compra. **✅ CORRIGIDA** na cópia: `Visão Geral!F3` e `G3` agora usam `'Avenue "EUA"'!B8` (preço médio do dólar = D43/E42) em vez de `B9` (cotação atual).
 3. **Soma total exclui a coluna Opções** — `Visão Geral!B2`/`B3` usam `=SOMA(C2:H2)`, não incluem a coluna I. Inofensivo hoje pois a aba de Opções foi excluída, mas se ele voltar a operar opções, precisa lembrar de ajustar o range. **Ainda NÃO corrigida.**
 4. **Referências quebradas (#REF!) na aba XP "Opções"** — célula I12 e cascata (Caixa Bruto/Líquido). **✅ RESOLVIDA** pela exclusão da aba (item abaixo).
-5. **Possível erro de escala 1000x em preços de ações europeias** (SRG e INGA, aba IBKR "Europa") — Preço Médio/Mercado parecem inflados 1000x em relação ao "Lucro em R$" calculado. **Ainda NÃO investigada a fundo nem corrigida.**
+5. **Possível erro de escala 1000x em preços de ações europeias** (SRG e INGA, aba IBKR "Europa"). **✅ INVESTIGADA — FALSO ALARME.** Preços corretos: SRG Qtd 5 × Preço Médio €5,926 = Aportado €29,63; × Preço Mercado €5,54 = Atual €27,70. INGA Qtd 0,35 × €24,14 = €8,449; × €32,24 = €11,284. Tudo fecha internamente. A impressão de "1000x" veio de ler errado a vírgula decimal (€5,926 = 5 casas decimais, não 5 mil) na auditoria visual. Nada a corrigir.
+6. **Câmbio EUR→BRL da carteira Europa fixado em R$ 300 por fórmula circular** (mesma família da inconsistência 2, não pega naquela rodada). `IBKR "Europa"!D32 = 300` (literal, rótulo "Cambiado"); `B9 = D32/E31`; `E34 (Cap. Aportado R$) = E31*B9` → colapsa sempre em R$ 300. `Visão Geral!H3` puxa E34 e gera o −15,29% exibido para Europa. Rentabilidade real em EUR (`IBKR "Europa"!G31`) = +2,10% (€43,079→€43,984). O −15,29% é fictício. **Pendente decisão do usuário:** os R$ 300 são valor realmente transferido/convertido para a IBKR (então é base de custo legítima, só quebrar a circularidade de B9) ou chute (então precisa das conversões BRL→EUR reais — a aba '(IR) Europa' só registra a compra em euro, não a conversão de reais). Buys em 08–09/jan/2026 (serial 46030/46031).
 
 ## Ações já aplicadas na cópia
 - Correção da inconsistência 2 (câmbio) em F3/G3 da Visão Geral.
