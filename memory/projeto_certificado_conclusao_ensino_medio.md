@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 217b5fa7-805b-4e0b-8d8e-bbfbf2557fa3
-  modified: 2026-09-08T18:46:34.067Z
+  modified: 2026-09-08T19:37:51.715Z
 ---
 
 **Arquivo:** `~/projetos/certificado-conclusao/certificado-conclusao-ensino-medio.html`
@@ -63,7 +63,7 @@ observações. Botões Limpar / Imprimir. Campos vazios viram `____`.
 **Impressão:** `@page{size:A4 landscape;margin:0}`, `.folha` com
 `print-color-adjust:exact` (senão o brasão colorido não sai).
 
-**Pendências:** não versionado no GitHub (usuário costuma pedir
-`gh repo create --private` — fluxo em [[projeto_declaracao_frequencia]]).
-Se precisar reeditar o layout, os SVGs "blank" e o `blank.py` estão só no
-scratchpad da sessão original — refazer a partir dos `.svg` da pasta do modelo.
+**Repositório GitHub:** `https://github.com/profadriano240/certificado-conclusao`
+(privado, criado em 2026-09-08, branch `master`). Os SVGs "blank", os PNGs de
+fundo e o `blank.py` estão versionados em `fontes/` — usar para reajustar o
+layout no futuro.
