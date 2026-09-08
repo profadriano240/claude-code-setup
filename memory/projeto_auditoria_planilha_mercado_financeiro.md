@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: c22a4ac6-15b6-47d8-a03d-2d3b6edd91d2
-  modified: 2026-09-08T19:57:27.796Z
+  modified: 2026-09-08T19:57:41.628Z
 ---
 
 Planilha original (intocada): `https://docs.google.com/spreadsheets/d/1Hbrt-zJaFxpFIGyg-w8XhCJN8EUqkhPE6S_dRsupbdM/edit`
@@ -29,7 +29,10 @@ Cópia de trabalho onde as correções são aplicadas: `https://docs.google.com/
 ## Pendente para a próxima sessão
 - Corrigir inconsistência 1 (Renda Fixa) — precisa decidir/perguntar ao usuário como reconstituir o custo de aquisição real dos títulos (CDB/LCA/Debêntures), já que a planilha não tem esse controle histórico como tem para Ações.
 - Corrigir/ajustar inconsistência 3 (range da soma B2/B3 excluindo coluna Opções) para robustez futura.
-- Investigar e corrigir a inconsistência 5 (escala de preços SRG/INGA na aba IBKR "Europa").
+- Inconsistência 6 (câmbio Europa fixo em R$ 300) — aguardando usuário confirmar se R$ 300 é valor real transferido ou chute.
+
+## Nota técnica: como ler a planilha sem o navegador
+Extensão Claude in Chrome pode estar desconectada. Alternativa: `mcp__claude_ai_Google_Drive__download_file_content` com `exportMimeType: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet` baixa a cópia como .xlsx (base64). Decodificar e ler `xl/worksheets/sheetN.xml` com Python/zipfile expõe TODAS as fórmulas e valores. Mapa abas→sheet: Visão Geral=sheet1, Inter "Brasil"=sheet2, Avenue "EUA"=sheet3, IBKR "Europa"=sheet4, (IR) FIISs=sheet5, (IR) Ações=sheet6, (IR) EUA=sheet7, (IR) Europa=sheet8, Preços Google=sheet9. Só edição continua exigindo navegador.
 
 ## Notas técnicas do ambiente
 - CUIDADO: `Ctrl+Shift+H` no Google Sheets insere a HORA ATUAL na célula selecionada (não é "Localizar e substituir" — isso é `Ctrl+H`). Já causei um incidente sobrescrevendo `Avenue "EUA"!E42` com timestamp; revertido com Ctrl+Z. Sempre usar `Ctrl+H` para abrir "Localizar e substituir".
