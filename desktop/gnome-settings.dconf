@@ -135,11 +135,11 @@ dual-page-odd-left=true
 enable-spellchecking=true
 fullscreen=false
 inverted-colors=false
-show-sidebar=true
+show-sidebar=false
 sidebar-page='thumbnails'
 sidebar-size=182
-sizing-mode='free'
-window-ratio=(2.0510531244543908, 0.80057987280209453)
+sizing-mode='fit-page'
+window-ratio=(0.81124099228527635, 1.2370580366450208)
 zoom=1.3640176872780294
 
 [org/gnome/evolution-data-server]
