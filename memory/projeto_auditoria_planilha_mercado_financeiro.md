@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: c22a4ac6-15b6-47d8-a03d-2d3b6edd91d2
-  modified: 2026-09-08T20:25:57.182Z
+  modified: 2026-09-08T20:26:10.041Z
 ---
 
 Planilha original (intocada): `https://docs.google.com/spreadsheets/d/1Hbrt-zJaFxpFIGyg-w8XhCJN8EUqkhPE6S_dRsupbdM/edit`
@@ -27,9 +27,9 @@ Cópia de trabalho onde as correções são aplicadas: `https://docs.google.com/
 - Abas remanescentes na cópia: Visão Geral, Inter "Brasil", Avenue "EUA", IBKR "Europa", (IR) FIIs, (IR) Ações, (IR) EUA, (IR) Europa, Preços Google — todas confirmadas como efetivamente usadas na consolidação.
 
 ## Pendente para a próxima sessão
-- Corrigir inconsistência 1 (Renda Fixa) — precisa decidir/perguntar ao usuário como reconstituir o custo de aquisição real dos títulos (CDB/LCA/Debêntures), já que a planilha não tem esse controle histórico como tem para Ações.
-- Corrigir/ajustar inconsistência 3 (range da soma B2/B3 excluindo coluna Opções) para robustez futura.
-- Inconsistência 6 (câmbio Europa fixo em R$ 300) — aguardando usuário confirmar se R$ 300 é valor real transferido ou chute.
+- **Inconsistência 1 (Renda Fixa)** — próximo item a atacar. Precisa que o usuário informe o valor de custo (quanto investiu) de cada título: CDB, LCA DI, Debênture 07/2026, Debênture 12/2030. A planilha não tem controle histórico de aporte de RF como tem para Ações. Hoje `Visão Geral!C2` e `C3` apontam ambos para `=D16` (valor de mercado atual) → rentabilidade sempre 0,00%.
+- **Inconsistência 3** — ajustar range da soma `Visão Geral!B2`/`B3` (`=SOMA(C2:H2)`) para incluir a coluna I (Opções), só robustez futura.
+- **Inconsistência 6** — opcional: trocar `IBKR "Europa"!E34` de `=E31*B9` para `=D32` (cosmético, número não muda). Depois disso o item 6 está encerrado.
 
 ## Nota técnica: como ler a planilha sem o navegador
 Extensão Claude in Chrome pode estar desconectada. Alternativa: `mcp__claude_ai_Google_Drive__download_file_content` com `exportMimeType: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet` baixa a cópia como .xlsx (base64). Decodificar e ler `xl/worksheets/sheetN.xml` com Python/zipfile expõe TODAS as fórmulas e valores. Mapa abas→sheet: Visão Geral=sheet1, Inter "Brasil"=sheet2, Avenue "EUA"=sheet3, IBKR "Europa"=sheet4, (IR) FIISs=sheet5, (IR) Ações=sheet6, (IR) EUA=sheet7, (IR) Europa=sheet8, Preços Google=sheet9. Só edição continua exigindo navegador.
