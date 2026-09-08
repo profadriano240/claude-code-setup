@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: c22a4ac6-15b6-47d8-a03d-2d3b6edd91d2
-  modified: 2026-09-08T19:57:41.628Z
+  modified: 2026-09-08T20:25:57.182Z
 ---
 
 Planilha original (intocada): `https://docs.google.com/spreadsheets/d/1Hbrt-zJaFxpFIGyg-w8XhCJN8EUqkhPE6S_dRsupbdM/edit`
@@ -18,7 +18,7 @@ Cópia de trabalho onde as correções são aplicadas: `https://docs.google.com/
 3. **Soma total exclui a coluna Opções** — `Visão Geral!B2`/`B3` usam `=SOMA(C2:H2)`, não incluem a coluna I. Inofensivo hoje pois a aba de Opções foi excluída, mas se ele voltar a operar opções, precisa lembrar de ajustar o range. **Ainda NÃO corrigida.**
 4. **Referências quebradas (#REF!) na aba XP "Opções"** — célula I12 e cascata (Caixa Bruto/Líquido). **✅ RESOLVIDA** pela exclusão da aba (item abaixo).
 5. **Possível erro de escala 1000x em preços de ações europeias** (SRG e INGA, aba IBKR "Europa"). **✅ INVESTIGADA — FALSO ALARME.** Preços corretos: SRG Qtd 5 × Preço Médio €5,926 = Aportado €29,63; × Preço Mercado €5,54 = Atual €27,70. INGA Qtd 0,35 × €24,14 = €8,449; × €32,24 = €11,284. Tudo fecha internamente. A impressão de "1000x" veio de ler errado a vírgula decimal (€5,926 = 5 casas decimais, não 5 mil) na auditoria visual. Nada a corrigir.
-6. **Câmbio EUR→BRL da carteira Europa fixado em R$ 300 por fórmula circular** (mesma família da inconsistência 2, não pega naquela rodada). `IBKR "Europa"!D32 = 300` (literal, rótulo "Cambiado"); `B9 = D32/E31`; `E34 (Cap. Aportado R$) = E31*B9` → colapsa sempre em R$ 300. `Visão Geral!H3` puxa E34 e gera o −15,29% exibido para Europa. Rentabilidade real em EUR (`IBKR "Europa"!G31`) = +2,10% (€43,079→€43,984). O −15,29% é fictício. **Pendente decisão do usuário:** os R$ 300 são valor realmente transferido/convertido para a IBKR (então é base de custo legítima, só quebrar a circularidade de B9) ou chute (então precisa das conversões BRL→EUR reais — a aba '(IR) Europa' só registra a compra em euro, não a conversão de reais). Buys em 08–09/jan/2026 (serial 46030/46031).
+6. **Câmbio EUR→BRL da carteira Europa — fórmula tautológica, mas número correto.** `IBKR "Europa"!D32 = 300` (literal, rótulo "Cambiado"); `B9 = D32/E31` (rotulado "Preço Médio", mas é taxa resolvida de trás pra frente ≈ 6,96); `E34 (Cap. Aportado R$) = E31*B9` → sempre colapsa em `D32` = R$ 300. `Visão Geral!H3` puxa E34; gera o −15,29% exibido para Europa (`H4 = (D34−E34)/E34`, com `D34` = valor atual já com desconto de −2,38% spread+IOF de repatriação). **RESOLVIDA: usuário confirmou que os R$ 300 são o valor que ele realmente transferiu para a IBKR.** Logo o −15,29% é legítimo (posição minúscula de R$ 254 = 0,12% da carteira; perda real por spread de câmbio + ~€5 parados em caixa + EUR/BRL contra). Sem bug de número. Único ajuste recomendado (cosmético, não muda nada): trocar `E34` de `=E31*B9` para `=D32`, deixando explícito que o aportado é input, não derivado de cotação. Sem esse desconto de repatriação o resultado seria ≈ −13,2% — mas o desconto é premissa deliberada do usuário. Item pode ser encerrado.
 
 ## Ações já aplicadas na cópia
 - Correção da inconsistência 2 (câmbio) em F3/G3 da Visão Geral.
