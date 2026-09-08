@@ -5,14 +5,14 @@ metadata:
   node_type: memory
   type: project
   originSessionId: c22a4ac6-15b6-47d8-a03d-2d3b6edd91d2
-  modified: 2026-09-08T20:26:10.041Z
+  modified: 2026-09-08T20:26:16.117Z
 ---
 
 Planilha original (intocada): `https://docs.google.com/spreadsheets/d/1Hbrt-zJaFxpFIGyg-w8XhCJN8EUqkhPE6S_dRsupbdM/edit`
 
 Cópia de trabalho onde as correções são aplicadas: `https://docs.google.com/spreadsheets/d/1RhQkxPFBIMRbAtimcuqHsXpYdcVcMa0Bo3rsPH0clmM/edit` ("Cópia de Mercado Financeiro").
 
-## Inconsistências identificadas na auditoria (5 no total)
+## Inconsistências identificadas na auditoria (6 no total; 4 resolvidas, faltam 1 e 3)
 1. **Renda Fixa sem rentabilidade real** — `Visão Geral!C2` e `C3` (Atual e Aportado) apontam para a mesma célula (`=D16`, valor de mercado atual), fazendo a rentabilidade de Renda Fixa sempre exibir 0,00%. **Ainda NÃO corrigida.**
 2. **Câmbio cancelado no cálculo de rentabilidade em USD** (Stock e Reat & ETF & USD) — o "Capital Aportado" usava a cotação atual do dólar em vez da cotação média histórica de compra. **✅ CORRIGIDA** na cópia: `Visão Geral!F3` e `G3` agora usam `'Avenue "EUA"'!B8` (preço médio do dólar = D43/E42) em vez de `B9` (cotação atual).
 3. **Soma total exclui a coluna Opções** — `Visão Geral!B2`/`B3` usam `=SOMA(C2:H2)`, não incluem a coluna I. Inofensivo hoje pois a aba de Opções foi excluída, mas se ele voltar a operar opções, precisa lembrar de ajustar o range. **Ainda NÃO corrigida.**
