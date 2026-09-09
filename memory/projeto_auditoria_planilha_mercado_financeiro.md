@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: c22a4ac6-15b6-47d8-a03d-2d3b6edd91d2
-  modified: 2026-09-09T12:23:57.904Z
+  modified: 2026-09-09T13:15:32.090Z
 ---
 
 Planilha original (intocada): `https://docs.google.com/spreadsheets/d/1Hbrt-zJaFxpFIGyg-w8XhCJN8EUqkhPE6S_dRsupbdM/edit`
@@ -32,6 +32,24 @@ Nenhum item aberto da auditoria original. Dois pontos levantados durante o traba
 - **Reserva de Emergência fora do patrimônio** — `H8:H14` (Tesouro: IPCA+ 2050/2040/2029, IPCA EDUCA+ 2040, Prefixado 2032, CDB Itaú, CDB Bradesco), total `H16` = 7.848,49, não entra em `B2`/`B3`; só aparece como percentual em `G7 = H16/B2` (3,79%). **Decisão do usuário (2026-09-09): manter fora, é intencional** (reserva ≠ carteira).
 
 Se o usuário quiser retomar o projeto, é para revisão geral/nova rodada de auditoria, não para reabrir estes pontos.
+
+## Fase 2: Redesenho visual do layout (2026-09-09)
+Depois da auditoria, o usuário pediu melhoria de layout — escopo: "Redesenho visual completo" + aplicar nas 4 abas ativas (Visão Geral, Inter "Brasil", Avenue "EUA", IBKR "Europa"). **Concluído e aplicado na cópia.**
+
+**Abordagem:** em vez de formatar célula por célula pelo navegador (lento, caro em tokens), foi escrito um script de Google Apps Script (arquivo `Redesign.gs`, novo, dentro do projeto Apps Script já existente chamado "cotação dólar" vinculado à planilha — **não tocar/apagar o `Código.gs` original**, que tem a função `obterCotacaoDolar()` do usuário) e executado via `runFullRedesign()`.
+
+**Paleta categórica usada (skill dataviz, ordem fixa validada, aplicada 1:1 nas colunas C:I da Visão Geral):** Renda Fixa=azul `#2a78d6`, Fundos Imobiliários=laranja `#eb6834`, Ações=aqua `#1baf7a`, Reat & ETF & USD=amarelo `#eda100`, Stock=magenta `#e87ba4`, Europa=verde `#008300`, Opções=violeta `#4a3aa7`, Total/neutro=`#0b0b0b`. Cada aba de carteira herda a cor da categoria que alimenta (Inter "Brasil": bloco Imóveis+Dívidas=laranja, Empresas=aqua; Avenue "EUA": Outros+Imóveis=amarelo, Empresas=magenta; IBKR "Europa": Outros+Empresas=verde) — link visual entre a Visão Geral e o detalhe de cada corretora.
+
+**O que foi feito:**
+- Visão Geral: cabeçalho de categorias colorido, linha de rótulos com fundo cinza-claro, valores Atual/Aportado com tinta leve da cor da categoria (linha de Rentabilidade não foi tocada — já tem formatação condicional própria), bordas em caixa, largura de colunas ajustada (resolve os textos cortados "RESERVA DE EMERGÊNCIA" e nomes de renda fixa), zebra striping nas mini-tabelas de Renda Fixa e Reserva de Emergência, linha 1 congelada. Gráfico de pizza principal recolorido para bater com o cabeçalho e reposicionado para `K2` (antes flutuava por cima das tabelas) — confirmado visualmente correto, todas as 7 fatias com a cor certa.
+- Inter "Brasil": bandas coloridas nos blocos Imóveis/Dívidas/Empresas/Resultado, zebra striping, bordas, lista "Ativos Brasileiros" e tabela Ano×Proventos com cabeçalho escuro. 4 gráficos (2 pizzas "Distribuição na bolsa brasileira"/"Distribuição em FII's"/"Distribuição em Ações" + 1 barra "Proventos versus Ano") repaginados lado a lado sem sobreposição, recoloridos com rampas de tom único por categoria (laranja p/ FIIs, aqua p/ Ações). **Imperfeição cosmética conhecida e não resolvida:** no gráfico "Distribuição em Ações", 2 das 9 fatias (SAPR4 e ITUB4) não pegaram a cor da rampa (saíram com cores default do Sheets) — depuração via Apps Script mostrou `getOptions().get('colors')` retornando `null` para esse gráfico especificamente mesmo após `chart.modify().setOption('colors',...).build()` + `updateChart()` sem erro. Causa não identificada; não vale a pena investigar mais (script de produção). Se quiser perfeição, corrigir manualmente no editor de gráfico do Sheets (clique no gráfico → Editar gráfico → Personalizar → Série/Fatias).
+- Avenue "EUA" e IBKR "Europa": mesmo padrão (bandas por bloco, zebra, bordas, largura de coluna) aplicado; sem gráficos nessas duas abas (confirmado via inspeção do .xlsx — só Visão Geral e Inter "Brasil" têm gráficos).
+- Cor de aba (tab color) definida para as 4 abas, batendo com a categoria dominante de cada uma.
+- **Nota:** existem faixas coloridas pré-existentes (não criadas por este redesenho) que ultrapassam as colunas de dados em algumas linhas de cabeçalho (ex.: Inter "Brasil" linha 1 colunas H em diante ficam azul/dourado; Avenue "EUA" e IBKR "Europa" linha 1 colunas E em diante ficam verde) — resíduo de formatação anterior do próprio usuário, fora do escopo tocado pelo script, deixado como estava.
+
+**Restam no projeto Apps Script (arquivo `Redesign.gs`) algumas funções de depuração** (`debugCheck`, `debugChartTitles`, `debugChartColors`, `debugChartColors2`) criadas durante a investigação da imperfeição acima — inofensivas (não são executadas automaticamente), podem ser apagadas numa limpeza futura se quiser deixar o projeto arrumado.
+
+**Lição para a próxima vez que precisar editar Apps Script via automação de navegador:** o editor (Monaco) tem auto-fechamento de colchetes/aspas que DUPLICA caracteres quando se digita código com quebras de linha reais (Enter no meio de `{...}` expande em 3 linhas e a chave de fechamento digitada depois vira duplicada). Solução que funcionou: minificar o código inteiro numa ÚNICA linha (sem `\n`, comentários `//` removidos antes) e digitar em blocos de até ~4-5 mil caracteres via `computer.type`, sempre com `ctrl+End` antes de cada bloco. Colar via clipboard NÃO funcionou nesta máquina (extensão Chrome travou esperando permissão nativa de colar que nunca apareceu visível — precisou o usuário fechar a aba manualmente para recuperar). Depois de rodar `runFullRedesign` pela primeira vez, o seletor de função do Apps Script **volta para a primeira função em ordem alfabética** depois do fluxo de autorização OAuth — sempre reselecionar a função certa no dropdown antes de clicar Executar de novo.
 
 ## Nota técnica: como ler a planilha sem o navegador
 Extensão Claude in Chrome pode estar desconectada. Alternativa: `mcp__claude_ai_Google_Drive__download_file_content` com `exportMimeType: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet` baixa a cópia como .xlsx (base64). Decodificar e ler `xl/worksheets/sheetN.xml` com Python/zipfile expõe TODAS as fórmulas e valores. Mapa abas→sheet: Visão Geral=sheet1, Inter "Brasil"=sheet2, Avenue "EUA"=sheet3, IBKR "Europa"=sheet4, (IR) FIISs=sheet5, (IR) Ações=sheet6, (IR) EUA=sheet7, (IR) Europa=sheet8, Preços Google=sheet9. Só edição continua exigindo navegador.
