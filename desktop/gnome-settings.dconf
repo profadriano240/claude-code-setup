@@ -214,7 +214,7 @@ sleep-inactive-ac-type='nothing'
 sleep-inactive-battery-type='nothing'
 
 [org/gnome/shell]
-favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Terminal.desktop', 'libreoffice-writer.desktop', 'libreoffice-calc.desktop', 'google-chrome.desktop']
+favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Terminal.desktop', 'libreoffice-writer.desktop', 'libreoffice-calc.desktop', 'google-chrome.desktop', 'chrome-fmpnliohjhemenmnlpbfagaolkdacoja-Default.desktop']
 last-selected-power-profile='power-saver'
 welcome-dialog-last-shown-version='48.7'
 
