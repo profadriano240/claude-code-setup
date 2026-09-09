@@ -9,4 +9,4 @@
 - [Declaração de frequência](projeto_declaracao_frequencia.md) — HTML gerador feito no claude.ai (não Claude Code), repo declaracao-frequencia; há outro similar (diploma) ainda não migrado
 - [Certificado de Conclusão do Ensino Médio](projeto_certificado_conclusao_ensino_medio.md) — gerador HTML arquivo único (frente+verso A4 paisagem), repo privado profadriano240/certificado-conclusao; fundo = SVGs do modelo oficial com texto variável removido
 - [Site Projetar Soluções Engenharia](projeto_site_projetar_solucoes.md) — v1 no ar em projetar-solucoes.netlify.app (Netlify); aguardando material do dono (Sobre, logo, região, lista de serviços)
-- [Auditoria planilha Mercado Financeiro](projeto_auditoria_planilha_mercado_financeiro.md) — Google Sheets de investimentos pessoais; 5 inconsistências achadas, correções em andamento numa cópia (original intocada), links e pendências registrados
+- [Auditoria planilha Mercado Financeiro](projeto_auditoria_planilha_mercado_financeiro.md) — Google Sheets de investimentos; trabalho antigo (auditoria + redesenho) DESCARTADO pelo usuário; cópia recomeçada do zero em 2026-09-09 (nova cópia id 1z23Sv..., original intocada)
