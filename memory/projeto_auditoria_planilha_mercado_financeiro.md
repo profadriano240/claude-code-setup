@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: c22a4ac6-15b6-47d8-a03d-2d3b6edd91d2
-  modified: 2026-09-09T12:23:41.338Z
+  modified: 2026-09-09T12:23:57.904Z
 ---
 
 Planilha original (intocada): `https://docs.google.com/spreadsheets/d/1Hbrt-zJaFxpFIGyg-w8XhCJN8EUqkhPE6S_dRsupbdM/edit`
@@ -27,8 +27,11 @@ Cópia de trabalho onde as correções são aplicadas: `https://docs.google.com/
 - Abas remanescentes na cópia: Visão Geral, Inter "Brasil", Avenue "EUA", IBKR "Europa", (IR) FIIs, (IR) Ações, (IR) EUA, (IR) Europa, Preços Google — todas confirmadas como efetivamente usadas na consolidação.
 
 ## Pendente para a próxima sessão
-- **Inconsistência 1 (Renda Fixa)** — ÚNICO item aberto. Precisa que o usuário informe o valor de custo (quanto investiu) de cada posição de RF. Confirmado por leitura completa do .xlsx: **não existe registro de aporte de RF em nenhuma aba** (a RF só aparece na Visão Geral como valor de mercado). Layout atual da área de RF na Visão Geral: `C8:C14` = % dentro da RF, `D8:D14` = valor atual, `E8:E14` = nome, coluna `F` livre. Valores hoje: `D11` CDB = `=2104.25+321.07+2253+269.94+335.23+2476.37` = 7.759,86 (6 CDBs somados numa célula só); `D12` LCA DI = 328,09; `D13` Debênture 07/2026 = vazio; `D14` Debênture 12/2030 = 2.408,73; `D16` total = 10.496,68. Plano: criar coluna de "Aportado" (F8:F14 ou nova), somar em algum `F16`, e apontar `Visão Geral!C3` para essa soma (hoje `C3`=`=D16`, igual a `C2`).
-- **Ponto novo levantado (aguardando decisão do usuário): a Reserva de Emergência não entra no patrimônio.** `H8:H14` (Tesouro: IPCA+ 2050/2040/2029, IPCA EDUCA+ 2040, Prefixado 2032, CDB Itaú, CDB Bradesco), total `H16` = 7.848,49, NÃO é somada em `B2`. Só aparece como `G7 = H16/B2` (3,79%). Pode ser intencional (reserva ≠ carteira) — confirmar antes de mexer.
+Nenhum item aberto da auditoria original. Dois pontos levantados durante o trabalho já foram decididos pelo usuário e ficam fechados, registrados aqui só como histórico:
+- **Renda Fixa sem rentabilidade** — decisão: manter assim, só valor atual (ver item 1 acima).
+- **Reserva de Emergência fora do patrimônio** — `H8:H14` (Tesouro: IPCA+ 2050/2040/2029, IPCA EDUCA+ 2040, Prefixado 2032, CDB Itaú, CDB Bradesco), total `H16` = 7.848,49, não entra em `B2`/`B3`; só aparece como percentual em `G7 = H16/B2` (3,79%). **Decisão do usuário (2026-09-09): manter fora, é intencional** (reserva ≠ carteira).
+
+Se o usuário quiser retomar o projeto, é para revisão geral/nova rodada de auditoria, não para reabrir estes pontos.
 
 ## Nota técnica: como ler a planilha sem o navegador
 Extensão Claude in Chrome pode estar desconectada. Alternativa: `mcp__claude_ai_Google_Drive__download_file_content` com `exportMimeType: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet` baixa a cópia como .xlsx (base64). Decodificar e ler `xl/worksheets/sheetN.xml` com Python/zipfile expõe TODAS as fórmulas e valores. Mapa abas→sheet: Visão Geral=sheet1, Inter "Brasil"=sheet2, Avenue "EUA"=sheet3, IBKR "Europa"=sheet4, (IR) FIISs=sheet5, (IR) Ações=sheet6, (IR) EUA=sheet7, (IR) Europa=sheet8, Preços Google=sheet9. Só edição continua exigindo navegador.
