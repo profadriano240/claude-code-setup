@@ -22,7 +22,7 @@ window-maximized=false
 window-size=(360, 616)
 
 [org/gnome/control-center]
-last-panel='bluetooth'
+last-panel='display'
 window-state=(915, 597, false)
 
 [org/gnome/deja-dup]
@@ -135,10 +135,10 @@ dual-page-odd-left=true
 enable-spellchecking=true
 fullscreen=false
 inverted-colors=false
-show-sidebar=false
+show-sidebar=true
 sidebar-page='thumbnails'
 sidebar-size=182
-sizing-mode='fit-page'
+sizing-mode='free'
 window-ratio=(0.81124099228527635, 1.2370580366450208)
 zoom=1.3640176872780294
 
@@ -185,7 +185,7 @@ search-filter-time-type='last_modified'
 [org/gnome/nautilus/window-state]
 initial-size=(890, 550)
 initial-size-file-chooser=(890, 550)
-maximized=true
+maximized=false
 
 [org/gnome/portal/filechooser/code]
 last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTATÍSTICA/PROGRAMA v3.2'
