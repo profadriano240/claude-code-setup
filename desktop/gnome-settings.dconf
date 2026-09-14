@@ -22,12 +22,12 @@ window-maximized=false
 window-size=(360, 616)
 
 [org/gnome/control-center]
-last-panel='display'
+last-panel='sound'
 window-state=(915, 677, false)
 
 [org/gnome/deja-dup]
 backend='google'
-prompt-check='2026-08-13T14:01:16.526168Z'
+prompt-check='2026-09-14T17:15:40.549285Z'
 
 [org/gnome/desktop/a11y/applications]
 screen-keyboard-enabled=false
@@ -85,7 +85,7 @@ cursor-blink-time=1478
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-software', 'gnome-power-panel', 'firefox-esr', 'google-chrome', 'code', 'libreoffice-writer', 'org-gnome-evince']
+application-children=['org-gnome-software', 'gnome-power-panel', 'firefox-esr', 'google-chrome', 'code', 'libreoffice-writer', 'org-gnome-evince', 'org-gnome-dejadup']
 show-banners=false
 
 [org/gnome/desktop/notifications/application/code]
@@ -102,6 +102,9 @@ application-id='google-chrome.desktop'
 
 [org/gnome/desktop/notifications/application/libreoffice-writer]
 application-id='libreoffice-writer.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-dejadup]
+application-id='org.gnome.DejaDup.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-evince]
 application-id='org.gnome.Evince.desktop'
@@ -139,7 +142,7 @@ show-sidebar=true
 sidebar-page='thumbnails'
 sidebar-size=182
 sizing-mode='free'
-window-ratio=(0.81124099228527635, 1.2370580366450208)
+window-ratio=(0.86340118149228695, 0.87419228077763778)
 zoom=1.3640176872780294
 
 [org/gnome/evolution-data-server]
