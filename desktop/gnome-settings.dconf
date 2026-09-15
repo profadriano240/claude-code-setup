@@ -200,7 +200,7 @@ last-folder-path='/home/adriano/Downloads'
 last-folder-path='/home/adriano/Documentos'
 
 [org/gnome/settings-daemon/plugins/color]
-night-light-enabled=true
+night-light-enabled=false
 night-light-schedule-automatic=false
 
 [org/gnome/settings-daemon/plugins/media-keys]
