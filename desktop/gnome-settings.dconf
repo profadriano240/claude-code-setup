@@ -22,7 +22,7 @@ window-maximized=false
 window-size=(360, 616)
 
 [org/gnome/control-center]
-last-panel='sound'
+last-panel='wifi'
 window-state=(915, 677, false)
 
 [org/gnome/deja-dup]
