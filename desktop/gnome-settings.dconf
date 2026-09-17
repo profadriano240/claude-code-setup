@@ -85,8 +85,11 @@ cursor-blink-time=1478
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-software', 'gnome-power-panel', 'firefox-esr', 'google-chrome', 'code', 'libreoffice-writer', 'org-gnome-evince', 'org-gnome-dejadup']
+application-children=['org-gnome-software', 'gnome-power-panel', 'firefox-esr', 'google-chrome', 'code', 'libreoffice-writer', 'org-gnome-evince', 'org-gnome-dejadup', 'chrome-fmpnliohjhemenmnlpbfagaolkdacoja-default']
 show-banners=false
+
+[org/gnome/desktop/notifications/application/chrome-fmpnliohjhemenmnlpbfagaolkdacoja-default]
+application-id='chrome-fmpnliohjhemenmnlpbfagaolkdacoja-Default.desktop'
 
 [org/gnome/desktop/notifications/application/code]
 application-id='code.desktop'
