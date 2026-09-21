@@ -192,6 +192,7 @@ os-prober
 ovmf
 pandoc
 passwd
+pavucontrol
 pciutils
 perl
 perl-base
