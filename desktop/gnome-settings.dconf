@@ -233,10 +233,10 @@ locations=[<(uint32 2, <('Brasília', 'SBBR', true, [(-0.27692558046753113, -0.8
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1787074300
+check-timestamp=int64 1790018361
 first-run=false
 packagekit-historical-updates-timestamp=uint64 1787084630
-update-notification-timestamp=int64 1786970213
+update-notification-timestamp=int64 1790018392
 
 [org/gnome/terminal/legacy]
 shortcuts-enabled=true
