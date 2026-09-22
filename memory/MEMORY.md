@@ -11,4 +11,4 @@
 - [Site Projetar Soluções Engenharia](projeto_site_projetar_solucoes.md) — v1 no ar em projetar-solucoes.netlify.app (Netlify); aguardando material do dono (Sobre, logo, região, lista de serviços)
 - [Auditoria planilha Mercado Financeiro](projeto_auditoria_planilha_mercado_financeiro.md) — Google Sheets de investimentos; trabalho antigo (auditoria + redesenho) DESCARTADO pelo usuário; cópia recomeçada do zero em 2026-09-09 (nova cópia id 1z23Sv..., original intocada)
 - [App limite-vendas-acoes](projeto_limite_vendas_acoes.md) — index.html único no Netlify com login/sync; repo privado profadriano240/limite-vendas-acoes (2026-09-21); projetar-solucoes-site também ganhou repo
-- [Solar Off-Grid curso+calculadora](projeto_solar_offgrid.md) — app JS puro em ~/projetos/solar-offgrid, completo; layout só testado via jsdom
+- [Solar Off-Grid curso+calculadora](projeto_solar_offgrid.md) — hospedado em solar-offgrid.netlify.app; AdSense pendente (falta pub-ID do usuário)
