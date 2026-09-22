@@ -197,7 +197,7 @@ maximized=false
 last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTATÍSTICA/PROGRAMA v3.2'
 
 [org/gnome/portal/filechooser/com.google.Chrome]
-last-folder-path='/home/adriano/Área de trabalho'
+last-folder-path='/home/adriano/Downloads'
 
 [org/gnome/portal/filechooser/org.gnome.TextEditor]
 last-folder-path='/home/adriano/Documentos'
@@ -235,8 +235,9 @@ locations=@av []
 [org/gnome/software]
 check-timestamp=int64 1790018361
 first-run=false
-packagekit-historical-updates-timestamp=uint64 1787084630
-update-notification-timestamp=int64 1790018392
+install-timestamp=int64 1790019838
+packagekit-historical-updates-timestamp=uint64 1790019838
+update-notification-timestamp=int64 1790080685
 
 [org/gnome/terminal/legacy]
 shortcuts-enabled=true
