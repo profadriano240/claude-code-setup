@@ -42,3 +42,6 @@ Extensão Claude in Chrome pode estar desconectada. Alternativa: `mcp__claude_ai
 2. **Método que funcionou 100%: API do Monaco via `javascript_tool`.** `monaco.editor.getModels()` lista os arquivos (identificar pelo `.getValue().slice(0,15)`), `model.setValue(conteúdoCompleto)` substitui tudo de uma vez, depois `ctrl+s`. Usar isso desde o início.
 3. **Clipboard (`navigator.clipboard.writeText`) não funciona nesta máquina** — trava esperando permissão nativa do Chrome que nunca aparece; precisou fechar a aba manualmente. Evitar.
 4. **Dropdown "Executar" do Apps Script volta pra 1ª função em ordem alfabética** após qualquer reload (OAuth, `setValue`). Sempre reabrir o dropdown, escolher a função certa, confirmar no topo do toolbar, então Executar.
+
+## Série histórica FIIs+Ações (2026-09-23)
+Reconstruída das abas (IR) FIISs/(IR) Ações + cotações Yahoo (yfinance, preço não ajustado). Arquivo `~/Documentos/Serie_Patrimonio_FIIs_Acoes.xlsx`; painel web (artifact privado) https://claude.ai/artifact/RHn88NpLkEKQkrz5jxT6ts com dados embutidos (estático, não atualiza sozinho). Datas com erro de digitação corrigidas só no cálculo (lista na aba Notas do xlsx); RBVA11 desdobramento 1:10 em 02/05/2025; IRDM11/SDIL11/JBSS3 sem histórico no Yahoo → preços das próprias ordens.
