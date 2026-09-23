@@ -22,7 +22,7 @@ window-maximized=false
 window-size=(360, 616)
 
 [org/gnome/control-center]
-last-panel='wifi'
+last-panel='display'
 window-state=(915, 677, false)
 
 [org/gnome/deja-dup]
@@ -197,7 +197,7 @@ maximized=false
 last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTATÍSTICA/PROGRAMA v3.2'
 
 [org/gnome/portal/filechooser/com.google.Chrome]
-last-folder-path='/home/adriano/Downloads'
+last-folder-path='/home/adriano/Downloads/MATEMÁTICA-20260923T122135Z-1-001/MATEMÁTICA/9ª, 10ª, 11ª e 12ª QUINZENA'
 
 [org/gnome/portal/filechooser/org.gnome.TextEditor]
 last-folder-path='/home/adriano/Documentos'
