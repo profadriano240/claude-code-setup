@@ -145,7 +145,7 @@ show-sidebar=true
 sidebar-page='thumbnails'
 sidebar-size=182
 sizing-mode='free'
-window-ratio=(0.74808324205914567, 0.28785607196401797)
+window-ratio=(0.86392368320046287, 0.28743824324017109)
 zoom=0.71351579720086189
 
 [org/gnome/evolution-data-server]
@@ -197,7 +197,7 @@ maximized=false
 last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTATÍSTICA/PROGRAMA v3.2'
 
 [org/gnome/portal/filechooser/com.google.Chrome]
-last-folder-path='/home/adriano/Downloads/MATEMÁTICA-20260923T122135Z-1-001/MATEMÁTICA/9ª, 10ª, 11ª e 12ª QUINZENA'
+last-folder-path='/home/adriano/Downloads'
 
 [org/gnome/portal/filechooser/org.gnome.TextEditor]
 last-folder-path='/home/adriano/Documentos'
