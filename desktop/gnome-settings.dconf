@@ -22,7 +22,7 @@ window-maximized=false
 window-size=(360, 616)
 
 [org/gnome/control-center]
-last-panel='display'
+last-panel='printers'
 window-state=(915, 677, false)
 
 [org/gnome/deja-dup]
@@ -233,11 +233,11 @@ locations=[<(uint32 2, <('Brasília', 'SBBR', true, [(-0.27692558046753113, -0.8
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1790018361
+check-timestamp=int64 1790278185
 first-run=false
-install-timestamp=int64 1790019838
+install-timestamp=int64 1790080677
 packagekit-historical-updates-timestamp=uint64 1790019838
-update-notification-timestamp=int64 1790080685
+update-notification-timestamp=int64 1790278125
 
 [org/gnome/terminal/legacy]
 shortcuts-enabled=true
