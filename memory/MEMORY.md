@@ -12,3 +12,4 @@
 - [Auditoria planilha Mercado Financeiro](projeto_auditoria_planilha_mercado_financeiro.md) — Google Sheets de investimentos; trabalho antigo (auditoria + redesenho) DESCARTADO pelo usuário; cópia recomeçada do zero em 2026-09-09 (nova cópia id 1z23Sv..., original intocada)
 - [App limite-vendas-acoes](projeto_limite_vendas_acoes.md) — index.html único no Netlify com login/sync; repo privado profadriano240/limite-vendas-acoes (2026-09-21); projetar-solucoes-site também ganhou repo
 - [Solar Off-Grid curso+calculadora](projeto_solar_offgrid.md) — hospedado em solar-offgrid.netlify.app; AdSense pendente (falta pub-ID do usuário)
+- [Carteira de ativos local](projeto_carteira_ativos_local.md) — SQLite + página em ~/projetos/carteira-ativos (comando `carteira`), lançamentos de movimentações/proventos desde 2026-09-23
