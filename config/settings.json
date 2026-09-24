@@ -54,6 +54,8 @@
     "mode": "hold"
   },
   "theme": "auto",
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true,
   "autoMode": {
     "environment": [
       "### Org-wide",
@@ -83,6 +85,5 @@
     ]
   },
   "voiceEnabled": true,
-  "agentPushNotifEnabled": true,
-  "inputNeededNotifEnabled": true
+  "switchModelsOnFlag": true
 }
