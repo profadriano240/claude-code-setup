@@ -145,7 +145,7 @@ show-sidebar=false
 sidebar-page='thumbnails'
 sidebar-size=182
 sizing-mode='free'
-window-ratio=(0.94861111111111107, 0.58024691859472655)
+window-ratio=(0.94934640522875813, 0.58080808080808077)
 zoom=0.71351579720086189
 
 [org/gnome/evolution-data-server]
@@ -197,7 +197,7 @@ maximized=true
 last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTATÍSTICA/PROGRAMA v3.2'
 
 [org/gnome/portal/filechooser/com.google.Chrome]
-last-folder-path='/home/adriano/Documentos/Digitalizacoes/22:25'
+last-folder-path='/home/adriano/Documentos/Digitalizacoes/Gabaritos Portugues'
 
 [org/gnome/portal/filechooser/org.gnome.TextEditor]
 last-folder-path='/home/adriano/Documentos'
