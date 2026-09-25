@@ -116,7 +116,7 @@ application-id='org.gnome.Evince.desktop'
 application-id='org.gnome.Software.desktop'
 
 [org/gnome/desktop/peripherals/keyboard]
-numlock-state=true
+numlock-state=false
 
 [org/gnome/desktop/peripherals/touchpad]
 two-finger-scrolling-enabled=true
@@ -197,7 +197,7 @@ maximized=true
 last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTATÍSTICA/PROGRAMA v3.2'
 
 [org/gnome/portal/filechooser/com.google.Chrome]
-last-folder-path='/home/adriano/Documentos/Digitalizacoes/Gabaritos Portugues'
+last-folder-path='/home/adriano/Documentos'
 
 [org/gnome/portal/filechooser/org.gnome.TextEditor]
 last-folder-path='/home/adriano/Documentos'
