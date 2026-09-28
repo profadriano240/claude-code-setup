@@ -14,3 +14,9 @@
 - [Solar Off-Grid curso+calculadora](projeto_solar_offgrid.md) — hospedado em solar-offgrid.netlify.app; AdSense pendente (falta pub-ID do usuário)
 - [Carteira de ativos local](projeto_carteira_ativos_local.md) — SQLite + página em ~/projetos/carteira-ativos (comando `carteira`), lançamentos de movimentações/proventos desde 2026-09-23
 - [Logout da extensão Chrome](projeto_chrome_extensao_logout.md) — extensão Claude pedia login a cada boot; serviço fechar-chrome.service criado, aguardando confirmação
+- [Cifras ECC para pasta](projeto_cifras_ecc.md) — PDFs minimalistas de cifras do Cifra Club; Sexta, Sábado e Faltantes (01–20) prontos, falta Domingo; scripts em ~/projetos/cifras-ecc
+- [Scanner Kyocera M2640idw](referencia_scanner_kyocera.md) — ADF via USB instável; usar vidro. Comando `digitalizar` (padrão DataEduc JPEG A4 cinza 300dpi em ~/Documentos/Digitalizacoes)
+- [Digitalização cartões AVE](projeto_digitalizacao_cartoes_ave.md) — progresso 2026-09-24 (M2mnm01 enviados, M2mnm03 0001–0005, "201 tarde" 4 folhas via ADF); `digitalizar` aprovado, não alterar — criar outra se precisar
+- [Memória temporária 7 dias](referencia_memoria_temporaria.md) — ~/.cache/claude-temporario guarda intermediários (HTML bruto etc.), limpeza automática após 7 dias
+- [Painel VALE3](projeto_painel_vale3.md) — app web de análise VALE3 em ~/projetos/vale3-analise, artifact privado; como atualizar os dados
+- [Painel Censo 2026](projeto_painel_censo_2026.md) — painel local `censo` (Node+Baileys, porta 8766) com 24 secretários escolares, envio em massa com 1 clique

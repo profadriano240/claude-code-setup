@@ -281,3 +281,9 @@ fechar sozinho no meio da tarefa; não é erro de ferramenta, é falta de RAM.
 Preferir abrir só uma aba pesada por vez, fechar assim que não precisar mais
 dela, e ter o comando de relançamento acima pronto em vez de insistir em
 retries de `tabs_context_mcp`.
+
+- Impressora/scanner HP LaserJet MFP E42540 via USB (2026-09-24): já funciona sem instalar nada (ipp-usb + sane-airscan). Device: `airscan:e0:No Active Peripheral (USB)` — vidro (Flatbed), ADF e ADF Duplex, até 600dpi. GUI: simple-scan.
+
+- IMPORTANTE (2026-09-24): a HP E42540 RECUSA digitalização pelo computador nos DOIS backends — eSCL/airscan dá HTTP 409 Conflict, e o nativo hpaio (HPLIP instalado) detecta o aparelho mas dá "Error during device I/O". É trava de política de admin no firmware, NÃO é driver. Só destrava com login de Administrador no painel (http://localhost:60000, senha desconhecida) ou reset de fábrica físico. Não repetir os testes de scan. hpaio já está no /etc/sane.d/dll.conf.
+
+Boot (2026-09-24): systemd-analyze ~36s (firmware 7s, loader 11.6s c/ GRUB_TIMEOUT=5, userspace 11s; NetworkManager-wait-online 6s). Já desativados no autostart do usuário: GNOME Software, localsearch (mascarado), Evolution-alarm-notify e DejaDup.Monitor (overrides em ~/.config/autostart). Pendentes c/ sudo (usuário roda): GRUB_TIMEOUT=1, disable NetworkManager-wait-online. Cada sessão Claude sobe `npx chrome-devtools-mcp@latest` (pesa no Celeron).
