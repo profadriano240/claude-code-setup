@@ -197,7 +197,7 @@ maximized=true
 last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTATÍSTICA/PROGRAMA v3.2'
 
 [org/gnome/portal/filechooser/com.google.Chrome]
-last-folder-path='/home/adriano/Documentos'
+last-folder-path='/home/adriano/Documentos/Eraídes'
 
 [org/gnome/portal/filechooser/org.gnome.TextEditor]
 last-folder-path='/home/adriano/Documentos'
@@ -233,7 +233,7 @@ locations=[<(uint32 2, <('Brasília', 'SBBR', true, [(-0.27692558046753113, -0.8
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1790278185
+check-timestamp=int64 1790779607
 first-run=false
 install-timestamp=int64 1790080677
 packagekit-historical-updates-timestamp=uint64 1790019838
