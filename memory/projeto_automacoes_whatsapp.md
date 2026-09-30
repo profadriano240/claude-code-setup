@@ -63,6 +63,11 @@ determinado a partir de `github.event.schedule`. Commit `a999a79`.
 "0 21 * * 1-5" (UTC). O corte de conteúdo do turno tarde no script já era 18h,
 então não precisou mudar `noticias_whatsapp.py`. Commit `dd3218d`.
 
+**Atualizado em 2026-09-29:** workflow de notícias PAUSADO a pedido do usuário
+(`gh workflow disable noticias.yml`, estado `disabled_manually`). Código intacto;
+para retomar: `gh workflow enable noticias.yml -R profadriano240/cotacoes-b3`.
+Cotações continuam ativas.
+
 **Why:** Adriano optou explicitamente por não gastar com API (recusou usar a API da
 Anthropic para escolher/resumir notícias com IA, mesmo sendo a opção de melhor
 qualidade) — prefere soluções 100% gratuitas mesmo que tecnicamente mais simples

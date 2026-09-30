@@ -1,4 +1,4 @@
-- [Automações WhatsApp](projeto_automacoes_whatsapp.md) — repositório GitHub cotacoes-b3, CallMeBot, preferência por soluções gratuitas sem API paga
+- [Automações WhatsApp](projeto_automacoes_whatsapp.md) — repositório GitHub cotacoes-b3, CallMeBot, preferência por soluções gratuitas; notícias PAUSADAS desde 2026-09-29
 - [Máquina Debian pessoal](maquina_debian_home.md) — notebook fraco (Celeron N4020, 3,6GB RAM), estado de ferramentas instaladas, sudo não-interativo sempre falha
 - [Economia de tokens](feedback_economia_tokens.md) — usuário pede sempre economizar tokens: usar browser_batch, evitar screenshots/confirmações redundantes
 - [Diário de Classe SEDUC-PA](referencia_diario_classe_seduc_pa.md) — como registrar frequência no www4.seduc.pa.gov.br; URL/IDs da turma, passo a passo, botão "Todos"
@@ -10,7 +10,7 @@
 - [Certificado de Conclusão do Ensino Médio](projeto_certificado_conclusao_ensino_medio.md) — gerador HTML arquivo único (frente+verso A4 paisagem), repo privado profadriano240/certificado-conclusao; fundo = SVGs do modelo oficial com texto variável removido
 - [Site Projetar Soluções Engenharia](projeto_site_projetar_solucoes.md) — v1 no ar em projetar-solucoes.netlify.app (Netlify); aguardando material do dono (Sobre, logo, região, lista de serviços)
 - [Auditoria planilha Mercado Financeiro](projeto_auditoria_planilha_mercado_financeiro.md) — Google Sheets de investimentos; trabalho antigo (auditoria + redesenho) DESCARTADO pelo usuário; cópia recomeçada do zero em 2026-09-09 (nova cópia id 1z23Sv..., original intocada)
-- [App limite-vendas-acoes](projeto_limite_vendas_acoes.md) — index.html único no Netlify com login/sync; repo privado profadriano240/limite-vendas-acoes (2026-09-21); projetar-solucoes-site também ganhou repo
+- [App limite-vendas-acoes](projeto_limite_vendas_acoes.md) — = painel de swing trade mensal (isenção R$ 20 mil); index.html único no Netlify com login/sync; repo privado profadriano240/limite-vendas-acoes (2026-09-21); projetar-solucoes-site também ganhou repo
 - [Solar Off-Grid curso+calculadora](projeto_solar_offgrid.md) — hospedado em solar-offgrid.netlify.app; AdSense pendente (falta pub-ID do usuário)
 - [Carteira de ativos local](projeto_carteira_ativos_local.md) — SQLite + página em ~/projetos/carteira-ativos (comando `carteira`), lançamentos de movimentações/proventos desde 2026-09-23
 - [Logout da extensão Chrome](projeto_chrome_extensao_logout.md) — extensão Claude pedia login a cada boot; serviço fechar-chrome.service criado, aguardando confirmação
@@ -20,3 +20,4 @@
 - [Memória temporária 7 dias](referencia_memoria_temporaria.md) — ~/.cache/claude-temporario guarda intermediários (HTML bruto etc.), limpeza automática após 7 dias
 - [Painel VALE3](projeto_painel_vale3.md) — app web de análise VALE3 em ~/projetos/vale3-analise, artifact privado; como atualizar os dados
 - [Painel Censo 2026](projeto_painel_censo_2026.md) — painel local `censo` (Node+Baileys, porta 8766) com 24 secretários escolares, envio em massa com 1 clique
+- [Acesso ao desktop Ubuntu](projeto_acesso_desktop_ubuntu.md) — SSH só na rede de casa, sem Tailscale; ainda não configurado
