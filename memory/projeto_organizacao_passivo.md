@@ -16,3 +16,5 @@ Método e script em ~/projetos/passivo-scan/ (LEIA-ME.md + escl_lote.py + backup
 
 **Why:** usuário cobrou várias vezes nomes faltando; a causa era o scanimage perder páginas, não folhas grudadas (o usuário acertou).
 **How to apply:** usar escl_lote.py (nunca scanimage para ADF); pedir folha de controle já gravada no fim da pilha; ao terminar, informar quantas folhas foram lidas para o usuário bater com a contagem dele. Ser ágil e econômico em tokens ([[feedback-economia-tokens]]): grades de 2 páginas, gravar em lote numa só abertura do xlsx (cada abertura leva ~15s).
+
+Painel (2026-10-01): artifact privado https://claude.ai/artifact/7Mvos9eG9V6rPXHwe6uFk3 . Atualizar: `python3 ~/projetos/passivo-scan/painel/gerar_painel.py` e republicar painel.html com a mesma URL.

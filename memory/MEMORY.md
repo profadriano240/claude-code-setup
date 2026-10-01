@@ -19,6 +19,8 @@
 - [Digitalização cartões AVE](projeto_digitalizacao_cartoes_ave.md) — progresso 2026-09-24 (M2mnm01 enviados, M2mnm03 0001–0005, "201 tarde" 4 folhas via ADF); `digitalizar` aprovado, não alterar — criar outra se precisar
 - [Memória temporária 7 dias](referencia_memoria_temporaria.md) — ~/.cache/claude-temporario guarda intermediários (HTML bruto etc.), limpeza automática após 7 dias
 - [Painel VALE3](projeto_painel_vale3.md) — app web de análise VALE3 em ~/projetos/vale3-analise, artifact privado; como atualizar os dados
-- [Painel Censo 2026](projeto_painel_censo_2026.md) — painel local `censo` (Node+Baileys, porta 8766) com 24 secretários escolares, envio em massa com 1 clique
+- [Painel Censo 2026](projeto_painel_censo_2026.md) — painel local `censo` (Node+Baileys, porta 8766) com 24 secretários; arquivos do trabalho com secretários em ~/Documentos/ESCOLAS CENSO ESCOLAR
 - [Acesso ao desktop Ubuntu](projeto_acesso_desktop_ubuntu.md) — SSH só na rede de casa, sem Tailscale; ainda não configurado
 - [Respostas aos secretários no WhatsApp](projeto_respostas_secretarios_whatsapp.md) — 2026-09-30: 6 enviadas, 4 rascunhos (Adriana, Bel, Daniele, Alyne) aguardando OK; método de áudio + comando `transcrever`
+- [Organização do passivo](projeto_organizacao_passivo.md) — nomes dos alunos nas abas do xlsx PASSIVO 2026; O-1 e P-1 feitas, retomar em P-2; usar escl_lote.py; painel artifact 7Mvos9...
+- [Painel Planejamento Financeiro 2026](projeto_painel_planejamento_financeiro_2026.md) — planilha de abas mensais + artifact que lê ao vivo via Google Drive; bug da coluna Restante
