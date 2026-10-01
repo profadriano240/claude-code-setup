@@ -21,3 +21,4 @@
 - [Painel VALE3](projeto_painel_vale3.md) — app web de análise VALE3 em ~/projetos/vale3-analise, artifact privado; como atualizar os dados
 - [Painel Censo 2026](projeto_painel_censo_2026.md) — painel local `censo` (Node+Baileys, porta 8766) com 24 secretários escolares, envio em massa com 1 clique
 - [Acesso ao desktop Ubuntu](projeto_acesso_desktop_ubuntu.md) — SSH só na rede de casa, sem Tailscale; ainda não configurado
+- [Respostas aos secretários no WhatsApp](projeto_respostas_secretarios_whatsapp.md) — 2026-09-30: 6 enviadas, 4 rascunhos (Adriana, Bel, Daniele, Alyne) aguardando OK; método de áudio + comando `transcrever`
