@@ -10,7 +10,9 @@ metadata:
 
 Planilha: ~/Documentos/ORGANIZAÇÃO PASSIVO/ORGANIZAÇÃO GERAL _PASSIVO _ 2026.xlsx. Cada aba = caixa (A-1…P-1). Usuário põe folhas na bandeja da HP; Claude digitaliza, lê o nome e grava na coluna E a partir de E4 (MAIÚSCULAS, ordem das folhas, sem duplicar).
 
-Progresso em 2026-09-30: O-1 concluída (14 alunos, E4:E17); P-1 com 58 alunos (E4:E61; E35 "PABLINE THIARA MORAIS SANTOS" não foi gravado pela Claude). **Retomar em 2026-10-01 pela aba P-2** (não existe ainda: copiar P-1 com openpyxl copy_worksheet, limpar E4:E99, C4="P2").
+Progresso em 2026-09-30: O-1 concluída (14 alunos, E4:E17); P-1 com 58 alunos (E4:E61; E35 "PABLINE THIARA MORAIS SANTOS" não foi gravado pela Claude). 2026-10-01: P-2 com 56 alunos (E4:E59) após lotes 1 (27 folhas) e 2 (33 folhas). Usuário levou p/ caixa P-1 e tirou da P-2: P.H. SILVA ALVES, PAULO SIDNEY, PATRICK NERES. Lote 2 tem 3 que também estão na P-1 (P.H. CAVALCANTE MELO, P.H. PEREIRA LIMA, PRISCILA ARAUJO DE OLIVEIRA) — usuário decidiu manter. P-2 encerrada em 56. P-3 (2026-10-01): lote 1 = 37 folhas, 32 alunos E4:E35; 5 também em outras abas (PAULINA CANDIDO, PABLINE, PAULA EDUARDA, PAULLO MATHEUS BARBOSA na P-1; P.H. SILVA CARDOSO na P-2) — usuário decidiu manter. Lote 2 (18 folhas): +15 alunos → P-3 com 47 (E4:E50). Próximo lote em E51 (sessão encerrada 2026-10-01).
+
+**Regra do usuário (2026-10-01):** nome que já aparece em outra aba pode ficar nas duas — não precisa perguntar, só gravar (no máximo citar de passagem). Duplicado dentro da mesma aba continua sendo gravado uma vez só.
 
 Método e script em ~/projetos/passivo-scan/ (LEIA-ME.md + escl_lote.py + backup da planilha). Ver [[referencia-scanner-kyocera]] para a HP.
 
