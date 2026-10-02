@@ -12,6 +12,7 @@
 - [Auditoria planilha Mercado Financeiro](projeto_auditoria_planilha_mercado_financeiro.md) — Google Sheets de investimentos; trabalho antigo (auditoria + redesenho) DESCARTADO pelo usuário; cópia recomeçada do zero em 2026-09-09 (nova cópia id 1z23Sv..., original intocada)
 - [App limite-vendas-acoes](projeto_limite_vendas_acoes.md) — = painel de swing trade mensal (isenção R$ 20 mil); index.html único no Netlify com login/sync; repo privado profadriano240/limite-vendas-acoes (2026-09-21); projetar-solucoes-site também ganhou repo
 - [Solar Off-Grid curso+calculadora](projeto_solar_offgrid.md) — hospedado em solar-offgrid.netlify.app; AdSense pendente (falta pub-ID do usuário)
+- [Imposto da Bolsa](projeto_imposto_da_bolsa.md) — site SEO calculadora isenção R$ 20 mil + guias IR ações, impostodabolsa.netlify.app (2026-10-02); 15 artigos; domínio .com.br comprado e ligado no Netlify (DNS pendente); próximo: Search Console + AdSense
 - [Carteira de ativos local](projeto_carteira_ativos_local.md) — SQLite + página em ~/projetos/carteira-ativos (comando `carteira`), lançamentos de movimentações/proventos desde 2026-09-23
 - [Logout da extensão Chrome](projeto_chrome_extensao_logout.md) — extensão Claude pedia login a cada boot; serviço fechar-chrome.service criado, aguardando confirmação
 - [Cifras ECC para pasta](projeto_cifras_ecc.md) — PDFs minimalistas de cifras do Cifra Club; Sexta, Sábado e Faltantes (01–20) prontos, falta Domingo; scripts em ~/projetos/cifras-ecc
