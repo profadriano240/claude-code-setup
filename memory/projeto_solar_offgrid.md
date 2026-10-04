@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 771f1d29-2638-4af3-9c96-d7d0fba20c90
-  modified: 2026-09-22T14:07:17.565Z
+  modified: 2026-10-04T20:09:48.811Z
 ---
 
 Criado em 2026-09-21 a partir de ~/Downloads/PROMPT_curso_solar_offgrid.md em ~/projetos/solar-offgrid. Leia o CLAUDE.md do próprio projeto para arquitetura e convenções.
@@ -22,3 +22,5 @@ Estado: todos os itens do prompt implementados (13 módulos + quizzes, calculado
 **Why:** usuário é professor de Matemática e quer entender as fórmulas; pediu offline total, sem CDN/framework.
 
 **How to apply:** layout dá para ver em navegador real com `google-chrome --headless=new --no-sandbox --screenshot=arq.png --virtual-time-budget=4000 file://.../index.html#/curso/N` (chrome-devtools MCP não conecta). Em 2026-09-21 foram vistas só as figuras novas (~10, módulos 1,3,5–9,11,12); responsividade/impressão e figuras antigas seguem sem conferência visual. Figuras SVG em `js/figuras.js`, inseridas por `{{fig:nome}}` em `conteudo.js`. Bitola final agora = max(queda, ampacidade, fusível ≤ cabo) — decisão do usuário em 2026-09-21. jsdom 24 está em scratchpad da sessão (não persiste). Valores de preço/HSP/ciclos são exemplos.
+
+**2026-10-02:** script AdSense (pub-6370131226236609) no <head> de index.html e privacidade.html + ads.txt, commit 4b66085, PUBLICADO no Netlify em 2026-10-02. Falta: adicionar o site em Sites no AdSense e pedir revisão. Tratado como Site 2 do portfólio; estado geral em ~/projetos/imposto-da-bolsa/docs/PORTFOLIO.md.
