@@ -5,3 +5,4 @@
 - [Diário de Classe SEDUC-PA](referencia_diario_classe_seduc_pa.md) — como registrar frequência no www4.seduc.pa.gov.br; URL/IDs da turma, passo a passo, botão "Todos"
 - [Lançamento de notas em paralelo](projeto_lancamento_notas_seduc.md) — outra sessão de terminal já cuida do lançamento de notas no mesmo diário; não duplicar aqui sem confirmar
 - [Backup claude-code-setup](referencia_backup_claude_code_setup.md) — repo GitHub com backup config/memória Claude Code; memória local restaurada em 2026-08-14
+- [Portfólio de sites](projeto_portfolio_sites.md) — repo profadriano240/portfolio-sites, blogs SEO anônimos (Imposto da Bolsa, Solar Off-Grid), AdSense/afiliados pendentes
