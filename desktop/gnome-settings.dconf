@@ -7,7 +7,7 @@ window-height=400
 window-width=612
 
 [com/ubuntu/update-notifier]
-release-check-time=uint32 1787799701
+release-check-time=uint32 1789391528
 
 [org/gnome/Disks]
 image-dir-uri='file:///home/adriano/Downloads'
@@ -243,7 +243,7 @@ overridden-settings={'org.gnome.mutter.edge-tiling': <@mb nothing>, 'org.gnome.m
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1788878762
+check-timestamp=int64 1789391535
 
 [org/gtk/gtk4/settings/color-chooser]
 selected-color=(true, 0.38431373238563538, 0.62745100259780884, 0.91764706373214722, 1.0)

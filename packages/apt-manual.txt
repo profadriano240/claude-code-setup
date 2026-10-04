@@ -1,4 +1,5 @@
 apt-transport-https
+audacity
 bsdutils
 build-essential
 ca-certificates
