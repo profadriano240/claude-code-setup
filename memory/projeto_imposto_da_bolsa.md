@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 8ca0761d-b073-4e4f-8e70-209de6e591f3
-  modified: 2026-10-02T14:19:47.402Z
+  modified: 2026-10-04T20:09:51.019Z
 ---
 
 Criado em 2026-10-02 a partir do blueprint ~/Downloads/blueprint-agentes-portfolio-sites.md (portfólio de blogs SEO anônimos, AdSense + afiliados). O usuário escolheu aproveitar o painel [[projeto-limite-vendas-acoes]] como ferramenta-âncora; o painel pessoal continua separado e intocado.
@@ -26,4 +26,4 @@ Criado em 2026-10-02 a partir do blueprint ~/Downloads/blueprint-agentes-portfol
 - 2026-10-02: ReVar + caixas PUBLICADOS (deploy ok); Solar Off-Grid publicado com AdSense (falta adicionar em Sites no AdSense). Hotmart (conta de afiliado criada pelo usuário, logada no Chrome) avaliada: nicho IR fraco — produtos com 0–1 avaliação, textos antigos; Bússola do Investidor "Curso IR na Bolsa" (ID 55855) com página de vendas FORA DO AR; "IR sem Medo" (ID 1089382, cookie eterno, texto de 2020, nota 3); melhor candidato "Declaração de IR em Ações" (ID 1325746, Mestre de Negócios, 40%, R$ 200, cookie eterno, 1 clique, 0 avaliações). Busca "investimentos para iniciantes" = só produtos baratos/sem avaliação. Nenhuma afiliação feita; aguardando decisão do usuário.
 - 2026-10-02: usuário escolheu afiliar-se ao "Declaração de IR em Ações" (ID 1325746) e publicar direto. Tentativa de afiliação (termos aceitos, 2 cliques em "Sim, quero me afiliar") falhou: "Não é possível se afiliar a este produto no momento" / "Falha ao realizar a operação". Causa não identificada (cadastro da conta incompleto? programa pausado?). Nada publicado.
 - 2026-10-02: após o usuário atualizar o cadastro (identidade completa, 2FA por e-mail, proteção intermediária), 3ª tentativa também não afiliou (sem erro, botão continua 'Afilie-se agora'). Provável bloqueio do lado do produto.
-- 2026-10-02: e-mail enviado (com OK do usuário) a mestredenegocios@gmail.com perguntando se a afiliação do ID 1325746 está ativa (Gmail id 1a0ffb05f8633da9). Próximo: aguardar resposta; Amazon Associados para caixa 'iniciante' (usuário precisa criar a conta).
+- 2026-10-02: e-mail enviado (com OK do usuário) a mestredenegocios@gmail.com perguntando se a afiliação do ID 1325746 está ativa (Gmail id 1a0ffb05f8633da9). Próximo: aguardar resposta (nenhuma até 2026-10-04); Amazon Associados para caixa 'iniciante' (usuário precisa criar a conta).
