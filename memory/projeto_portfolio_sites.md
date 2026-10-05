@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 09f82023-8822-41f7-8a38-56c5d84cef41
-  modified: 2026-10-05T01:46:37.013Z
+  modified: 2026-10-05T01:46:45.407Z
 ---
 
 Repo central privado https://github.com/profadriano240/portfolio-sites (branch `master`) guarda
@@ -57,9 +57,13 @@ já publicados. Falta adicionar em AdSense → Sites e pedir revisão.
 2. ~~Search Console → reenviar sitemap.xml~~ — feito em 2026-10-04 (31 URLs).
 3. ~~Leva de 8–10 guias novos~~ — feito em 2026-10-04 (9 guias, ver acima).
 4. Criar conta Amazon Associados (só dono pode) → caixa "iniciante".
-5. Se produtor Hotmart não responder até ~09/10, abandonar Hotmart nesse nicho, avaliar programas
-   de indicação de corretoras.
+5. ~~Se produtor Hotmart não responder até ~09/10, abandonar Hotmart nesse nicho~~ — superado:
+   descoberto em 2026-10-04 que a conta já tinha 2 afiliações ativas (ver acima); link do curso
+   ID 1169630 publicado no slot `curso-ir`. Ainda restam 2 pedidos pendentes desde 02/10
+   (ID 1777009, ID 1202583) — acompanhar aceite do produtor.
 6. Acompanhar indexação dos 9 guias novos no Search Console (Páginas → indexadas) nos próximos dias.
+7. Slots "planilha" e "iniciante" ainda vazios — procurar produto Hotmart (ou Amazon, após #4) que
+   encaixe pra preencher.
 
 **Como retomar em máquina nova:** clonar [[referencia_backup_claude_code_setup]] primeiro (restaura
 memória), depois `gh repo clone profadriano240/portfolio-sites` + rodar `clonar.sh`. Conectores
