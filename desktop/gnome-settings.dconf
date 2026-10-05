@@ -1,13 +1,13 @@
 [apps/update-manager]
 first-run=false
-launch-count=16
-launch-time=int64 1788878762
+launch-count=17
+launch-time=int64 1791144364
 show-details=true
 window-height=400
 window-width=612
 
 [com/ubuntu/update-notifier]
-release-check-time=uint32 1789391528
+release-check-time=uint32 1791749166
 
 [org/gnome/Disks]
 image-dir-uri='file:///home/adriano/Downloads'
@@ -32,7 +32,7 @@ window-size=(382, 503)
 word-size=64
 
 [org/gnome/control-center]
-last-panel='wifi'
+last-panel='power'
 window-state=(980, 640, false)
 
 [org/gnome/desktop/app-folders]
@@ -131,7 +131,7 @@ primary-color='#000000'
 secondary-color='#000000'
 
 [org/gnome/desktop/session]
-idle-delay=uint32 600
+idle-delay=uint32 0
 
 [org/gnome/desktop/sound]
 allow-volume-above-100-percent=false
@@ -221,6 +221,7 @@ sleep-inactive-ac-type='nothing'
 app-picker-layout=[{'gnome-session-properties.desktop': <{'position': <0>}>, 'update-manager.desktop': <{'position': <1>}>, 'software-properties-drivers.desktop': <{'position': <2>}>, 'org.gnome.clocks.desktop': <{'position': <3>}>, 'org.gnome.TextEditor.desktop': <{'position': <4>}>, 'org.gnome.PowerStats.desktop': <{'position': <5>}>, 'software-properties-gtk.desktop': <{'position': <6>}>, 'gnome-language-selector.desktop': <{'position': <7>}>, 'org.gnome.eog.desktop': <{'position': <8>}>, 'org.gnome.Settings.desktop': <{'position': <9>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <10>}>, 'org.gnome.Terminal.desktop': <{'position': <11>}>, 'Utilities': <{'position': <12>}>, 'yelp.desktop': <{'position': <13>}>, 'vlc.desktop': <{'position': <14>}>}, {'org.gnome.Software.desktop': <{'position': <0>}>, 'install4j_1b5fghx-Ajuda_do_IRPF_2026.desktop': <{'position': <1>}>, 'firefox_firefox.desktop': <{'position': <2>}>, 'gscriptor.desktop': <{'position': <3>}>, 'install4j_1b5fghx-IRPF2026.desktop': <{'position': <4>}>, 'install4j_1b5fghx-Leia-me_do_IRPF_2026.desktop': <{'position': <5>}>, 'libreoffice26.2-startcenter.desktop': <{'position': <6>}>, 'libreoffice26.2-base.desktop': <{'position': <7>}>, 'libreoffice26.2-calc.desktop': <{'position': <8>}>, 'libreoffice26.2-draw.desktop': <{'position': <9>}>, 'libreoffice26.2-impress.desktop': <{'position': <10>}>, 'libreoffice26.2-math.desktop': <{'position': <11>}>, 'libreoffice26.2-writer.desktop': <{'position': <12>}>, 'PJEInstaller.desktop': <{'position': <13>}>, 'PJEOfficePro.desktop': <{'position': <14>}>, 'SACMonitor.desktop': <{'position': <15>}>, 'SACTools.desktop': <{'position': <16>}>}]
 enabled-extensions=['ding@rastersoft.com', 'ubuntu-dock@ubuntu.com', 'tiling-assistant@ubuntu.com']
 favorite-apps=['google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Calculator.desktop', 'com.obsproject.Studio.desktop', 'org.kde.kdenlive.desktop', 'code.desktop', 'com.anthropic.Claude.desktop']
+last-selected-power-profile='performance'
 welcome-dialog-last-shown-version='46.0'
 
 [org/gnome/shell/extensions/dash-to-dock]
@@ -243,7 +244,7 @@ overridden-settings={'org.gnome.mutter.edge-tiling': <@mb nothing>, 'org.gnome.m
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1789391535
+check-timestamp=int64 1791144365
 
 [org/gtk/gtk4/settings/color-chooser]
 selected-color=(true, 0.38431373238563538, 0.62745100259780884, 0.91764706373214722, 1.0)
