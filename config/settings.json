@@ -83,11 +83,11 @@
   },
   "language": "pt-BR",
   "voice": {
-    "enabled": true,
+    "enabled": false,
     "mode": "hold"
   },
   "theme": "auto",
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
-  "voiceEnabled": true
+  "voiceEnabled": false
 }
