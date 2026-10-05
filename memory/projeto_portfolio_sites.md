@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 09f82023-8822-41f7-8a38-56c5d84cef41
-  modified: 2026-10-05T01:46:45.407Z
+  modified: 2026-10-05T02:52:37.702Z
 ---
 
 Repo central privado https://github.com/profadriano240/portfolio-sites (branch `master`) guarda
@@ -64,6 +64,28 @@ já publicados. Falta adicionar em AdSense → Sites e pedir revisão.
 6. Acompanhar indexação dos 9 guias novos no Search Console (Páginas → indexadas) nos próximos dias.
 7. Slots "planilha" e "iniciante" ainda vazios — procurar produto Hotmart (ou Amazon, após #4) que
    encaixe pra preencher.
+
+**Divulgação no Instagram (desde 2026-10-04):** perfil pessoal do usuário `@profadrianofreire` (856
+seguidores, já é conta de finanças pessoais — bio fala de ações/análise, feed tem conteúdo de
+investimento) passou a divulgar o Imposto da Bolsa. Bio tem link de captura de leads
+(`adrianofreire-h5hnp5.subscribepage.io`, guia grátis) — **link da bio só edita pelo app do
+celular, não pelo Chrome/web** (Instagram bloqueia essa edição no desktop); usuário decidiu trocar
+esse link pelo site, mas precisa fazer manualmente no celular. Postados via Chrome logado
+(`mcp__claude-in-chrome`) + upload de imagem local (`file_upload`) + `Compartilhar em: Facebook`
+mantido ligado (cross-post automático pro Facebook "Adriano Freire Rodrigues"):
+1. Post single-image sobre o site (guias de IR) — feito 2 vezes: 1ª versão em 4:5 cortava texto no
+   grid (Instagram crop quadrado no perfil), refeita em 1:1 (1080x1080) e a antiga apagada.
+2. Carrossel de 8 slides sobre "ganhar na bolsa independente da eleição" — conteúdo educativo real
+   (o que move o preço de uma ação, volatilidade eleitoral ≠ veredito, 3 táticas: diversificar,
+   aportar todo mês, reserva de emergência, pensar em anos) com fotos reais do Pexels (banco
+   gratuito, uso comercial livre — `images.pexels.com/photos/<id>/pexels-photo-<id>.jpeg` sem
+   query string; pegar o ID da URL da página do Pexels, não do `og:image`, que às vezes aponta pra
+   foto promovida errada) + overlay de texto via Pillow. Fecha em loop visual (slide 6 repete a
+   pose do slide 1). Script gerador: `/tmp/.../scratchpad/gerar_carrossel.py` (não versionado,
+   scratchpad de sessão — recriar se precisar).
+Gamma (`mcp__claude_ai_Gamma__generate_image`) ficou sem créditos (plano free, 0 restantes) —
+não dá pra gerar fotos realistas por IA até o usuário fazer upgrade em
+gamma.app/settings/billing.
 
 **Como retomar em máquina nova:** clonar [[referencia_backup_claude_code_setup]] primeiro (restaura
 memória), depois `gh repo clone profadriano240/portfolio-sites` + rodar `clonar.sh`. Conectores
