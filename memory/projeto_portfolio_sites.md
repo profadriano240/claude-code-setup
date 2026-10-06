@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 09f82023-8822-41f7-8a38-56c5d84cef41
-  modified: 2026-10-06T02:42:31.165Z
+  modified: 2026-10-06T02:51:07.743Z
 ---
 
 Repo central privado https://github.com/profadriano240/portfolio-sites (branch `master`) guarda
@@ -96,8 +96,13 @@ resposta, 3 dias; Hotmart 2 pedidos ainda pendentes; indexação dos 9 guias ain
 Commits do dia foram só organizacionais: criação de equipe de 5 agentes (diretor-portfolio,
 social-instagram, seo-conteudo, monetizacao, analista-dados) e ajuste do `analista-dados` pra
 incluir GA4 no relatório. Primeiro relatório semanal do analista-dados previsto pra sexta 2026-10-09
-em `relatorios/2026-10-09.md`. Pendência nova: criar propriedade GA4 e colar o ID `G-...` em
-`GA_ID` no `gerar.py` (código já pronto, só falta o ID).
+em `relatorios/2026-10-09.md`. **GA4 ativado em 2026-10-05:** propriedade "Imposto da Bolsa" criada
+na conta Google Analytics "Prof. Adriano Freire" (conta 324032885), stream Web
+`www.impostodabolsa.com.br`, measurement ID `G-X1TB31SRTC` colado em `GA_ID` no `gerar.py`
+(repo local `/home/adriano/projetos/imposto-da-bolsa`, não `/home/adriano/imposto-da-bolsa` que
+está desatualizado), commit `e635200` + push + deploy Netlify feitos. Coleta de dados pode levar até
+48h pra começar a aparecer nos relatórios GA4. Outras contas Analytics do usuário: "Adriano
+Rodrigues" (105240587) e "IZI Semijoias" (317346258, já tem propriedade própria) — não usadas aqui.
 
 **Why:** novo projeto não documentado em memória antes de 2026-10-04 — só descoberto ao usuário
 colar a URL do repo.
