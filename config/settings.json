@@ -1,6 +1,9 @@
 {
   "permissions": {
-    "defaultMode": "auto"
+    "defaultMode": "auto",
+    "allow": [
+      "mcp__claude_ai_Netlify__netlify-deploy-services-updater"
+    ]
   },
   "hooks": {
     "ConfigChange": [
