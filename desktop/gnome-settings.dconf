@@ -32,7 +32,7 @@ window-size=(382, 503)
 word-size=64
 
 [org/gnome/control-center]
-last-panel='display'
+last-panel='sound'
 window-state=(980, 640, false)
 
 [org/gnome/desktop/app-folders]
@@ -73,7 +73,7 @@ icon-theme='Yaru-blue-dark'
 
 [org/gnome/desktop/notifications]
 application-children=['org-openrgb-openrgb', 'firefox-firefox', 'snap-store-snap-store', 'vlc-vlc', 'google-chrome', 'org-gnome-settings', 'org-gnome-evince', 'org-gnome-nautilus', 'com-obsproject-studio', 'libreoffice26-2-writer', 'com-anthropic-claude', 'code', 'deluge', 'org-qbittorrent-qbittorrent']
-show-banners=false
+show-banners=true
 
 [org/gnome/desktop/notifications/application/code]
 application-id='code.desktop'
@@ -134,7 +134,7 @@ secondary-color='#000000'
 idle-delay=uint32 0
 
 [org/gnome/desktop/sound]
-allow-volume-above-100-percent=false
+allow-volume-above-100-percent=true
 
 [org/gnome/evince/default]
 continuous=true
