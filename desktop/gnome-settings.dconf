@@ -244,7 +244,7 @@ overridden-settings={'org.gnome.mutter.edge-tiling': <@mb nothing>, 'org.gnome.m
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1791144365
+check-timestamp=int64 1791209034
 
 [org/gtk/gtk4/settings/color-chooser]
 selected-color=(true, 0.38431373238563538, 0.62745100259780884, 0.91764706373214722, 1.0)
