@@ -118,7 +118,7 @@ application-id='snap-store_snap-store.desktop'
 application-id='vlc_vlc.desktop'
 
 [org/gnome/desktop/peripherals/keyboard]
-numlock-state=true
+numlock-state=false
 
 [org/gnome/desktop/peripherals/touchpad]
 two-finger-scrolling-enabled=true
