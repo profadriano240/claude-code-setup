@@ -16,3 +16,5 @@ Criado em 2026-10-04 a pedido do usuário, para continuar o portfólio do deskto
 
 **Why:** um lugar único para retomar o portfólio em qualquer máquina, sem depender da memória local.
 **How to apply:** ao mudar o estado de um site (deploy, AdSense, afiliados, artigos), atualizar também o README desse repo e dar push; site novo → acrescentar no clonar.sh.
+
+**Equipe de agentes (2026-10-05):** 5 subagentes em `portfolio-sites/agentes/` com symlink em ~/.claude/agents (diretor-portfolio, social-instagram, seo-conteudo, monetizacao, analista-dados); clonar.sh refaz os links. Instagram passou a usar a imagem do usuário (decisão dele em 2026-10-05) — blueprint ajustado. Relatórios em `portfolio-sites/relatorios/`. Agentes ficam no repo privado, não no claude-code-setup (público).

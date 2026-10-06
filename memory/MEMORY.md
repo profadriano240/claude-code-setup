@@ -27,4 +27,5 @@
 - [Painel Planejamento Financeiro 2026](projeto_painel_planejamento_financeiro_2026.md) — planilha de abas mensais + artifact que lê ao vivo via Google Drive; bug da coluna Restante
 - [Extensão da inteligência](feedback_extensao_inteligencia.md) — atuar como parceiro que pensa junto: iniciativa, opinião franca, ligar contexto entre projetos; ainda confirmar ações externas
 - [Alternar tema claro/escuro](feedback_alternar_tema.md) — toda aplicação/página deve ter botão de troca de tema claro/escuro
-- [Portfólio de sites](projeto_portfolio_sites.md) — central em repo privado profadriano240/portfolio-sites (README de estado, blueprint, clonar.sh); Site 1 Imposto da Bolsa, Site 2 Solar Off-Grid
+- [Portfólio de sites](projeto_portfolio_sites.md) — central em repo privado profadriano240/portfolio-sites (README, blueprint, clonar.sh); 5 agentes em agentes/ (desde 2026-10-05); Site 1 Imposto da Bolsa, Site 2 Solar Off-Grid
+- [Gerador de questões Cursinho](projeto_gerador_questoes_cursinho.md) — listas ENEM Matemática por tema (HTML→PDF, modelo Folha Matriz); Geometria Espacial pronta em 2026-09-28; aula interativa HTML em 2026-10-05
