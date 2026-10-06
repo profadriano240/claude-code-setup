@@ -12,7 +12,7 @@
 - [Auditoria planilha Mercado Financeiro](projeto_auditoria_planilha_mercado_financeiro.md) — Google Sheets de investimentos; trabalho antigo (auditoria + redesenho) DESCARTADO pelo usuário; cópia recomeçada do zero em 2026-09-09 (nova cópia id 1z23Sv..., original intocada)
 - [App limite-vendas-acoes](projeto_limite_vendas_acoes.md) — = painel de swing trade mensal (isenção R$ 20 mil); index.html único no Netlify com login/sync; repo privado profadriano240/limite-vendas-acoes (2026-09-21); projetar-solucoes-site também ganhou repo
 - [Solar Off-Grid curso+calculadora](projeto_solar_offgrid.md) — hospedado em solar-offgrid.netlify.app; AdSense pendente — pub-ID já existe (pub-6370131226236609, ver Imposto da Bolsa); candidato a Site 2 do portfólio
-- [Imposto da Bolsa](projeto_imposto_da_bolsa.md) — site SEO calculadora isenção R$ 20 mil + guias IR ações; primário www.impostodabolsa.com.br (2026-10-02); 15 artigos; Search Console ok; AdSense em revisão desde 2026-10-02; calculadoras PM/DARF no ar desde 2026-10-02
+- [Imposto da Bolsa](projeto_imposto_da_bolsa.md) — www.impostodabolsa.com.br; 25 guias + 3 calculadoras; AdSense em revisão desde 02/10; Hotmart ativo no curso-ir; GA4 ok; layout de portal + cotações + fotos NO AR 2026-10-06; deploy = git push (Netlify ligado ao GitHub)
 - [Carteira de ativos local](projeto_carteira_ativos_local.md) — SQLite + página em ~/projetos/carteira-ativos (comando `carteira`), lançamentos de movimentações/proventos desde 2026-09-23
 - [Logout da extensão Chrome](projeto_chrome_extensao_logout.md) — extensão Claude pedia login a cada boot; serviço fechar-chrome.service criado, aguardando confirmação
 - [Cifras ECC para pasta](projeto_cifras_ecc.md) — PDFs minimalistas de cifras do Cifra Club; Sexta, Sábado e Faltantes (01–20) prontos, falta Domingo; scripts em ~/projetos/cifras-ecc
@@ -27,5 +27,6 @@
 - [Painel Planejamento Financeiro 2026](projeto_painel_planejamento_financeiro_2026.md) — planilha de abas mensais + artifact que lê ao vivo via Google Drive; bug da coluna Restante
 - [Extensão da inteligência](feedback_extensao_inteligencia.md) — atuar como parceiro que pensa junto: iniciativa, opinião franca, ligar contexto entre projetos; ainda confirmar ações externas
 - [Alternar tema claro/escuro](feedback_alternar_tema.md) — toda aplicação/página deve ter botão de troca de tema claro/escuro
-- [Portfólio de sites](projeto_portfolio_sites.md) — central em repo privado profadriano240/portfolio-sites (README, blueprint, clonar.sh); 5 agentes em agentes/ (desde 2026-10-05); Site 1 Imposto da Bolsa, Site 2 Solar Off-Grid
+- [Portfólio de sites](projeto_portfolio_sites.md) — repo profadriano240/portfolio-sites (README = fonte da verdade, git pull ao retomar); Instagram: bio/nome novos, agenda de 25 posts, 09/14/16-10 agendados; próximos lotes após relatório de 09/10
 - [Gerador de questões Cursinho](projeto_gerador_questoes_cursinho.md) — listas ENEM Matemática por tema (HTML→PDF, modelo Folha Matriz); Geometria Espacial pronta em 2026-09-28; aula interativa HTML em 2026-10-05
+- [Sem promessas exageradas](feedback_sem_promessas_exageradas.md) — CTAs sem "em 30 segundos"; chamada ligada ao tema real do post

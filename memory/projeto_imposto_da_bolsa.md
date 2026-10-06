@@ -5,8 +5,10 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 8ca0761d-b073-4e4f-8e70-209de6e591f3
-  modified: 2026-10-04T20:09:51.019Z
+  modified: 2026-10-06T12:00:00.000Z
 ---
+
+**ESTADO ATUAL (2026-10-06, conferido no README de profadriano240/portfolio-sites — fonte da verdade):** 25 guias + calculadoras isenção/PM/DARF; sitemap 31 URLs reenviado 04/10; AdSense em revisão desde 02/10; Hotmart ID 1169630 ativo no slot `curso-ir` (pedidos 1777009 e 1202583 pendentes; 1325746 sumiu); slots `planilha`/`iniciante` vazios; GA4 configurado (GA_ID G-X1TB31SRTC). Redesign de identidade visual no ar em 06/10 (Source Serif 4, paleta dourado/creme, commits 85b7513..7227864) para fugir da cara de "site feito com IA". **06/10 tarde: layout de portal de notícias** (cotações Yahoo via Netlify Function /api/cotacoes, manchete/editorias, fotos CC0 do Openverse em assets/capas + conteudo/capas.json, calculadora em /calculadora-isencao-20-mil/) — NO AR (deploy 6ac4f223, 06/10). **Como fazer deploy (desde 06/10): `git push` na master** — Netlify ligado ao GitHub com publicação automática; push = produção, então pedir OK antes. (O caminho antigo via `npx @netlify/mcp --proxy-path` é bloqueado pelo classificador por credencial no link.) Unsplash bloqueia automação (anti-bot) — usar Openverse cc0. As notas datadas abaixo são histórico.
 
 Criado em 2026-10-02 a partir do blueprint ~/Downloads/blueprint-agentes-portfolio-sites.md (portfólio de blogs SEO anônimos, AdSense + afiliados). O usuário escolheu aproveitar o painel [[projeto-limite-vendas-acoes]] como ferramenta-âncora; o painel pessoal continua separado e intocado.
 
