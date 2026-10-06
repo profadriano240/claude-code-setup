@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 09f82023-8822-41f7-8a38-56c5d84cef41
-  modified: 2026-10-05T02:52:37.702Z
+  modified: 2026-10-06T02:42:31.165Z
 ---
 
 Repo central privado https://github.com/profadriano240/portfolio-sites (branch `master`) guarda
@@ -90,6 +90,14 @@ gamma.app/settings/billing.
 **Como retomar em máquina nova:** clonar [[referencia_backup_claude_code_setup]] primeiro (restaura
 memória), depois `gh repo clone profadriano240/portfolio-sites` + rodar `clonar.sh`. Conectores
 claude.ai usados: Netlify, Gmail. Chrome de casa logado em Google/Search Console/AdSense/Hotmart.
+
+**Checado em 2026-10-05:** nada mudou nos pontos monitorados desde 04/10 (AdSense ainda sem
+resposta, 3 dias; Hotmart 2 pedidos ainda pendentes; indexação dos 9 guias ainda não confirmada).
+Commits do dia foram só organizacionais: criação de equipe de 5 agentes (diretor-portfolio,
+social-instagram, seo-conteudo, monetizacao, analista-dados) e ajuste do `analista-dados` pra
+incluir GA4 no relatório. Primeiro relatório semanal do analista-dados previsto pra sexta 2026-10-09
+em `relatorios/2026-10-09.md`. Pendência nova: criar propriedade GA4 e colar o ID `G-...` em
+`GA_ID` no `gerar.py` (código já pronto, só falta o ID).
 
 **Why:** novo projeto não documentado em memória antes de 2026-10-04 — só descoberto ao usuário
 colar a URL do repo.
