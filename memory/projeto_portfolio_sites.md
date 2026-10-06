@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 09f82023-8822-41f7-8a38-56c5d84cef41
-  modified: 2026-10-06T02:51:07.743Z
+  modified: 2026-10-06T02:57:24.396Z
 ---
 
 Repo central privado https://github.com/profadriano240/portfolio-sites (branch `master`) guarda
@@ -103,6 +103,17 @@ na conta Google Analytics "Prof. Adriano Freire" (conta 324032885), stream Web
 está desatualizado), commit `e635200` + push + deploy Netlify feitos. Coleta de dados pode levar até
 48h pra começar a aparecer nos relatórios GA4. Outras contas Analytics do usuário: "Adriano
 Rodrigues" (105240587) e "IZI Semijoias" (317346258, já tem propriedade própria) — não usadas aqui.
+
+**Indexação checada em 2026-10-05:** 8 dos 9 guias novos (04/10) já indexados no Google (opções,
+fiagro, futuros/mini contratos, herança/doação, malha fina, obrigatoriedade, direito de subscrição,
+ação que faliu). Só `declarar-acoes-eua-sem-bdr` (ações dos EUA sem BDR) ainda não — Search Console
+mostrava "detectada, mas não indexada no momento"; solicitada indexação manual nesse dia, checar
+depois se entrou.
+
+**Decisão do usuário (2026-10-05):** por ora não mexer em Amazon Associados (item 4 da lista de
+próximos passos fica parado). Usuário perguntou como trabalhar com a equipe de agentes
+(diretor-portfolio, social-instagram, seo-conteudo, monetizacao, analista-dados) de forma mais
+interativa — ver [[feedback_economia_tokens]] e ajustar conforme resposta dada nessa conversa.
 
 **Why:** novo projeto não documentado em memória antes de 2026-10-04 — só descoberto ao usuário
 colar a URL do repo.
