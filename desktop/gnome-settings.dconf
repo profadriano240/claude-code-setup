@@ -82,6 +82,7 @@ xkb-options=@as []
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
 cursor-blink-time=1478
+enable-animations=false
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
