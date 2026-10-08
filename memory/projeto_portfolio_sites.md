@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 09f82023-8822-41f7-8a38-56c5d84cef41
-  modified: 2026-10-06T02:57:24.396Z
+  modified: 2026-10-08T03:59:02.600Z
 ---
 
 Repo central privado https://github.com/profadriano240/portfolio-sites (branch `master`) guarda
@@ -119,3 +119,36 @@ interativa — ver [[feedback_economia_tokens]] e ajustar conforme resposta dada
 colar a URL do repo.
 **How to apply:** ao tocar qualquer site do portfólio, checar README do repo central primeiro
 (estado muda rápido — AdSense/Hotmart têm prazos e respostas pendentes).
+
+**Sessão 2026-10-07/08 (Instagram):** post "5 erros de IR" (evergreen) foi ao ar 07/10 com a foto
+nova (estúdio) na capa, o Adriano achou envelhecida, pediu pra apagar e recriar. Trocada pela foto
+antiga (`pessoa.png` de `2026-10-05-bbas3-eleicao`, recortada sem fundo) mantendo o fundo bege do
+slide, sem a legenda "Prof. Adriano" embaixo — isso virou o padrão novo pra capa. Republicado e
+turbinado: R$21 + taxas (total R$23,89) por 3 dias, objetivo "visitar perfil", no MasterCard
+····8978, cobrança só após aprovação do anúncio. CSV `relatorios/instagram-posts.csv` atualizado.
+
+**Destaques do perfil:** perfil não tinha nenhum. Preparados 4 stories em
+`imposto-da-bolsa/instagram/destaques-perfil/` (Erros de IR, Calculadoras, Guias, Sobre — o Adriano
+pediu pra pular o "Sobre"). **Travado:** Instagram web não deixa postar Story novo nem criar
+destaque a partir de upload direto — só a partir de Stories que já existem/arquivados. Falta o
+Adriano postar os 3 stories (erros-de-ir, calculadoras, guias) pelo celular; depois disso dá pra
+criar os destaques (um "Novo destaque" por story, escolhendo da lista que aparece).
+
+**Regra nova (vetada/ajustada 08/10/2026):** a foto do Adriano não precisa aparecer em todo post —
+documentado em `agentes/social-instagram.md`, vale a partir do lote L3 (commit `667c18a`). Os 3
+posts já agendados (irrf-dedo-duro 09/10, fii 14/10, dividendos-jcp 16/10) ficam como estão.
+
+**Lote L3 (#4-6, agenda-instagram.md) preparado pelo agente social-instagram em 08/10/2026**
+(commit `694c033`), ainda SEM aprovação do Adriano nem agendamento:
+- `2026-10-19-preco-medio` — foto só na capa. OK na revisão.
+- `2026-10-21-day-trade` — sem foto na capa, foto só no slide 4. **Bug achado na revisão:** a foto
+  sobrepõe o texto do slide 4 — os cards "resultado do mês" / "20% de imposto" ficam vazios (sem os
+  valores R$2.200/R$440 que o agente disse ter usado) e o box do IRRF/DARF fica cortado atrás da
+  foto. Precisa re-renderizar esse slide antes de aprovar o lote.
+- `2026-10-23-isencao-20-mil` — sem foto nenhuma. OK na revisão.
+
+**Como retomar (inclusive de outra máquina via sync de memória):** 1) corrigir o slide 4 de
+`2026-10-21-day-trade` (mover a foto ou tirar, ajustar layout pra não sobrepor os cards); 2) revisar
+o lote L3 de novo com o Adriano; 3) agendar os 3 no Meta Business Suite e registrar no CSV; 4)
+pedir pro Adriano postar os 3 stories de destaque pelo celular e então criar os destaques no
+perfil.
