@@ -16,3 +16,6 @@ Livro de registro dos certificados do Ensino Médio (Escola Janelas para o Mundo
 
 **Why:** fonte Calibri do modelo não existe no Debian; instalei Carlito em ~/.fonts para o PDF caber (sem ela vira 8 páginas).
 **How to apply:** ao receber novos lotes, ler as imagens, acrescentar em dados.json e rodar gerar.py; conferir contagem frentes×versos antes (houve 7 frentes × 8 versos no teste).
+
+## Livro 010 (2026-10-06) — gerado direto do gerador de certificado
+Novo arquivo `~/projetos/certificado-conclusao/certificado-conclusao-livro.html` (build: `livro/build_livro.py` + `livro/livro.js`; mesmo layout do gerador original). Botão "Registrar no livro e imprimir" numera Nº/Folha sozinho (começa em 001/001, 2 termos por folha, data do registro = data de emissão), grava `livro-010.json` + DOCX + PDF na pasta escolhida (File System Access API, Chrome/Edge no Windows do usuário). DOCX = modelo embutido; PDF = jsPDF + fonte Carlito. Testado só em Chrome headless Linux com pasta simulada; NÃO testado no Windows. Usuário emite sempre do mesmo PC Windows. Arquivos .docx/.pdf abertos no Word travam a gravação (botão "Atualizar documentos" refaz). Livro 009 (605–612) foi só teste.

@@ -1,4 +1,4 @@
-- [Automações WhatsApp](projeto_automacoes_whatsapp.md) — repositório GitHub cotacoes-b3, CallMeBot, preferência por soluções gratuitas; notícias PAUSADAS desde 2026-09-29
+- [Automações WhatsApp](projeto_automacoes_whatsapp.md) — repositório GitHub cotacoes-b3, CallMeBot, preferência por soluções gratuitas; notícias PAUSADAS desde 2026-09-29; mensagem.yml envia texto avulso
 - [Máquina Debian pessoal](maquina_debian_home.md) — notebook fraco (Celeron N4020, 3,6GB RAM), estado de ferramentas instaladas, sudo não-interativo sempre falha
 - [Economia de tokens](feedback_economia_tokens.md) — usuário pede sempre economizar tokens: usar browser_batch, evitar screenshots/confirmações redundantes
 - [Diário de Classe SEDUC-PA](referencia_diario_classe_seduc_pa.md) — como registrar frequência no www4.seduc.pa.gov.br; URL/IDs da turma, passo a passo, botão "Todos"
@@ -23,10 +23,16 @@
 - [Painel Censo 2026](projeto_painel_censo_2026.md) — painel local `censo` (Node+Baileys, porta 8766) com 24 secretários; arquivos do trabalho com secretários em ~/Documentos/ESCOLAS CENSO ESCOLAR
 - [Acesso ao desktop Ubuntu](projeto_acesso_desktop_ubuntu.md) — SSH só na rede de casa, sem Tailscale; ainda não configurado
 - [Respostas aos secretários no WhatsApp](projeto_respostas_secretarios_whatsapp.md) — 2026-09-30: 6 enviadas, 4 rascunhos (Adriana, Bel, Daniele, Alyne) aguardando OK; método de áudio + comando `transcrever`
-- [Organização do passivo](projeto_organizacao_passivo.md) — nomes dos alunos nas abas do xlsx PASSIVO 2026; P-2 com 56; P-3 em andamento (47 nomes, próximo E51); repetido entre abas pode ficar; usar escl_lote.py; painel artifact 7Mvos9...
+- [Organização do passivo](projeto_organizacao_passivo.md) — nomes dos alunos nas abas do xlsx PASSIVO 2026; P-2 com 56; P-3 47 nomes (próx. E51); R-1 58 nomes; R-2 55 (próx. E59); repetido entre abas pode ficar; usar escl_lote.py; painel artifact 7Mvos9...
 - [Painel Planejamento Financeiro 2026](projeto_painel_planejamento_financeiro_2026.md) — planilha de abas mensais + artifact que lê ao vivo via Google Drive; bug da coluna Restante
 - [Extensão da inteligência](feedback_extensao_inteligencia.md) — atuar como parceiro que pensa junto: iniciativa, opinião franca, ligar contexto entre projetos; ainda confirmar ações externas
 - [Alternar tema claro/escuro](feedback_alternar_tema.md) — toda aplicação/página deve ter botão de troca de tema claro/escuro
 - [Portfólio de sites](projeto_portfolio_sites.md) — repo profadriano240/portfolio-sites (README = fonte da verdade, git pull ao retomar); Instagram: bio/nome novos, agenda de 25 posts, 09/14/16-10 agendados; próximos lotes após relatório de 09/10
 - [Gerador de questões Cursinho](projeto_gerador_questoes_cursinho.md) — listas ENEM Matemática por tema (HTML→PDF, modelo Folha Matriz); Geometria Espacial pronta em 2026-09-28; aula interativa HTML em 2026-10-05
 - [Sem promessas exageradas](feedback_sem_promessas_exageradas.md) — CTAs sem "em 30 segundos"; chamada ligada ao tema real do post
+- [Livro de registro de certificados](projeto_livro_registro_certificados.md) — HP ADF, dados.json+gerar.py em ~/projetos/livro-certificados; regras CPF/RG, Regular, só mãe; teste 605–612 gerado 2026-10-06
+- [Escopo do analista-dados](feedback_escopo_analista_dados.md) — dados só de Instagram @profadrianofreire, impostodabolsa.com.br e Hotmart
+- [Apelido "Diretor"](feedback_apelido_diretor.md) — "Diretor" = agente diretor-portfolio (portfólio de sites/Instagram)
+- [Corrigir gabaritos](projeto_corrigir_gabaritos.md) — fotos de cartões-resposta → OMR → PDF de notas (0,1/questão); comando `corrigir ler|pdf`; limiares ainda não testados com fotos reais
+- [Manual Todo Real Tem Destino](projeto_manual_todo_real_tem_destino.md) — método fixos-cartão/variáveis-Pix p/ quem recebe no último dia útil; PDF v1 2026-10-09 em ~/projetos/bolso-esperto/manual; página distribuidor (distribuicao.html) = artifact 1xfCck9TDnDzS1rxj9AYcc
+- [Produto app + manual de planejamento](projeto_produto_planejamento_financeiro.md) — Hotmart R$ 24,90, marca Bolso Esperto; app standalone + textos prontos em ~/projetos/bolso-esperto/produto; calculadora grátis+guia no impostodabolsa NO AR 2026-10-09; app no ar em bolsoesperto-distribuidor.netlify.app; falta cadastro Hotmart e preencher AFILIADOS todo-real (pedir OK)

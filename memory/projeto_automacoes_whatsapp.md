@@ -78,3 +78,5 @@ gratuita/sem custo de API por padrão, e só sugerir serviços pagos (mesmo que 
 como alternativa opcional, deixando claro o trade-off de qualidade. Ver também
 [[maquina-debian-home]] para o contexto de hardware modesto que motivou essa
 preferência por soluções leves e gratuitas.
+
+**Atualizado em 2026-10-07:** criado `.github/workflows/mensagem.yml` (workflow_dispatch, input `texto`) para mensagens avulsas via CallMeBot: `gh workflow run mensagem.yml -R profadriano240/cotacoes-b3 -f texto="..."`. Testado OK. Usado para relatórios dos agentes (ex.: relatório do impulsionamento em 09/10 22h). Manter textos curtos (~600 caracteres).
