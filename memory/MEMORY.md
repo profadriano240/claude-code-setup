@@ -36,4 +36,5 @@
 - [Apelido "Diretor"](feedback_apelido_diretor.md) — "Diretor" = agente diretor-portfolio (portfólio de sites/Instagram)
 - [Corrigir gabaritos](projeto_corrigir_gabaritos.md) — fotos de cartões-resposta → OMR → PDF de notas (0,1/questão); comando `corrigir ler|pdf`; limiares ainda não testados com fotos reais
 - [Manual Todo Real Tem Destino](projeto_manual_todo_real_tem_destino.md) — método fixos-cartão/variáveis-Pix p/ quem recebe no último dia útil; PDF v1 2026-10-09 em ~/projetos/bolso-esperto/manual; página distribuidor (distribuicao.html) = artifact 1xfCck9TDnDzS1rxj9AYcc
+- [Consultor de patrimônio](projeto_consultor_patrimonio.md) — agente consultor-patrimonio (finanças pessoais), só planilha Mercado Financeiro, perfil moderado-conservador, só leitura
 - [Produto app + manual de planejamento](projeto_produto_planejamento_financeiro.md) — Hotmart R$ 24,90, marca Bolso Esperto; app standalone + textos prontos em ~/projetos/bolso-esperto/produto; calculadora grátis+guia no impostodabolsa NO AR 2026-10-09; app no ar em bolsoesperto-distribuidor.netlify.app; falta cadastro Hotmart e preencher AFILIADOS todo-real (pedir OK)
