@@ -223,6 +223,8 @@ task-english
 task-gnome-desktop
 task-laptop
 tasksel
+tesseract-ocr
+tesseract-ocr-por
 tlp-rdw
 traceroute
 tzdata
