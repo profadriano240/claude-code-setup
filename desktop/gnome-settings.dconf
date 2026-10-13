@@ -146,7 +146,7 @@ show-sidebar=false
 sidebar-page='thumbnails'
 sidebar-size=182
 sizing-mode='free'
-window-ratio=(1.266640210685205, 0.58202394298263493)
+window-ratio=(2.1611570247933884, 0.58563535911602205)
 zoom=1.2329552975630889
 
 [org/gnome/evolution-data-server]
@@ -198,7 +198,7 @@ maximized=false
 last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTATÍSTICA/PROGRAMA v3.2'
 
 [org/gnome/portal/filechooser/com.google.Chrome]
-last-folder-path='/home/adriano/Downloads/PLANILHA DE ESTATÍSTICA - 2026-20261009T120803Z-1-001/PLANILHA DE ESTATÍSTICA - 2026'
+last-folder-path='/home/adriano/Downloads'
 
 [org/gnome/portal/filechooser/org.gnome.TextEditor]
 last-folder-path='/home/adriano/Documentos'
