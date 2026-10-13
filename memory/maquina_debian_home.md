@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-13T23:11:25.106Z
+  modified: 2026-08-19T00:37:47.186Z
 ---
 
 Notebook pessoal do Adriano: Debian 13 (trixie), instalação limpa feita em
@@ -188,3 +188,104 @@ de notificação única (`Bash` com `run_in_background` + loop `until`), não o
 acompanhamento contínuo). Também pediu (mensagem separada) que eu sempre
 "fale" nas respostas — já coberto pelo hook `Stop` de leitura em voz alta,
 que dispara em toda resposta automaticamente, nada adicional necessário.
+
+**Conflito de git resolvido (2026-08-14):** os hooks `sync-config-repo.sh` e
+`sync-memory-repo.sh` sempre usam o caminho fixo `$HOME/claude-code-setup`
+(confirmado por grep no código dos dois) — não existe clone separado por
+sessão, é o mesmo diretório físico no disco pra qualquer sessão do Claude
+Code nesta máquina. Mesmo assim, duas sessões rodando em paralelo (~12h20 e
+~14h47) geraram commits de auto-sync divergentes (a segunda não tinha o
+fetch da primeira), e o push foi rejeitado. Rebase resolveu automaticamente
+a maioria dos arquivos, mas `packages/apt-manual.txt` deu conflito de
+verdade porque as duas sessões capturaram `apt-mark showmanual` em momentos
+diferentes.
+
+**Como resolvi:** em vez de mesclar as duas listas manualmente (arriscado —
+reintroduziria pacotes já removidos entre as duas capturas), regenerei o
+arquivo direto do estado real atual da máquina (`apt-mark showmanual`), que
+é exatamente o que o hook faz normalmente. Validado depois: `bash -n
+restore.sh` (sintaxe OK) e conferência de que o arquivo não tinha sobrado
+marcador de conflito nem linha em branco — `restore.sh` consome esse
+arquivo via `$(cat packages/apt-manual.txt)` (word-split simples, funciona
+porque nomes de pacote não têm espaço).
+
+**Why:** arquivos gerados automaticamente a partir do estado real do
+sistema (listas de pacotes, `dconf dump`, etc.) não devem ser resolvidos
+por merge textual em caso de conflito — a fonte de verdade é sempre
+"regerar do estado atual", não "unir os dois lados". A própria lista em
+conflito já estava suspeita (tinha `ubuntu-desktop-minimal`,
+`libreoffice26.2-*` — pacotes que não fazem sentido pra este Debian
+minimal), então regenerar também corrigiu uma captura ruim anterior.
+
+**How to apply:** se aparecer um conflito de git em `claude-code-setup`
+de novo (comum quando duas sessões auto-sincronizam em paralelo), preferir
+sempre regenerar o arquivo gerado (pacotes apt/npm/pipx, `dconf dump`,
+etc.) a partir do comando de origem, em vez de editar manualmente os
+marcadores `<<<<<<<`/`=======`/`>>>>>>>`. Atenção: comandos como
+`apt-mark showmanual` batem no filtro `*apt-mark*` do hook
+`PostToolUse`/Bash em `sync-config-repo.sh` — rodar esse comando dentro de
+uma sessão já dispara um novo auto-commit/push sozinho.
+
+**Otimização de RAM aplicada em 2026-08-17** (confirmada pelo usuário via
+pergunta de múltipla escolha, todas as três aceitas): estado normal já era
+saudável (zram 50%/1,9GB + swap em disco 4GB via `zramswap.service`,
+corretamente configurado — `free -h` mostrava ~2,1GB "disponível" de
+3,6GB). Ainda assim, três desperdícios reais e corrigidos, nenhum exigindo
+`sudo`:
+1. Autostart do `gnome-software` (ficava residente em background só para
+   checar atualizações) desativado via
+   `~/.config/autostart/org.gnome.Software.desktop` com
+   `X-GNOME-Autostart-enabled=false` (override por usuário, não mexe no
+   `/etc/xdg/autostart/` do sistema). O app "Software" continua funcionando
+   normalmente se aberto manualmente.
+2. `localsearch-3.service` (indexador de arquivos do GNOME, ex-Tracker
+   Miner FS) mascarado via `systemctl --user mask` — estava rodando
+   continuamente em background. **Consequência: a busca por conteúdo de
+   arquivos no GNOME Files/Activities não vai mais indexar/atualizar** (só
+   busca por nome de arquivo continua). Se o usuário reclamar que a busca
+   piorou, é isso.
+3. Processos órfãos do `chrome-devtools-mcp` (de uma automação de browser
+   anterior na mesma sessão, ~360MB juntos: processo principal + watchdog
+   de telemetria) encerrados com `kill`. São recriados automaticamente
+   quando uma ferramenta `mcp__chrome-devtools__*` é chamada de novo — não
+   é uma configuração permanente, só limpeza pontual.
+
+**Why:** usuário pediu para reduzir desperdício de RAM na máquina fraca.
+Nenhuma mudança precisou de root porque autostart e serviços mascarados
+eram todos escopo `--user`/`~/.config`. Ver [[feedback-economia-tokens]]
+para o estilo de pergunta única com multiSelect usado para confirmar as
+três ações de uma vez.
+
+**How to apply:** se o usuário quiser reverter, `rm
+~/.config/autostart/org.gnome.Software.desktop` restaura o autostart do
+gnome-software; `systemctl --user unmask localsearch-3.service &&
+systemctl --user start localsearch-3.service` restaura a indexação de
+arquivos.
+
+**Chrome instável em uso pesado (2026-08-18):** durante comparação visual de
+um HTML local com um design no editor do Canva (aba pesada, JS-heavy) via
+`claude-in-chrome`, o Chrome fechou sozinho duas vezes (processo some,
+`tabs_context_mcp` retorna "Browser extension is not connected"). Recuperação
+que funcionou: `nohup google-chrome --remote-debugging-port=9222 about:blank
+&` seguido de `tabs_context_mcp{createIfEmpty:true}` reconecta a extensão em
+poucos segundos (o flag de debug port é ignorado por já ter perfil padrão,
+mas o processo sobe e o native host da extensão reconecta sozinho).
+
+**Why:** RAM de 3,6GB é insuficiente para manter o editor do Canva (ou apps
+web pesadas similares) + outras abas abertas por muito tempo nesta máquina —
+ver hardware fraco no topo desta memória.
+
+**How to apply:** ao comparar/depurar visualmente algo contra um app web
+pesado (Canva, Figma, etc.) nesta máquina, esperar que o Chrome possa
+fechar sozinho no meio da tarefa; não é erro de ferramenta, é falta de RAM.
+Preferir abrir só uma aba pesada por vez, fechar assim que não precisar mais
+dela, e ter o comando de relançamento acima pronto em vez de insistir em
+retries de `tabs_context_mcp`.
+
+- Impressora/scanner HP LaserJet MFP E42540 via USB (2026-09-24): já funciona sem instalar nada (ipp-usb + sane-airscan). Device: `airscan:e0:No Active Peripheral (USB)` — vidro (Flatbed), ADF e ADF Duplex, até 600dpi. GUI: simple-scan.
+
+- IMPORTANTE (2026-09-24): a HP E42540 RECUSA digitalização pelo computador nos DOIS backends — eSCL/airscan dá HTTP 409 Conflict, e o nativo hpaio (HPLIP instalado) detecta o aparelho mas dá "Error during device I/O". É trava de política de admin no firmware, NÃO é driver. Só destrava com login de Administrador no painel (http://localhost:60000, senha desconhecida) ou reset de fábrica físico. Não repetir os testes de scan. hpaio já está no /etc/sane.d/dll.conf.
+
+Boot (2026-09-24): systemd-analyze ~36s (firmware 7s, loader 11.6s c/ GRUB_TIMEOUT=5, userspace 11s; NetworkManager-wait-online 6s). Já desativados no autostart do usuário: GNOME Software, localsearch (mascarado), Evolution-alarm-notify e DejaDup.Monitor (overrides em ~/.config/autostart). Pendentes c/ sudo (usuário roda): GRUB_TIMEOUT=1, disable NetworkManager-wait-online. Cada sessão Claude sobe `npx chrome-devtools-mcp@latest` (pesa no Celeron).
+
+**Otimização 2026-10-07:** autostart de GNOME Software, alarme do Evolution e monitor do Déjà Dup desativados (Hidden=true em ~/.config/autostart/*.desktop — reverter apagando as 2 linhas finais); animações do GNOME desligadas via gsettings. Gargalo principal = CPU de 2 núcleos + Chrome (~2,8 GB em 23 processos).

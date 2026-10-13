@@ -1,0 +1,23 @@
+---
+name: projeto-painel-censo-2026
+description: Painel local (comando `censo`, Node+Baileys, porta 8766) e artifact antigo com os 24 secretários escolares da retificação da 1ª etapa do Censo Escolar 2026 — números, situação, mensagem em massa via wa.me
+metadata:
+  type: project
+---
+Painel publicado em 2026-09-28: https://claude.ai/artifact/Qjn1c28wRDYrBR9YJSeqcK (fonte ~/projetos/painel-censo/painel.html).
+- Contatos (nome, escola, número) estão fixos no HTML (array CONTATOS). Situação/anotação de cada escola ficam no db do artifact, coleção `escolas`, doc id = slug da escola (ex.: `jose-rodrigues`), campos status (pend|and|ok), nota.
+- Mensagem em massa = links wa.me com texto preenchido; o usuário aperta enviar em cada um (sem API paga, ver [[projeto_automacoes_whatsapp]]).
+- Números coletados pelo WhatsApp Web (conta Business). Contatos Business mostram o número mais abaixo no painel "Dados do contato".
+- No contato salvo o nome era "Rosimeire" (Monteiro Lobato); o usuário digitou "Rpsimeire".
+
+
+ATUALIZAÇÃO 2026-09-28: usuário quis envio com 1 clique → virou painel LOCAL em ~/projetos/painel-censo (server.js Node + Baileys 6.7 como aparelho vinculado do WhatsApp Business; index.html; contatos.json; estado.json guarda situação/nota/ultimoEnvio; envios.log; auth/ = sessão). Abrir com `censo` (link em ~/.local/bin) ou atalho "Painel do Censo" no menu do GNOME, http://127.0.0.1:8766. Envio sequencial com intervalo aleatório de 5–12 s. O artifact acima ficou obsoleto (o usuário decide se apaga).
+
+**Why:** usuário auxilia esses secretários na retificação do Censo e quer acesso rápido e envio em massa sem clicar em cada conversa.
+**How to apply:** contatos novos → editar contatos.json e reiniciar o servidor; situação fica em estado.json (não no db do artifact).
+
+ATUALIZAÇÃO 2026-09-29: sessão caiu (401, desvinculado) → revinculado por QR. server.js agora: conecta só por IPv4 (agent family 4; IPv6 da rede Setor_Estatistica não alcança o WhatsApp), grava mensagens recebidas em respostas.log (TSV: data, id, fone, jid, pushName, texto), aceita histórico não-FULL, log do Baileys via env LOG=info. Mesmo assim o celular NÃO entregou o histórico ao vincular — respostas anteriores ao vínculo só dão para ver no celular/WhatsApp Web. Cuidado: `pkill -f "node server.js"` mata o próprio shell; usar `kill $(pgrep -f "^node server.js")`.
+
+ATUALIZAÇÃO 2026-10-01: diretório de trabalho com os secretários = `/home/adriano/Documentos/ESCOLAS CENSO ESCOLAR` (criado vazio nesse dia). Arquivos recebidos/gerados para as escolas (relatórios, prints, CSVs, planilhas) vão para lá — não para ~/Downloads nem ~/projetos/painel-censo.
+
+ATUALIZAÇÃO 2026-10-07: sessão auth/ desvinculada de novo (401) — precisa revincular por QR antes de usar. Criado enviar-whatsapp.js (envio avulso / `--teste`), mas para avisos ao Adriano usar o workflow mensagem.yml do cotacoes-b3 ([[projeto-automacoes-whatsapp]]).

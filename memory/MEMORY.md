@@ -1,8 +1,39 @@
-- [Automações WhatsApp](projeto_automacoes_whatsapp.md) — repositório GitHub cotacoes-b3, CallMeBot, preferência por soluções gratuitas sem API paga
+- [Automações WhatsApp](projeto_automacoes_whatsapp.md) — repositório GitHub cotacoes-b3, CallMeBot, preferência por soluções gratuitas; notícias PAUSADAS desde 2026-09-29; mensagem.yml envia texto avulso
 - [Máquina Debian pessoal](maquina_debian_home.md) — notebook fraco (Celeron N4020, 3,6GB RAM), estado de ferramentas instaladas, sudo não-interativo sempre falha
 - [Máquina desktop Ubuntu](maquina_desktop_ubuntu.md) — desktop forte (Ryzen 5 5600GT, 14GB RAM), Ubuntu 24.04, claude-code-setup já clonado aqui
 - [Economia de tokens](feedback_economia_tokens.md) — usuário pede sempre economizar tokens: usar browser_batch, evitar screenshots/confirmações redundantes
 - [Diário de Classe SEDUC-PA](referencia_diario_classe_seduc_pa.md) — como registrar frequência no www4.seduc.pa.gov.br; URL/IDs da turma, passo a passo, botão "Todos"
 - [Lançamento de notas em paralelo](projeto_lancamento_notas_seduc.md) — outra sessão de terminal já cuida do lançamento de notas no mesmo diário; não duplicar aqui sem confirmar
-- [Backup claude-code-setup](referencia_backup_claude_code_setup.md) — repo GitHub com backup config/memória Claude Code; memória local restaurada em 2026-08-14
-- [Portfólio de sites](projeto_portfolio_sites.md) — repo profadriano240/portfolio-sites, blogs SEO anônimos (Imposto da Bolsa, Solar Off-Grid), AdSense/afiliados pendentes
+- [Backup claude-code-setup](referencia_backup_claude_code_setup.md) — repo GitHub profadriano240/claude-code-setup guarda backup de config/memória, sync automático via hooks
+- [Revista Bolso Esperto](projeto_revista_bolso_esperto.md) — projeto de ebooks/revista semanal educação financeira 18-37 anos, marca+template já definidos em ~/projetos/bolso-esperto/
+- [Baixo envolvimento em redes sociais](feedback_baixo_envolvimento_redes_sociais.md) — usuário quer aparecer o mínimo possível e tem pouco tempo; preferir formatos que a Claude produz/publica sozinha
+- [Declaração de frequência](projeto_declaracao_frequencia.md) — HTML gerador feito no claude.ai (não Claude Code), repo declaracao-frequencia; há outro similar (diploma) ainda não migrado
+- [Certificado de Conclusão do Ensino Médio](projeto_certificado_conclusao_ensino_medio.md) — gerador HTML arquivo único (frente+verso A4 paisagem), repo privado profadriano240/certificado-conclusao; fundo = SVGs do modelo oficial com texto variável removido
+- [Site Projetar Soluções Engenharia](projeto_site_projetar_solucoes.md) — v1 no ar em projetar-solucoes.netlify.app (Netlify); aguardando material do dono (Sobre, logo, região, lista de serviços)
+- [Auditoria planilha Mercado Financeiro](projeto_auditoria_planilha_mercado_financeiro.md) — Google Sheets de investimentos; trabalho antigo (auditoria + redesenho) DESCARTADO pelo usuário; cópia recomeçada do zero em 2026-09-09 (nova cópia id 1z23Sv..., original intocada)
+- [App limite-vendas-acoes](projeto_limite_vendas_acoes.md) — = painel de swing trade mensal (isenção R$ 20 mil); index.html único no Netlify com login/sync; repo privado profadriano240/limite-vendas-acoes (2026-09-21); projetar-solucoes-site também ganhou repo
+- [Solar Off-Grid curso+calculadora](projeto_solar_offgrid.md) — hospedado em solar-offgrid.netlify.app; AdSense pendente — pub-ID já existe (pub-6370131226236609, ver Imposto da Bolsa); candidato a Site 2 do portfólio
+- [Imposto da Bolsa](projeto_imposto_da_bolsa.md) — www.impostodabolsa.com.br; 25 guias + 3 calculadoras; AdSense em revisão desde 02/10; Hotmart ativo no curso-ir; GA4 ok; layout de portal + cotações + fotos NO AR 2026-10-06; deploy = git push (Netlify ligado ao GitHub)
+- [Carteira de ativos local](projeto_carteira_ativos_local.md) — SQLite + página em ~/projetos/carteira-ativos (comando `carteira`), lançamentos de movimentações/proventos desde 2026-09-23
+- [Logout da extensão Chrome](projeto_chrome_extensao_logout.md) — extensão Claude pedia login a cada boot; serviço fechar-chrome.service criado, aguardando confirmação
+- [Cifras ECC para pasta](projeto_cifras_ecc.md) — PDFs minimalistas de cifras do Cifra Club; Sexta, Sábado e Faltantes (01–20) prontos, falta Domingo; scripts em ~/projetos/cifras-ecc
+- [Scanner Kyocera M2640idw](referencia_scanner_kyocera.md) — ADF via USB instável; usar vidro. Comando `digitalizar` (padrão DataEduc JPEG A4 cinza 300dpi em ~/Documentos/Digitalizacoes)
+- [Digitalização cartões AVE](projeto_digitalizacao_cartoes_ave.md) — progresso 2026-09-24 (M2mnm01 enviados, M2mnm03 0001–0005, "201 tarde" 4 folhas via ADF); `digitalizar` aprovado, não alterar — criar outra se precisar
+- [Memória temporária 7 dias](referencia_memoria_temporaria.md) — ~/.cache/claude-temporario guarda intermediários (HTML bruto etc.), limpeza automática após 7 dias
+- [Painel VALE3](projeto_painel_vale3.md) — app web de análise VALE3 em ~/projetos/vale3-analise, artifact privado; como atualizar os dados
+- [Painel Censo 2026](projeto_painel_censo_2026.md) — painel local `censo` (Node+Baileys, porta 8766) com 24 secretários; arquivos do trabalho com secretários em ~/Documentos/ESCOLAS CENSO ESCOLAR
+- [Acesso ao desktop Ubuntu](projeto_acesso_desktop_ubuntu.md) — SSH só na rede de casa, sem Tailscale; ainda não configurado
+- [Respostas aos secretários no WhatsApp](projeto_respostas_secretarios_whatsapp.md) — 2026-09-30: 6 enviadas, 4 rascunhos (Adriana, Bel, Daniele, Alyne) aguardando OK; método de áudio + comando `transcrever`
+- [Organização do passivo](projeto_organizacao_passivo.md) — nomes dos alunos nas abas do xlsx PASSIVO 2026; P-2 com 56; P-3 47 nomes (próx. E51); R-1 58 nomes; R-2 55 (próx. E59); repetido entre abas pode ficar; usar escl_lote.py; painel artifact 7Mvos9...
+- [Painel Planejamento Financeiro 2026](projeto_painel_planejamento_financeiro_2026.md) — planilha de abas mensais + artifact que lê ao vivo via Google Drive; bug da coluna Restante
+- [Extensão da inteligência](feedback_extensao_inteligencia.md) — atuar como parceiro que pensa junto: iniciativa, opinião franca, ligar contexto entre projetos; ainda confirmar ações externas
+- [Alternar tema claro/escuro](feedback_alternar_tema.md) — toda aplicação/página deve ter botão de troca de tema claro/escuro
+- [Portfólio de sites](projeto_portfolio_sites.md) — repo profadriano240/portfolio-sites (README = fonte da verdade, git pull ao retomar); Instagram: bio/nome novos, agenda de 25 posts, 09/14/16-10 agendados; próximos lotes após relatório de 09/10
+- [Gerador de questões Cursinho](projeto_gerador_questoes_cursinho.md) — listas ENEM Matemática por tema (HTML→PDF, modelo Folha Matriz); Geometria Espacial pronta em 2026-09-28; aula interativa HTML em 2026-10-05
+- [Sem promessas exageradas](feedback_sem_promessas_exageradas.md) — CTAs sem "em 30 segundos"; chamada ligada ao tema real do post
+- [Livro de registro de certificados](projeto_livro_registro_certificados.md) — HP ADF, dados.json+gerar.py em ~/projetos/livro-certificados; regras CPF/RG, Regular, só mãe; teste 605–612 gerado 2026-10-06
+- [Escopo do analista-dados](feedback_escopo_analista_dados.md) — dados só de Instagram @profadrianofreire, impostodabolsa.com.br e Hotmart
+- [Apelido "Diretor"](feedback_apelido_diretor.md) — "Diretor" = agente diretor-portfolio (portfólio de sites/Instagram)
+- [Corrigir gabaritos](projeto_corrigir_gabaritos.md) — fotos de cartões-resposta → OMR → PDF de notas (0,1/questão); comando `corrigir ler|pdf`; limiares ainda não testados com fotos reais
+- [Manual Todo Real Tem Destino](projeto_manual_todo_real_tem_destino.md) — método fixos-cartão/variáveis-Pix p/ quem recebe no último dia útil; PDF v1 2026-10-09 em ~/projetos/bolso-esperto/manual; página distribuidor (distribuicao.html) = artifact 1xfCck9TDnDzS1rxj9AYcc
+- [Produto app + manual de planejamento](projeto_produto_planejamento_financeiro.md) — Hotmart R$ 24,90, marca Bolso Esperto; app standalone + textos prontos em ~/projetos/bolso-esperto/produto; calculadora grátis+guia no impostodabolsa NO AR 2026-10-09; app no ar em bolsoesperto-distribuidor.netlify.app; falta cadastro Hotmart e preencher AFILIADOS todo-real (pedir OK)

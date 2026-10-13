@@ -5,25 +5,68 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2824c6e8-f4b4-4389-a776-3869d680b7c8
-  modified: 2026-08-12T19:29:40.914Z
+  modified: 2026-08-19T14:44:53.723Z
 ---
 
 Adriano (usuário GitHub @profadriano240) tem um repositório privado **cotacoes-b3**
 (https://github.com/profadriano240/cotacoes-b3) com duas automações rodando via
 GitHub Actions (não dependem do notebook estar ligado):
 
-- **cotacoes_whatsapp.py**: envia cotações de VALE3, BBAS3, ITUB4 (ações) e RBVA11,
-  GTWR11, LVBI11, HSML11, GGRC11 (FIIs) via brapi.dev (plano free, 1 ativo por
-  requisição) — roda 07:45 e 18:00 (seg-sex, horário de Brasília).
-- **noticias_whatsapp.py**: busca as 5 notícias mais recentes do feed
-  `https://www.moneytimes.com.br/mercados/feed/` publicadas até 18h do próprio dia,
-  sem IA (apenas RSS + filtro de horário) — roda às 19:00 (seg-sex).
+- **cotacoes_whatsapp.py**: envia cotações apenas de VALE3, BBAS3 e PETR4 (ações;
+  antes era VALE3/BBAS3/ITUB4 + 5 FIIs, removidos em 2026-08-19) via brapi.dev
+  (plano free, 1 ativo por requisição) — roda 07:15 e 17:30 (seg-sex, horário de
+  Brasília).
+- **noticias_whatsapp.py**: busca as 2 notícias mais recentes (MAX_NOTICIAS) do feed
+  `https://www.moneytimes.com.br/mercados/feed/`, sem IA (apenas RSS + filtro de
+  janela de horário) — roda duas vezes (seg-sex): 06:30 (turno "manha", pega notícias
+  publicadas desde as 18h de ontem até agora — cobre noticiário internacional
+  overnight) e 18:00 (turno "tarde", pega notícias de hoje publicadas até 18h).
+  O turno é passado via env var `TURNO` pelo workflow,
+  que o determina a partir do horário do cron que disparou o job.
+
+**Atualizado em 2026-08-14:** usuário pediu para adiantar os três horários em
+30 minutos (eram 07:45/18:00/19:00). Editado direto em
+`.github/workflows/cotacoes.yml` e `.github/workflows/noticias.yml` (cron em
+UTC, Brasília é UTC-3 fixo, sem horário de verão) — commit `9bb255b`,
+clonado temporariamente em scratchpad só para essa edição (repo não tem
+clone permanente nesta máquina, roda 100% via Actions). O filtro de corte
+"notícias até 18h" do `noticias_whatsapp.py` não precisou mudar, pois
+18:30 continua depois do corte.
 
 Entrega via **CallMeBot** (API gratuita de WhatsApp) — número do usuário é
 **+559491184178** (note: sem o "9" extra que ele mesmo informou verbalmente;
 o CallMeBot amarra o apikey ao número exato usado no opt-in). Credenciais
 (BRAPI_TOKEN, CALLMEBOT_PHONE, CALLMEBOT_APIKEY) ficam como GitHub Actions
 secrets no repositório, nunca hardcoded no código versionado.
+
+**Atualizado em 2026-08-19:** o CallMeBot estava truncando a mensagem de notícias
+a partir da 3ª (2 primeiras chegavam certas, a 3ª incompleta, a 4ª só aparecia "4."
+e a 5ª nem chegava) — limite de tamanho de mensagem/URL do CallMeBot. Reduzido
+`MAX_NOTICIAS` de 5 para 2 em `noticias_whatsapp.py`, commit `8fbb5fd`
+(mesmo fluxo: clone temporário no scratchpad, sem clone permanente na máquina).
+
+**Atualizado em 2026-08-19 (2):** usuário pediu para receber cotações apenas de
+VALE3, BBAS3 e PETR4 — removidos ITUB4 e todos os FIIs (RBVA11, GTWR11, LVBI11,
+HSML11, GGRC11) de `cotacoes_whatsapp.py` (confirmado explicitamente que os FIIs
+deveriam sair também). Commit `8fc7943`.
+
+**Atualizado em 2026-08-19 (3):** usuário pediu para receber notícias também às
+6:30 da manhã, já que notícias internacionais chegam frescas nesse horário. Como
+o filtro original só pegava notícias "de hoje até 18h", rodando às 6:30 quase
+nada seria capturado (só 00:00-06:30 de hoje) — refeita a lógica de janela em
+`noticias_whatsapp.py` para dois turnos (manha/tarde, ver acima). Novo cron
+"30 9 * * 1-5" (UTC) adicionado em `.github/workflows/noticias.yml`, turno
+determinado a partir de `github.event.schedule`. Commit `a999a79`.
+
+**Atualizado em 2026-08-19 (4):** usuário adiantou o turno tarde de 18:30 para
+18:00. Alterado cron em `.github/workflows/noticias.yml` de "30 21 * * 1-5" para
+"0 21 * * 1-5" (UTC). O corte de conteúdo do turno tarde no script já era 18h,
+então não precisou mudar `noticias_whatsapp.py`. Commit `dd3218d`.
+
+**Atualizado em 2026-09-29:** workflow de notícias PAUSADO a pedido do usuário
+(`gh workflow disable noticias.yml`, estado `disabled_manually`). Código intacto;
+para retomar: `gh workflow enable noticias.yml -R profadriano240/cotacoes-b3`.
+Cotações continuam ativas.
 
 **Why:** Adriano optou explicitamente por não gastar com API (recusou usar a API da
 Anthropic para escolher/resumir notícias com IA, mesmo sendo a opção de melhor
@@ -35,3 +78,5 @@ gratuita/sem custo de API por padrão, e só sugerir serviços pagos (mesmo que 
 como alternativa opcional, deixando claro o trade-off de qualidade. Ver também
 [[maquina-debian-home]] para o contexto de hardware modesto que motivou essa
 preferência por soluções leves e gratuitas.
+
+**Atualizado em 2026-10-07:** criado `.github/workflows/mensagem.yml` (workflow_dispatch, input `texto`) para mensagens avulsas via CallMeBot: `gh workflow run mensagem.yml -R profadriano240/cotacoes-b3 -f texto="..."`. Testado OK. Usado para relatórios dos agentes (ex.: relatório do impulsionamento em 09/10 22h). Manter textos curtos (~600 caracteres).
