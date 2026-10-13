@@ -1,7 +1,7 @@
 [apps/update-manager]
 first-run=false
-launch-count=17
-launch-time=int64 1791144364
+launch-count=18
+launch-time=int64 1791857794
 show-details=true
 window-height=400
 window-width=612
@@ -157,20 +157,32 @@ migrated=true
 cpu-colors=[(uint32 0, '#e01b24'), (1, '#ff7800'), (2, '#f6d32d'), (3, '#33d17a'), (4, '#26a269'), (5, 'rgb(98,160,234)'), (6, '#1c71d8'), (7, '#613583'), (8, '#9141ac'), (9, '#c061cb'), (10, '#ffbe6f'), (11, '#f9f06b'), (12, '#8ff0a4'), (13, '#2ec27e'), (14, '#1a5fb4'), (15, '#c061cb')]
 cpu-stacked-area-chart=true
 current-tab='resources'
+logarithmic-scale=true
 maximized=false
+network-in-bits=true
+network-total-in-bits=true
+process-memory-in-iec=true
+resources-memory-in-iec=true
 show-all-fs=true
 show-dependencies=false
 show-whose-processes='user'
 window-height=480
 
 [org/gnome/gnome-system-monitor/disktreenew]
+col-4-visible=true
+col-4-width=0
 col-6-visible=true
 col-6-width=0
-columns-order=[6]
+columns-order=[5]
 sort-col=6
 sort-order=1
 
 [org/gnome/gnome-system-monitor/proctree]
+col-2-visible=true
+col-3-visible=true
+col-3-width=0
+col-9-visible=true
+col-9-width=0
 columns-order=[0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
 sort-col=15
 sort-order=0
@@ -246,7 +258,7 @@ tiling-popup-all-workspace=true
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1791426633
+check-timestamp=int64 1791857794
 
 [org/gtk/gtk4/settings/color-chooser]
 selected-color=(true, 0.38431373238563538, 0.62745100259780884, 0.91764706373214722, 1.0)
