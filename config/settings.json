@@ -19,6 +19,11 @@
         "hooks": [
           {
             "type": "command",
+            "command": "bash $HOME/.claude/hooks/sync-pull-repo.sh 2>/dev/null || true",
+            "statusMessage": "Puxando memória atualizada do claude-code-setup..."
+          },
+          {
+            "type": "command",
             "command": "bash $HOME/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
             "statusMessage": "Verificando sincronização de config/packages..."
           }
