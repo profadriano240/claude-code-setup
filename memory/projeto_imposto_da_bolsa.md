@@ -31,3 +31,12 @@ Criado em 2026-10-02 a partir do blueprint ~/Downloads/blueprint-agentes-portfol
 - 2026-10-02: e-mail enviado (com OK do usuário) a mestredenegocios@gmail.com perguntando se a afiliação do ID 1325746 está ativa (Gmail id 1a0ffb05f8633da9). Próximo: aguardar resposta (nenhuma até 2026-10-04); Amazon Associados para caixa 'iniciante' (usuário precisa criar a conta).
 
 **Instagram (2026-10-05):** posts ficam em ~/projetos/imposto-da-bolsa/instagram/<data-tema>/ (carrossel.html → slide-N.jpg 1080×1350, story.html → story-N.jpg, legenda.txt, pessoa.png = foto do usuário sem fundo). 1º carrossel publicado pelo Chrome (instagram.com, conta logada; escolher 4:5 no recorte). Stories não dá para postar pelo desktop — usuário posta pelo celular. Ângulo: notícia de mercado → regra de imposto → link na bio; neutro em política, aviso "conteúdo educativo".
+- 2026-10-09: NO AR calculadora /calculadora-distribuicao-salario/ + guia /como-organizar-salario-antes-de-investir/ (editoria Finanças pessoais) para divulgar o produto Bolso Esperto; caixa AFILIADOS["todo-real"] com url vazia até existir o link Hotmart. Ver [[projeto_produto_planejamento_financeiro]].
+
+## 2026-10-09
+- Página /links/ (noindex) = destino da bio do Instagram (UTM utm_source=instagram&utm_medium=social&utm_campaign=bio). A cada post novo, trocar o 1º botão (conteudo/paginas/links.html) para o artigo do post.
+- Caixa curso-ir adicionada em isenção 20 mil, vendi +20 mil, FII, ETF, dedo-duro; atalhos da home no celular. Branch principal = master.
+- Usuário é PRODUTOR na Hotmart de 3 eBooks com vendas ativas: "A Casa em Ordem" (4834194), "Guia de Finanças Pessoais" (4327366), "Sócio, Não Apostador" (8436144) — autorizou colocá-los nos sites.
+- Post de 07/10 ("5 erros de IR") foi turbinado pelo próprio usuário: alcance pago, não orgânico.
+- Checkouts dos eBooks: Sócio A107424434W (slot "iniciante", artigo dividendos), A Casa em Ordem F97027782N (organizar-salario, no lugar de todo-real — voltar para todo-real quando o produto Bolso Esperto existir), Guia F94421522W (calc-salario, antes do FAQ). Links obtidos em Hotmart > produto > Links de divulgação > "Visualizar página" (pagamento).
+- Rotina na nuvem trig_013kgdykeCjGXDnEHV2NiBG3 troca /links/ para FII em 14/10 07h — conferir resultado.
