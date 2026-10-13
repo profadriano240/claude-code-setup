@@ -73,7 +73,7 @@ icon-theme='Yaru-blue'
 
 [org/gnome/desktop/notifications]
 application-children=['org-openrgb-openrgb', 'firefox-firefox', 'snap-store-snap-store', 'vlc-vlc', 'google-chrome', 'org-gnome-settings', 'org-gnome-evince', 'org-gnome-nautilus', 'com-obsproject-studio', 'libreoffice26-2-writer', 'com-anthropic-claude', 'code', 'deluge', 'org-qbittorrent-qbittorrent']
-show-banners=true
+show-banners=false
 
 [org/gnome/desktop/notifications/application/code]
 application-id='code.desktop'
