@@ -22,7 +22,7 @@ window-maximized=false
 window-size=(360, 616)
 
 [org/gnome/control-center]
-last-panel='sound'
+last-panel='display'
 window-state=(915, 677, false)
 
 [org/gnome/deja-dup]
@@ -147,7 +147,7 @@ sidebar-page='thumbnails'
 sidebar-size=182
 sizing-mode='free'
 window-ratio=(2.1611570247933884, 0.58563535911602205)
-zoom=1.2329552975630889
+zoom=1.4795463570757068
 
 [org/gnome/evolution-data-server]
 migrated=true
