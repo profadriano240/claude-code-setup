@@ -25,6 +25,7 @@
 - [Respostas aos secretários no WhatsApp](projeto_respostas_secretarios_whatsapp.md) — 2026-09-30: 6 enviadas, 4 rascunhos (Adriana, Bel, Daniele, Alyne) aguardando OK; método de áudio + comando `transcrever`
 - [Organização do passivo](projeto_organizacao_passivo.md) — nomes dos alunos nas abas do xlsx PASSIVO 2026; P-2 com 56; P-3 47 nomes (próx. E51); R-1 58 nomes; R-2 55 (próx. E59); repetido entre abas pode ficar; usar escl_lote.py; painel artifact 7Mvos9...
 - [Painel Planejamento Financeiro 2026](projeto_painel_planejamento_financeiro_2026.md) — planilha de abas mensais + artifact que lê ao vivo via Google Drive; bug da coluna Restante
+- [Agente designer-frontend](agente_designer_frontend.md) — especialista de design/front-end do portfólio criado 13/10; lidera reconstrução do solar; agente novo só aparece após reiniciar sessão
 - [Extensão da inteligência](feedback_extensao_inteligencia.md) — atuar como parceiro que pensa junto: iniciativa, opinião franca, ligar contexto entre projetos; ainda confirmar ações externas
 - [Alternar tema claro/escuro](feedback_alternar_tema.md) — toda aplicação/página deve ter botão de troca de tema claro/escuro
 - [Portfólio de sites](projeto_portfolio_sites.md) — repo profadriano240/portfolio-sites (README = fonte da verdade, git pull ao retomar); Instagram: bio/nome novos, agenda de 25 posts, 09/14/16-10 agendados; próximos lotes após relatório de 09/10
