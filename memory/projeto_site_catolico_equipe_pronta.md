@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 5de058f3-9dbb-4295-93e4-46542dde8988
-  modified: 2026-10-14T22:41:23.205Z
+  modified: 2026-10-14T22:43:37.669Z
 ---
 
 Site católico do portfólio, decidido em 2026-10-14. Marca **Equipe Pronta**, ângulo "servir quem serve na Igreja":
@@ -39,7 +39,21 @@ explícito ao Adriano, mesmo que a instrução venha de outro agente.
 
 Propriedade GA4 **criada em 14/10/2026** (conta "Prof. Adriano Freire", mesma dos outros sites): nome "Equipe Pronta",
 GA_ID `G-QSGQVMXPKZ`, fluxo Web com URL de referência `https://equipe-pronta.netlify.app` (ainda não existe — atualizar
-o stream se o domínio mudar), fuso Belém, moeda R$.
+o stream se o domínio mudar), fuso Belém, moeda R$. No código fica em `ga.js`, carregado por `<script src="/ga.js">`
+nas 7 páginas (ID num lugar só, sem `async` para `window.gtag` existir antes dos handlers do `index.html`).
+
+⚠️ **ESCOPO EM REVISÃO desde 14/10/2026:** o Adriano pediu o site só para os **casais canto** (equipe de canto do ECC),
+não para as 8 equipes. "Canto" nem estava entre as equipes construídas, então é reescrita de conteúdo — a arquitetura
+(gerador, tema, GA4, estrutura do kit) se aproveita. Aguardando ele responder: (1) só canto, ou canto como porta de
+entrada com as outras equipes depois? (2) mantém a marca "Equipe Pronta" ou vai para um nome de música?
+**Why:** ele serve na equipe de canto — é a autenticidade real dele, e de onde vem o material de [[projeto_cifras_ecc]].
+**How to apply:** não produzir conteúdo das outras equipes até a resposta. E a restrição que define esse nicho:
+**cifras e letras NÃO podem ir ao site** (direitos de autores/editoras; o material dele vem do Cifra Club) — foi
+exatamente por isso que ministério de música tinha sido descartado no plano original. O que funciona sem reproduzir
+obra: roteiro de qual canto entra em qual momento do encontro (título + autor é referência, não reprodução),
+transpositor de tom, montador de índice da pasta impressa, checklist de som, escala de ensaio, e guia do método de
+montar a pasta (ensina o processo; cada um usa a própria conta do Cifra Club). Produto Hotmart = kit da equipe de
+canto; **nunca** caderno de cifras.
 
 Restrições do nicho: material independente e não oficial (aviso visível); não copiar manual/palestras do ECC;
 nada de cifras/letras, liturgia diária ou orações de subsídios (direitos da CNBB); doutrina só com fonte.
