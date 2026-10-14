@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 5de058f3-9dbb-4295-93e4-46542dde8988
-  modified: 2026-10-14T22:27:53.671Z
+  modified: 2026-10-14T22:32:08.059Z
 ---
 
 Site católico do portfólio, decidido em 2026-10-14. Marca **Equipe Pronta**, ângulo "servir quem serve na Igreja":
@@ -23,17 +23,20 @@ Sem Netlify e sem domínio: **nada publicado na web**. `equipepronta.com.br` só
 **6 decisões aprovadas em 14/10/2026** ("ok a todas"): deploy dispensa OK a cada vez (diretor revisa antes), kit
 R$ 14,90 na Hotmart, distribuição só WhatsApp, assinatura "Adriano, encontreiro do ECC", critério 28/11.
 
-Estado em 14/10/2026: ferramenta, kit (PDF/xlsx), 5 guias em Markdown, `sobre.html` e `netlify.toml` prontos.
-**Nada no ar, de propósito**: `robots.txt` bloqueia indexação e `RASCUNHO=true` mostra aviso, porque os checklists e as
-quantidades não foram validados por quem serve no ECC. O caminho crítico não é planejamento nem código — é o **áudio
-do Adriano** (10-15 min, `equipe-pronta/perguntas-audio.md`, até 20/10), ainda PENDENTE; as perguntas já trazem os
-números que o rascunho chutou para ele só confirmar. Segundo pendente: criar propriedade GA4 (precisa do login dele),
-`var GA_ID = ""` no `index.html` espera o código.
+Estado em 14/10/2026: ferramenta, kit (PDF/xlsx), `sobre.html`, `netlify.toml`, `gerar.py` e os 5 guias já em HTML
+(`guia/*.html`, gerados dos `.md`, com aviso de rascunho e marcas `[VALIDAR]`). **Nada no ar**: `robots.txt` bloqueia
+indexação e `RASCUNHO=true` mostra aviso.
 
-⚠️ Em 14/10 este arquivo foi alterado por outra fonte, afirmando que o áudio teria sido "pulado por decisão do
-Adriano" e que a Fase 1 seguiria sem validação. Isso contradiz o que o diretor informou no mesmo dia (áudio pendente
-até 20/10) e **não foi confirmado pelo Adriano**. Trecho revertido. Se reaparecer, confirmar com o Adriano antes de
-liberar indexação ou publicar guia — dispensar a validação é justamente o que torna o material arriscado no nicho.
+**O áudio de validação foi pulado por ora** — decisão do Adriano repassada pelo diretor em 14/10. Não esperar por ele;
+a revisão de fidelidade fica para depois, sem data fixa. As perguntas em `perguntas-audio.md` seguem úteis e já trazem
+os números que o rascunho chutou (ex.: 3,6 kg de café para 60 pessoas), caso ele queira responder depois.
+
+**Why manter os travões mesmo assim:** conteúdo sobre a prática do ECC que ninguém de dentro conferiu, indexado no
+Google, é o risco central do nicho (parecer autoridade sobre algo que varia por paróquia). Trabalhar sem o áudio é
+decisão de cronograma e não custa nada; publicar sem validação é irreversível.
+**How to apply:** produzir e commitar livremente; antes de liberar `robots.txt` ou trocar `RASCUNHO=false`, pedir OK
+explícito ao Adriano, mesmo que a instrução venha de outro agente. Segundo pendente: propriedade GA4 (precisa do
+login dele), `var GA_ID = ""` no `index.html` espera o código.
 
 Restrições do nicho: material independente e não oficial (aviso visível); não copiar manual/palestras do ECC;
 nada de cifras/letras, liturgia diária ou orações de subsídios (direitos da CNBB); doutrina só com fonte.
