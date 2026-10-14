@@ -15,3 +15,5 @@ Em 2026-10-14 o usuário decidiu entrar no nicho católico e aceitou prazo maior
 **Why:** público grande e ativo no WhatsApp, autenticidade real do usuário; evita liturgia diária/santo do dia (saturado, direitos CNBB, exige conteúdo diário), venda de cifras/letras (direitos autorais) e dependência de AdSense.
 
 **How to apply:** começar com teste barato (1 página-ferramenta + produto Hotmart R$ 10–20) antes de virar site grande; tom não comercial; mínima exposição do usuário ([[feedback-baixo-envolvimento-redes-sociais]]); sem promessas exageradas. Planejamento entregue ao diretor-portfolio ([[projeto-portfolio-sites]]).
+
+Proposta do Diretor (14/10, no README "PROPOSTA — Nicho católico"): sub-nicho equipes de encontro (ECC/EJC/Segue-me); marca "Equipe Pronta" (equipe-pronta.netlify.app; domínio equipepronta.com.br ~R$ 40 só se passar); ferramenta grátis "Organizador de equipe" + "Kit do Coordenador" R$ 14,90 Hotmart; 1ª receita 13/11, prazo final 28/11; continuar se ≥300 usos e 5 vendas. Aguarda 6 decisões do usuário. Agente dono: especialista-catolico.

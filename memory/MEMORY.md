@@ -29,7 +29,7 @@
 - [Agente designer-frontend](agente_designer_frontend.md) — especialista de design/front-end do portfólio criado 13/10; lidera reconstrução do solar; agente novo só aparece após reiniciar sessão
 - [Extensão da inteligência](feedback_extensao_inteligencia.md) — atuar como parceiro que pensa junto: iniciativa, opinião franca, ligar contexto entre projetos; ainda confirmar ações externas
 - [Alternar tema claro/escuro](feedback_alternar_tema.md) — toda aplicação/página deve ter botão de troca de tema claro/escuro
-- [Portfólio de sites](projeto_portfolio_sites.md) — repo profadriano240/portfolio-sites (README = fonte da verdade, git pull ao retomar); Instagram: L3 agendado 19/21/23-10; 14/10: solar publicado, 8e8da77 JÁ publicado; receita R$ 0 até 14/10; plano "1ª receita até 29/10" (campanha DARF vence 30/10) aguarda 5 OKs do usuário
+- [Portfólio de sites](projeto_portfolio_sites.md) — repo profadriano240/portfolio-sites (README = fonte da verdade, git pull ao retomar); Instagram: L3 agendado 19/21/23-10; 14/10: solar publicado, 8e8da77 JÁ publicado; receita R$ 0 até 14/10; plano "1ª receita até 29/10" APROVADO; planos 90 dias + fusão parcial IR+Bolso Esperto em docs/plano-90-dias (14/10, aguardam decisões)
 - [Gerador de questões Cursinho](projeto_gerador_questoes_cursinho.md) — listas ENEM Matemática por tema (HTML→PDF, modelo Folha Matriz); Geometria Espacial pronta em 2026-09-28; aula interativa HTML em 2026-10-05
 - [Sem promessas exageradas](feedback_sem_promessas_exageradas.md) — CTAs sem "em 30 segundos"; chamada ligada ao tema real do post
 - [Livro de registro de certificados](projeto_livro_registro_certificados.md) — HP ADF, dados.json+gerar.py em ~/projetos/livro-certificados; regras CPF/RG, Regular, só mãe; teste 605–612 gerado 2026-10-06
@@ -45,3 +45,4 @@
 - [Autonomia estagiário bancário](feedback_autonomia_estagiario_bancario.md) — sem pedir OK pra ações simples/reversíveis dentro da Fase 1 (leitura)
 - [Clareza em painéis](feedback_paineis_clareza.md) — abrir com 2-4 números grandes/simples antes de tabelas densas; sem jargão/poluição visual
 - [Parar em 97% de uso](feedback_parar_em_97_porcento_uso.md) — ao chegar perto do limite do plano, parar e sincronizar memória no GitHub; sem ferramenta pra ver % automaticamente, depende do usuário avisar
+- [Nicho católico](projeto_nicho_catolico.md) — decidido 14/10; proposta "Equipe Pronta" (equipes de encontro ECC, kit R$ 14,90, 1ª receita 13/11) aguarda 6 decisões; especialistas por site criados 14/10 (especialista-imposto-bolsa|solar|bolso-esperto|catolico)
