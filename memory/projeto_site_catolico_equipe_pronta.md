@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 5de058f3-9dbb-4295-93e4-46542dde8988
-  modified: 2026-10-14T22:20:24.694Z
+  modified: 2026-10-14T22:23:31.812Z
 ---
 
 Site católico do portfólio, decidido em 2026-10-14. Marca **Equipe Pronta**, ângulo "servir quem serve na Igreja":
@@ -20,10 +20,10 @@ pelos grupos de WhatsApp que já frequenta. Meta dos 90 dias: R$ 300 líquidos a
 Código em `~/projetos/equipe-pronta` (repo **privado** `profadriano240/equipe-pronta`, branch `master`).
 Sem Netlify e sem domínio: **nada publicado na web**. `equipepronta.com.br` só se passar no checkout de 28/11.
 
-Estado em 14/10/2026: v0 construída (ferramenta `index.html` com 8 equipes + kit PDF/xlsx + 5 guias em Markdown),
-mas tudo RASCUNHO. O caminho crítico **não é mais planejamento** — é o Adriano: responder as 6 decisões
-(fim do `catolico.md`) e gravar um áudio de 10-15 min com as 10 perguntas de `equipe-pronta/perguntas-audio.md`.
-Sem o áudio os checklists não têm validação da prática real e os guias ficam cheios de `[VALIDAR]`.
+Estado em 14/10/2026: v0 construída (ferramenta `index.html` com 8 equipes + kit PDF/xlsx + 5 guias em Markdown).
+As 6 decisões foram aprovadas ("ok a todas"). O áudio das 10 perguntas (`equipe-pronta/perguntas-audio.md`) foi
+**pulado por decisão do Adriano** — não esperar por ele; Fase 1 segue sem essa validação, guias ficam com
+`[VALIDAR]` nos pontos que dependiam da prática real, revisão fica pra depois sem data fixa.
 
 Restrições do nicho: material independente e não oficial (aviso visível); não copiar manual/palestras do ECC;
 nada de cifras/letras, liturgia diária ou orações de subsídios (direitos da CNBB); doutrina só com fonte.
