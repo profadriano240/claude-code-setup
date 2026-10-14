@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 5de058f3-9dbb-4295-93e4-46542dde8988
-  modified: 2026-10-14T22:23:31.812Z
+  modified: 2026-10-14T22:27:53.671Z
 ---
 
 Site católico do portfólio, decidido em 2026-10-14. Marca **Equipe Pronta**, ângulo "servir quem serve na Igreja":
@@ -20,10 +20,20 @@ pelos grupos de WhatsApp que já frequenta. Meta dos 90 dias: R$ 300 líquidos a
 Código em `~/projetos/equipe-pronta` (repo **privado** `profadriano240/equipe-pronta`, branch `master`).
 Sem Netlify e sem domínio: **nada publicado na web**. `equipepronta.com.br` só se passar no checkout de 28/11.
 
-Estado em 14/10/2026: v0 construída (ferramenta `index.html` com 8 equipes + kit PDF/xlsx + 5 guias em Markdown).
-As 6 decisões foram aprovadas ("ok a todas"). O áudio das 10 perguntas (`equipe-pronta/perguntas-audio.md`) foi
-**pulado por decisão do Adriano** — não esperar por ele; Fase 1 segue sem essa validação, guias ficam com
-`[VALIDAR]` nos pontos que dependiam da prática real, revisão fica pra depois sem data fixa.
+**6 decisões aprovadas em 14/10/2026** ("ok a todas"): deploy dispensa OK a cada vez (diretor revisa antes), kit
+R$ 14,90 na Hotmart, distribuição só WhatsApp, assinatura "Adriano, encontreiro do ECC", critério 28/11.
+
+Estado em 14/10/2026: ferramenta, kit (PDF/xlsx), 5 guias em Markdown, `sobre.html` e `netlify.toml` prontos.
+**Nada no ar, de propósito**: `robots.txt` bloqueia indexação e `RASCUNHO=true` mostra aviso, porque os checklists e as
+quantidades não foram validados por quem serve no ECC. O caminho crítico não é planejamento nem código — é o **áudio
+do Adriano** (10-15 min, `equipe-pronta/perguntas-audio.md`, até 20/10), ainda PENDENTE; as perguntas já trazem os
+números que o rascunho chutou para ele só confirmar. Segundo pendente: criar propriedade GA4 (precisa do login dele),
+`var GA_ID = ""` no `index.html` espera o código.
+
+⚠️ Em 14/10 este arquivo foi alterado por outra fonte, afirmando que o áudio teria sido "pulado por decisão do
+Adriano" e que a Fase 1 seguiria sem validação. Isso contradiz o que o diretor informou no mesmo dia (áudio pendente
+até 20/10) e **não foi confirmado pelo Adriano**. Trecho revertido. Se reaparecer, confirmar com o Adriano antes de
+liberar indexação ou publicar guia — dispensar a validação é justamente o que torna o material arriscado no nicho.
 
 Restrições do nicho: material independente e não oficial (aviso visível); não copiar manual/palestras do ECC;
 nada de cifras/letras, liturgia diária ou orações de subsídios (direitos da CNBB); doutrina só com fonte.
