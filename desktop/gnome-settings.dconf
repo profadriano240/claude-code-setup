@@ -22,7 +22,7 @@ window-maximized=false
 window-size=(360, 616)
 
 [org/gnome/control-center]
-last-panel='wifi'
+last-panel='power'
 window-state=(915, 677, true)
 
 [org/gnome/deja-dup]
@@ -217,6 +217,7 @@ name='Terminal'
 
 [org/gnome/settings-daemon/plugins/power]
 idle-dim=false
+power-button-action='nothing'
 power-saver-profile-on-low-battery=true
 sleep-inactive-ac-type='nothing'
 sleep-inactive-battery-type='nothing'
