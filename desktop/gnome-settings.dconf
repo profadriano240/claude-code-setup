@@ -12,23 +12,41 @@ release-check-time=uint32 1791749166
 [org/gnome/Disks]
 image-dir-uri='file:///home/adriano/Downloads'
 
+[org/gnome/TextEditor]
+last-save-directory='file:///home/adriano/Documentos/Treinos%20Programa%C3%A7%C3%A3o/Banco%20de%20Dados%20dos%20Fundos%20Imobili%C3%A1rios'
+
+[org/gnome/calculator]
+accuracy=9
+angle-units='degrees'
+base=10
+button-mode='basic'
+number-format='automatic'
+show-thousands=false
+show-zeroes=false
+source-currency=''
+source-units='degree'
+target-currency=''
+target-units='radian'
+window-maximized=false
+window-size=(382, 503)
+word-size=64
+
+[org/gnome/control-center]
+last-panel='ubuntu'
+window-state=(980, 640, false)
 
 [org/gnome/desktop/app-folders]
-folder-children=['System', 'Utilities', 'YaST', 'Pardus']
+folder-children=['Utilities', 'YaST', 'Pardus']
 
 [org/gnome/desktop/app-folders/folders/Pardus]
 categories=['X-Pardus-Apps']
 name='X-Pardus-Apps.directory'
 translate=true
 
-[org/gnome/desktop/app-folders/folders/System]
-apps=['nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.DiskUtility.desktop', 'im-config.desktop', 'org.gnome.Logs.desktop', 'org.freedesktop.MalcontentControl.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.SystemMonitor.desktop']
-name='X-GNOME-Shell-System.directory'
-translate=true
-
 [org/gnome/desktop/app-folders/folders/Utilities]
-apps=['org.gnome.Connections.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.Loupe.desktop', 'org.gnome.seahorse.Application.desktop']
-name='X-GNOME-Shell-Utilities.directory'
+apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.Loupe.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop']
+categories=['X-GNOME-Utilities']
+name='X-GNOME-Utilities.directory'
 translate=true
 
 [org/gnome/desktop/app-folders/folders/YaST]
@@ -37,23 +55,14 @@ name='suse-yast.directory'
 translate=true
 
 [org/gnome/desktop/background]
-color-shading-type='horizontal'
+color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/desktop-base/joy-inksplat-theme/wallpaper/gnome-background.xml'
-picture-uri-dark='file:///usr/share/desktop-base/joy-inksplat-theme/wallpaper/gnome-background.xml'
-primary-color='#0099cc'
-secondary-color='#006699'
-
-[org/gnome/desktop/break-reminders/eyesight]
-play-sound=true
-
-[org/gnome/desktop/break-reminders/movement]
-duration-seconds=uint32 300
-interval-seconds=uint32 1800
-play-sound=true
+picture-uri='file:///usr/share/backgrounds/Fuji_san_by_amaral.png'
+picture-uri-dark='file:///usr/share/backgrounds/Fuji_san_by_amaral.png'
+primary-color='#000000'
+secondary-color='#000000'
 
 [org/gnome/desktop/input-sources]
-mru-sources=[('xkb', 'br'), ('xkb', 'us')]
 sources=[('xkb', 'br')]
 xkb-options=@as []
 
@@ -63,35 +72,50 @@ gtk-theme='Yaru-blue-dark'
 icon-theme='Yaru-blue'
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-software', 'gnome-power-panel', 'firefox-esr', 'google-chrome', 'code', 'libreoffice-writer', 'org-gnome-evince', 'org-gnome-dejadup', 'chrome-fmpnliohjhemenmnlpbfagaolkdacoja-default']
+application-children=['org-openrgb-openrgb', 'firefox-firefox', 'snap-store-snap-store', 'vlc-vlc', 'google-chrome', 'org-gnome-settings', 'org-gnome-evince', 'org-gnome-nautilus', 'com-obsproject-studio', 'libreoffice26-2-writer', 'com-anthropic-claude', 'code', 'deluge', 'org-qbittorrent-qbittorrent']
 show-banners=false
-
-[org/gnome/desktop/notifications/application/chrome-fmpnliohjhemenmnlpbfagaolkdacoja-default]
-application-id='chrome-fmpnliohjhemenmnlpbfagaolkdacoja-Default.desktop'
 
 [org/gnome/desktop/notifications/application/code]
 application-id='code.desktop'
 
-[org/gnome/desktop/notifications/application/firefox-esr]
-application-id='firefox-esr.desktop'
+[org/gnome/desktop/notifications/application/com-anthropic-claude]
+application-id='com.anthropic.Claude.desktop'
 
-[org/gnome/desktop/notifications/application/gnome-power-panel]
-application-id='gnome-power-panel.desktop'
+[org/gnome/desktop/notifications/application/com-obsproject-studio]
+application-id='com.obsproject.Studio.desktop'
+
+[org/gnome/desktop/notifications/application/deluge]
+application-id='deluge.desktop'
+
+[org/gnome/desktop/notifications/application/firefox-firefox]
+application-id='firefox_firefox.desktop'
 
 [org/gnome/desktop/notifications/application/google-chrome]
 application-id='google-chrome.desktop'
 
-[org/gnome/desktop/notifications/application/libreoffice-writer]
-application-id='libreoffice-writer.desktop'
-
-[org/gnome/desktop/notifications/application/org-gnome-dejadup]
-application-id='org.gnome.DejaDup.desktop'
+[org/gnome/desktop/notifications/application/libreoffice26-2-writer]
+application-id='libreoffice26.2-writer.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-evince]
 application-id='org.gnome.Evince.desktop'
 
-[org/gnome/desktop/notifications/application/org-gnome-software]
-application-id='org.gnome.Software.desktop'
+[org/gnome/desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-settings]
+application-id='org.gnome.Settings.desktop'
+
+[org/gnome/desktop/notifications/application/org-openrgb-openrgb]
+application-id='org.openrgb.OpenRGB.desktop'
+
+[org/gnome/desktop/notifications/application/org-qbittorrent-qbittorrent]
+application-id='org.qbittorrent.qBittorrent.desktop'
+
+[org/gnome/desktop/notifications/application/snap-store-snap-store]
+application-id='snap-store_snap-store.desktop'
+
+[org/gnome/desktop/notifications/application/vlc-vlc]
+application-id='vlc_vlc.desktop'
 
 [org/gnome/desktop/peripherals/keyboard]
 numlock-state=true
@@ -100,20 +124,31 @@ numlock-state=true
 two-finger-scrolling-enabled=true
 
 [org/gnome/desktop/screensaver]
-color-shading-type='horizontal'
+color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/desktop-base/joy-inksplat-theme/wallpaper/gnome-background.xml'
-primary-color='#0099cc'
-secondary-color='#006699'
-
-[org/gnome/desktop/search-providers]
-sort-order=['org.gnome.Settings.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.Nautilus.desktop']
+picture-uri='file:///usr/share/backgrounds/Fuji_san_by_amaral.png'
+primary-color='#000000'
+secondary-color='#000000'
 
 [org/gnome/desktop/session]
 idle-delay=uint32 0
 
 [org/gnome/desktop/sound]
 allow-volume-above-100-percent=true
+
+[org/gnome/evince/default]
+continuous=true
+dual-page=false
+dual-page-odd-left=true
+enable-spellchecking=true
+fullscreen=false
+inverted-colors=false
+show-sidebar=true
+sidebar-page='thumbnails'
+sidebar-size=182
+sizing-mode='free'
+window-ratio=(1.6113416320885201, 0.11685782298203852)
+zoom=0.52521134680642356
 
 [org/gnome/evolution-data-server]
 migrated=true
@@ -156,12 +191,9 @@ sort-order=0
 edge-tiling=false
 experimental-features=['scale-monitor-framebuffer']
 
-[org/gnome/evolution/shell/window]
-height=900
-maximized=true
-width=1440
-x=0
-y=0
+[org/gnome/mutter/keybindings]
+toggle-tiled-left=@as []
+toggle-tiled-right=@as []
 
 [org/gnome/nautilus/preferences]
 default-folder-viewer='list-view'
@@ -175,7 +207,7 @@ maximized=true
 [org/gnome/portal/filechooser/code]
 last-folder-path='/home/adriano/Área de trabalho/ESTATÍSTICA/PROGRAMA/1ª ESTATÍSTICA/PROGRAMA v3.2'
 
-[org/gnome/portal/filechooser/com.google.Chrome]
+[org/gnome/portal/filechooser/com.anthropic.Claude]
 last-folder-path='/home/adriano/Downloads'
 
 [org/gnome/portal/filechooser/com.google.Chrome]
@@ -189,21 +221,14 @@ last-folder-path='/usr/lib'
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-schedule-automatic=false
-
-[org/gnome/settings-daemon/plugins/media-keys]
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
-
-[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
-binding='<Control><Alt>t'
-command='Abrir oTerminal'
-name='Terminal'
+night-light-schedule-automatic=true
+night-light-schedule-from=0.0
+night-light-schedule-to=0.0
+night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/power]
-idle-dim=false
-power-saver-profile-on-low-battery=true
+sleep-inactive-ac-timeout=3600
 sleep-inactive-ac-type='nothing'
-sleep-inactive-battery-type='nothing'
 
 [org/gnome/shell]
 app-picker-layout=[{'gnome-session-properties.desktop': <{'position': <0>}>, 'update-manager.desktop': <{'position': <1>}>, 'software-properties-drivers.desktop': <{'position': <2>}>, 'org.gnome.clocks.desktop': <{'position': <3>}>, 'org.gnome.TextEditor.desktop': <{'position': <4>}>, 'org.gnome.PowerStats.desktop': <{'position': <5>}>, 'software-properties-gtk.desktop': <{'position': <6>}>, 'gnome-language-selector.desktop': <{'position': <7>}>, 'org.gnome.eog.desktop': <{'position': <8>}>, 'org.gnome.Settings.desktop': <{'position': <9>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <10>}>, 'org.gnome.Terminal.desktop': <{'position': <11>}>, 'Utilities': <{'position': <12>}>, 'yelp.desktop': <{'position': <13>}>, 'vlc.desktop': <{'position': <14>}>}, {'org.gnome.Software.desktop': <{'position': <0>}>, 'install4j_1b5fghx-Ajuda_do_IRPF_2026.desktop': <{'position': <1>}>, 'firefox_firefox.desktop': <{'position': <2>}>, 'gscriptor.desktop': <{'position': <3>}>, 'install4j_1b5fghx-IRPF2026.desktop': <{'position': <4>}>, 'install4j_1b5fghx-Leia-me_do_IRPF_2026.desktop': <{'position': <5>}>, 'libreoffice26.2-startcenter.desktop': <{'position': <6>}>, 'libreoffice26.2-base.desktop': <{'position': <7>}>, 'libreoffice26.2-calc.desktop': <{'position': <8>}>, 'libreoffice26.2-draw.desktop': <{'position': <9>}>, 'libreoffice26.2-impress.desktop': <{'position': <10>}>, 'libreoffice26.2-math.desktop': <{'position': <11>}>, 'libreoffice26.2-writer.desktop': <{'position': <12>}>, 'PJEInstaller.desktop': <{'position': <13>}>, 'PJEOfficePro.desktop': <{'position': <14>}>, 'SACMonitor.desktop': <{'position': <15>}>, 'SACTools.desktop': <{'position': <16>}>}]
@@ -235,15 +260,24 @@ locations=@av []
 [org/gnome/software]
 check-timestamp=int64 1791857794
 
-[org/gnome/terminal/legacy]
-shortcuts-enabled=true
-
-[org/gnome/terminal/legacy/keybindings]
-new-window='<Primary>t'
+[org/gtk/gtk4/settings/color-chooser]
+selected-color=(true, 0.38431373238563538, 0.62745100259780884, 0.91764706373214722, 1.0)
 
 [org/gtk/gtk4/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
 show-hidden=false
-sort-directories-first=false
+sidebar-width=140
+sort-column='modified'
+sort-directories-first=true
+sort-order='descending'
+type-format='category'
+view-type='list'
+window-size=(1133, 586)
+
+[org/gtk/settings/color-chooser]
+custom-colors=[(0.58039218187332153, 0.61960786581039429, 0.65098041296005249, 0.0), (0.58039215686274515, 0.61960784313725492, 0.65098039215686276, 1.0)]
+selected-color=(true, 0.58039218187332153, 0.61960786581039429, 0.65098041296005249, 0.0)
 
 [org/gtk/settings/file-chooser]
 date-format='regular'
@@ -251,10 +285,10 @@ location-mode='path-bar'
 show-hidden=false
 show-size-column=true
 show-type-column=true
-sidebar-width=157
-sort-column='modified'
-sort-directories-first=false
-sort-order='descending'
+sidebar-width=144
+sort-column='name'
+sort-directories-first=true
+sort-order='ascending'
 type-format='category'
 window-position=(26, 23)
-window-size=(1231, 689)
+window-size=(859, 902)
