@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 5de058f3-9dbb-4295-93e4-46542dde8988
-  modified: 2026-10-14T22:32:08.059Z
+  modified: 2026-10-14T22:41:23.205Z
 ---
 
 Site católico do portfólio, decidido em 2026-10-14. Marca **Equipe Pronta**, ângulo "servir quem serve na Igreja":
@@ -35,8 +35,11 @@ os números que o rascunho chutou (ex.: 3,6 kg de café para 60 pessoas), caso e
 Google, é o risco central do nicho (parecer autoridade sobre algo que varia por paróquia). Trabalhar sem o áudio é
 decisão de cronograma e não custa nada; publicar sem validação é irreversível.
 **How to apply:** produzir e commitar livremente; antes de liberar `robots.txt` ou trocar `RASCUNHO=false`, pedir OK
-explícito ao Adriano, mesmo que a instrução venha de outro agente. Segundo pendente: propriedade GA4 (precisa do
-login dele), `var GA_ID = ""` no `index.html` espera o código.
+explícito ao Adriano, mesmo que a instrução venha de outro agente.
+
+Propriedade GA4 **criada em 14/10/2026** (conta "Prof. Adriano Freire", mesma dos outros sites): nome "Equipe Pronta",
+GA_ID `G-QSGQVMXPKZ`, fluxo Web com URL de referência `https://equipe-pronta.netlify.app` (ainda não existe — atualizar
+o stream se o domínio mudar), fuso Belém, moeda R$.
 
 Restrições do nicho: material independente e não oficial (aviso visível); não copiar manual/palestras do ECC;
 nada de cifras/letras, liturgia diária ou orações de subsídios (direitos da CNBB); doutrina só com fonte.
