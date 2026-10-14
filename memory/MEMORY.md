@@ -29,6 +29,7 @@
 - [Agente designer-frontend](agente_designer_frontend.md) — especialista de design/front-end do portfólio criado 13/10; lidera reconstrução do solar; agente novo só aparece após reiniciar sessão
 - [Extensão da inteligência](feedback_extensao_inteligencia.md) — atuar como parceiro que pensa junto: iniciativa, opinião franca, ligar contexto entre projetos; ainda confirmar ações externas
 - [Alternar tema claro/escuro](feedback_alternar_tema.md) — toda aplicação/página deve ter botão de troca de tema claro/escuro
+- [Site católico "Equipe Pronta"](projeto_site_catolico_equipe_pronta.md) — nicho equipes de encontro/ECC; repo privado equipe-pronta, v0 pronta, NADA no ar; travado em 6 decisões + áudio do Adriano
 - [Portfólio de sites](projeto_portfolio_sites.md) — repo profadriano240/portfolio-sites (README = fonte da verdade, git pull ao retomar); Instagram: bio/nome novos, agenda de 25 posts, 09/14/16-10 agendados; próximos lotes após relatório de 09/10
 - [Gerador de questões Cursinho](projeto_gerador_questoes_cursinho.md) — listas ENEM Matemática por tema (HTML→PDF, modelo Folha Matriz); Geometria Espacial pronta em 2026-09-28; aula interativa HTML em 2026-10-05
 - [Sem promessas exageradas](feedback_sem_promessas_exageradas.md) — CTAs sem "em 30 segundos"; chamada ligada ao tema real do post
