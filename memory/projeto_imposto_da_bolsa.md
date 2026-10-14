@@ -40,3 +40,5 @@ Criado em 2026-10-02 a partir do blueprint ~/Downloads/blueprint-agentes-portfol
 - Post de 07/10 ("5 erros de IR") foi turbinado pelo próprio usuário: alcance pago, não orgânico.
 - Checkouts dos eBooks: Sócio A107424434W (slot "iniciante", artigo dividendos), A Casa em Ordem F97027782N (organizar-salario, no lugar de todo-real — voltar para todo-real quando o produto Bolso Esperto existir), Guia F94421522W (calc-salario, antes do FAQ). Links obtidos em Hotmart > produto > Links de divulgação > "Visualizar página" (pagamento).
 - Rotina na nuvem trig_013kgdykeCjGXDnEHV2NiBG3 troca /links/ para FII em 14/10 07h — conferir resultado.
+
+**AdSense (visto 2026-10-13):** status 'Requer atenção — Conteúdo de baixo valor' desde 11/10/2026; ads.txt autorizado.
