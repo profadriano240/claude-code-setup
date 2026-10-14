@@ -40,4 +40,5 @@
 - [Consultor de patrimônio](projeto_consultor_patrimonio.md) — agente consultor-patrimonio (finanças pessoais), só planilha Mercado Financeiro, perfil moderado-conservador, só leitura
 - [Estagiário bancário Inter](projeto_estagiario_bancario.md) — agente estagiario-bancario lê extrato via Chrome, categoriza e organiza em painel local `inter` (8767); só leitura por ora, fase 2 (pagar/transferir c/ aprovação) ainda não habilitada
 - [Autonomia estagiário bancário](feedback_autonomia_estagiario_bancario.md) — sem pedir OK pra ações simples/reversíveis dentro da Fase 1 (leitura)
+- [Clareza em painéis](feedback_paineis_clareza.md) — abrir com 2-4 números grandes/simples antes de tabelas densas; sem jargão/poluição visual
 - [Produto app + manual de planejamento](projeto_produto_planejamento_financeiro.md) — Bolso Esperto, Hotmart R$ 24,90; app standalone + textos prontos em ~/projetos/bolso-esperto/produto; app no ar em bolsoesperto-distribuidor.netlify.app; calculadora grátis+guia no impostodabolsa NO AR 2026-10-09; PRÓXIMO: cadastro Hotmart, capa 600×600, preencher AFILIADOS todo-real (pedir OK), feedback manual
