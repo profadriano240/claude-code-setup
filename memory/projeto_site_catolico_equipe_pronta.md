@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 5de058f3-9dbb-4295-93e4-46542dde8988
-  modified: 2026-10-14T22:43:37.669Z
+  modified: 2026-10-14T22:53:22.240Z
 ---
 
 Site católico do portfólio, decidido em 2026-10-14. Marca **Equipe Pronta**, ângulo "servir quem serve na Igreja":
@@ -42,10 +42,10 @@ GA_ID `G-QSGQVMXPKZ`, fluxo Web com URL de referência `https://equipe-pronta.ne
 o stream se o domínio mudar), fuso Belém, moeda R$. No código fica em `ga.js`, carregado por `<script src="/ga.js">`
 nas 7 páginas (ID num lugar só, sem `async` para `window.gtag` existir antes dos handlers do `index.html`).
 
-⚠️ **ESCOPO EM REVISÃO desde 14/10/2026:** o Adriano pediu o site só para os **casais canto** (equipe de canto do ECC),
-não para as 8 equipes. "Canto" nem estava entre as equipes construídas, então é reescrita de conteúdo — a arquitetura
-(gerador, tema, GA4, estrutura do kit) se aproveita. Aguardando ele responder: (1) só canto, ou canto como porta de
-entrada com as outras equipes depois? (2) mantém a marca "Equipe Pronta" ou vai para um nome de música?
+⚠️ **ESCOPO FECHADO em 14/10/2026:** o site é só para os **casais canto** (equipe de canto do ECC), fechado — não vira
+porta de entrada pras outras 7 equipes. Marca "Equipe Pronta" será TROCADA por um nome ligado a música/canto (Adriano
+escolheu trocar). especialista-catolico está propondo 3-4 opções de nome; arquitetura (gerador, tema, GA4, kit) se
+aproveita, conteúdo é reescrito.
 **Why:** ele serve na equipe de canto — é a autenticidade real dele, e de onde vem o material de [[projeto_cifras_ecc]].
 **How to apply:** não produzir conteúdo das outras equipes até a resposta. E a restrição que define esse nicho:
 **cifras e letras NÃO podem ir ao site** (direitos de autores/editoras; o material dele vem do Cifra Club) — foi
