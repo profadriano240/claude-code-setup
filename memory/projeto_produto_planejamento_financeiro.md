@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: fe8bcce3-9a9b-42da-96e8-efc4b4ce3629
-  modified: 2026-10-09T14:15:42.017Z
+  modified: 2026-10-15T15:33:02.133Z
 ---
 
 Decidido 2026-10-09: vender pacote **manual + app** de planejamento financeiro na **Hotmart**, marca **Bolso Esperto** ([[projeto_revista_bolso_esperto]]), preço sugerido **R$ 24,90** (faixa R$ 19–29), garantia 7 dias. Sem login: app em link não divulgado (aceito o risco de repasse).
@@ -29,3 +29,5 @@ Ideias adiadas: importação de extrato OFX/CSV; Open Finance (só Meu Pluggy p/
 
 **Why:** usuário quer produto replicável/vendável de organização financeira com baixo envolvimento pessoal ([[feedback_baixo_envolvimento_redes_sociais]]).
 **How to apply:** retomar pelos próximos passos acima; publicar/cadastrar/push só com OK explícito.
+
+**ATUALIZAÇÃO 2026-10-15 (mandato de autonomia total ao diretor-portfolio, 12h-14h):** os materiais da lista "Próximos passos" (capa 600×600, checklist de cadastro campo-a-campo, 6 mensagens de WhatsApp datadas, revisadas pela skill `humanizar`) JÁ ESTAVAM PRONTOS numa branch esquecida desde a noite de 14/10 (`origin/plano-90-dias`, commit f9067e9) — o diretor mesclou em vez de recriar (commit be7d1bf, push feito). Tentativa de cadastro real na Hotmart pelo Chrome ficou em andamento no fechamento do expediente; pode ter batido no mesmo bloqueio de permissão de extensão Chrome de 14/10 — conferir no próximo commit do repo. Mensagem de WhatsApp de 28/10 já escrita, só falta aprovação do usuário para enviar.
