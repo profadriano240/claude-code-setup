@@ -57,7 +57,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash $HOME/.claude/hooks/tts-response.sh 2>/dev/null || true",
+            "command": "echo \"$(date)\" >> /tmp/tts-hook-debug.log; env >> /tmp/tts-hook-debug.log; bash $HOME/.claude/hooks/tts-response.sh >> /tmp/tts-hook-debug.log 2>&1; echo \"exit=$?\" >> /tmp/tts-hook-debug.log",
             "statusMessage": "Falando resposta em voz alta...",
             "async": true
           }
