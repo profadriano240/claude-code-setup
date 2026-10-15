@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: f64dd761-a5ea-4d4a-bb0a-c16e63f2d846
-  modified: 2026-10-14T22:50:01.264Z
+  modified: 2026-10-15T15:32:36.206Z
 ---
 
 Decisão do Adriano (14/10/2026): "enxugar" a estratégia de vendas que estava espalhada em 3 agentes e concentrar numa equipe dedicada de 2 papéis, cobrindo os 4 sites do portfólio (Imposto da Bolsa, Solar Off-Grid, Bolso Esperto, futuro site católico).
@@ -23,9 +23,6 @@ Decisão do Adriano (14/10/2026): "enxugar" a estratégia de vendas que estava e
 
 **How to apply:** Qualquer menção a CTA/funil/objeção de compra/copy de venda no portfólio passa a ser do `estrategia-vendas`/`copy-vendas`, não mais do `monetizacao`/`voz-do-cliente`/`arquiteto-ideias`.
 
-**Estado em 14/10/2026 (pausado por limite de tokens):**
-- Spec aprovado: `~/projetos/portfolio-sites/docs/superpowers/specs/2026-10-14-equipe-vendas-design.md`
-- Plano escrito (7 tasks): `~/projetos/portfolio-sites/docs/superpowers/plans/2026-10-14-equipe-vendas.md`
-- **Nada implementado ainda** — nenhum arquivo de agente foi criado/editado, só spec+plano. Próximo passo: perguntar ao Adriano se executa via subagent-driven-development ou inline, e rodar as 7 tasks (criar `agentes/estrategia-vendas.md` e `agentes/copy-vendas.md`, editar `monetizacao.md`/`voz-do-cliente.md`/`arquiteto-ideias.md`/`diretor-portfolio.md`, religar symlinks com `clonar.sh`, atualizar README, commit+push).
+**IMPLEMENTADO em 15/10/2026** (commit 72a2b0c, push feito em origin/master): as 7 tasks do plano rodaram — `agentes/estrategia-vendas.md` e `agentes/copy-vendas.md` criados; `monetizacao.md`/`voz-do-cliente.md`/`arquiteto-ideias.md`/`diretor-portfolio.md` editados; symlinks religados via `clonar.sh`; README atualizado. Os dois agentes novos já estão disponíveis e em uso (usados no mandato de autonomia de 15/10 para montar o brief de venda do plano de receita em 15 dias).
 
 Ver também [[projeto_portfolio_sites]], [[referencia_backup_claude_code_setup]].
