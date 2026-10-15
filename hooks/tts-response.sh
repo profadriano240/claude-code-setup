@@ -4,17 +4,7 @@ PIPER_BIN="$HOME/.local/bin/piper"
 PIPER_MODEL="$HOME/.local/share/piper-voices/pt_BR-faber-medium.onnx"
 
 input=$(cat)
-transcript_path=$(echo "$input" | jq -r '.transcript_path // empty')
-[ -z "$transcript_path" ] && exit 0
-[ -f "$transcript_path" ] || exit 0
-
-text=$(jq -rs '
-  map(select(.type == "assistant" and .message.role == "assistant"))
-  | last
-  | .message.content
-  | map(select(.type == "text") | .text)
-  | join(" ")
-' "$transcript_path" 2>/dev/null)
+text=$(echo "$input" | jq -r '.last_assistant_message // empty')
 
 [ -z "$text" ] && exit 0
 
