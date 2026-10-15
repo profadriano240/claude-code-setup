@@ -1,11 +1,11 @@
 ---
 name: feedback-economia-tokens
-description: Usuário pede para sempre economizar tokens nas interações
+description: Usuário pede para sempre economizar tokens nas interações e acelerar automação de navegador (Chrome)
 metadata: 
   node_type: memory
   type: feedback
   originSessionId: 0901cc2a-1da3-4cd7-ad85-763655b010b8
-  modified: 2026-10-13T02:41:00.559Z
+  modified: 2026-10-15T15:15:21.399Z
 ---
 
 O usuário pediu explicitamente para sempre tentar economizar tokens.
