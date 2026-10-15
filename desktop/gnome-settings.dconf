@@ -32,7 +32,7 @@ window-size=(382, 503)
 word-size=64
 
 [org/gnome/control-center]
-last-panel='ubuntu'
+last-panel='sound'
 window-state=(980, 640, false)
 
 [org/gnome/desktop/app-folders]
@@ -134,7 +134,7 @@ secondary-color='#000000'
 idle-delay=uint32 0
 
 [org/gnome/desktop/sound]
-allow-volume-above-100-percent=true
+allow-volume-above-100-percent=false
 
 [org/gnome/evince/default]
 continuous=true
