@@ -88,11 +88,12 @@
   },
   "language": "pt-BR",
   "voice": {
-    "enabled": false,
-    "mode": "hold"
+    "enabled": true,
+    "mode": "tap",
+    "autoSubmit": true
   },
   "theme": "auto",
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
-  "voiceEnabled": false
+  "voiceEnabled": true
 }
