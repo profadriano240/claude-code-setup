@@ -1,3 +1,4 @@
+- [TTS automático por voz](referencia_tts_voz.md) — hook Stop fala toda resposta (Piper pt-BR); usa campo last_assistant_message, não reparsear transcript; ditado tap ligado
 - [Automações WhatsApp](projeto_automacoes_whatsapp.md) — repositório GitHub cotacoes-b3, CallMeBot, preferência por soluções gratuitas; notícias PAUSADAS desde 2026-09-29; mensagem.yml envia texto avulso
 - [Máquina Debian pessoal](maquina_debian_home.md) — notebook fraco (Celeron N4020, 3,6GB RAM), estado de ferramentas instaladas, sudo não-interativo sempre falha
 - [Máquina desktop Ubuntu](maquina_desktop_ubuntu.md) — desktop forte (Ryzen 5 5600GT, 14GB RAM), Ubuntu 24.04, claude-code-setup já clonado aqui
