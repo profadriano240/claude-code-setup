@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 771f1d29-2638-4af3-9c96-d7d0fba20c90
-  modified: 2026-10-04T20:09:48.811Z
+  modified: 2026-10-15T14:26:44.385Z
 ---
 
 Criado em 2026-09-21 a partir de ~/Downloads/PROMPT_curso_solar_offgrid.md em ~/projetos/solar-offgrid. Leia o CLAUDE.md do próprio projeto para arquitetura e convenções.
@@ -33,3 +33,5 @@ Estado: todos os itens do prompt implementados (13 módulos + quizzes, calculado
 - **Diretor em HOLD:** mandei o diretor-portfolio NÃO publicar T1/T2 (CTA calculadora→kits, GA4, sitemap, SEO) nem dar push, porque vamos reestruturar. Produção intacta (commit d0bcb2a / deploy 6ace2e0f). O diretor deixou `~/projetos/portfolio-sites/README.md` MODIFICADO localmente (não commitado) com atualização de estado + "Plano da semana 13/10"; preservar.
 
 **Para retomar após reinício:** abrir o mockup (`google-chrome ~/.cache/claude-temporario/solar-redesign/home-v2.html` ou publicar como artifact) para o usuário aprovar; invocar o agente designer-frontend para conduzir; decidir a stack com OK; não publicar nada sem OK.
+
+**ATUALIZAÇÃO 2026-10-15 (verificado no repo portfolio-sites, não estava em HOLD):** a reconstrução v2 JÁ FOI FEITA e JÁ ESTÁ EM PRODUÇÃO — site multipágina estático, 34 URLs no sitemap (deploy 14/10), 69/69 testes, guias de cauda longa, página Sobre com autoria real, afiliados ML com 6 produtos. AdSense em revisão desde 13/10. Bloqueio atual é só operacional: cota diária de indexação manual do Search Console esgotou em 13 e 14/10 — retomar enviando URLs em lotes (~10/dia): `/guias/`, `/curso/`, `/manual/`, depois os guias restantes.
