@@ -1,12 +1,14 @@
 ---
 name: referencia-tts-voz
-description: "TTS automático (Piper, voz pt-BR) lê toda resposta em voz alta via hook de Stop; ditado por voz (tap) também ligado"
+description: "TTS automático de saída DESLIGADO (2026-10-15, pedido do usuário); ditado por voz (tap) continua ligado"
 metadata: 
   node_type: memory
   type: reference
   originSessionId: 6592ff61-e8d0-46d3-95cf-03480da371b4
-  modified: 2026-10-15T17:57:14.266Z
+  modified: 2026-10-15T18:02:38.445Z
 ---
+
+**DESLIGADO em 2026-10-15** — usuário pediu pra parar ("acabo de ouvir você"). Hook `Stop` removido de `~/.claude/settings.json` (era o bloco que rodava `tts-response.sh`). Script `~/.claude/hooks/tts-response.sh` continua no disco, só não é mais chamado. Ditado por voz (entrada, `voice.mode: tap`) NÃO foi mexido, continua ligado. Pra reativar: adicionar de volta o bloco `"Stop"` em settings.json chamando `tts-response.sh` (ver git history do repo claude-code-setup ou histórico desta sessão).
 
 Ligado em 2026-10-15 a pedido do usuário ("quero poder só falar com você, sem precisar digitar toda vez, fluido como conversa real").
 
