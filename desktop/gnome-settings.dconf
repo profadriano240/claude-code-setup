@@ -166,14 +166,15 @@ resources-memory-in-iec=true
 show-all-fs=true
 show-dependencies=false
 show-whose-processes='user'
-window-height=480
+window-height=615
+window-width=620
 
 [org/gnome/gnome-system-monitor/disktreenew]
 col-4-visible=true
 col-4-width=0
 col-6-visible=true
 col-6-width=0
-columns-order=[5]
+columns-order=[6]
 sort-col=6
 sort-order=1
 
@@ -258,7 +259,7 @@ tiling-popup-all-workspace=true
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1792014082
+check-timestamp=int64 1792073400
 
 [org/gtk/gtk4/settings/color-chooser]
 selected-color=(true, 0.38431373238563538, 0.62745100259780884, 0.91764706373214722, 1.0)
