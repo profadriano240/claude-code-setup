@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 8ca0761d-b073-4e4f-8e70-209de6e591f3
-  modified: 2026-10-15T15:32:50.709Z
+  modified: 2026-10-15T16:02:10.583Z
 ---
 
 **ATUALIZAÇÃO 2026-10-13: AdSense REJEITADO**, motivo "Conteúdo de baixo valor" (política de spam/conteúdo superficial — falta valor único substancial, curadoria/manutenção contínua, interesse genuíno do usuário). Status "Requer atenção" na página do site (adsense.google.com/adsense/u/0/pub-6370131226236609/sites/detail/url=impostodabolsa.com.br). Há botão "Pedir revisão" (habilita após marcar "Confirmo que corrigi os problemas") — NENHUM reenvio feito ainda, aguardando decisão/plano do usuário sobre o que corrigir antes de pedir nova revisão.
@@ -46,5 +46,5 @@ Criado em 2026-10-02 a partir do blueprint ~/Downloads/blueprint-agentes-portfol
 ## 2026-10-15 (mandato de autonomia total ao diretor-portfolio, 12h-14h)
 - Push em produção (commits 61df36c/3b7963c/f45042c): aviso automático do prazo do DARF (vence 30/10) em 4 guias+calculadora; formulário "Lembrete do DARF" (Netlify Forms) em 5 guias; ponte com Bolso Esperto (editoria "Primeiros passos" + caixa `todo-real` com fallback, desbloqueou a distribuição do manual). 6 guias aprofundados.
 - Erro tributário corrigido antes de publicar: guia do Fiagro afirmava retenção de 5% com base na MP 1.303/2025, que caducou sem virar lei — Lei 15.270/2025 manteve a isenção.
-- Bloqueio novo: painel de afiliados da Hotmart mudou de URL (algo como app-vlc.hotmart.com/tools/affiliate); extensão Claude in Chrome não tem permissão lá, impedindo checar os 2 pedidos pendentes (ID 1777009, ID 1202583). **Precisa o usuário liberar o domínio na extensão** (1 min).
+- CORREÇÃO: o "bloqueio de permissão da extensão Chrome" relatado era falso diagnóstico — a extensão acessa app.hotmart.com normalmente. O caminho certo pra ver pedidos de afiliação é Produtos → aba "Sou Afiliado(a)" → sub-aba "Solicitadas" (não existe URL direta, precisa navegar pelo menu: Parcerias > Afiliados > "Acessar mercado" > Produtos > Sou Afiliado(a)). Conferido 15/10: os 2 pedidos pendentes (ID 1777009 "Curso Imposto de Renda da Bolsa", ID 1202583 "Treinamento Imposto Sobre Renda Variável") seguem "Aguardando aceite desde 02/10/2026" — 13 dias parado, depende só do produtor aceitar, nada a fazer do nosso lado além de aguardar ou contatar o produtor.
 - Próximo passo (datado pro README): cascata de conteúdo da campanha DARF (carrosséis 26 e 28/10, 4 Stories, 2 status, DM) ainda não escrita — previsto pra 16/10.
