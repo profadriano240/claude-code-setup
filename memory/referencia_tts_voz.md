@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: reference
   originSessionId: 6592ff61-e8d0-46d3-95cf-03480da371b4
-  modified: 2026-10-15T16:59:10.092Z
+  modified: 2026-10-15T17:04:57.508Z
 ---
 
 Ligado em 2026-10-15 a pedido do usuário ("quero poder só falar com você, sem precisar digitar toda vez, fluido como conversa real").
@@ -17,3 +17,5 @@ Ligado em 2026-10-15 a pedido do usuário ("quero poder só falar com você, sem
 **Ditado por voz (entrada):** `voice.enabled: true`, `mode: "tap"`, `autoSubmit: true` no settings.json — toca uma vez pra começar a falar, toca de novo e já envia. Não existe modo 100% sem teclado/toque no Claude Code atual.
 
 **Como depurar se parar de funcionar:** trocar temporariamente o comando do hook por algo que salve o stdin bruto em arquivo (`cat >> /tmp/algumlog.log`), forçar o Stop disparar (terminar uma resposta), conferir o log. Mudança em `settings.json` só é recarregada pela sessão ativa depois de `/hooks` ou reiniciar — não é instantânea.
+
+**Bug corrigido 2026-10-15 (2º, mesma sessão) — cortava a 1ª palavra:** não era problema de ALSA/dispositivo frio (padding de silêncio com `ffmpeg -af adelay` não resolveu). É o Piper cortando o ataque do primeiro fonema na própria síntese. Fix: prefixar o texto com `". "` (ponto+espaço) descartável antes de mandar pro Piper (`printf '. %s' "$clean" | piper ...`) — o corte cai nesse ponto sacrificial, não na palavra real. `ffmpeg` não é mais necessário no script, só `piper` + `aplay` num arquivo wav temporário (evita também a corrida de stream direto que existia antes).
