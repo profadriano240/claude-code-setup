@@ -51,18 +51,6 @@
           }
         ]
       }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bash $HOME/.claude/hooks/tts-response.sh 2>/dev/null || true",
-            "statusMessage": "Falando resposta em voz alta...",
-            "async": true
-          }
-        ]
-      }
     ]
   },
   "enabledPlugins": {
