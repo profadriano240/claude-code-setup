@@ -83,5 +83,16 @@
   "theme": "auto",
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "permissions": {
+    "allow": [
+      "mcp__claude_ai_Netlify__netlify-deploy-services-updater"
+    ]
+  },
+  "autoMode": {
+    "allow": [
+      "$defaults",
+      "mcp__claude_ai_Netlify__netlify-deploy-services-updater"
+    ]
+  }
 }
