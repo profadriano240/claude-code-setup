@@ -221,7 +221,7 @@ last-folder-path='/home/adriano/Imagens'
 last-folder-path='/usr/lib'
 
 [org/gnome/settings-daemon/plugins/color]
-night-light-enabled=false
+night-light-enabled=true
 night-light-schedule-automatic=true
 night-light-schedule-from=0.0
 night-light-schedule-to=0.0
