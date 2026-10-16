@@ -43,6 +43,9 @@ Criado em 2026-10-02 a partir do blueprint ~/Downloads/blueprint-agentes-portfol
 - Checkouts dos eBooks: Sócio A107424434W (slot "iniciante", artigo dividendos), A Casa em Ordem F97027782N (organizar-salario, no lugar de todo-real — voltar para todo-real quando o produto Bolso Esperto existir), Guia F94421522W (calc-salario, antes do FAQ). Links obtidos em Hotmart > produto > Links de divulgação > "Visualizar página" (pagamento).
 - Rotina na nuvem trig_013kgdykeCjGXDnEHV2NiBG3 troca /links/ para FII em 14/10 07h — conferir resultado.
 
+**AdSense (visto 2026-10-13):** status 'Requer atenção — Conteúdo de baixo valor' desde 11/10/2026; ads.txt autorizado.
+- 14/10/2026: checklist SEO de 20 itens (post TikTok) NO AR (commits 4e7d47a + fd56ac2, push com OK): og-padrao.jpg, BreadcrumbList, 404 com links, evento generate_lead; **artigos agora assinados por Adriano Freire** (decisão dele — fim do 'Redação'/anonimato neste site): byline, caixa do autor (assets/autor-adriano.webp), schema Person, seção 'Quem escreve' (#autor) no Sobre. Não feito de propósito: CTA fixo mobile (conflito com anúncio âncora). Próximo: pedir revisão do AdSense após alguns dias de indexação.
+
 ## 2026-10-15 (mandato de autonomia total ao diretor-portfolio, 12h-14h)
 - Push em produção (commits 61df36c/3b7963c/f45042c): aviso automático do prazo do DARF (vence 30/10) em 4 guias+calculadora; formulário "Lembrete do DARF" (Netlify Forms) em 5 guias; ponte com Bolso Esperto (editoria "Primeiros passos" + caixa `todo-real` com fallback, desbloqueou a distribuição do manual). 6 guias aprofundados.
 - Erro tributário corrigido antes de publicar: guia do Fiagro afirmava retenção de 5% com base na MP 1.303/2025, que caducou sem virar lei — Lei 15.270/2025 manteve a isenção.

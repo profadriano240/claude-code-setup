@@ -1,6 +1,9 @@
 {
-  "env": {
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  "permissions": {
+    "allow": [
+      "mcp__claude_ai_Netlify__netlify-deploy-services-updater"
+    ],
+    "defaultMode": "auto"
   },
   "hooks": {
     "ConfigChange": [
@@ -8,7 +11,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash $HOME/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
+            "command": "bash $HOME/.claude/hooks/sync-config-repo.sh || true",
             "statusMessage": "Sincronizando config/ com claude-code-setup..."
           }
         ]
@@ -19,12 +22,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash $HOME/.claude/hooks/sync-pull-repo.sh 2>/dev/null || true",
-            "statusMessage": "Puxando memória atualizada do claude-code-setup..."
-          },
-          {
-            "type": "command",
-            "command": "bash $HOME/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
+            "command": "bash $HOME/.claude/hooks/sync-config-repo.sh || true",
             "statusMessage": "Verificando sincronização de config/packages..."
           }
         ]
@@ -46,7 +44,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash $HOME/.claude/hooks/sync-config-repo.sh 2>/dev/null || true",
+            "command": "bash $HOME/.claude/hooks/sync-config-repo.sh || true",
             "statusMessage": "Verificando pacotes instalados..."
           }
         ]
@@ -54,25 +52,9 @@
     ]
   },
   "enabledPlugins": {
-    "skill-creator@claude-plugins-official": true,
-    "superpowers@superpowers-marketplace": true,
-    "code-simplifier@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
-    "caveman@caveman": true
-  },
-  "extraKnownMarketplaces": {
-    "superpowers-marketplace": {
-      "source": {
-        "source": "github",
-        "repo": "obra/superpowers-marketplace"
-      }
-    },
-    "caveman": {
-      "source": {
-        "source": "github",
-        "repo": "JuliusBrussee/caveman"
-      }
-    }
+    "superpowers@claude-plugins-official": true
   },
   "language": "pt-BR",
   "voice": {
@@ -81,14 +63,10 @@
     "autoSubmit": true
   },
   "theme": "auto",
+  "switchModelsOnFlag": true,
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
   "voiceEnabled": true,
-  "permissions": {
-    "allow": [
-      "mcp__claude_ai_Netlify__netlify-deploy-services-updater"
-    ]
-  },
   "autoMode": {
     "allow": [
       "$defaults",

@@ -72,3 +72,5 @@ trata como parceria pessoal (é a esposa dele), não trabalho pago — ver
 **How to apply:** manter tom sóbrio institucional; nunca colocar foto com terceiros reconhecíveis
 no site (regra nova, 2026-10-14); nunca reintroduzir elementos de marketing agressivo vedados pela
 OAB sem repensar o Provimento 205/2021 primeiro.
+
+**Versão do notebook DESCARTADA (decisão do usuário, 14/10):** seguir só com a do desktop (`~/projetos/luara-lacerda-advocacia`). Pasta do notebook movida para ~/.cache/claude-temporario (some em 7 dias); repo GitHub profadriano240/site-luara-lacerda APAGADO pelo usuário em 14/10. Usuário pediu para pôr no ar o site do desktop: ele NÃO está no GitHub; no desktop, criar repo privado + push, depois deploy Netlify (resolver antes: forum.png em alta, endereço/e-mail, 3º artigo).
