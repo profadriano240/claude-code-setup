@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 8ca0761d-b073-4e4f-8e70-209de6e591f3
-  modified: 2026-10-15T16:02:10.583Z
+  modified: 2026-10-16T01:01:39.991Z
 ---
 
 **ATUALIZAÇÃO 2026-10-13: AdSense REJEITADO**, motivo "Conteúdo de baixo valor" (política de spam/conteúdo superficial — falta valor único substancial, curadoria/manutenção contínua, interesse genuíno do usuário). Status "Requer atenção" na página do site (adsense.google.com/adsense/u/0/pub-6370131226236609/sites/detail/url=impostodabolsa.com.br). Há botão "Pedir revisão" (habilita após marcar "Confirmo que corrigi os problemas") — NENHUM reenvio feito ainda, aguardando decisão/plano do usuário sobre o que corrigir antes de pedir nova revisão.
@@ -48,3 +48,6 @@ Criado em 2026-10-02 a partir do blueprint ~/Downloads/blueprint-agentes-portfol
 - Erro tributário corrigido antes de publicar: guia do Fiagro afirmava retenção de 5% com base na MP 1.303/2025, que caducou sem virar lei — Lei 15.270/2025 manteve a isenção.
 - CORREÇÃO: o "bloqueio de permissão da extensão Chrome" relatado era falso diagnóstico — a extensão acessa app.hotmart.com normalmente. O caminho certo pra ver pedidos de afiliação é Produtos → aba "Sou Afiliado(a)" → sub-aba "Solicitadas" (não existe URL direta, precisa navegar pelo menu: Parcerias > Afiliados > "Acessar mercado" > Produtos > Sou Afiliado(a)). Conferido 15/10: os 2 pedidos pendentes (ID 1777009 "Curso Imposto de Renda da Bolsa", ID 1202583 "Treinamento Imposto Sobre Renda Variável") seguem "Aguardando aceite desde 02/10/2026" — 13 dias parado, depende só do produtor aceitar, nada a fazer do nosso lado além de aguardar ou contatar o produtor.
 - Próximo passo (datado pro README): cascata de conteúdo da campanha DARF (carrosséis 26 e 28/10, 4 Stories, 2 status, DM) ainda não escrita — previsto pra 16/10.
+- **PENDÊNCIA URGENTE**: formulário "Lembrete do DARF" (Netlify Forms, 5 guias+calculadora) captura e-mail mas NÃO tem envio automático — alguém precisa mandar manual antes de 30/10 (vencimento DARF setembro), senão quebra promessa com quem se inscreveu.
+- 14/10: sprint de venda dos 3 eBooks (Story IG + grupo WhatsApp + R$20 anúncio Meta) não converteu nada — público frio não compra em poucas horas; falta lista aquecida antes de nova tentativa. Vendas Hotmart (eBooks + curso-ir) zeradas até 15/10.
+- GA4 primeira semana com dado real (05-11/10): 66 sessões, 56 usuários, engajamento 28,8%. Tráfego quase todo direto+Instagram; busca orgânica só 3 sessões — SEO ainda não puxa apesar de 32 guias publicados.
