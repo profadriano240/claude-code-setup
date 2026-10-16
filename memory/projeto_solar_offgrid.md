@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 771f1d29-2638-4af3-9c96-d7d0fba20c90
-  modified: 2026-10-15T14:26:44.385Z
+  modified: 2026-10-16T01:07:19.860Z
 ---
 
 Criado em 2026-09-21 a partir de ~/Downloads/PROMPT_curso_solar_offgrid.md em ~/projetos/solar-offgrid. Leia o CLAUDE.md do próprio projeto para arquitetura e convenções.
@@ -34,4 +34,8 @@ Estado: todos os itens do prompt implementados (13 módulos + quizzes, calculado
 
 **Para retomar após reinício:** abrir o mockup (`google-chrome ~/.cache/claude-temporario/solar-redesign/home-v2.html` ou publicar como artifact) para o usuário aprovar; invocar o agente designer-frontend para conduzir; decidir a stack com OK; não publicar nada sem OK.
 
-**ATUALIZAÇÃO 2026-10-15 (verificado no repo portfolio-sites, não estava em HOLD):** a reconstrução v2 JÁ FOI FEITA e JÁ ESTÁ EM PRODUÇÃO — site multipágina estático, 34 URLs no sitemap (deploy 14/10), 69/69 testes, guias de cauda longa, página Sobre com autoria real, afiliados ML com 6 produtos. AdSense em revisão desde 13/10. Bloqueio atual é só operacional: cota diária de indexação manual do Search Console esgotou em 13 e 14/10 — retomar enviando URLs em lotes (~10/dia): `/guias/`, `/curso/`, `/manual/`, depois os guias restantes.
+**ATUALIZAÇÃO 2026-10-15 (verificado no repo portfolio-sites, não estava em HOLD):** a reconstrução que foi feita é SÓ a estrutural (SPA #/ → multipágina estática), não o redesign VISUAL do mockup v2 — site multipágina estático, 34 URLs no sitemap (deploy 14/10), 69/69 testes, guias de cauda longa, página Sobre com autoria real, afiliados ML com 6 produtos. AdSense em revisão desde 13/10. Bloqueio atual é só operacional: cota diária de indexação manual do Search Console esgotou em 13 e 14/10 — retomar enviando URLs em lotes (~10/dia): `/guias/`, `/curso/`, `/manual/`, depois os guias restantes.
+
+**CORREÇÃO 2026-10-15 (confirmado via agente especialista-solar):** o mockup v2 citado acima (`~/.cache/claude-temporario/solar-redesign/home-v2.html`, hero noturno/toggle tema/cards novos) **NÃO EXISTE MAIS** — pasta apagada (provável limpeza dos 7 dias, ver [[referencia_memoria_temporaria]]) e nunca foi aplicado. Repo não tem nenhum commit de redesign visual. Ou seja: a mudança visual proposta em 13/10 ficou só na decisão, nunca saiu do papel; o que está no ar hoje é a estrutura multipágina "padrão" do projeto, com a cara antiga, só sem o SPA por hash.
+
+**Problema encontrado 2026-10-15:** 3 dos 12 links de afiliado ML estão mortos (kit/painel/cabos caem em perfil vazio por gerador errado, exigem 2º clique). 7 dias de afiliado: 2 cliques, 0 pedido, R$ 0. Correção já identificada, só falta OK do usuário para regerar os 12 links no linkbuilder do ML e editar `itens` em `afiliados.js`.
